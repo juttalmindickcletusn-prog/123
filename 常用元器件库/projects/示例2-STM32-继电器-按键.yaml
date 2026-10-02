@@ -1,0 +1,22 @@
+# 样例 2：立创地猛星 STM32F103 + 1 路继电器模块 + 3 个按键 + LED，DC-005 5V 2A 适配器供电
+name: 示例2-STM32-继电器-按键
+sets: 1
+power: {source: DC-005 接 5V 2A 适配器, capacity_ma: 2000}
+mcu: MCU-002
+items:
+  - {id: MCU-002, qty: 1}
+  - {id: ACT-001, qty: 1, vcc: 5}
+  - {id: HDR-001, qty: 1, note: 继电器模块接口 1×3 排针（截取）}
+  - {id: SW-002, qty: 3}
+  - {id: RES-002, value: 10k, qty: 3}
+  - {id: LED-001, qty: 1}
+  - {id: RES-002, value: 1k, qty: 1}
+  - {id: PWR-001, qty: 1}
+  - {id: FUS-003, qty: 1}
+  - {id: DIO-003, qty: 1}
+  - {id: SW-010, qty: 1}
+  - {id: CAP-012, qty: 1}
+  - {id: CAP-001, qty: 2}
+pins:
+  ACT-001.IN: PB12
+extra_cost: {pcb: 0, note: ""}

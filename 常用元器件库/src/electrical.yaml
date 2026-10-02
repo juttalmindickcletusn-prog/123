@@ -1,0 +1,1274 @@
+# 电气参数（第 5 节）。由云端一次生成，之后手工维护。每条写 src_ref；查不到的值为 null 并写"未核"，不估。
+# outputs：模块输出给主控的脚 → 电平（"vcc" 表示随模块供电电压；数值为固定电平；null 为未核或开漏）。
+# i2c_pullup.to："vcc"（随模块供电）、"3.3"（板载 3.3V）、null（未核）。
+MCU-001:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-004:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-005:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-006:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-007:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-008:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 500, cond: 按用户规范 3.3 节：ESP32 负载预算按 ≥500mA 计}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 用户规范 3.3 节（ESP32 按 ≥500mA）；GPIO 不耐 5V 沿用第二批条目 logic_level（乐鑫规格书绝对最大额定值，云端未下载）
+MCU-016:
+  vcc_range: 5V（安信可规格书只给 5V）
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, Wi-Fi, Camera]
+  i_typ_ma: {value: 180, cond: 关闪光灯 @5V（安信可规格书）}
+  i_peak_ma: {value: 310, cond: 闪光灯最亮 @5V（安信可规格书）}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 安信可 ESP32-CAM 规格书第 2 页 Power Dissipation
+  note: 规格书 Notes：电源至少 5V 2A，否则图像有水波纹
+MCU-010:
+  vcc_range: 5V（USB 或 VIN）
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, Wi-Fi]
+  i_typ_ma: {value: 80, cond: 按 ESP-01S 资料（同为 ESP8266）平均工作电流}
+  i_peak_ma: {value: 300, cond: 按 ESP-01S 资料 Wi-Fi 发射峰值}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 安信可 ESP-01S 资料（Tayda 转存，平均 80mA、峰值 300mA，同为 ESP8266 芯片）；A0 量程见 mcu_pins.yaml
+MCU-011:
+  vcc_range: 5V（USB 或 VIN）
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, Wi-Fi]
+  i_typ_ma: {value: 80, cond: 按 ESP-01S 资料（同为 ESP8266）平均工作电流}
+  i_peak_ma: {value: 300, cond: 按 ESP-01S 资料 Wi-Fi 发射峰值}
+  supply_capacity_ma: {value: null, note: 板载 3.3V LDO 型号和余量未核，模块 3.3V 用电多时单独加 LDO}
+  src_ref: 安信可 ESP-01S 资料（Tayda 转存，平均 80mA、峰值 300mA，同为 ESP8266 芯片）；A0 量程见 mcu_pins.yaml
+MCU-002:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: 3.3V；FT 脚耐 5V（逐脚见 mcu_pins.yaml）
+  io_5v_tolerant: 按脚
+  interface: [UART, I2C, SPI, ADC, USB, CAN]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 板载 LDO 型号未核}
+  src_ref: ST STM32F103x8 规格书 DS5319 表 5（FT 列）
+MCU-003:
+  vcc_range: 5V（USB 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: 3.3V；FT 脚耐 5V（逐脚见 mcu_pins.yaml）
+  io_5v_tolerant: 按脚
+  interface: [UART, I2C, SPI, ADC, USB, CAN]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 板载 LDO 型号未核}
+  src_ref: ST STM32F103x8 规格书 DS5319 表 5（FT 列）
+MCU-015:
+  vcc_range: 5V（USB-C 或 5V 脚），板载 LDO 出 3.3V
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: 3.3V；FT 脚耐 5V（PA0、PB5 为 TC 不耐）
+  io_5v_tolerant: 按脚
+  interface: [UART, I2C, SPI, ADC, USB]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: V3.1 原理图 U2 只标 "SOT23-3 LDO"，型号和电流未核}
+  src_ref: ST STM32F411 规格书表 8；WeAct V3.1 原理图
+MCU-009:
+  vcc_range: 5V（USB）或 VIN
+  vcc_min: 4.75
+  vcc_max: 5.25
+  logic_v: 5V 逻辑
+  io_5v_tolerant: 是
+  interface: [UART, I2C, SPI, ADC, PWM]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 板载 5V 稳压（VIN 供电时）和 3.3V 输出能力未核}
+  src_ref: 本库 MCU-009 条目（5V 逻辑）；Arduino A000005 规格书（云端未下载）
+MCU-012:
+  vcc_range: VBUS 5V 或 VSYS 1.8–5.5V（板载 DC-DC 出 3.3V）
+  vcc_min: 1.8
+  vcc_max: 5.5
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, PIO]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 3V3(OUT) 对外供电能力以 Pico 规格书为准（云端未下载）}
+  src_ref: 本库 MCU-012/013 条目（Pico 规格书第 2 章，交接线索截图）
+MCU-013:
+  vcc_range: VBUS 5V 或 VSYS 1.8–5.5V（板载 DC-DC 出 3.3V）
+  vcc_min: 1.8
+  vcc_max: 5.5
+  logic_v: GPIO 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, I2C, SPI, ADC, PWM, PIO, Wi-Fi]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 3V3(OUT) 对外供电能力以 Pico 规格书为准（云端未下载）}
+  src_ref: 本库 MCU-012/013 条目（Pico 规格书第 2 章，交接线索截图）
+MCU-014:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 5V TTL；P0 开漏
+  io_5v_tolerant: 是
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 MCU-014 条目（STC89 手册，云端未取到正文）
+DSP-001:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容（lcdwiki：不需要电平转换）
+  io_5v_tolerant: 是
+  interface: [I2C]
+  i2c_addr: ['0x3C']
+  i2c_addr_alt: 0x3D（模块背面电阻改焊；lcdwiki 写 8 位地址 0x78/0x7A）
+  i2c_addr_options: ['0x3C', '0x3D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: 18, cond: lcdwiki 标正常显示 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MC096/MC130/MC091 页面与手册（地址、功耗）
+DSP-002:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容（lcdwiki：不需要电平转换）
+  io_5v_tolerant: 是
+  interface: [I2C]
+  i2c_addr: ['0x3C']
+  i2c_addr_alt: 0x3D（模块背面电阻改焊；lcdwiki 写 8 位地址 0x78/0x7A）
+  i2c_addr_options: ['0x3C', '0x3D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: 18, cond: lcdwiki 标正常显示 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MC096/MC130/MC091 页面与手册（地址、功耗）
+DSP-003:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容（lcdwiki：不需要电平转换）
+  io_5v_tolerant: 是
+  interface: [I2C]
+  i2c_addr: ['0x3C']
+  i2c_addr_alt: 0x3D（模块背面电阻改焊；lcdwiki 写 8 位地址 0x78/0x7A）
+  i2c_addr_options: ['0x3C', '0x3D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: 18, cond: lcdwiki 标正常显示 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MC096/MC130/MC091 页面与手册（地址、功耗）
+DSP-004:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容（lcdwiki：不需要电平转换）
+  io_5v_tolerant: 是
+  interface: [I2C]
+  i2c_addr: ['0x3C']
+  i2c_addr_alt: 0x3D（模块背面电阻改焊；lcdwiki 写 8 位地址 0x78/0x7A）
+  i2c_addr_options: ['0x3C', '0x3D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: 18, cond: lcdwiki 标正常显示 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MC096/MC130/MC091 页面与手册（地址、功耗）
+DSP-005:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容（lcdwiki：不需要电平转换）
+  io_5v_tolerant: 是
+  interface: [I2C]
+  i2c_addr: ['0x3C']
+  i2c_addr_alt: 0x3D（模块背面电阻改焊；lcdwiki 写 8 位地址 0x78/0x7A）
+  i2c_addr_options: ['0x3C', '0x3D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: 18, cond: lcdwiki 标正常显示 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MC096/MC130/MC091 页面与手册（地址、功耗）
+DSP-006:
+  vcc_range: 3.3–5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V/5V 兼容
+  io_5v_tolerant: 是
+  interface: [SPI]
+  i_typ_ma: {value: 18, cond: lcdwiki 标 0.06W，按 3.3V 换算}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki 0.96 SPI OLED（MSP096X）
+DSP-007:
+  vcc_range: VCC 3.3–5V，逻辑 3.3V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [SPI]
+  i_typ_ma: {value: 61, cond: lcdwiki 标功耗 0.2W 按 3.3V 换算，其中背光 38.2mA}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MSP1803 页面
+DSP-008:
+  vcc_range: 3.3V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 3.3
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MSP1541/MSP2008 手册（工作电压 3.3V）
+DSP-009:
+  vcc_range: 3.3V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 3.3
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: lcdwiki MSP1541/MSP2008 手册（工作电压 3.3V）
+DSP-010:
+  vcc_range: 3.3V/5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SDO_MISO: 3.3, T_DO: 3.3, T_IRQ: 3.3}
+  src_ref: lcdwiki MSP2402/MSP2807 手册
+DSP-011:
+  vcc_range: 3.3V/5V（lcdwiki）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SDO_MISO: 3.3, T_DO: 3.3, T_IRQ: 3.3}
+  src_ref: lcdwiki MSP2402/MSP2807 手册
+DSP-012:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 5V（HD44780 兼容）
+  io_5v_tolerant: 是
+  interface: [并口]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {D0: vcc, D7: vcc}
+  src_ref: 本库 DSP-012 条目
+  note: RW 接地只写不读时屏不会往主控输出电平；要读忙标志则 D0–D7 输出 5V
+DSP-013:
+  vcc_range: 5V（屏要 5V）
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 随供电
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x27']
+  i2c_addr_alt: PCF8574AT 版为 0x3F；A0–A2 跳线可改：PCF8574 0x20–0x27、PCF8574A 0x38–0x3F（全部跳线短接为最低地址）
+  i2c_addr_options: ['0x20', '0x21', '0x22', '0x23', '0x24', '0x25', '0x26', '0x27', '0x38', '0x39', '0x3A', '0x3B', '0x3C', '0x3D', '0x3E', '0x3F']
+  i2c_pullup: {ohm: null, to: null, note: 未核：转接板是否带 I2C 上拉、上拉到哪，到货看板上电阻}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: TI PCF8574/PCF8574A 规格书地址表（交接文档 1.2 节：PCF8574T=0x27、PCF8574AT=0x3F）
+DSP-015:
+  vcc_range: 未核
+  vcc_min: null
+  vcc_max: null
+  logic_v: 随供电（CLK/DIO 开漏，模块上拉到 VCC）
+  io_5v_tolerant: 未核
+  interface: [两线（非 I2C）]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DIO: vcc}
+  src_ref: 本库 DSP-015 条目
+DSP-016:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 5V 器件
+  io_5v_tolerant: 是
+  interface: [SPI 类]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  inputs: {DIN: 输入高电平门限以 MAX7219 规格书为准（未核），3.3V 驱动可能不稳}
+  src_ref: 本库 DSP-016 条目
+REG-002:
+  vcc_range: 输入 4.5–12V
+  vcc_min: 4.5
+  vcc_max: 12
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 800, note: LD1117V33 额定 800mA（条目名称），按 70% 用}
+  src_ref: 本库 REG-002 条目
+REG-003:
+  vcc_range: 输入 4.8–12V
+  vcc_min: 4.8
+  vcc_max: 12
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 3000, note: LM1085 额定 3A，大电流按发热算}
+  src_ref: 本库 REG-003 条目
+REG-004:
+  vcc_range: 输入 7–25V
+  vcc_min: 7
+  vcc_max: 25
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 1500, note: L7805 额定 1.5A}
+  src_ref: 本库 REG-004 条目
+BZ-001:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 不适用（S8050 驱动）
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: 30, cond: 条目 supply/logic 字段}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 BZ-001 条目
+BZ-003:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 不适用（S8050 驱动）
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 BZ-003 条目
+Q-001:
+  vcc_range: 不适用
+  vcc_min: null
+  vcc_max: null
+  logic_v: 基极串 1k 由 3.3V GPIO 驱动
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 Q-001 条目
+  note: 可开关约 100mA 负载（条目）
+OPT-001:
+  vcc_range: 不适用
+  vcc_min: null
+  vcc_max: null
+  logic_v: 输入 3.3V GPIO 串 330Ω 约 6mA
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: 6, cond: 输入 LED 电流（条目）}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 OPT-001 条目
+SEN-001:
+  vcc_range: DC 3.3–5.5V（奥松规格书）
+  vcc_min: 3.3
+  vcc_max: 5.5
+  logic_v: 随供电
+  io_5v_tolerant: 未核
+  interface: [单总线]
+  i_typ_ma: {value: 0.3, cond: 测量时（奥松规格书）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DATA: vcc}
+  src_ref: 奥松 DHT11 规格书（components101 转存）
+SEN-003:
+  vcc_range: 3.3–5.5V
+  vcc_min: 3.3
+  vcc_max: 5.5
+  logic_v: 随供电
+  io_5v_tolerant: 未核
+  interface: [单总线]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DATA: vcc}
+  src_ref: 奥松 DHT22 规格书（SparkFun 转存）
+SEN-004:
+  vcc_range: 芯片 2.0–5.5V；模块以说明为准
+  vcc_min: 2.0
+  vcc_max: 5.5
+  logic_v: 随 VIN
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x38']
+  i2c_addr_alt: 不可改
+  i2c_addr_options: ['0x38']
+  i2c_addr_fixed: ['0x38']
+  i2c_pullup: {ohm: 10000, to: vcc, note: Adafruit AHT20 板为 10k 上拉到 VIN；淘宝板未核}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 奥松 AHT20 规格书；Adafruit AHT20 引脚说明
+SEN-005:
+  vcc_range: 以模块说明为准
+  vcc_min: null
+  vcc_max: null
+  logic_v: 随 VCC
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x38', '0x77']
+  i2c_addr_alt: BMP280 为 0x76 或 0x77（看 SDO），先 I2C 扫描
+  i2c_addr_options: ['0x38', '0x76', '0x77']
+  i2c_addr_fixed: ['0x38']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: AHT20/BMP280 规格书；cirkitdesigner 资料
+SEN-006:
+  vcc_range: 2.5–5V（教程站）
+  vcc_min: 2.5
+  vcc_max: 5.0
+  logic_v: 随 VIN
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x44']
+  i2c_addr_alt: ADR 接 VIN 改 0x45
+  i2c_addr_options: ['0x44', '0x45']
+  i2c_pullup: {ohm: 10000, to: vcc, note: 教程站：SCL/SDA 各 10k 上拉到 VIN}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 盛思锐 SHT3x 规格书；教程站 GY-SHT30-D 说明
+SEN-007:
+  vcc_range: 3.0–5.5V（Maxim）
+  vcc_min: 3.0
+  vcc_max: 5.5
+  logic_v: 开漏单总线，DQ 上拉到 VDD
+  io_5v_tolerant: 未核
+  interface: [单总线]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DQ: vcc}
+  src_ref: Maxim DS18B20 规格书
+SEN-008:
+  vcc_range: 3.0–5.5V（Maxim）
+  vcc_min: 3.0
+  vcc_max: 5.5
+  logic_v: 开漏单总线
+  io_5v_tolerant: 未核
+  interface: [单总线]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DQ: vcc}
+  src_ref: Maxim DS18B20 规格书
+SEN-009:
+  vcc_range: 未核
+  vcc_min: null
+  vcc_max: null
+  logic_v: 单总线，DQ 上拉
+  io_5v_tolerant: 未核
+  interface: [单总线]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DQ: vcc}
+  src_ref: 规范第 7 节（V1.1 4.7k 上拉）
+SEN-010:
+  vcc_range: 3V 版 / 5V 版（看后缀）
+  vcc_min: null
+  vcc_max: null
+  logic_v: I2C 3.3V（教程站：模块带稳压和上拉）
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x5A']
+  i2c_addr_alt: 软件可改（EEPROM）
+  i2c_addr_options: ['0x5A']
+  i2c_pullup: {ohm: null, to: '3.3', note: 教程站：带上拉，SCL/SDA 为 3.3V 电平；阻值未核}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: Melexis MLX90614 规格书；教程站 GY-906
+SEN-011:
+  vcc_range: VIN（模块常标 3.3–5V）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 模块上拉电压各版不同
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x57']
+  i2c_addr_alt: 不可改
+  i2c_addr_options: ['0x57']
+  i2c_addr_fixed: ['0x57']
+  i2c_pullup: {ohm: 4700, to: null, note: 教程站：多数模块板载 4.7k；上拉到哪（VIN/3.3V/1.8V）各版不同，未核}
+  i_typ_ma: {value: 0.6, cond: 典型（教程站转述规格书，不含 LED 脉冲）}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: Maxim MAX30102 规格书；教程站
+SEN-012:
+  vcc_range: 3.3–5V
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 模拟输出 0.3V~VCC
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: 4, cond: 约 4mA（教程站）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SIG: vcc}
+  src_ref: pulsesensor.com 资料（digikey 转存）
+SEN-013:
+  vcc_range: 3.3V
+  vcc_min: 3.3
+  vcc_max: 3.3
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [模拟, 数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUTPUT: 3.3, LO-: 3.3, LO+: 3.3}
+  src_ref: SparkFun AD8232 Hookup Guide；ADI AD8232 规格书
+SEN-014:
+  vcc_range: VCC 3.3–5V（模块带稳压）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 未核（模块上拉阻值和电压未核）
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x68']
+  i2c_addr_alt: AD0 接 VCC 改 0x69
+  i2c_addr_options: ['0x68', '0x69']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {INT: null}
+  src_ref: TDK MPU-6000/6050 规格书；教程站 GY-521
+SEN-015:
+  vcc_range: 3–5V（教程站）
+  vcc_min: 3.0
+  vcc_max: 5.0
+  logic_v: 教程站称 SDA/SCL 兼容 5V（未核）
+  io_5v_tolerant: 未核
+  interface: [I2C, SPI]
+  i2c_addr: ['0x53']
+  i2c_addr_alt: SDO 接高改 0x1D
+  i2c_addr_options: ['0x53', '0x1D']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: ADI ADXL345 规格书；教程站 GY-291
+SEN-016:
+  vcc_range: DC 4.5–20V（教程站）
+  vcc_min: 4.5
+  vcc_max: 20
+  logic_v: 输出 3.3V
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: 3.3}
+  src_ref: 教程站 HC-SR501 资料
+SEN-017:
+  vcc_range: 2.7–12V（教程站）
+  vcc_min: 2.7
+  vcc_max: 12
+  logic_v: 输出 3.3V
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: 0.1, cond: 静态 <0.1mA（教程站）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: 3.3}
+  src_ref: 教程站 AM312 资料
+SEN-018:
+  vcc_range: 5V（老版只能 5V）
+  vcc_min: 4.8
+  vcc_max: 5.0
+  logic_v: Echo 输出 5V
+  io_5v_tolerant: 是
+  interface: [数字]
+  i_typ_ma: {value: 15, cond: 工作电流（教程站）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {ECHO: vcc}
+  src_ref: Handson HC-SR04 指南；教程站
+SEN-019:
+  vcc_range: 3.3–5V（商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: Echo 随供电
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {ECHO: vcc}
+  src_ref: 商家 HC-SR04P 资料
+SEN-020:
+  vcc_range: VIN 2.6–5.5V（教程站）
+  vcc_min: 2.6
+  vcc_max: 5.5
+  logic_v: 板载电平转换到 VIN
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x29']
+  i2c_addr_alt: 软件可改（多只时用 XSHUT 逐个改）
+  i2c_addr_options: ['0x29']
+  i2c_pullup: {ohm: null, to: vcc, note: 教程站：板载上拉并电平转换到 VIN；阻值未核}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {GPIO1: vcc}
+  src_ref: ST VL53L0X 规格书；教程站 GY-530
+SEN-021:
+  vcc_range: VIN 4–28V（教程站）
+  vcc_min: 4.0
+  vcc_max: 28
+  logic_v: 输出 3.3V
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: 3.3}
+  src_ref: 教程站 RCWL-0516；3V3 脚为输出（≤100mA）
+SEN-022:
+  vcc_range: VCC 5–12V，建议 5V（海凌科手册）
+  vcc_min: 5.0
+  vcc_max: 12
+  logic_v: 未核（以海凌科手册为准）
+  io_5v_tolerant: 未核
+  interface: [UART, 数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TX: null, OUT: null}
+  src_ref: 海凌科 HLK-LD2410C 手册（naylamp 转存，摘要）
+SEN-023:
+  vcc_range: 3.3V（手册：3.1–3.5V，纹波 ≤50mV，电源 ≥1A）
+  vcc_min: 3.1
+  vcc_max: 3.5
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 600, cond: 工作电流（海凌科手册，二手资料）}
+  outputs: {TX0: 3.3, TX2: 3.3}
+  src_ref: 海凌科 LD6002 手册（manuals.plus/商家转述）
+  note: 要求低纹波，单独 LDO 供电
+SEN-024:
+  vcc_range: 3.3V（手册：3.1–3.5V，纹波 ≤50mV，电源 ≥1A）
+  vcc_min: 3.1
+  vcc_max: 3.5
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 600, cond: 工作电流（海凌科手册，二手资料）}
+  outputs: {TX0: 3.3, TX2: 3.3}
+  src_ref: 海凌科 LD6002 手册（manuals.plus/商家转述）
+  note: 要求低纹波，单独 LDO 供电
+SEN-025:
+  vcc_range: 模块 VCC（芯片 2.4–3.6V，模块带稳压）
+  vcc_min: null
+  vcc_max: null
+  logic_v: 未核
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x23']
+  i2c_addr_alt: ADDR 接高改 0x5C
+  i2c_addr_options: ['0x23', '0x5C']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: ROHM BH1750FVI 规格书；教程站 GY-302
+SEN-026:
+  vcc_range: 3.3–5V（教程站/商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO/AO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 教程站/商家资料（LM393 比较器模块）
+SEN-027:
+  vcc_range: 3.3–5V（教程站/商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO/AO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 教程站/商家资料（LM393 比较器模块）
+SEN-028:
+  vcc_range: 3.3–5V（教程站/商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO/AO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 教程站/商家资料（LM393 比较器模块）
+SEN-029:
+  vcc_range: 3.3–5V（教程站/商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO/AO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 教程站/商家资料（LM393 比较器模块）
+SEN-035:
+  vcc_range: 3.3–5V（教程站/商家）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO/AO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 教程站/商家资料（LM393 比较器模块）
+SEN-032:
+  vcc_range: 5V（加热丝 5V±0.1，炜盛手册）
+  vcc_min: 4.9
+  vcc_max: 5.1
+  logic_v: DO/AO 随供电（5V）
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: 160, cond: 加热功耗 ≤800mW（炜盛 MQ 手册）按 5V 换算的上限}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 炜盛 MQ-2 / MQ-135 手册 V1.4
+SEN-033:
+  vcc_range: 5V（加热丝 5V±0.1，炜盛手册）
+  vcc_min: 4.9
+  vcc_max: 5.1
+  logic_v: DO/AO 随供电（5V）
+  io_5v_tolerant: 未核
+  interface: [数字, 模拟]
+  i_typ_ma: {value: 160, cond: 加热功耗 ≤800mW（炜盛 MQ 手册）按 5V 换算的上限}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc, AO: vcc}
+  src_ref: 炜盛 MQ-2 / MQ-135 手册 V1.4
+SEN-030:
+  vcc_range: 3.3–5.5V（教程站）
+  vcc_min: 3.3
+  vcc_max: 5.5
+  logic_v: AOUT 约 1.2–3V（教程站）
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {AOUT: 3.0}
+  src_ref: 教程站 v1.2 资料
+SEN-031:
+  vcc_range: 3.3–5V（教程站）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: S 随供电
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SIG: vcc}
+  src_ref: Iduino SE045 资料
+SEN-034:
+  vcc_range: 3.3–5V（教程站）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: DO 随供电
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DO: vcc}
+  src_ref: 教程站 SW-420
+SEN-036:
+  vcc_range: 2.7–5.5V（商家）
+  vcc_min: 2.7
+  vcc_max: 5.5
+  logic_v: OUT 随供电
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: vcc}
+  src_ref: 商家 VS1838B 资料
+SEN-037:
+  vcc_range: A3144 4.5–24V（资料）
+  vcc_min: 4.5
+  vcc_max: 24
+  logic_v: 开漏输出，上拉到主控电压
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SIG: null}
+  src_ref: Joy-IT KY-003 资料
+SEN-038:
+  vcc_range: VCC 2.6–5.5V（教程站）
+  vcc_min: 2.6
+  vcc_max: 5.5
+  logic_v: DT/SCK 随供电
+  io_5v_tolerant: 未核
+  interface: [两线（非 I2C）]
+  i_typ_ma: {value: 1.5, cond: 工作电流（教程站）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DT: vcc}
+  src_ref: Avia HX711 规格书（SparkFun GitHub）；教程站
+SEN-039:
+  vcc_range: 4.5–5.5V（教程站）
+  vcc_min: 4.5
+  vcc_max: 5.5
+  logic_v: OUT 0–5V 模拟（0A 时 VCC/2）
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: vcc}
+  src_ref: Allegro ACS712 产品页；教程站
+SEN-040:
+  vcc_range: 4.5–5.5V（教程站）
+  vcc_min: 4.5
+  vcc_max: 5.5
+  logic_v: OUT 0–5V 模拟（0A 时 VCC/2）
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {OUT: vcc}
+  src_ref: Allegro ACS712 产品页；教程站
+SEN-041:
+  vcc_range: VCC 3–5.5V（教程站）
+  vcc_min: 3.0
+  vcc_max: 5.5
+  logic_v: 随 VCC
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x40']
+  i2c_addr_alt: A0/A1 焊盘改 0x41、0x44、0x45
+  i2c_addr_options: ['0x40', '0x41', '0x44', '0x45']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: TI INA219 规格书（Adafruit 转存）；教程站
+SEN-042:
+  vcc_range: 无需供电（电阻分压）
+  vcc_min: null
+  vcc_max: null
+  logic_v: SIG = Vin/5
+  io_5v_tolerant: 未核
+  interface: [模拟]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SIG: 5.0}
+  src_ref: 教程站（30k/7.5k 分压）
+  note: 输入 25V 时 SIG=5V，3.3V 主控最多测约 16.5V
+SEN-043:
+  vcc_range: 3.3–5V（教程站）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: 未核
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TX: null, PPS: null}
+  src_ref: 教程站/商家 ATGM336H 资料
+SEN-044:
+  vcc_range: 3.3–5V（模块带 3.3V 稳压）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: TX 3.3V（NEO-6M 为 3.3V 芯片）；教程站称输入耐 5V（未核）
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: 45, cond: 典型（教程站）}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TX: 3.3}
+  src_ref: u-blox NEO-6 规格书；教程站 GY-NEO6MV2
+SEN-045:
+  vcc_range: 3.3V（不能接 5V）
+  vcc_min: 3.3
+  vcc_max: 3.3
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {MISO: 3.3, IRQ: 3.3}
+  src_ref: NXP MFRC522 规格书；教程站
+SEN-046:
+  vcc_range: 3.3–6V（教程站，资料不一）
+  vcc_min: 3.3
+  vcc_max: 6.0
+  logic_v: 未核
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 120, cond: <120mA（教程站）}
+  outputs: {TX: null, TOUCH: null}
+  src_ref: 教程站/商家 AS608 资料
+SEN-047:
+  vcc_range: 2.3–5.5V（教程站）
+  vcc_min: 2.3
+  vcc_max: 5.5
+  logic_v: 未核
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i2c_addr: ['0x68', '0x57']
+  i2c_addr_alt: DS3231 0x68 固定；AT24C32 0x57（A0–A2 焊盘可改 0x50–0x57）
+  i2c_addr_options: ['0x68', '0x50', '0x51', '0x52', '0x53', '0x54', '0x55', '0x56', '0x57']
+  i2c_addr_fixed: ['0x68']
+  i2c_pullup: {ohm: null, to: null, note: 未核（看模块板上电阻丝印或原理图）}
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {SQW: null, 32K: null}
+  src_ref: ADI DS3231 规格书；教程站 ZS-042
+SEN-048:
+  vcc_range: 2.0–5.5V（教程站）
+  vcc_min: 2.0
+  vcc_max: 5.5
+  logic_v: 随供电
+  io_5v_tolerant: 未核
+  interface: [三线（非 I2C）]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {DAT: vcc}
+  src_ref: DS1302 规格书；教程站
+SEN-049:
+  vcc_range: 模块 VCC 3.3–5V（看稳压）
+  vcc_min: 3.3
+  vcc_max: 5.0
+  logic_v: MISO 电平未核（板载缓冲器）
+  io_5v_tolerant: 未核
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {MISO: null}
+  src_ref: 教程站 Micro SD 模块
+ACT-001:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: IN 由主控驱动（3.3V 能否触发未核）
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: 71.4, cond: SRD-05VDC 线圈电流（松乐规格书 5V 高灵敏度型）}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 松乐 SRD 规格书线圈参数表；教程站继电器模块
+ACT-002:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: IN 由主控驱动（3.3V 能否触发未核）
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: 71.4, cond: SRD-05VDC 线圈电流（松乐规格书 5V 高灵敏度型）}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 松乐 SRD 规格书线圈参数表；教程站继电器模块
+ACT-003:
+  vcc_range: 线圈 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 需三极管驱动
+  io_5v_tolerant: 未核
+  interface: [线圈]
+  i_typ_ma: {value: 71.4, cond: 5V 线圈（SRD 高灵敏度型 70Ω）}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 松乐 SRD 规格书 6. COIL DATA CHART
+ACT-004:
+  vcc_range: 4.8–6V（教程站）
+  vcc_min: 4.8
+  vcc_max: 6.0
+  logic_v: PWM 信号
+  io_5v_tolerant: 未核
+  interface: [PWM]
+  i_typ_ma: {value: 250, cond: 带载 200–250mA（教程站）}
+  i_peak_ma: {value: 750, cond: 堵转 500–750mA（教程站）}
+  src_ref: 教程站 SG90 资料
+ACT-005:
+  vcc_range: 4.8–7.2V（教程站）
+  vcc_min: 4.8
+  vcc_max: 7.2
+  logic_v: PWM 信号
+  io_5v_tolerant: 未核
+  interface: [PWM]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: 2500, cond: 堵转约 2.5A（教程站）}
+  src_ref: 教程站 MG996R 资料
+ACT-006:
+  vcc_range: 5V（教程站）
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: IN1–IN4 由主控驱动
+  io_5v_tolerant: 未核
+  interface: [数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: TI ULN2003A 规格书；教程站
+  note: 电机电流未核，按电机规格书算
+ACT-007:
+  vcc_range: VM 4.5–13.5V，VCC 2.7–5.5V（教程站转述）
+  vcc_min: 2.7
+  vcc_max: 5.5
+  logic_v: 逻辑随 VCC
+  io_5v_tolerant: 未核
+  interface: [PWM, 数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 东芝 TB6612FNG 规格书；教程站
+  note: 每路 1.2A 连续、3.2A 峰值；电机电流另算
+ACT-008:
+  vcc_range: 电机电源 5–35V（模块资料）
+  vcc_min: 5.0
+  vcc_max: 35
+  logic_v: 输入 TTL（门限未核）
+  io_5v_tolerant: 未核
+  interface: [PWM, 数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: ST L298 规格书；教程站
+ACT-009:
+  vcc_range: 2.7–10.8V（TI）
+  vcc_min: 2.7
+  vcc_max: 10.8
+  logic_v: 输入 3.3V 可驱动（未核模块）
+  io_5v_tolerant: 未核
+  interface: [PWM, 数字]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: TI DRV8833 产品页
+ACT-010:
+  vcc_range: 3.2–5V（DFRobot）
+  vcc_min: 3.2
+  vcc_max: 5.0
+  logic_v: UART，RX 串 1k
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TX: null, BUSY: null}
+  src_ref: DFRobot DFR0299 wiki
+COM-001:
+  vcc_range: VCC 3.6–6V（教程站）
+  vcc_min: 3.6
+  vcc_max: 6.0
+  logic_v: TXD/RXD 3.3V
+  io_5v_tolerant: 否
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TXD: 3.3, STATE: 3.3}
+  src_ref: 教程站 HC-05
+COM-002:
+  vcc_range: 以商品为准
+  vcc_min: null
+  vcc_max: null
+  logic_v: TXD/RXD 3.3V
+  io_5v_tolerant: 否
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TXD: 3.3}
+  src_ref: 教程站 HC-06
+COM-003:
+  vcc_range: 3.0–3.6V（安信可）
+  vcc_min: 3.0
+  vcc_max: 3.6
+  logic_v: 3.3V
+  io_5v_tolerant: 否
+  interface: [UART, Wi-Fi]
+  i_typ_ma: {value: 80, cond: 平均（安信可 ESP-01S 资料）}
+  i_peak_ma: {value: 300, cond: Wi-Fi 发射峰值（安信可）}
+  outputs: {TXD: 3.3}
+  src_ref: 安信可 ESP-01S 资料（Tayda 转存）
+  note: 电源建议 ≥500mA
+COM-004:
+  vcc_range: 1.9–3.6V（教程站）
+  vcc_min: 1.9
+  vcc_max: 3.6
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [SPI]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {MISO: 3.3, IRQ: 3.3}
+  src_ref: Nordic nRF24L01+ 规格书；教程站
+  note: 加 10µF 去耦
+COM-005:
+  vcc_range: 5V（ADI 规格书）
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 5V（RO 输出 5V）
+  io_5v_tolerant: 是
+  interface: [UART, RS485]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {RO: vcc}
+  src_ref: ADI MAX481/485 规格书；教程站
+DSP-014:
+  vcc_range: 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 经 DSP-013 转接板为 I2C
+  io_5v_tolerant: 未核
+  interface: [I2C]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: 本库 DSP-014 条目
+  note: I2C 地址和上拉见 DSP-013
+TOOL-001:
+  vcc_range: USB 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 跳线选 3.3V 或 5V 电平
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TXD: null}
+  src_ref: 本库 TOOL-001 条目
+  note: 接 3.3V 主控前把跳线拨到 3.3V
+TOOL-002:
+  vcc_range: USB 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 多数板 3.3V 电平（以模块为准）
+  io_5v_tolerant: 未核
+  interface: [UART]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  outputs: {TXD: null}
+  src_ref: 本库 TOOL-002 条目
+TOOL-003:
+  vcc_range: USB 5V
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 3.3V
+  io_5v_tolerant: 未核
+  interface: [SWD]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  src_ref: ST UM1075
+PMD-001:
+  vcc_range: Type-C 5V 输入
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 1000, note: 充电电流 1A（R_PROG 1.2k，商家资料）；OUT 带 DW01A 保护}
+  src_ref: TP4056 规格书；商家资料
+PMD-002:
+  vcc_range: Type-C 5V 输入
+  vcc_min: 5.0
+  vcc_max: 5.0
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 1000, note: 充电电流 1A（R_PROG 1.2k）}
+  src_ref: TP4056 规格书
+PMD-003:
+  vcc_range: 输入 4.5–28V
+  vcc_min: 4.5
+  vcc_max: 28
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 3000, note: 最大 3A（商家），长期按 1.5A 以下用}
+  src_ref: MPS MP1584 规格书；商家资料
+PMD-004:
+  vcc_range: 输入 4–40V
+  vcc_min: 4.0
+  vcc_max: 40
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 3000, note: 最大 3A（商家）}
+  src_ref: TI LM2596 产品页；商家资料
+PMD-005:
+  vcc_range: 输入 2–24V
+  vcc_min: 2.0
+  vcc_max: 24
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: 2000, note: 最大 2A（商家），升压后输入电流更大}
+  src_ref: MT3608 模块资料（components101 转存）
+PMD-006:
+  vcc_range: 单节 3.7V（满电 4.2V）
+  vcc_min: 3.0
+  vcc_max: 4.2
+  logic_v: 不适用
+  io_5v_tolerant: 未核
+  interface: [电源]
+  i_typ_ma: {value: null, cond: 未核}
+  i_peak_ma: {value: null, cond: 未核}
+  supply_capacity_ma: {value: null, note: 放电能力看电池规格，未核}
+  src_ref: 规范 3.3 节

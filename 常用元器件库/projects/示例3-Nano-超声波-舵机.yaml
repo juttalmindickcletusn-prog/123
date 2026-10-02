@@ -1,0 +1,18 @@
+# 样例 3：Arduino Nano + HC-SR04 超声波 + SG90 舵机，外接 5V 2A 供电（舵机堵转电流大，USB 带不动）
+name: 示例3-Nano-超声波-舵机
+sets: 1
+power: {source: DC-005 接 5V 2A 适配器, capacity_ma: 2000}
+mcu: MCU-009
+items:
+  - {id: MCU-009, qty: 1}
+  - {id: SKT-001, qty: 2, note: Nano 两条 1×15 排母（截取）}
+  - {id: SEN-018, qty: 1, vcc: 5}
+  - {id: ACT-004, qty: 1, vcc: 5}
+  - {id: HDR-001, qty: 1, note: 超声波 4P、舵机 3P 排针（截取）}
+  - {id: PWR-001, qty: 1}
+  - {id: CAP-014, qty: 1, note: 舵机电源旁 1000µF}
+pins:
+  SEN-018.TRIG: D9
+  SEN-018.ECHO: D10
+  ACT-004.PWM: D6
+extra_cost: {pcb: 0, note: ""}

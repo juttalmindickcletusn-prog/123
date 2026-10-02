@@ -1,0 +1,8 @@
+# 自测：USB 500mA 带 MG996R 舵机
+name: 自测-电流
+power: {source: USB 口, capacity_ma: 500}
+mcu: MCU-009
+items:
+  - {id: MCU-009, qty: 1}
+  - {id: ACT-005, qty: 1, vcc: 5}
+pins: {ACT-005.PWM: D9}

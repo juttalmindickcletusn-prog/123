@@ -1,0 +1,1667 @@
+# 主控板逐脚约束表（第 5 节）。由云端一次生成，之后手工维护。
+# use：能用 / 慎用 / 别用。flags：strap 启动脚、flash/psram 占用、input_only 只能输入、usb、uart_log 默认串口、
+#   jtag/swd 调试口、led/button 板载、occupied 板上已占用、adc2（ESP 开 Wi-Fi 时 ADC2 不能用）、ft 耐 5V、open_drain。
+# five_v_tolerant：本脚能否直接接 5V 信号。每块板的出处写在 sources。
+MCU-006:
+  board: 乐鑫 ESP32-DevKitC V4（38P）
+  chip: ESP32
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 150–2450 mV（硬件设计指南）
+  uart_log: UART0 TX=GPIO1 RX=GPIO3
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32.inc（GitHub espressif/esp-idf master，GPIO 汇总表）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    esptool 文档 boot-mode-selection.rst（GitHub espressif/esptool）]
+  pins:
+    GPIO36:
+      header: VP_GPIO36
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH0
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉；开 ADC 或 Wi-Fi/蓝牙睡眠时不要用 GPIO36/39 中断（勘误 GPIO-3.11）
+    GPIO39:
+      header: VN_GPIO39
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH3
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉；开 ADC 或 Wi-Fi/蓝牙睡眠时不要用 GPIO36/39 中断（勘误 GPIO-3.11）
+    GPIO34:
+      header: GPIO34
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH6
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉
+    GPIO35:
+      header: GPIO35
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH7
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉
+    GPIO32: {header: GPIO32, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+    GPIO33: {header: GPIO33, use: 能用, adc: ADC1_CH5, five_v_tolerant: false}
+    GPIO25:
+      header: GPIO25
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH8（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO26:
+      header: GPIO26
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH9（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO27:
+      header: GPIO27
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH7（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO14:
+      header: GPIO14
+      use: 能用
+      flags: [jtag, adc2]
+      adc: ADC2_CH6（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO12:
+      header: GPIO12
+      use: 慎用
+      flags: [strap, jtag, adc2]
+      adc: ADC2_CH5（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；MTDI 拉高会把 Flash 电压设成 1.8V 导致不启动
+    GPIO13:
+      header: GPIO13
+      use: 能用
+      flags: [jtag, adc2]
+      adc: ADC2_CH4（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO9:
+      header: SD2_GPIO9
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO10:
+      header: SD3_GPIO10
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO11:
+      header: CMD_GPIO11
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO6:
+      header: CLK_GPIO6
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO7:
+      header: SD0_GPIO7
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO8:
+      header: SD1_GPIO8
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接模组内 SPI Flash
+    GPIO15:
+      header: GPIO15
+      use: 慎用
+      flags: [strap, jtag, adc2]
+      adc: ADC2_CH3（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏
+    GPIO2:
+      header: GPIO2
+      use: 慎用
+      flags: [strap, adc2]
+      adc: ADC2_CH2（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏
+    GPIO0:
+      header: GPIO0
+      use: 慎用
+      flags: [strap, adc2, button]
+      adc: ADC2_CH1（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；BOOT 键
+    GPIO4:
+      header: GPIO4
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO16:
+      header: GPIO16
+      use: 慎用
+      flags: [psram]
+      five_v_tolerant: false
+      note: WROVER（带 PSRAM）模组接 PSRAM，WROOM 模组可用
+    GPIO17:
+      header: GPIO17
+      use: 慎用
+      flags: [psram]
+      five_v_tolerant: false
+      note: WROVER（带 PSRAM）模组接 PSRAM，WROOM 模组可用
+    GPIO5:
+      header: GPIO5
+      use: 慎用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏
+    GPIO18: {header: GPIO18, use: 能用, five_v_tolerant: false}
+    GPIO19: {header: GPIO19, use: 能用, five_v_tolerant: false}
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO3:
+      header: RX_GPIO3
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX（下载和日志）
+    GPIO1:
+      header: TX_GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX（下载和日志）
+    GPIO22: {header: GPIO22, use: 能用, five_v_tolerant: false}
+    GPIO23: {header: GPIO23, use: 能用, five_v_tolerant: false}
+  safe: [GPIO32, GPIO33, GPIO25, GPIO26, GPIO27, GPIO14, GPIO13, GPIO4, GPIO18, GPIO19, GPIO21, GPIO22, GPIO23]
+MCU-007:
+  board: ESP32 30P 开发板（DOIT 类）
+  chip: ESP32
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 150–2450 mV
+  uart_log: UART0 TX=GPIO1 RX=GPIO3
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32.inc（GitHub espressif/esp-idf master，GPIO 汇总表）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    arduino-esp32 variants/doitESP32devkitV1/pins_arduino.h（LED_BUILTIN=2，TX=1，RX=3）]
+  pins:
+    GPIO36:
+      header: VP_GPIO36
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH0
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉；开 ADC 或 Wi-Fi/蓝牙睡眠时不要用 GPIO36/39 中断（勘误 GPIO-3.11）
+    GPIO39:
+      header: VN_GPIO39
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH3
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉；开 ADC 或 Wi-Fi/蓝牙睡眠时不要用 GPIO36/39 中断（勘误 GPIO-3.11）
+    GPIO34:
+      header: GPIO34
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH6
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉
+    GPIO35:
+      header: GPIO35
+      use: 慎用
+      flags: [input_only]
+      adc: ADC1_CH7
+      five_v_tolerant: false
+      note: 只能输入，无内部上下拉
+    GPIO32: {header: GPIO32, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+    GPIO33: {header: GPIO33, use: 能用, adc: ADC1_CH5, five_v_tolerant: false}
+    GPIO25:
+      header: GPIO25
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH8（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO26:
+      header: GPIO26
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH9（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO27:
+      header: GPIO27
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH7（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO14:
+      header: GPIO14
+      use: 能用
+      flags: [jtag, adc2]
+      adc: ADC2_CH6（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO12:
+      header: GPIO12
+      use: 慎用
+      flags: [strap, jtag, adc2]
+      adc: ADC2_CH5（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；MTDI 拉高会把 Flash 电压设成 1.8V 导致不启动
+    GPIO13:
+      header: GPIO13
+      use: 能用
+      flags: [jtag, adc2]
+      adc: ADC2_CH4（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO15:
+      header: GPIO15
+      use: 慎用
+      flags: [strap, jtag, adc2]
+      adc: ADC2_CH3（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏
+    GPIO2:
+      header: GPIO2
+      use: 慎用
+      flags: [strap, adc2, led]
+      adc: ADC2_CH2（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；板载 LED（DOIT 板）
+    GPIO4:
+      header: GPIO4
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+    GPIO16:
+      header: GPIO16
+      use: 慎用
+      flags: [psram]
+      five_v_tolerant: false
+      note: WROVER（带 PSRAM）模组接 PSRAM，WROOM 模组可用
+    GPIO17:
+      header: GPIO17
+      use: 慎用
+      flags: [psram]
+      five_v_tolerant: false
+      note: WROVER（带 PSRAM）模组接 PSRAM，WROOM 模组可用
+    GPIO5:
+      header: GPIO5
+      use: 慎用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏
+    GPIO18: {header: GPIO18, use: 能用, five_v_tolerant: false}
+    GPIO19: {header: GPIO19, use: 能用, five_v_tolerant: false}
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO3:
+      header: RX_GPIO3
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX（下载和日志）
+    GPIO1:
+      header: TX_GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX（下载和日志）
+    GPIO22: {header: GPIO22, use: 能用, five_v_tolerant: false}
+    GPIO23: {header: GPIO23, use: 能用, five_v_tolerant: false}
+  safe: [GPIO32, GPIO33, GPIO25, GPIO26, GPIO27, GPIO14, GPIO13, GPIO4, GPIO18, GPIO19, GPIO21, GPIO22, GPIO23]
+MCU-016:
+  board: 安信可 ESP32-CAM
+  chip: ESP32
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 150–2450 mV
+  uart_log: UART0 U0T=GPIO1 U0R=GPIO3
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32.inc（GitHub espressif/esp-idf master，GPIO 汇总表）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    安信可 ESP32-CAM 规格书第 3 页 Internal Pin Connect（evidence/MCU-016/datasheet.pdf）]
+  pins:
+    GPIO12:
+      header: IO12
+      use: 慎用
+      flags: [strap, jtag, adc2, occupied]
+      adc: ADC2_CH5（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；MTDI 拉高会把 Flash 电压设成 1.8V 导致不启动；TF 卡 DATA2
+    GPIO13:
+      header: IO13
+      use: 慎用
+      flags: [jtag, adc2, occupied]
+      adc: ADC2_CH4（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: TF 卡 DATA3
+    GPIO15:
+      header: IO15
+      use: 慎用
+      flags: [strap, jtag, adc2, occupied]
+      adc: ADC2_CH3（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；TF 卡 CMD
+    GPIO14:
+      header: IO14
+      use: 慎用
+      flags: [jtag, adc2, occupied]
+      adc: ADC2_CH6（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: TF 卡 CLK
+    GPIO2:
+      header: IO2
+      use: 慎用
+      flags: [strap, adc2, occupied]
+      adc: ADC2_CH2（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；TF 卡 DATA0
+    GPIO4:
+      header: IO4
+      use: 慎用
+      flags: [adc2, occupied]
+      adc: ADC2_CH0（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 板载闪光灯（TF 卡 DATA1 也用它）
+    GPIO1:
+      header: U0T
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX（下载和日志）
+    GPIO3:
+      header: U0R
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX（下载和日志）
+    GPIO0:
+      header: IO0
+      use: 别用
+      flags: [strap, adc2, occupied]
+      adc: ADC2_CH1（开 Wi-Fi 时不能用）
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/2/5/MTDI/MTDO），上电时外部电路不能把它拉偏；摄像头 XCLK；拉低进下载
+    GPIO16:
+      header: IO16
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: WROVER（带 PSRAM）模组接 PSRAM，WROOM 模组可用；模组 PSRAM 占用（IDF：GPIO16–17 常接 PSRAM）
+  safe: []
+MCU-001:
+  board: 立创 LCKFB-ESP32S3R8N8（40P）
+  chip: ESP32-S3（R8 八线 PSRAM）
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 0–2900 mV
+  uart_log: UART0 TX=GPIO43 RX=GPIO44（不在排针上）
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32s3.inc（GitHub espressif/esp-idf master）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    用户《本科毕业设计硬件项目通用设计规范》3.2 节 GPIO 规则, 本库条目 pinout/pitfalls 字段（第一、二批本地核实）]
+  pins:
+    GPIO1: {header: GPIO1, use: 能用, adc: ADC1_CH0, five_v_tolerant: false}
+    GPIO2: {header: GPIO2, use: 能用, adc: ADC1_CH1, five_v_tolerant: false}
+    GPIO3:
+      header: GPIO3
+      use: 别用
+      flags: [strap]
+      adc: ADC1_CH2
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO4: {header: GPIO4, use: 能用, adc: ADC1_CH3, five_v_tolerant: false}
+    GPIO5: {header: GPIO5, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+    GPIO6: {header: GPIO6, use: 能用, adc: ADC1_CH5, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, adc: ADC1_CH6, five_v_tolerant: false}
+    GPIO8: {header: GPIO8, use: 能用, adc: ADC1_CH7, five_v_tolerant: false}
+    GPIO9: {header: GPIO9, use: 能用, adc: ADC1_CH8, five_v_tolerant: false}
+    GPIO10: {header: GPIO10, use: 能用, adc: ADC1_CH9, five_v_tolerant: false}
+    GPIO11:
+      header: GPIO11
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO12:
+      header: GPIO12
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH1（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO13:
+      header: GPIO13
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH2（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO14:
+      header: GPIO14
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH3（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO0:
+      header: BOOT_GPIO0
+      use: 别用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开；BOOT 键
+    GPIO48: {header: GPIO48, use: 能用, five_v_tolerant: false}
+    GPIO47: {header: GPIO47, use: 能用, five_v_tolerant: false}
+    GPIO38: {header: GPIO38, use: 能用, five_v_tolerant: false}
+    GPIO39: {header: GPIO39, use: 能用, five_v_tolerant: false}
+    GPIO40: {header: GPIO40, use: 能用, five_v_tolerant: false}
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO18:
+      header: GPIO18
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH7（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO17:
+      header: GPIO17
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH6（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO16:
+      header: GPIO16
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH5（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO15:
+      header: GPIO15
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH4（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO41: {header: GPIO41, use: 能用, five_v_tolerant: false}
+    GPIO42: {header: GPIO42, use: 能用, five_v_tolerant: false}
+    GPIO45:
+      header: GPIO45
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO46:
+      header: GPIO46
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+  safe: [GPIO1, GPIO2, GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO48, GPIO47, GPIO38, GPIO39, GPIO40, GPIO21, GPIO18, GPIO17, GPIO16, GPIO15, GPIO41, GPIO42]
+MCU-004:
+  board: 乐鑫 ESP32-S3-DevKitC-1 v1.1（44P）
+  chip: ESP32-S3（N8R8 等八线 PSRAM 版占 33–37）
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 0–2900 mV
+  uart_log: UART0 TX=GPIO43 RX=GPIO44
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32s3.inc（GitHub espressif/esp-idf master）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    用户《本科毕业设计硬件项目通用设计规范》3.2 节 GPIO 规则, arduino-esp32 variants/esp32s3/pins_arduino.h（TX=43，RX=44；RGB_LED=48 是 v1.0 板）, 本库条目 pinout/pitfalls 字段（第一、二批本地核实）]
+  pins:
+    GPIO4: {header: GPIO4, use: 能用, adc: ADC1_CH3, five_v_tolerant: false}
+    GPIO5: {header: GPIO5, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+    GPIO6: {header: GPIO6, use: 能用, adc: ADC1_CH5, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, adc: ADC1_CH6, five_v_tolerant: false}
+    GPIO15:
+      header: GPIO15
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH4（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO16:
+      header: GPIO16
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH5（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO17:
+      header: GPIO17
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH6（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO18:
+      header: GPIO18
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH7（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO8: {header: GPIO8, use: 能用, adc: ADC1_CH7, five_v_tolerant: false}
+    GPIO3:
+      header: GPIO3
+      use: 别用
+      flags: [strap]
+      adc: ADC1_CH2
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO46:
+      header: GPIO46
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO9: {header: GPIO9, use: 能用, adc: ADC1_CH8, five_v_tolerant: false}
+    GPIO10: {header: GPIO10, use: 能用, adc: ADC1_CH9, five_v_tolerant: false}
+    GPIO11:
+      header: GPIO11
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO12:
+      header: GPIO12
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH1（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO13:
+      header: GPIO13
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH2（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO14:
+      header: GPIO14
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH3（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO19:
+      header: GPIO19
+      use: 别用
+      flags: [usb, adc2]
+      adc: ADC2_CH8（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+      note: USB D-/D+（板上 USB 口），改作 GPIO 后不能用 USB 下载/调试
+    GPIO20:
+      header: GPIO20
+      use: 别用
+      flags: [usb, adc2]
+      adc: ADC2_CH9（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+      note: USB D-/D+（板上 USB 口），改作 GPIO 后不能用 USB 下载/调试
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO47: {header: GPIO47, use: 能用, five_v_tolerant: false}
+    GPIO48: {header: GPIO48, use: 能用, five_v_tolerant: false}
+    GPIO45:
+      header: GPIO45
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO0:
+      header: GPIO0
+      use: 别用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开；BOOT 键
+    GPIO35:
+      header: GPIO35
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO36:
+      header: GPIO36
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO37:
+      header: GPIO37
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO38:
+      header: GPIO38
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: v1.1 板载 RGB LED（v1.0 板在 GPIO48）
+    GPIO39: {header: GPIO39, use: 能用, five_v_tolerant: false}
+    GPIO40: {header: GPIO40, use: 能用, five_v_tolerant: false}
+    GPIO41: {header: GPIO41, use: 能用, five_v_tolerant: false}
+    GPIO42: {header: GPIO42, use: 能用, five_v_tolerant: false}
+    GPIO2: {header: GPIO2, use: 能用, adc: ADC1_CH1, five_v_tolerant: false}
+    GPIO1: {header: GPIO1, use: 能用, adc: ADC1_CH0, five_v_tolerant: false}
+    GPIO44:
+      header: RX_GPIO44
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX
+    GPIO43:
+      header: TX_GPIO43
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX
+  safe: [GPIO4, GPIO5, GPIO6, GPIO7, GPIO15, GPIO16, GPIO17, GPIO18, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO21, GPIO47, GPIO48, GPIO38, GPIO39, GPIO40, GPIO41, GPIO42, GPIO2, GPIO1]
+MCU-005:
+  board: ESP32-S3 N16R8 兼容板（DevKitC-1 脚位）
+  chip: ESP32-S3（N16R8）
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 0–2900 mV
+  uart_log: UART0 TX=GPIO43 RX=GPIO44
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32s3.inc（GitHub espressif/esp-idf master）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    用户《本科毕业设计硬件项目通用设计规范》3.2 节 GPIO 规则]
+  pins:
+    GPIO4: {header: GPIO4, use: 能用, adc: ADC1_CH3, five_v_tolerant: false}
+    GPIO5: {header: GPIO5, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+    GPIO6: {header: GPIO6, use: 能用, adc: ADC1_CH5, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, adc: ADC1_CH6, five_v_tolerant: false}
+    GPIO15:
+      header: GPIO15
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH4（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO16:
+      header: GPIO16
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH5（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO17:
+      header: GPIO17
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH6（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO18:
+      header: GPIO18
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH7（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO8: {header: GPIO8, use: 能用, adc: ADC1_CH7, five_v_tolerant: false}
+    GPIO3:
+      header: GPIO3
+      use: 别用
+      flags: [strap]
+      adc: ADC1_CH2
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO46:
+      header: GPIO46
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO9: {header: GPIO9, use: 能用, adc: ADC1_CH8, five_v_tolerant: false}
+    GPIO10: {header: GPIO10, use: 能用, adc: ADC1_CH9, five_v_tolerant: false}
+    GPIO11:
+      header: GPIO11
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO12:
+      header: GPIO12
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH1（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO13:
+      header: GPIO13
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH2（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO14:
+      header: GPIO14
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH3（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO19:
+      header: GPIO19
+      use: 别用
+      flags: [usb, adc2]
+      adc: ADC2_CH8（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+      note: USB D-/D+（板上 USB 口），改作 GPIO 后不能用 USB 下载/调试
+    GPIO20:
+      header: GPIO20
+      use: 别用
+      flags: [usb, adc2]
+      adc: ADC2_CH9（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+      note: USB D-/D+（板上 USB 口），改作 GPIO 后不能用 USB 下载/调试
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO47: {header: GPIO47, use: 能用, five_v_tolerant: false}
+    GPIO48:
+      header: GPIO48
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: 多数兼容板 RGB 在 GPIO48（未核，看商品）
+    GPIO45:
+      header: GPIO45
+      use: 别用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开
+    GPIO0:
+      header: GPIO0
+      use: 别用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚（GPIO0/3/45/46）；用户规范要求避开；BOOT 键
+    GPIO35:
+      header: GPIO35
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO36:
+      header: GPIO36
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO37:
+      header: GPIO37
+      use: 别用
+      flags: [psram]
+      five_v_tolerant: false
+      note: 八线 PSRAM（R8）占用
+    GPIO38: {header: GPIO38, use: 能用, five_v_tolerant: false}
+    GPIO39: {header: GPIO39, use: 能用, five_v_tolerant: false}
+    GPIO40: {header: GPIO40, use: 能用, five_v_tolerant: false}
+    GPIO41: {header: GPIO41, use: 能用, five_v_tolerant: false}
+    GPIO42: {header: GPIO42, use: 能用, five_v_tolerant: false}
+    GPIO2: {header: GPIO2, use: 能用, adc: ADC1_CH1, five_v_tolerant: false}
+    GPIO1: {header: GPIO1, use: 能用, adc: ADC1_CH0, five_v_tolerant: false}
+    GPIO44:
+      header: RX_GPIO44
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX
+    GPIO43:
+      header: TX_GPIO43
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX
+  safe: [GPIO4, GPIO5, GPIO6, GPIO7, GPIO15, GPIO16, GPIO17, GPIO18, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO21, GPIO47, GPIO48, GPIO38, GPIO39, GPIO40, GPIO41, GPIO42, GPIO2, GPIO1]
+MCU-008:
+  board: ESP32-C3 SuperMini
+  chip: ESP32-C3
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: ATTEN3 校准范围 0–2500 mV
+  uart_log: UART0 TX=GPIO21 RX=GPIO20
+  sources: [ESP-IDF 文档 api-reference/peripherals/gpio/esp32c3.inc（GitHub espressif/esp-idf master）, 乐鑫《硬件设计指南》schematic-checklist.rst Strapping Pins 与 ADC 节（GitHub espressif/esp-hardware-design-guidelines）,
+    arduino-esp32 variants/nologo_esp32c3_super_mini/pins_arduino.h（LED_BUILTIN=8，TX=21，RX=20）]
+  pins:
+    GPIO5:
+      header: GPIO5
+      use: 能用
+      flags: [adc2]
+      adc: ADC2_CH0（开 Wi-Fi 时受限）
+      five_v_tolerant: false
+    GPIO6: {header: GPIO6, use: 能用, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, five_v_tolerant: false}
+    GPIO8:
+      header: GPIO8
+      use: 慎用
+      flags: [strap, led]
+      five_v_tolerant: false
+      note: 启动脚（GPIO2/8/9）；板载蓝色 LED（arduino 变体 LED_BUILTIN=8）
+    GPIO9:
+      header: GPIO9
+      use: 慎用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚（GPIO2/8/9）；BOOT 键
+    GPIO10: {header: GPIO10, use: 能用, five_v_tolerant: false}
+    GPIO20:
+      header: RX_GPIO20
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX
+    GPIO21:
+      header: TX_GPIO21
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX
+    GPIO0: {header: GPIO0, use: 能用, adc: ADC1_CH0, five_v_tolerant: false}
+    GPIO1: {header: GPIO1, use: 能用, adc: ADC1_CH1, five_v_tolerant: false}
+    GPIO2:
+      header: GPIO2
+      use: 慎用
+      flags: [strap]
+      adc: ADC1_CH2
+      five_v_tolerant: false
+      note: 启动脚（GPIO2/8/9）
+    GPIO3: {header: GPIO3, use: 能用, adc: ADC1_CH3, five_v_tolerant: false}
+    GPIO4: {header: GPIO4, use: 能用, adc: ADC1_CH4, five_v_tolerant: false}
+  safe: [GPIO5, GPIO6, GPIO7, GPIO10, GPIO0, GPIO1, GPIO3, GPIO4]
+MCU-010:
+  board: NodeMCU ESP8266（CH340 宽版）
+  chip: ESP8266
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: A0：裸片 0–1.0V，开发板一般带分压（以板为准）
+  uart_log: UART0 TX=GPIO1 RX=GPIO3（接 USB 转串口）
+  sources: [ESP8266 Arduino 核心 doc/reference.rst（GPIO6–11 接 Flash；A0 裸片 0–1.0V）, esptool 文档 boot-mode-selection.rst（GitHub espressif/esptool）, ESP8266 Arduino 核心 variants/nodemcu/pins_arduino.h（LED_BUILTIN=2，LED_BUILTIN_AUX=16，D0–D8
+      对应）]
+  pins:
+    A0:
+      header: A0
+      use: 慎用
+      flags: [adc]
+      adc: ADC0
+      five_v_tolerant: false
+      note: 唯一模拟输入：裸片 0–1.0V，NodeMCU 板一般带分压（以板为准）
+    GPIO10:
+      header: SD3_GPIO10
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接 Flash（SD/CMD/CLK 引脚）
+    GPIO9:
+      header: SD2_GPIO9
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接 Flash（SD/CMD/CLK 引脚）
+    GPIO1:
+      header: TX_GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX
+    GPIO3:
+      header: RX_GPIO3
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX
+    GPIO15:
+      header: D8_GPIO15
+      use: 慎用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚：上电须为低
+    GPIO13: {header: D7_GPIO13, use: 能用, five_v_tolerant: false}
+    GPIO12: {header: D6_GPIO12, use: 能用, five_v_tolerant: false}
+    GPIO14: {header: D5_GPIO14, use: 能用, five_v_tolerant: false}
+    GPIO2:
+      header: D4_GPIO2
+      use: 慎用
+      flags: [strap, led]
+      five_v_tolerant: false
+      note: 启动脚：上电须为高，下载模式会输出 TX；模组蓝灯（LED_BUILTIN）
+    GPIO0:
+      header: D3_GPIO0
+      use: 慎用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚：上电为低进下载（FLASH 键）；FLASH 键
+    GPIO4: {header: D2_GPIO4, use: 能用, five_v_tolerant: false}
+    GPIO5: {header: D1_GPIO5, use: 能用, five_v_tolerant: false}
+    GPIO16:
+      header: D0_GPIO16
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: 板载 LED（LED_BUILTIN_AUX）
+  safe: [GPIO13, GPIO12, GPIO14, GPIO4, GPIO5, GPIO16]
+MCU-011:
+  board: NodeMCU ESP8266（CP2102 窄版）
+  chip: ESP8266
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: A0：裸片 0–1.0V，开发板一般带分压（以板为准）
+  uart_log: UART0 TX=GPIO1 RX=GPIO3（接 USB 转串口）
+  sources: [ESP8266 Arduino 核心 doc/reference.rst（GPIO6–11 接 Flash；A0 裸片 0–1.0V）, esptool 文档 boot-mode-selection.rst（GitHub espressif/esptool）, ESP8266 Arduino 核心 variants/nodemcu/pins_arduino.h（LED_BUILTIN=2，LED_BUILTIN_AUX=16，D0–D8
+      对应）]
+  pins:
+    A0:
+      header: A0
+      use: 慎用
+      flags: [adc]
+      adc: ADC0
+      five_v_tolerant: false
+      note: 唯一模拟输入：裸片 0–1.0V，NodeMCU 板一般带分压（以板为准）
+    GPIO10:
+      header: SD3_GPIO10
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接 Flash（SD/CMD/CLK 引脚）
+    GPIO9:
+      header: SD2_GPIO9
+      use: 别用
+      flags: [flash]
+      five_v_tolerant: false
+      note: 接 Flash（SD/CMD/CLK 引脚）
+    GPIO1:
+      header: TX_GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 TX
+    GPIO3:
+      header: RX_GPIO3
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认串口 RX
+    GPIO15:
+      header: D8_GPIO15
+      use: 慎用
+      flags: [strap]
+      five_v_tolerant: false
+      note: 启动脚：上电须为低
+    GPIO13: {header: D7_GPIO13, use: 能用, five_v_tolerant: false}
+    GPIO12: {header: D6_GPIO12, use: 能用, five_v_tolerant: false}
+    GPIO14: {header: D5_GPIO14, use: 能用, five_v_tolerant: false}
+    GPIO2:
+      header: D4_GPIO2
+      use: 慎用
+      flags: [strap, led]
+      five_v_tolerant: false
+      note: 启动脚：上电须为高，下载模式会输出 TX；模组蓝灯（LED_BUILTIN）
+    GPIO0:
+      header: D3_GPIO0
+      use: 慎用
+      flags: [strap, button]
+      five_v_tolerant: false
+      note: 启动脚：上电为低进下载（FLASH 键）；FLASH 键
+    GPIO4: {header: D2_GPIO4, use: 能用, five_v_tolerant: false}
+    GPIO5: {header: D1_GPIO5, use: 能用, five_v_tolerant: false}
+    GPIO16:
+      header: D0_GPIO16
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: 板载 LED（LED_BUILTIN_AUX）
+  safe: [GPIO13, GPIO12, GPIO14, GPIO4, GPIO5, GPIO16]
+MCU-002:
+  board: 立创·地猛星 STM32F103C8T6
+  chip: STM32F103C8T6
+  five_v_tolerant: 按脚：FT 脚耐 5V（作模拟输入时除外），其余不耐
+  adc_range: 0–3.3V（VREF+ = 3.3V）
+  uart_log: USART1 TX=PA9 RX=PA10
+  sources: [ST STM32F103x8 规格书 DS5319 Rev17 表 5 引脚定义（I/O Level 列 FT；WeAct BluePill-Plus 仓库转存）, stm32duino variants/STM32F1xx/F103C8T_F103CB(T-U)/variant_PILL_F103Cx.h（Bluepill LED=PC13）]
+  pins:
+    PB12:
+      header: PB12
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB13:
+      header: PB13
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB14:
+      header: PB14
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB15:
+      header: PB15
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA8:
+      header: PA8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA9:
+      header: PA9
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA10:
+      header: PA10
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA11:
+      header: PA11
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA12:
+      header: PA12
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA15:
+      header: PA15
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB3:
+      header: PB3
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB4:
+      header: PB4
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB5: {header: PB5, use: 能用, five_v_tolerant: false}
+    PB6:
+      header: PB6
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB7:
+      header: PB7
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB8:
+      header: PB8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB9:
+      header: PB9
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PC13:
+      header: PC13
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注；板载 LED（蓝色药丸，stm32duino）
+    PC14: {header: PC14, use: 能用, five_v_tolerant: false, note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注}
+    PC15: {header: PC15, use: 能用, five_v_tolerant: false, note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注}
+    PA0: {header: PA0, use: 能用, adc: ADC12_IN0, five_v_tolerant: false}
+    PA1: {header: PA1, use: 能用, adc: ADC12_IN1, five_v_tolerant: false}
+    PA2: {header: PA2, use: 能用, adc: ADC12_IN2, five_v_tolerant: false}
+    PA3: {header: PA3, use: 能用, adc: ADC12_IN3, five_v_tolerant: false}
+    PA4: {header: PA4, use: 能用, adc: ADC12_IN4, five_v_tolerant: false}
+    PA5: {header: PA5, use: 能用, adc: ADC12_IN5, five_v_tolerant: false}
+    PA6: {header: PA6, use: 能用, adc: ADC12_IN6, five_v_tolerant: false}
+    PA7: {header: PA7, use: 能用, adc: ADC12_IN7, five_v_tolerant: false}
+    PB0: {header: PB0, use: 能用, adc: ADC12_IN8, five_v_tolerant: false}
+    PB1: {header: PB1, use: 能用, adc: ADC12_IN9, five_v_tolerant: false}
+    PB10:
+      header: PB10
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB11:
+      header: PB11
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+  safe: [PB12, PB13, PB14, PB15, PA8, PB5, PB6, PB7, PB8, PB9, PC13, PC14, PC15, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PB0, PB1, PB10, PB11]
+MCU-003:
+  board: 蓝色药丸 STM32F103C8T6
+  chip: STM32F103C8T6
+  five_v_tolerant: 按脚：FT 脚耐 5V（作模拟输入时除外），其余不耐
+  adc_range: 0–3.3V（VREF+ = 3.3V）
+  uart_log: USART1 TX=PA9 RX=PA10
+  sources: [ST STM32F103x8 规格书 DS5319 Rev17 表 5 引脚定义（I/O Level 列 FT；WeAct BluePill-Plus 仓库转存）, stm32duino variants/STM32F1xx/F103C8T_F103CB(T-U)/variant_PILL_F103Cx.h（Bluepill LED=PC13）]
+  pins:
+    PB12:
+      header: PB12
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB13:
+      header: PB13
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB14:
+      header: PB14
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB15:
+      header: PB15
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA8:
+      header: PA8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA9:
+      header: PA9
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA10:
+      header: PA10
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA11:
+      header: PA11
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA12:
+      header: PA12
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA15:
+      header: PA15
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB3:
+      header: PB3
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB4:
+      header: PB4
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB5: {header: PB5, use: 能用, five_v_tolerant: false}
+    PB6:
+      header: PB6
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB7:
+      header: PB7
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB8:
+      header: PB8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB9:
+      header: PB9
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PC13:
+      header: PC13
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注；板载 LED（蓝色药丸，stm32duino）
+    PC14: {header: PC14, use: 能用, five_v_tolerant: false, note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注}
+    PC15: {header: PC15, use: 能用, five_v_tolerant: false, note: PC13–15 驱动能力弱（只宜作低速输入/灌小电流），规格书有注}
+    PA0: {header: PA0, use: 能用, adc: ADC12_IN0, five_v_tolerant: false}
+    PA1: {header: PA1, use: 能用, adc: ADC12_IN1, five_v_tolerant: false}
+    PA2: {header: PA2, use: 能用, adc: ADC12_IN2, five_v_tolerant: false}
+    PA3: {header: PA3, use: 能用, adc: ADC12_IN3, five_v_tolerant: false}
+    PA4: {header: PA4, use: 能用, adc: ADC12_IN4, five_v_tolerant: false}
+    PA5: {header: PA5, use: 能用, adc: ADC12_IN5, five_v_tolerant: false}
+    PA6: {header: PA6, use: 能用, adc: ADC12_IN6, five_v_tolerant: false}
+    PA7: {header: PA7, use: 能用, adc: ADC12_IN7, five_v_tolerant: false}
+    PB0: {header: PB0, use: 能用, adc: ADC12_IN8, five_v_tolerant: false}
+    PB1: {header: PB1, use: 能用, adc: ADC12_IN9, five_v_tolerant: false}
+    PB10:
+      header: PB10
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB11:
+      header: PB11
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+  safe: [PB12, PB13, PB14, PB15, PA8, PB5, PB6, PB7, PB8, PB9, PC13, PC14, PC15, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PB0, PB1, PB10, PB11]
+MCU-015:
+  board: WeAct BlackPill STM32F411CEU6 V3.1
+  chip: STM32F411CEU6
+  five_v_tolerant: 按脚：FT 脚耐 5V（作模拟输入时除外），其余不耐
+  adc_range: 0–3.3V
+  uart_log: USART1 TX=PA9 RX=PA10
+  sources: [ST STM32F411xC/xE 规格书 Rev7 表 8 引脚定义（FT=耐 5V，TC=标准 3.3V；evidence/MCU-015）, WeAct MiniF4x1Cx V3.1 原理图（evidence/MCU-015/datasheet.pdf：KEY→PA0，蓝灯 PC13 经 1.5k 接 3.3V，Y1 32.768k 接 PC14/PC15）, stm32duino
+      variant_BLACKPILL_F411CE.h（LED_BUILTIN=PC13，USER_BTN=PA0）]
+  pins:
+    PB12:
+      header: PB12
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB13:
+      header: PB13
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB14:
+      header: PB14
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB15:
+      header: PB15
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA8:
+      header: PA8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PA9:
+      header: PA9
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA10:
+      header: PA10
+      use: 慎用
+      flags: [ft, uart_log]
+      five_v_tolerant: true
+      note: USART1，串口下载用
+    PA11:
+      header: PA11
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA12:
+      header: PA12
+      use: 慎用
+      flags: [ft, usb]
+      five_v_tolerant: true
+      note: USB D-/D+（板上 USB 口）
+    PA15:
+      header: PA15
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB3:
+      header: PB3
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB4:
+      header: PB4
+      use: 慎用
+      flags: [ft, jtag]
+      five_v_tolerant: true
+      note: 复位后为 JTAG，作 GPIO 要先关 JTAG（保留 SWD）
+    PB5: {header: PB5, use: 能用, five_v_tolerant: false}
+    PB6:
+      header: PB6
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB7:
+      header: PB7
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB8:
+      header: PB8
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB9:
+      header: PB9
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PC13:
+      header: PC13
+      use: 能用
+      flags: [led]
+      five_v_tolerant: false
+      note: 板载蓝灯（低电平亮）
+    PC14:
+      header: PC14
+      use: 别用
+      flags: [occupied]
+      five_v_tolerant: false
+      note: 板载 32.768kHz 晶振
+    PC15:
+      header: PC15
+      use: 别用
+      flags: [occupied]
+      five_v_tolerant: false
+      note: 板载 32.768kHz 晶振
+    PA0:
+      header: PA0
+      use: 能用
+      flags: [button]
+      adc: ADC1_IN0
+      five_v_tolerant: false
+      note: 板载 KEY 按键（按下接地）
+    PA1:
+      header: PA1
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN1
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA2:
+      header: PA2
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN2
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA3:
+      header: PA3
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN3
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA4:
+      header: PA4
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN4
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA5:
+      header: PA5
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN5
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA6:
+      header: PA6
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN6
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PA7:
+      header: PA7
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN7
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PB0:
+      header: PB0
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN8
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PB1:
+      header: PB1
+      use: 能用
+      flags: [ft]
+      adc: ADC1_IN9
+      five_v_tolerant: true
+      note: 作模拟输入时不耐 5V
+    PB2:
+      header: PB2
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+    PB10:
+      header: PB10
+      use: 能用
+      flags: [ft]
+      five_v_tolerant: true
+  safe: [PB12, PB13, PB14, PB15, PA8, PB5, PB6, PB7, PB8, PB9, PC13, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PB0, PB1, PB2, PB10]
+MCU-012:
+  board: 树莓派 Pico
+  chip: RP2040
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: 0–3.3V（ADC 只有 GP26–28）
+  uart_log: UART0 TX=GP0 RX=GP1
+  sources: [pico-sdk src/boards/include/boards/pico.h（LED=GP25，默认 UART0 TX=GP0 RX=GP1，I2C0 GP4/GP5）, 本库条目 pinout/pitfalls 字段（第一、二批本地核实）]
+  pins:
+    GPIO0:
+      header: GPIO0
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认 UART0 TX
+    GPIO1:
+      header: GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认 UART0 RX
+    GPIO2: {header: GPIO2, use: 能用, five_v_tolerant: false}
+    GPIO3: {header: GPIO3, use: 能用, five_v_tolerant: false}
+    GPIO4: {header: GPIO4, use: 能用, five_v_tolerant: false}
+    GPIO5: {header: GPIO5, use: 能用, five_v_tolerant: false}
+    GPIO6: {header: GPIO6, use: 能用, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, five_v_tolerant: false}
+    GPIO8: {header: GPIO8, use: 能用, five_v_tolerant: false}
+    GPIO9: {header: GPIO9, use: 能用, five_v_tolerant: false}
+    GPIO10: {header: GPIO10, use: 能用, five_v_tolerant: false}
+    GPIO11: {header: GPIO11, use: 能用, five_v_tolerant: false}
+    GPIO12: {header: GPIO12, use: 能用, five_v_tolerant: false}
+    GPIO13: {header: GPIO13, use: 能用, five_v_tolerant: false}
+    GPIO14: {header: GPIO14, use: 能用, five_v_tolerant: false}
+    GPIO15: {header: GPIO15, use: 能用, five_v_tolerant: false}
+    GPIO16: {header: GPIO16, use: 能用, five_v_tolerant: false}
+    GPIO17: {header: GPIO17, use: 能用, five_v_tolerant: false}
+    GPIO18: {header: GPIO18, use: 能用, five_v_tolerant: false}
+    GPIO19: {header: GPIO19, use: 能用, five_v_tolerant: false}
+    GPIO20: {header: GPIO20, use: 能用, five_v_tolerant: false}
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO22: {header: GPIO22, use: 能用, five_v_tolerant: false}
+    GPIO26: {header: GPIO26, use: 能用, adc: ADC0, five_v_tolerant: false}
+    GPIO27: {header: GPIO27, use: 能用, adc: ADC1, five_v_tolerant: false}
+    GPIO28: {header: GPIO28, use: 能用, adc: ADC2, five_v_tolerant: false}
+  safe: [GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO15, GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21, GPIO22, GPIO26, GPIO27, GPIO28]
+  note: 板载 LED 在 GP25（不在排针上）
+MCU-013:
+  board: 树莓派 Pico W
+  chip: RP2040
+  five_v_tolerant: 否（所有 GPIO 不耐 5V）
+  adc_range: 0–3.3V（ADC 只有 GP26–28）
+  uart_log: UART0 TX=GP0 RX=GP1
+  sources: [pico-sdk boards/pico_w.h（板载 LED 在无线芯片上，CYW43_WL_GPIO_LED_PIN=0）, 本库条目 pinout/pitfalls 字段（第一、二批本地核实）]
+  pins:
+    GPIO0:
+      header: GPIO0
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认 UART0 TX
+    GPIO1:
+      header: GPIO1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: false
+      note: 默认 UART0 RX
+    GPIO2: {header: GPIO2, use: 能用, five_v_tolerant: false}
+    GPIO3: {header: GPIO3, use: 能用, five_v_tolerant: false}
+    GPIO4: {header: GPIO4, use: 能用, five_v_tolerant: false}
+    GPIO5: {header: GPIO5, use: 能用, five_v_tolerant: false}
+    GPIO6: {header: GPIO6, use: 能用, five_v_tolerant: false}
+    GPIO7: {header: GPIO7, use: 能用, five_v_tolerant: false}
+    GPIO8: {header: GPIO8, use: 能用, five_v_tolerant: false}
+    GPIO9: {header: GPIO9, use: 能用, five_v_tolerant: false}
+    GPIO10: {header: GPIO10, use: 能用, five_v_tolerant: false}
+    GPIO11: {header: GPIO11, use: 能用, five_v_tolerant: false}
+    GPIO12: {header: GPIO12, use: 能用, five_v_tolerant: false}
+    GPIO13: {header: GPIO13, use: 能用, five_v_tolerant: false}
+    GPIO14: {header: GPIO14, use: 能用, five_v_tolerant: false}
+    GPIO15: {header: GPIO15, use: 能用, five_v_tolerant: false}
+    GPIO16: {header: GPIO16, use: 能用, five_v_tolerant: false}
+    GPIO17: {header: GPIO17, use: 能用, five_v_tolerant: false}
+    GPIO18: {header: GPIO18, use: 能用, five_v_tolerant: false}
+    GPIO19: {header: GPIO19, use: 能用, five_v_tolerant: false}
+    GPIO20: {header: GPIO20, use: 能用, five_v_tolerant: false}
+    GPIO21: {header: GPIO21, use: 能用, five_v_tolerant: false}
+    GPIO22: {header: GPIO22, use: 能用, five_v_tolerant: false}
+    GPIO26: {header: GPIO26, use: 能用, adc: ADC0, five_v_tolerant: false}
+    GPIO27: {header: GPIO27, use: 能用, adc: ADC1, five_v_tolerant: false}
+    GPIO28: {header: GPIO28, use: 能用, adc: ADC2, five_v_tolerant: false}
+  safe: [GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO15, GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21, GPIO22, GPIO26, GPIO27, GPIO28]
+  note: 板载 LED 接在无线芯片 CYW43 的 WL_GPIO0，不能当普通 GPIO 用
+MCU-009:
+  board: Arduino Nano（ATmega328P）
+  chip: ATmega328P（5V）
+  five_v_tolerant: 是
+  adc_range: 0–5V（AREF 默认 5V）
+  uart_log: Serial TX=D1 RX=D0
+  sources: [本库条目 pinout/pitfalls 字段（第一、二批本地核实）, 'Arduino Nano 官方规格书 A000005（https://docs.arduino.cc/resources/datasheets/A000005-datasheet.pdf，云端未下载）']
+  pins:
+    D0:
+      header: D0
+      use: 别用
+      flags: [uart_log]
+      five_v_tolerant: true
+      note: 接板载 USB 转串口（下载和串口监视器）
+    D1:
+      header: D1
+      use: 别用
+      flags: [uart_log]
+      five_v_tolerant: true
+      note: 接板载 USB 转串口（下载和串口监视器）
+    D2: {header: D2, use: 能用, five_v_tolerant: true}
+    D3: {header: D3, use: 能用, five_v_tolerant: true}
+    D4: {header: D4, use: 能用, five_v_tolerant: true}
+    D5: {header: D5, use: 能用, five_v_tolerant: true}
+    D6: {header: D6, use: 能用, five_v_tolerant: true}
+    D7: {header: D7, use: 能用, five_v_tolerant: true}
+    D8: {header: D8, use: 能用, five_v_tolerant: true}
+    D9: {header: D9, use: 能用, five_v_tolerant: true}
+    D10: {header: D10, use: 能用, five_v_tolerant: true}
+    D11: {header: D11, use: 能用, five_v_tolerant: true}
+    D12: {header: D12, use: 能用, five_v_tolerant: true}
+    D13:
+      header: D13
+      use: 能用
+      flags: [led]
+      five_v_tolerant: true
+      note: 板载 LED（L）
+    A0: {header: A0, use: 能用, adc: A0, five_v_tolerant: true}
+    A1: {header: A1, use: 能用, adc: A1, five_v_tolerant: true}
+    A2: {header: A2, use: 能用, adc: A2, five_v_tolerant: true}
+    A3: {header: A3, use: 能用, adc: A3, five_v_tolerant: true}
+    A4: {header: A4, use: 能用, adc: A4, five_v_tolerant: true, note: 硬件 I2C（A4=SDA，A5=SCL）}
+    A5: {header: A5, use: 能用, adc: A5, five_v_tolerant: true, note: 硬件 I2C（A4=SDA，A5=SCL）}
+    A6:
+      header: A6
+      use: 慎用
+      flags: [input_only]
+      adc: A6
+      five_v_tolerant: true
+      note: 只能模拟输入，不能当数字 IO
+    A7:
+      header: A7
+      use: 慎用
+      flags: [input_only]
+      adc: A7
+      five_v_tolerant: true
+      note: 只能模拟输入，不能当数字 IO
+  safe: [D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, A0, A1, A2, A3, A4, A5]
+MCU-014:
+  board: STC89C52RC（DIP-40）
+  chip: STC89C52RC（5V）
+  five_v_tolerant: 是
+  adc_range: 无 ADC
+  uart_log: UART TXD=P3.1 RXD=P3.0
+  sources: [本库条目 pinout/pitfalls 字段（第一、二批本地核实）]
+  pins:
+    P0.0:
+      header: P0.0
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.1:
+      header: P0.1
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.2:
+      header: P0.2
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.3:
+      header: P0.3
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.4:
+      header: P0.4
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.5:
+      header: P0.5
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.6:
+      header: P0.6
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P0.7:
+      header: P0.7
+      use: 慎用
+      flags: [open_drain]
+      five_v_tolerant: true
+      note: P0 口开漏，作输出要外接上拉（排阻 10k）
+    P1.0: {header: P1.0, use: 能用, five_v_tolerant: true}
+    P1.1: {header: P1.1, use: 能用, five_v_tolerant: true}
+    P1.2: {header: P1.2, use: 能用, five_v_tolerant: true}
+    P1.3: {header: P1.3, use: 能用, five_v_tolerant: true}
+    P1.4: {header: P1.4, use: 能用, five_v_tolerant: true}
+    P1.5: {header: P1.5, use: 能用, five_v_tolerant: true}
+    P1.6: {header: P1.6, use: 能用, five_v_tolerant: true}
+    P1.7: {header: P1.7, use: 能用, five_v_tolerant: true}
+    P2.0: {header: P2.0, use: 能用, five_v_tolerant: true}
+    P2.1: {header: P2.1, use: 能用, five_v_tolerant: true}
+    P2.2: {header: P2.2, use: 能用, five_v_tolerant: true}
+    P2.3: {header: P2.3, use: 能用, five_v_tolerant: true}
+    P2.4: {header: P2.4, use: 能用, five_v_tolerant: true}
+    P2.5: {header: P2.5, use: 能用, five_v_tolerant: true}
+    P2.6: {header: P2.6, use: 能用, five_v_tolerant: true}
+    P2.7: {header: P2.7, use: 能用, five_v_tolerant: true}
+    P3.0:
+      header: P3.0
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: true
+      note: 串口（ISP 下载用）
+    P3.1:
+      header: P3.1
+      use: 慎用
+      flags: [uart_log]
+      five_v_tolerant: true
+      note: 串口（ISP 下载用）
+    P3.2: {header: P3.2, use: 能用, five_v_tolerant: true}
+    P3.3: {header: P3.3, use: 能用, five_v_tolerant: true}
+    P3.4: {header: P3.4, use: 能用, five_v_tolerant: true}
+    P3.5: {header: P3.5, use: 能用, five_v_tolerant: true}
+    P3.6: {header: P3.6, use: 能用, five_v_tolerant: true}
+    P3.7: {header: P3.7, use: 能用, five_v_tolerant: true}
+  safe: [P1.0, P1.1, P1.2, P1.3, P1.4, P1.5, P1.6, P1.7, P2.0, P2.1, P2.2, P2.3, P2.4, P2.5, P2.6, P2.7, P3.2, P3.3, P3.4, P3.5, P3.6, P3.7]

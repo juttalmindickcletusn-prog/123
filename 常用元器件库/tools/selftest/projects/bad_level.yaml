@@ -1,0 +1,8 @@
+# 自测：HC-SR04 只能 5V，Echo 5V 直接接 ESP32
+name: 自测-电平
+power: {source: 5V 2A, capacity_ma: 2000}
+mcu: MCU-006
+items:
+  - {id: MCU-006, qty: 1}
+  - {id: SEN-018, qty: 1, vcc: 5}
+pins: {SEN-018.TRIG: GPIO25, SEN-018.ECHO: GPIO26}

@@ -25,11 +25,21 @@
 | ✅ 抓到 | 原子符号封装属性写错 | check_atomic.py | Footprint 属性 | ✗ Q-001_S8050: Footprint 属性 'Package_TO_SOT_THT:TO-92_Inline' ≠ 应为 'StudentHW:TO-92_Inline_Wide' |
 | ✅ 抓到 | 原子符号少一个引脚 | check_atomic.py | 引脚与基础符号 | ✗ REG-002_LD1117V33: 引脚与基础符号 Regulator_Linear:LM1117T-3.3 不一致：缺 [('3', 'VI')] 多 []；引脚号 ['1', '2'] ≠ 封装焊盘号 ['1' |
 | ✅ 抓到 | 原子符号 C 编号写错 | check_atomic.py | LCSC 属性 | ✗ RES-001_10k: LCSC 属性 'C57435' ≠ 应为 'C57436' |
+| ✅ 抓到 | I2C 地址冲突（MPU6050 与 DS3231 同为 0x68） | check_project.py | 冲突 | ✗ I2C 总线 0：0x68 冲突（SEN-014 与 SEN-047）→ 把 SEN-014 改到 0x69（AD0 接 VCC 改 0x69），并在 items 里写 i2c_addr；或分两路 I2C |
+| ✅ 抓到 | 5V 输出接不耐 5V 的脚（HC-SR04 Echo → ESP32） | check_project.py | 不耐 5V | ✗ SEN-018.ECHO → GPIO26：模块输出 5V，GPIO26 不耐 5V（加分压/电平转换，或模块改 3.3V 供电） |
+| ✅ 抓到 | 用 Flash 脚 | check_project.py | 别用 | ✗ SEN-019.TRIG → GPIO34：该脚只能输入，但 TRIG 需要主控输出 |
+| ✅ 抓到 | 只能输入的脚接输出信号 | check_project.py | 只能输入 | ✗ SEN-019.TRIG → GPIO34：该脚只能输入，但 TRIG 需要主控输出 |
+| ✅ 抓到 | 同一个脚分两次 | check_project.py | 同时分给了 | ✗ SEN-019.TRIG → GPIO34：该脚只能输入，但 TRIG 需要主控输出 |
+| ✅ 抓到 | 电流超 70%（USB 带 MG996R） | check_project.py | 超过 70% | ✗ 电流：典型合计 2500mA，峰值合计 2500mA；USB 口 500mA 的 70% = 350mA → 超过 70%，换更大电源或分路供电 |
+| ✅ 抓到 | I2C 上拉到 5V 接 ESP32 | check_project.py | 上拉到 5V | ✗ I2C 总线 0：SEN-006 上拉到 5V，主控 GPIO4 不耐 5V（模块改 3.3V 供电或加电平转换） |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 189 条，出错 0 条；离线警告：缺 PDF 86 条，C 编号未接口核实 2 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_atomic.py | 0 错误 | 原子符号 192 个（应有 192），kicad-cli 导出 192 张 SVG，出错 0 处 |
+| ✅ 通过 | 正向对照：样例项目 示例1-ESP32S3-OLED-温湿度 | check_project.py | 0 错误 | 示例1-ESP32S3-OLED-温湿度：错误 0，提醒 2 → /home/user/123/常用元器件库/projects/示例1-ESP32S3-OLED-温湿度/检查结果.md |
+| ✅ 通过 | 正向对照：样例项目 示例2-STM32-继电器-按键 | check_project.py | 0 错误 | 示例2-STM32-继电器-按键：错误 0，提醒 1 → /home/user/123/常用元器件库/projects/示例2-STM32-继电器-按键/检查结果.md |
+| ✅ 通过 | 正向对照：样例项目 示例3-Nano-超声波-舵机 | check_project.py | 0 错误 | 示例3-Nano-超声波-舵机：错误 0，提醒 1 → /home/user/123/常用元器件库/projects/示例3-Nano-超声波-舵机/检查结果.md |
 
-合计 21 个故意错误 + 4 个正向对照，失败 0 项。
+合计 28 个故意错误 + 7 个正向对照，失败 0 项。
 
 注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。

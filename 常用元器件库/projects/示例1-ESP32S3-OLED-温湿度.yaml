@@ -1,0 +1,31 @@
+# 样例 1：ESP32-S3 核心板 + 0.96 寸 OLED + AHT20 温湿度 + 蜂鸣器 + LED
+# 规范 3.3：ESP32 按 ≥500mA 预算，电脑 USB 口（500mA 的 70%）带不动，按规范默认用 DC-005 + 5V 2A 适配器
+name: 示例1-ESP32S3-OLED-温湿度
+sets: 2                       # 做几套
+power: {source: DC-005 接 5V 2A 适配器, capacity_ma: 2000}
+mcu: MCU-001
+items:
+  - {id: MCU-001, qty: 1}
+  - {id: SKT-001, qty: 2, note: 1×20 排母两条（用 1×8 代表款截取，实际按 1×20 买）}
+  - {id: DSP-001, qty: 1, vcc: 3.3, i2c_bus: 0}
+  - {id: SKT-001, qty: 1, note: OLED 用 1×4 排母（截取）}
+  - {id: SEN-004, qty: 1, vcc: 3.3, i2c_bus: 0}
+  - {id: HDR-001, qty: 1, note: AHT20 接口 1×4 排针（截取）}
+  - {id: BZ-001, qty: 1}
+  - {id: Q-001, qty: 1}
+  - {id: LED-001, qty: 2}
+  - {id: RES-001, value: 1k, qty: 4}
+  - {id: RES-001, value: 10k, qty: 1}
+  - {id: CAP-001, qty: 4}
+  - {id: CAP-011, qty: 1}
+  - {id: SW-002, qty: 2}
+  - {id: PWR-001, qty: 1}
+  - {id: FUS-003, qty: 1}
+  - {id: DIO-003, qty: 1}
+  - {id: SW-010, qty: 1}
+pins:
+  DSP-001.SDA: GPIO8
+  DSP-001.SCL: GPIO9
+  SEN-004.SDA: GPIO8
+  SEN-004.SCL: GPIO9
+extra_cost: {pcb: 0, note: 嘉立创打样费按实际下单时填}

@@ -1,0 +1,9 @@
+# 自测：用了 Flash 脚、只能输入的脚接输出信号、同一个脚分两次
+name: 自测-引脚
+power: {source: 5V 2A, capacity_ma: 2000}
+mcu: MCU-006
+items:
+  - {id: MCU-006, qty: 1}
+  - {id: SEN-019, qty: 1, vcc: 3.3}
+  - {id: ACT-001, qty: 1, vcc: 5}
+pins: {SEN-019.TRIG: GPIO34, SEN-019.ECHO: GPIO9, ACT-001.IN: GPIO9}

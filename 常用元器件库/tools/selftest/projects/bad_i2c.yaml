@@ -1,0 +1,9 @@
+# 自测：MPU6050 和 DS3231 同一路 I2C，都是 0x68
+name: 自测-I2C冲突
+power: {source: 5V 2A, capacity_ma: 2000}
+mcu: MCU-004
+items:
+  - {id: MCU-004, qty: 1}
+  - {id: SEN-014, qty: 1, vcc: 3.3, i2c_bus: 0}
+  - {id: SEN-047, qty: 1, vcc: 3.3, i2c_bus: 0}
+pins: {SEN-014.SDA: GPIO8, SEN-014.SCL: GPIO9, SEN-047.SDA: GPIO8, SEN-047.SCL: GPIO9}

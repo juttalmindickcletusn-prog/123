@@ -1,0 +1,8 @@
+# 自测：SHT30 模块 5V 供电，板上 10k 上拉到 VIN（5V），接 ESP32
+name: 自测-上拉
+power: {source: 5V 2A, capacity_ma: 2000}
+mcu: MCU-008
+items:
+  - {id: MCU-008, qty: 1}
+  - {id: SEN-006, qty: 1, vcc: 5, i2c_bus: 0}
+pins: {SEN-006.SDA: GPIO4, SEN-006.SCL: GPIO5}

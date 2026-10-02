@@ -143,6 +143,16 @@ def main():
     atomic_case("原子符号少一个引脚", lambda d: drop_pin(d["REG-002_LD1117V33"]), "引脚与基础符号")
     atomic_case("原子符号 C 编号写错", lambda d: set_prop(d["RES-001_10k"], "LCSC", "C57435"), "LCSC 属性")
 
+    # 项目检查：故意出错的样例项目（tools/selftest/projects/bad_*.yaml），每种错误都要报出来
+    for fn, title, expect in (("bad_i2c.yaml", "I2C 地址冲突（MPU6050 与 DS3231 同为 0x68）", "冲突"),
+                              ("bad_level.yaml", "5V 输出接不耐 5V 的脚（HC-SR04 Echo → ESP32）", "不耐 5V"),
+                              ("bad_pin.yaml", "用 Flash 脚", "别用"),
+                              ("bad_pin.yaml", "只能输入的脚接输出信号", "只能输入"),
+                              ("bad_pin.yaml", "同一个脚分两次", "同时分给了"),
+                              ("bad_current.yaml", "电流超 70%（USB 带 MG996R）", "超过 70%"),
+                              ("bad_pullup.yaml", "I2C 上拉到 5V 接 ESP32", "上拉到 5V")):
+        cases.append((title, "check_project.py", HERE / "projects" / fn, (), expect))
+
     lines = ["# 检查脚本自测", "", "每一行把一个真实条目故意改错一处，脚本必须报错。", "",
              "| 结果 | 故意制造的错误 | 脚本 | 期望报出 | 实际输出（节选） |", "|---|---|---|---|---|"]
     fails = 0
@@ -153,17 +163,20 @@ def main():
         msg = next((l.strip() for l in out.splitlines() if l.startswith("✗")), out.strip()[:80]).replace("|", "/")
         lines.append(f"| {'✅ 抓到' if ok else '❌ 漏报'} | {title} | {script} | {expect} | {msg[:110]} |")
         print(("OK  " if ok else "FAIL"), title, "|", msg[:100])
-    # 正向对照：真实 parts.csv 必须全部通过
-    for script in ("check_footprints.py", "check_symbol_pins.py", "check_evidence.py", "check_atomic.py"):
+    # 正向对照：真实 parts.csv、样例项目必须全部通过
+    positives = [(s_, []) for s_ in ("check_footprints.py", "check_symbol_pins.py", "check_evidence.py", "check_atomic.py")]
+    positives += [("check_project.py", [str(p_)]) for p_ in sorted((ROOT / "projects").glob("*.yaml"))]
+    for script, args in positives:
         exe = KICAD_PY if script in ("check_footprints.py",) else PY
-        r = subprocess.run([exe, str(ROOT / "tools" / script)], capture_output=True, text=True, encoding="utf-8",
+        r = subprocess.run([exe, str(ROOT / "tools" / script), *args], capture_output=True, text=True, encoding="utf-8",
                            errors="replace", env={**__import__("os").environ, "PYTHONIOENCODING": "utf-8"})
         ok = r.returncode == 0
         fails += not ok
         last = (r.stdout.strip().splitlines() or [""])[-1]
-        lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：真实 parts.csv | {script} | 0 错误 | {last} |")
-        print(("OK  " if ok else "FAIL"), "正向对照", script, last)
-    lines += ["", f"合计 {len(cases)} 个故意错误 + 4 个正向对照，失败 {fails} 项。"]
+        what = "样例项目 " + Path(args[0]).stem if args else "真实 parts.csv"
+        lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：{what} | {script} | 0 错误 | {last} |")
+        print(("OK  " if ok else "FAIL"), "正向对照", what, script, last)
+    lines += ["", f"合计 {len(cases)} 个故意错误 + {len(positives)} 个正向对照，失败 {fails} 项。"]
     _env = __import__("os").environ
     if _env.get("STUDENTHW_OFFLINE") == "1" or _env.get("STUDENTHW_PDF_MISSING_OK") == "1":
         lines += ["", "注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。"]
