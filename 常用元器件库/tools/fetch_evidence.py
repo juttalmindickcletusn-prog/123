@@ -36,7 +36,9 @@ PYLIB = paths.PYLIB
 def load_parts() -> list[dict]:
     out = []
     for f in sorted((ROOT / "src").glob("*.yaml")):
-        out += yaml.safe_load(f.read_text(encoding="utf-8")) or []
+        _d = yaml.safe_load(f.read_text(encoding="utf-8")) or []
+        if isinstance(_d, list):  # 条目文件是列表；market/series 等是字典，跳过
+            out += _d
     return out
 
 

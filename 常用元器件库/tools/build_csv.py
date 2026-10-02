@@ -24,10 +24,12 @@ FIELDS = [
     "checked_date", "notes",
     # 机器检查用的附加列
     "polarized", "lead_max_mm", "check_pads", "pdf_keyword", "ring_min_mm",
+    # 原子符号用：Pin1 一句话认 1 脚；sym_value 阻容的阻值/容值（空则用型号）
+    "pin1", "sym_value",
 ]
 MANUAL = ["key_params", "supply", "logic_level", "pin_count", "pinout", "pitch_mm", "row_spacing_mm", "lead_size_mm",
           "body_mm", "mount", "seated_height_mm", "kicad_symbol", "kicad_footprint", "dim_source",
-          "level", "pitfalls", "notes", "taobao_keyword"]
+          "level", "pitfalls", "notes", "taobao_keyword", "pin1"]
 LIB = {"base": "基础库", "expand": "扩展库"}
 
 
@@ -90,7 +92,9 @@ def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     parts = []
     for f in sorted((ROOT / "src").glob("*.yaml")):
-        parts += yaml.safe_load(f.read_text(encoding="utf-8")) or []
+        _d = yaml.safe_load(f.read_text(encoding="utf-8")) or []
+        if isinstance(_d, list):  # 条目文件是列表；market/series 等是字典，跳过
+            parts += _d
     rows, problems = [], []
     for p in parts:
         ev = ROOT / "evidence" / p["id"]
@@ -122,6 +126,7 @@ def main() -> int:
             "check_pads": p.get("check_pads", "1,2"),
             "pdf_keyword": p.get("pdf_keyword", ""),
             "ring_min_mm": str(p.get("ring_min_mm", "")),
+            "sym_value": str(p.get("sym_value", "")),
         })
         for k in MANUAL:
             v = p.get(k)

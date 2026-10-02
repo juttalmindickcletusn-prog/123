@@ -17,6 +17,7 @@
   body_mm: Φ1.53–1.91 × 3.05–4.56（玻璃封装）
   mount: 卧装直插
   seated_height_mm: 约 2（贴板卧装）
+  pin1: 1=K：黑色环一端，PCB 方焊盘
   kicad_symbol: Diode:1N4148
   kicad_footprint: StudentHW:D_DO-35_SOD27_P7.62mm_Horizontal
   dim_source: 厂家规格书 onsemi DO-35 外形尺寸（dim_DO35.png）
@@ -43,6 +44,7 @@
   body_mm: Φ2.0–2.7 × 4.2–5.2
   mount: 卧装直插
   seated_height_mm: 约 2.7（贴板卧装）
+  pin1: 1=K：色环一端，PCB 方焊盘
   kicad_symbol: Diode:1N4007
   kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal
   dim_source: 厂家规格书 LGE DO-41 外形尺寸（dim_DO41_LGE.png）
@@ -69,6 +71,7 @@
   body_mm: DO-41 Φ2.0–2.7 × 4.1–5.2（见规格书）
   mount: 卧装直插
   seated_height_mm: 约 2.7（贴板卧装）
+  pin1: 1=K：色环一端，PCB 方焊盘
   kicad_symbol: Diode:1N5819
   kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal
   dim_source: V1.1 实物验证；厂家规格书 MDD DO-41 外形尺寸（dim_DO41_MDD.png）
@@ -95,6 +98,7 @@
   body_mm: Φ2.5 × 最长 4.6（玻璃封装）
   mount: 卧装直插
   seated_height_mm: 约 2.6（贴板卧装）
+  pin1: 1=K：色环一端，PCB 方焊盘
   kicad_symbol: Device:D_Zener
   kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal_Hole1.2
   dim_source: 厂家规格书 LGE 玻封 DO-41 外形尺寸（dim_DO41_glass.png）
@@ -121,6 +125,7 @@
   body_mm: Φ2.6–3.6 × 5.8–7.6
   mount: 卧装直插
   seated_height_mm: 约 3.6（贴板卧装）
+  pin1: 1=K：色环一端，PCB 方焊盘
   kicad_symbol: Device:D_Zener
   kicad_footprint: StudentHW:D_DO-15_P10.16mm_Horizontal
   dim_source: V1.1 实物验证；厂家规格书 Littelfuse P6KE DO-15 尺寸表（dim_DO15_Littelfuse.png）
@@ -147,6 +152,7 @@
   body_mm: &led5_body Φ5.0，底边 Φ5.5，高 8.7
   mount: 立式直插
   seated_height_mm: 8.7（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: StudentHW:LED_D5.0mm
   dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（dim_LED5mm.png）
@@ -173,6 +179,7 @@
   body_mm: *led5_body
   mount: 立式直插
   seated_height_mm: 8.7（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: StudentHW:LED_D5.0mm
   dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
@@ -200,6 +207,7 @@
   body_mm: *led5_body
   mount: 立式直插
   seated_height_mm: 8.7（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: StudentHW:LED_D5.0mm
   dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
@@ -227,6 +235,7 @@
   body_mm: *led5_body
   mount: 立式直插
   seated_height_mm: 8.7（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: StudentHW:LED_D5.0mm
   dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
@@ -254,6 +263,7 @@
   body_mm: *led5_body
   mount: 立式直插
   seated_height_mm: 8.7（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: StudentHW:LED_D5.0mm
   dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
@@ -281,6 +291,7 @@
   body_mm: &led3_body Φ3.0，底边 Φ3.8，高 5.2
   mount: 立式直插
   seated_height_mm: 5.2（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: LED_THT:LED_D3.0mm
   dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（dim_LED3mm.png）
@@ -307,6 +318,7 @@
   body_mm: *led3_body
   mount: 立式直插
   seated_height_mm: 5.2（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: LED_THT:LED_D3.0mm
   dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
@@ -334,6 +346,7 @@
   body_mm: *led3_body
   mount: 立式直插
   seated_height_mm: 5.2（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: LED_THT:LED_D3.0mm
   dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
@@ -361,6 +374,7 @@
   body_mm: *led3_body
   mount: 立式直插
   seated_height_mm: 5.2（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: LED_THT:LED_D3.0mm
   dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
@@ -388,6 +402,7 @@
   body_mm: *led3_body
   mount: 立式直插
   seated_height_mm: 5.2（贴板）
+  pin1: 1=K：短脚、管壳平边一侧，PCB 方焊盘
   kicad_symbol: Device:LED
   kicad_footprint: LED_THT:LED_D3.0mm
   dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
@@ -415,6 +430,7 @@
   body_mm: TO-92 宽 4.45–5.21 × 厚 3.18–4.19 × 高 4.32–5.33
   mount: 立式直插
   seated_height_mm: 最高 5.33 + 留脚高度
+  pin1: 1=E、2=B、3=C：平面朝自己、引脚朝下，从左到右
   kicad_symbol: Transistor_BJT:S8050
   kicad_footprint: StudentHW:TO-92_Inline_Wide
   dim_source: V1.1 实物验证；厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8050.png）
@@ -442,6 +458,7 @@
   body_mm: TO-92（见规格书）
   mount: 立式直插
   seated_height_mm: 约 4.5 + 留脚高度
+  pin1: 1=E、2=B、3=C：平面朝自己、引脚朝下，从左到右
   kicad_symbol: Transistor_BJT:S8550
   kicad_footprint: StudentHW:TO-92_Inline_Wide
   dim_source: 厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8550.png）
@@ -469,6 +486,7 @@
   body_mm: 6.5 × 4.6 × 3.5
   mount: 直插（DIP）
   seated_height_mm: 约 3.5
+  pin1: 1=阳极 A：本体圆点一角，PCB 方焊盘
   kicad_symbol: Isolator:PC817
   kicad_footprint: Package_DIP:DIP-4_W7.62mm
   dim_source: 厂家规格书 Sharp PC817X 外形图（图片型 PDF，人工读图，dim_PC817_outline.png）
@@ -495,6 +513,7 @@
   body_mm: 宽 10–10.4 × 厚 4.4–4.6 × 本体加散热片高 15.25–15.75
   mount: 立装直插
   seated_height_mm: 约 15.5 + 留脚高度
+  pin1: 1=GND、2=VOUT、3=VIN：正面（有字面）朝自己、引脚朝下，从左到右
   kicad_symbol: Regulator_Linear:LM1117T-3.3
   kicad_footprint: StudentHW:TO-220-3_Vertical_GND-OUT-IN
   dim_source: 厂家规格书 ST LD1117 TO-220 尺寸表（dim_TO220_ST_LD1117.png）与引脚图（dim_pins_LD1117.png）
@@ -525,6 +544,7 @@
   body_mm: 宽 10–10.4 × 厚 4.45–4.62 × 塑封高 8.5–9.1（含散热片约 15）
   mount: 立装直插（要卧装就把引脚弯 90° 贴板，另加 M3 螺丝）
   seated_height_mm: 约 15 + 留脚高度
+  pin1: 1=ADJ/GND、2=VOUT、3=VIN：正面（有字面）朝自己、引脚朝下，从左到右
   kicad_symbol: Regulator_Linear:LM1085-3.3
   kicad_footprint: StudentHW:TO-220-3_Vertical_GND-OUT-IN
   dim_source: 厂家规格书 华冠 LM1085 TO-220-3 尺寸表（dim_TO220.png）与引脚图（dim_pins_LM1085.png）
@@ -555,6 +575,7 @@
   body_mm: 宽 10–10.4 × 厚 4.4–4.6 × 本体加散热片高 15.25–15.75
   mount: 立装直插
   seated_height_mm: 约 15.5 + 留脚高度
+  pin1: 1=IN、2=GND、3=OUT：正面（有字面）朝自己、引脚朝下，从左到右
   kicad_symbol: Regulator_Linear:L7805
   kicad_footprint: StudentHW:TO-220-3_Vertical_IN-GND-OUT
   dim_source: 厂家规格书 ST L78 TO-220 尺寸表（dim_TO220_ST_L7805.png）与引脚图（dim_pins_L7805.png）

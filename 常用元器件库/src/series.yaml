@@ -1,0 +1,27 @@
+# 系列件：同一系列、同一封装，只换阻值/容值。每个值生成一个原子符号（tools/build_atomic.py），封装同母条目。
+# 规则：每个值都要有同一系列里真实的 C 编号；查不到的值不建。
+# 字段：value（原子符号名和 Value 用，ASCII）、lcsc、mpn（核实过才填，否则空）、verified（核实情况）。
+# 价格不写在这里：立创价格统一从 src/price_history.csv 读（refresh_prices.py 联网刷新）。
+#
+# 云端（2026-10-02）说明：立创/嘉立创接口被云端网络策略拦截，没法逐个核实型号、价格、库存。
+#   下面的 C 编号来自第一批 RES-001 的 notes（本地 Claude 2026-10-02 用接口查到的同系列编号）；
+#   只有 1k（C57435）和 10k（C57436）两个值的型号已在 evidence 的 jlc.json 里核实。
+#   其余值 mpn 留空、价格未核，本地联网后跑：python tools/refresh_prices.py --series
+#   10Ω、22Ω、47Ω、2k、20k、47k、1M 和瓷片电容 22pF/100pF/1nF/1µF 等值没有已核实的 C 编号，没建（见 待确认.md）。
+
+RES-001:
+  family: UNI-ROYAL MFR0W4F 系列，1/4W 1% 金属膜，Φ2.2×6.5，卧装 7.62
+  values:
+    - {value: 100R, ohm: 100, lcsc: C57438, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 220R, ohm: 220, lcsc: C57439, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 330R, ohm: 330, lcsc: C58608, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 1k, ohm: 1000, lcsc: C57435, mpn: MFR0W4F1001A50, verified: "evidence/RES-001/jlc.json 已核实型号和价格"}
+    - {value: 2.2k, ohm: 2200, lcsc: C58595, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 4.7k, ohm: 4700, lcsc: C57204, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 5.1k, ohm: 5100, lcsc: C58591, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+    - {value: 10k, ohm: 10000, lcsc: C57436, mpn: MFR0W4F1002A50, verified: "evidence/RES-002/jlc.json 已核实型号和价格"}
+    - {value: 100k, ohm: 100000, lcsc: C58597, mpn: "", verified: "C 编号来自 RES-001 notes；型号、价格、库存云端未核"}
+
+RES-002:
+  family: 同 RES-001（同一颗电阻），卧装 10.16
+  same_as: RES-001

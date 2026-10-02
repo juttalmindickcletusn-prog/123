@@ -57,7 +57,7 @@ def make_pdf(path: Path, text: str = "", image_only: bool = False) -> None:
 
 
 def run(script, csv_path, extra=()):
-    exe = KICAD_PY if script == "check_footprints.py" else PY
+    exe = KICAD_PY if script in ("check_footprints.py",) else PY
     r = subprocess.run([exe, str(ROOT / "tools" / script), str(csv_path), *extra], capture_output=True,
                        text=True, encoding="utf-8", errors="replace", env={**__import__("os").environ, "PYTHONIOENCODING": "utf-8"})
     return r.returncode, r.stdout + r.stderr
@@ -120,6 +120,29 @@ def main():
     r = row("BZ-002"); r["evidence"] = "evidence/BZ-002/datasheet.pdf"
     cases.append(("缺尺寸图", "check_evidence.py", write_csv("ev_nodim", [r]), (), "缺尺寸图"))
 
+    # 原子符号库：复制真库，各注入一种错误
+    sys.path.insert(0, str(ROOT / "tools"))
+    from sexpr import children as _ch, dump as _dump, parse as _parse, Q as _Q
+    def atomic_case(title, mutate, expect):
+        lib = _parse((ROOT / "kicad" / "StudentHW_Parts.kicad_sym").read_text(encoding="utf-8"))
+        mutate({s_[1]: s_ for s_ in _ch(lib, "symbol")})
+        path = FIX / f"atomic_{len(cases)}.kicad_sym"
+        path.write_text(_dump(lib) + "\n", encoding="utf-8")
+        cases.append((title, "check_atomic.py", path, ("--no-cli",), expect))
+    def set_prop(sym, key, val):
+        for p_ in _ch(sym, "property"):
+            if p_[1] == key:
+                p_[2] = _Q(val)
+    def drop_pin(sym):
+        for unit in _ch(sym, "symbol"):
+            pins = [x for x in unit if isinstance(x, list) and x and x[0] == "pin"]
+            if pins:
+                unit.remove(pins[-1])
+                return
+    atomic_case("原子符号封装属性写错", lambda d: set_prop(d["Q-001_S8050"], "Footprint", "Package_TO_SOT_THT:TO-92_Inline"), "Footprint 属性")
+    atomic_case("原子符号少一个引脚", lambda d: drop_pin(d["REG-002_LD1117V33"]), "引脚与基础符号")
+    atomic_case("原子符号 C 编号写错", lambda d: set_prop(d["RES-001_10k"], "LCSC", "C57435"), "LCSC 属性")
+
     lines = ["# 检查脚本自测", "", "每一行把一个真实条目故意改错一处，脚本必须报错。", "",
              "| 结果 | 故意制造的错误 | 脚本 | 期望报出 | 实际输出（节选） |", "|---|---|---|---|---|"]
     fails = 0
@@ -131,8 +154,8 @@ def main():
         lines.append(f"| {'✅ 抓到' if ok else '❌ 漏报'} | {title} | {script} | {expect} | {msg[:110]} |")
         print(("OK  " if ok else "FAIL"), title, "|", msg[:100])
     # 正向对照：真实 parts.csv 必须全部通过
-    for script in ("check_footprints.py", "check_symbol_pins.py", "check_evidence.py"):
-        exe = KICAD_PY if script == "check_footprints.py" else PY
+    for script in ("check_footprints.py", "check_symbol_pins.py", "check_evidence.py", "check_atomic.py"):
+        exe = KICAD_PY if script in ("check_footprints.py",) else PY
         r = subprocess.run([exe, str(ROOT / "tools" / script)], capture_output=True, text=True, encoding="utf-8",
                            errors="replace", env={**__import__("os").environ, "PYTHONIOENCODING": "utf-8"})
         ok = r.returncode == 0
@@ -140,7 +163,7 @@ def main():
         last = (r.stdout.strip().splitlines() or [""])[-1]
         lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：真实 parts.csv | {script} | 0 错误 | {last} |")
         print(("OK  " if ok else "FAIL"), "正向对照", script, last)
-    lines += ["", f"合计 {len(cases)} 个故意错误 + 3 个正向对照，失败 {fails} 项。"]
+    lines += ["", f"合计 {len(cases)} 个故意错误 + 4 个正向对照，失败 {fails} 项。"]
     if __import__("os").environ.get("STUDENTHW_PDF_MISSING_OK") == "1":
         lines += ["", "注意：本次在精简包上运行（STUDENTHW_PDF_MISSING_OK=1），证据检查的正向对照把缺 PDF 记为警告而非错误。"]
     (ROOT / "reports" / "selftest.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

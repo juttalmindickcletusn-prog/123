@@ -1,0 +1,6 @@
+{
+ "symbols": 122,
+ "expected": 122,
+ "cli": "kicad-cli 导出 122 张 SVG",
+ "errors": {}
+}

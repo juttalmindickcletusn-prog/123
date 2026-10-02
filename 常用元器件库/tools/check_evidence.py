@@ -98,10 +98,10 @@ def main() -> int:
         if errs:
             report["errors"][row["id"]] = errs
             print(f"✗ {row['id']:9} " + "；".join(errs))
+    report["pdf_missing_warn"] = sorted(set(report["pdf_missing_warn"]))
     out = ROOT / "reports" / ("check_evidence.json" if len(sys.argv) == 1 else "selftest_check_evidence.json")
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
-    report["pdf_missing_warn"] = sorted(set(report["pdf_missing_warn"]))
     warn = f"；精简包缺 PDF（未核 PDF 文本）{len(report['pdf_missing_warn'])} 条" if report["pdf_missing_warn"] else ""
     print(f"检查 {report['checked']} 条，出错 {len(report['errors'])} 条{warn}")
     return 1 if report["errors"] else 0

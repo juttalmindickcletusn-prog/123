@@ -1,6 +1,6 @@
 """一键重建与检查（不联网）。改了 src/*.yaml 或封装后运行这一个脚本即可。
 
-顺序：生成封装 → 生成 parts.csv → 三项检查 → 检查脚本自测 → 测试板 + DRC + 渲染 → preview.html → 常用元器件清单.md → reports/检查汇总.md
+顺序：生成封装 → 生成 parts.csv → 原子符号库 → 四项检查 → 检查脚本自测 → 测试板 + DRC + 渲染 → preview.html → 常用元器件清单.md → reports/检查汇总.md
 联网刷新价格库存另跑：python tools/fetch_evidence.py
 用法：python tools/run_all.py
 """
@@ -37,9 +37,11 @@ def main() -> int:
         step("生成自建封装", [PY, "tools/gen_footprints.py"]),
         step("生成模块封装和符号", [PY, "tools/gen_modules.py"]),
         step("生成 parts.csv",[PY, "tools/build_csv.py"]),
+        step("生成原子符号库", [PY, "tools/build_atomic.py"]),
         step("封装检查", [KPY, "tools/check_footprints.py"]),
         step("符号引脚检查", [PY, "tools/check_symbol_pins.py"]),
         step("证据检查", [PY, "tools/check_evidence.py"]),
+        step("原子符号检查", [PY, "tools/check_atomic.py"]),
         step("检查脚本自测", [PY, "tools/selftest/run_selftest.py"]),
         step("测试板", [KPY, "tools/build_testboard.py"]),
         step("测试板 DRC", [CLI, "pcb", "drc", "--format", "json", "--exit-code-violations", "-o", str(out / "drc.json"), str(tb)]),

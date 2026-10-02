@@ -17,6 +17,7 @@
   body_mm: 长 14.0 × 宽 9.0 × 高 11.0
   mount: 卧装直插，插口伸到板边
   seated_height_mm: 11.0
+  pin1: 1=中心针（+），离插口最远的那只脚，PCB 方焊盘
   kicad_symbol: Connector:Barrel_Jack_Switch
   kicad_footprint: StudentHW:PowerJack_DC-005_XKB_5A_Horizontal
   dim_source: 厂家规格书 XKB DC-005-5A-2.0 外形图与推荐 PCB 图（dim_DC005_XKB.png、dim_DC005_PCB.png）
@@ -47,6 +48,7 @@
   body_mm: 长 14.4 × 宽 9.0 × 高 11.0
   mount: 卧装直插，插口伸到板边
   seated_height_mm: 11.0
+  pin1: 1=中心针（+），PCB 方焊盘
   kicad_symbol: Connector:Barrel_Jack_Switch
   kicad_footprint: StudentHW:BarrelJack_CUI_PJ-102AH_Horizontal
   dim_source: 厂家规格书 CUI PJ-102AH 机械图与推荐 PCB 图（dim_PJ102AH.png）
@@ -73,6 +75,7 @@
   body_mm: 塑座高 2.5；针上露 5.7、下露 3.0，总长 11.2
   mount: 立式直插
   seated_height_mm: 8.2（塑座 + 上露针）
+  pin1: 无极性；PCB 方焊盘为 1 脚，按丝印依次编号
   kicad_symbol: Connector_Generic:Conn_01x40
   kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x40_P2.54mm_Vertical
   dim_source: 厂家规格书 博穆 2.54-1xNA-H2.5 图纸（dim_PZ254_1xN.png，图片型，人工读图）
@@ -101,6 +104,7 @@
   body_mm: 塑座 2.54 × 2.54；水平伸出 6.0，板下 3.0
   mount: 卧式直插（针平行于板面）
   seated_height_mm: 约 2.54
+  pin1: 无极性；PCB 方焊盘为 1 脚，按丝印依次编号
   kicad_symbol: Connector_Generic:Conn_01x40
   kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x40_P2.54mm_Horizontal
   dim_source: 厂家规格书 博穆 PZ2.54-1xNAW-ZW 图纸（dim_PZ254_1xN_RA.png，图片型，人工读图）
@@ -128,6 +132,7 @@
   body_mm: 塑座宽 5.0 × 高 2.54；上露 6.0，下露 3.0，总长 11.4
   mount: 立式直插
   seated_height_mm: 约 8.5
+  pin1: PCB 方焊盘为 1 脚；单号一排、双号一排
   kicad_symbol: Connector_Generic:Conn_02x40_Odd_Even
   kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_2x40_P2.54mm_Vertical
   dim_source: 厂家规格书 博穆 PZ2.54-2xNA-11.4MM 图纸（dim_PZ254_2xN.png，图片型，人工读图）
@@ -155,6 +160,7 @@
   body_mm: 塑座高 2.0；上露 4.0，下露 2.7，总长 8.7
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: 无极性；PCB 方焊盘为 1 脚，按丝印依次编号
   kicad_symbol: Connector_Generic:Conn_01x40
   kicad_footprint: Connector_PinHeader_2.00mm:PinHeader_1x40_P2.00mm_Vertical
   dim_source: 厂家规格书 博穆 PZ2.0-1xNA-L8.7MM 图纸（dim_PZ200_1xN.png，图片型，人工读图）
@@ -182,6 +188,7 @@
   body_mm: 宽 2.4 × 高 8.5；板下 3.2
   mount: 立式直插
   seated_height_mm: 8.5
+  pin1: 无极性；PCB 方焊盘为 1 脚，按丝印依次编号
   kicad_symbol: Connector_Generic:Conn_01x08
   kicad_footprint: Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical
   dim_source: 厂家规格书 博穆 2.54-1xNA-H8.5MM 图纸（dim_PM254_1xN.png，图片型，人工读图）
@@ -209,6 +216,7 @@
   body_mm: 宽 5.0 × 高 8.5；板下 3.1
   mount: 立式直插
   seated_height_mm: 8.5
+  pin1: PCB 方焊盘为 1 脚；单号一排、双号一排
   kicad_symbol: Connector_Generic:Conn_02x20_Odd_Even
   kicad_footprint: Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical
   dim_source: 厂家规格书 博穆 PY2.54-2xNA-8.5MM 图纸（dim_PY254_2xN.png，图片型，人工读图）
@@ -237,6 +245,7 @@
   body_mm: 宽 2.4 × 高 4.3；板下 2.8
   mount: 立式直插
   seated_height_mm: 4.3
+  pin1: 无极性；PCB 方焊盘为 1 脚，按丝印依次编号
   kicad_symbol: Connector_Generic:Conn_01x08
   kicad_footprint: StudentHW:PinSocket_1x08_P2.00mm_Vertical
   dim_source: V1.1 实物验证；厂家规格书 韩下 HX PM2.0-1x8P 图纸（dim_HX_PM20.png）
@@ -263,6 +272,7 @@
   body_mm: 2.4 × 5.0 × 6.4（高）
   mount: 插在排针上
   seated_height_mm: 不适用
+  pin1: 无极性
   kicad_symbol: 不适用
   kicad_footprint: 不适用（配件，插在 HDR-001 的 2 针上）
   dim_source: 厂家规格书 博穆 2.54 短路帽闭口图纸（dim_jumper254.png，图片型，人工读图）
@@ -289,6 +299,7 @@
   body_mm: 长 10.0（2P）× 深 7.6 × 高 10.0
   mount: 立式直插，接线口朝板边
   seated_height_mm: 10.0
+  pin1: PCB 方焊盘为 1 脚；接线口朝板外
   kicad_symbol: Connector:Screw_Terminal_01x02
   kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal
   dim_source: 厂家规格书 科发 KF301-5.0 图纸（dim_KF301_50.png，图片型，人工读图）
@@ -316,6 +327,7 @@
   body_mm: 长 15.0（3P）× 深 7.6 × 高 10.0
   mount: 立式直插，接线口朝板边
   seated_height_mm: 10.0
+  pin1: PCB 方焊盘为 1 脚；接线口朝板外
   kicad_symbol: Connector:Screw_Terminal_01x03
   kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal
   dim_source: 厂家规格书 科发 KF301-5.0 图纸（与 TERM-001 同一份，图片型，人工读图，见 evidence/TERM-001/dim_KF301_50.png）
@@ -343,6 +355,7 @@
   body_mm: 长 7.4（=脚数×2.5+2.4）× 深 5.75 × 高 7.0
   mount: 立式直插（插头从上方插入）
   seated_height_mm: 7.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x02
   kicad_footprint: Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
   dim_source: JST XH 目录 Through-hole shrouded header 尺寸表（dim_JST_XH_top.png）
@@ -372,6 +385,7 @@
   body_mm: 长 9.9 × 深 5.75 × 高 7.0
   mount: 立式直插
   seated_height_mm: 7.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x03
   kicad_footprint: Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical
   dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
@@ -402,6 +416,7 @@
   body_mm: 长 12.4 × 深 5.75 × 高 7.0
   mount: 立式直插
   seated_height_mm: 7.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x04
   kicad_footprint: Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
   dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
@@ -432,6 +447,7 @@
   body_mm: 长 14.9 × 深 5.75 × 高 7.0
   mount: 立式直插
   seated_height_mm: 7.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x05
   kicad_footprint: Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical
   dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
@@ -462,6 +478,7 @@
   body_mm: 长 17.4 × 深 5.75 × 高 7.0
   mount: 立式直插
   seated_height_mm: 7.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x06
   kicad_footprint: Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical
   dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
@@ -491,6 +508,7 @@
   body_mm: &xh_side_body 侧插型，长 = 脚数×2.5+2.4，插入方向尺寸 11.5（见图，S()B-XH-A 型 9.2）
   mount: 卧式直插（插头平行于板面插入，插口朝板边）
   seated_height_mm: 约 7（见图）
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x02
   kicad_footprint: Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal
   dim_source: JST XH 目录 Side entry type 尺寸（dim_JST_XH_side.png）
@@ -520,6 +538,7 @@
   body_mm: *xh_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 约 7（见图）
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x03
   kicad_footprint: Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal
   dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
@@ -550,6 +569,7 @@
   body_mm: *xh_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 约 7（见图）
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x04
   kicad_footprint: Connector_JST:JST_XH_S4B-XH-A_1x04_P2.50mm_Horizontal
   dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
@@ -580,6 +600,7 @@
   body_mm: *xh_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 约 7（见图）
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x05
   kicad_footprint: Connector_JST:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal
   dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
@@ -610,6 +631,7 @@
   body_mm: *xh_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 约 7（见图）
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x06
   kicad_footprint: Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal
   dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
@@ -639,6 +661,7 @@
   body_mm: 长 5.9（=脚数×2+1.9）× 深 4.5 × 高 6.0
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x02
   kicad_footprint: Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
   dim_source: JST PH 目录 Through-hole shrouded header 尺寸表（dim_JST_PH_top.png）
@@ -668,6 +691,7 @@
   body_mm: 长 7.9 × 深 4.5 × 高 6.0
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x03
   kicad_footprint: Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical
   dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
@@ -698,6 +722,7 @@
   body_mm: 长 9.9 × 深 4.5 × 高 6.0
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x04
   kicad_footprint: Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical
   dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
@@ -728,6 +753,7 @@
   body_mm: 长 11.9 × 深 4.5 × 高 6.0
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x05
   kicad_footprint: Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical
   dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
@@ -758,6 +784,7 @@
   body_mm: 长 13.9 × 深 4.5 × 高 6.0
   mount: 立式直插
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x06
   kicad_footprint: Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical
   dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
@@ -788,6 +815,7 @@
   body_mm: &ph_side_body 侧插型，长 = 脚数×2+1.9，插入方向 4.8，板上高 6.0（见图）
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x02
   kicad_footprint: Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal
   dim_source: JST PH 目录 Side entry type 尺寸（dim_JST_PH_side.png）
@@ -817,6 +845,7 @@
   body_mm: *ph_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x03
   kicad_footprint: Connector_JST:JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal
   dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
@@ -847,6 +876,7 @@
   body_mm: *ph_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x04
   kicad_footprint: Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal
   dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
@@ -877,6 +907,7 @@
   body_mm: *ph_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x05
   kicad_footprint: Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal
   dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
@@ -907,6 +938,7 @@
   body_mm: *ph_side_body
   mount: 卧式直插（插口朝板边）
   seated_height_mm: 6.0
+  pin1: PCB 方焊盘为 1 脚，对应插座本体上的三角标记端
   kicad_symbol: Connector_Generic:Conn_01x06
   kicad_footprint: Connector_JST:JST_PH_S6B-PH-K_1x06_P2.00mm_Horizontal
   dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
@@ -936,6 +968,7 @@
   body_mm: 6.0 × 6.0，按钮高 5.0（总高）
   mount: 立式直插
   seated_height_mm: 5.0
+  pin1: 无极性；同一侧（相距 4.5）两脚是开关触点，相距 6.5 的两脚常通
   kicad_symbol: Switch:SW_Push
   kicad_footprint: StudentHW:SW_PUSH_6mm
   dim_source: 厂家规格书 韩荣 K2-1102DP 图纸与高度表（dim_K2_6x6.png、dim_K2_height_table.png，图片型，人工读图）
@@ -964,6 +997,7 @@
   body_mm: 6.0 × 6.0，按钮高 7.0（总高）
   mount: 立式直插
   seated_height_mm: 7.0
+  pin1: 无极性；同一侧（相距 4.5）两脚是开关触点，相距 6.5 的两脚常通
   kicad_symbol: Switch:SW_Push
   kicad_footprint: StudentHW:SW_PUSH_6mm
   dim_source: V1.1 实物验证；厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png）
@@ -992,6 +1026,7 @@
   body_mm: 6.0 × 6.0，按钮高 9.0（总高）
   mount: 立式直插
   seated_height_mm: 9.0
+  pin1: 无极性；同一侧（相距 4.5）两脚是开关触点，相距 6.5 的两脚常通
   kicad_symbol: Switch:SW_Push
   kicad_footprint: StudentHW:SW_PUSH_6mm
   dim_source: 厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png）
@@ -1021,6 +1056,7 @@
   body_mm: 6.0 × 6.0，按钮高 13.0（总高）
   mount: 立式直插
   seated_height_mm: 13.0
+  pin1: 无极性；同一侧（相距 4.5）两脚是开关触点，相距 6.5 的两脚常通
   kicad_symbol: Switch:SW_Push
   kicad_footprint: StudentHW:SW_PUSH_6mm
   dim_source: 厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png）
@@ -1049,6 +1085,7 @@
   body_mm: 13.0 × 6.8 × 6.4（不含拨柄）
   mount: 立式直插
   seated_height_mm: 6.4 + 拨柄 5
+  pin1: 2=中间公共脚；1、3 在两侧，无极性
   kicad_symbol: Switch:SW_SPDT
   kicad_footprint: StudentHW:SW_Slide_SS-12D10_P4.7mm
   dim_source: V1.1 实物验证；厂家规格书 XKB SS-12D10L5 图纸（dim_SS12D10L5.png，图片型，人工读图）
@@ -1075,6 +1112,7 @@
   body_mm: Φ12.0 × 高 9.5
   mount: 立式直插
   seated_height_mm: 9.5
+  pin1: 1=+：长脚，外壳 + 标记，PCB 方焊盘
   kicad_symbol: Device:Buzzer
   kicad_footprint: Buzzer_Beeper:Buzzer_12x9.5RM7.6
   dim_source: 厂家规格书 华能 TMB12A05 外形尺寸图（dim_TMB12A05.png）
@@ -1101,6 +1139,7 @@
   body_mm: Φ12 × 高 8.5
   mount: 立式直插
   seated_height_mm: 8.5
+  pin1: 无源：1 脚（方焊盘）接壳体 + 标记一侧
   kicad_symbol: Device:Buzzer
   kicad_footprint: StudentHW:Buzzer_D12.0mm_H8.5mm_P6.50mm
   dim_source: 厂家规格书 锋鸣 YS-MBZ12085C05R42 外形尺寸（dim_YS_MBZ12085.png）
@@ -1128,6 +1167,7 @@
   body_mm: Φ9.0 × 高 5.5
   mount: 立式直插
   seated_height_mm: 5.5
+  pin1: 1=+：长脚，PCB 方焊盘
   kicad_symbol: Device:Buzzer
   kicad_footprint: StudentHW:Buzzer_D9.0mm_H5.5mm_P5.00mm
   dim_source: 厂家规格书 华能 HNB09A05 外形尺寸图（dim_HNB09A05.png）
@@ -1154,6 +1194,7 @@
   body_mm: 75.5 × 21.0 × 18.2（高）
   mount: 卧装直插
   seated_height_mm: 18.2
+  pin1: 1=+：无弹簧一端，PCB 方焊盘
   kicad_symbol: Device:Battery_Cell
   kicad_footprint: StudentHW:BatteryHolder_MYOUNG_BH-18650-A1AJ005
   dim_source: 厂家规格书 美阳 BH-18650-A1AJ005 图纸（dim_BH18650_A1AJ005.png，图片型，人工读图）
@@ -1181,6 +1222,7 @@
   body_mm: Φ23.2（外缘 26.6）× 高 9.0
   mount: 卧装直插
   seated_height_mm: 9.0
+  pin1: 1=+：卡扣一侧、离电池中心 12.40 的脚，PCB 方焊盘
   kicad_symbol: Device:Battery_Cell
   kicad_footprint: StudentHW:BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032_Pad2.6
   dim_source: 厂家规格书 美阳 BS-07-A1BJ001 图纸与 PCB 图（dim_BS07_A1BJ001.png，图片型，人工读图）
@@ -1200,6 +1242,7 @@
   pin_count: 2
   pinout: 1、2 按丝印，接线口朝板外
   body_mm: 长 10.16（2P）× 深 10.0 × 高 14.07
+  pin1: PCB 方焊盘为 1 脚；接线口朝板外
   kicad_symbol: Connector:Screw_Terminal_01x02
   kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal
   notes: 厂家推荐孔 Φ1.5，官方封装孔 1.3、焊盘 2.6；引脚对角约 1.2，能插入。立创无科发 KF301-5.08，用康奈克斯同款。
@@ -1228,6 +1271,7 @@
   pin_count: 3
   pinout: 1、2、3 按丝印，接线口朝板外
   body_mm: 长 15.24（3P）× 深 10.0 × 高 14.07
+  pin1: PCB 方焊盘为 1 脚；接线口朝板外
   kicad_symbol: Connector:Screw_Terminal_01x03
   kicad_footprint: StudentHW:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal
   notes: 封装与 V1.1 的 KF301-5.08-3P（体温探头接口）同一个，V1.1 已实焊；本条换了品牌，所以定 B 级。厂家推荐孔 Φ1.5，封装孔 1.3，引脚对角约 1.2，能插入。
