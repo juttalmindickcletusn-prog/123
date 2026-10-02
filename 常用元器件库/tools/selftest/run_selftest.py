@@ -81,6 +81,9 @@ def main():
         case_footprint("有极性但 1 脚不是方焊盘", "CAP-001", {"polarized": "是"}, "方焊盘"),
         case_footprint("封装不存在", "RES-001", {"kicad_footprint": "StudentHW:NoSuchFootprint"}, "封装不存在"),
         case_footprint("没有 3D 也没说明", "FUS-001", {"notes": "无"}, "3D"),
+        case_footprint("贴片封装（0805 电阻）", "RES-001", {"kicad_footprint": "Resistor_SMD:R_0805_2012Metric",
+                                                     "kicad_3d": "无", "notes": "无 3D"}, "禁止贴片"),
+        case_footprint("mount 写贴片", "RES-002", {"mount": "贴片"}, "禁止贴片"),
     ]
     # 符号
     r = row("LED-001"); r["kicad_symbol"] = "Connector_Generic:Conn_01x03"

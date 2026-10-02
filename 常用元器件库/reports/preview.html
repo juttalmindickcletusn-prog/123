@@ -22,9 +22,9 @@ figure img{width:100%;height:150px;object-fit:contain}figcaption{font-size:11px;
 dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{color:var(--mute)}dd{margin:0;word-break:break-word}.pit{color:var(--c)}
 </style></head><body>
 <div class="top"><h1>常用元器件库预览（第一批：通用元件）</h1>
-<p class="sum">113 条 · A 级 16 · B 级 89 · C 级 8 · 点尺寸图看原图 · 数据源 parts.csv</p>
+<p class="sum">107 条 · A 级 16 · B 级 83 · C 级 8 · 点尺寸图看原图 · 数据源 parts.csv</p>
 <input id="q" placeholder="搜索编号 / 名称 / 型号 / C 编号 / 封装名">
-<div class="cats"><button data-cat="" class="on">全部</button><button data-cat="电源座">电源座</button><button data-cat="Type-C">Type-C</button><button data-cat="排针排母">排针排母</button><button data-cat="端子">端子</button><button data-cat="开关">开关</button><button data-cat="蜂鸣器">蜂鸣器</button><button data-cat="电池座">电池座</button><button data-cat="电阻">电阻</button><button data-cat="电容">电容</button><button data-cat="电解电容">电解电容</button><button data-cat="保险">保险</button><button data-cat="二极管">二极管</button><button data-cat="LED">LED</button><button data-cat="三极管">三极管</button><button data-cat="MOS管">MOS管</button><button data-cat="光耦">光耦</button><button data-cat="稳压器">稳压器</button><button data-cat="主控板">主控板</button><button data-cat="显示屏">显示屏</button><button data-cat="数码管">数码管</button></div></div>
+<div class="cats"><button data-cat="" class="on">全部</button><button data-cat="电源座">电源座</button><button data-cat="排针排母">排针排母</button><button data-cat="端子">端子</button><button data-cat="开关">开关</button><button data-cat="蜂鸣器">蜂鸣器</button><button data-cat="电池座">电池座</button><button data-cat="电阻">电阻</button><button data-cat="电容">电容</button><button data-cat="电解电容">电解电容</button><button data-cat="保险">保险</button><button data-cat="二极管">二极管</button><button data-cat="LED">LED</button><button data-cat="三极管">三极管</button><button data-cat="光耦">光耦</button><button data-cat="稳压器">稳压器</button><button data-cat="主控板">主控板</button><button data-cat="显示屏">显示屏</button><button data-cat="数码管">数码管</button></div></div>
 <main id="list">
 <article class="card" data-cat="电源座" data-text="pwr-001dc-005 电源座（5.5×2.1 插头，2.0 针）dc-005-5a-2.0c381116studenthw:powerjack_dc-005_xkb_5a_horizontal">
   <header><span class="id">PWR-001</span><span class="lvl lvl-B">B 级</span><h2>DC-005 电源座（5.5×2.1 插头，2.0 针）</h2></header>
@@ -60,42 +60,6 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>依据</dt><dd>厂家规格书 CUI PJ-102AH 机械图与推荐 PCB 图（dim_PJ102AH.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无脚位相同的替代；手边只有 DC-005 就改用 PWR-001 的封装</dd>
     <dt>淘宝</dt><dd>PJ-102AH DC 电源座</dd>
-  </dl>
-</article>
-<article class="card" data-cat="Type-C" data-text="usb-002type-c 6p 仅供电母座（贴片信号脚+直插固定脚）type-c 6pc456012studenthw:usb_c_receptacle_shouhan_type-c-6p_poweronly">
-  <header><span class="id">USB-002</span><span class="lvl lvl-B">B 级</span><h2>Type-C 6P 仅供电母座（贴片信号脚+直插固定脚）</h2></header>
-  <p class="pn"><b>TYPE-C 6P</b>（SHOU HAN）· 立创 <a href="https://item.szlcsc.com/search.html?k=C456012" target="_blank">C456012</a> · 扩展库 · ¥0.2384@10+（立创商城） · 库存 立创商城 68308，嘉立创 688649</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/USB_C_Receptacle_ShouHan_TYPE-C-6P_PowerOnly.svg" alt="封装" loading="lazy"><figcaption>封装 StudentHW:USB_C_Receptacle_ShouHan_TYPE-C-6P_PowerOnly</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Connector/USB_C_Receptacle_PowerOnly_6P_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Connector:USB_C_Receptacle_PowerOnly_6P</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/USB-002/dim_TypeC6P_layout.png" target="_blank"><img class="dim" src="../evidence/USB-002/dim_TypeC6P_layout.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>只有 VBUS、GND、CC1、CC2 六个脚，额定 3A（电源脚）；CC 脚各接 5.1kΩ 下拉后，C-C 线和 PD 充电器都能出 5V</dd>
-    <dt>引脚</dt><dd>A9/B9=VBUS，A12/B12=GND，A5=CC1，B5=CC2，SH=外壳（4 个固定脚）</dd>
-    <dt>尺寸</dt><dd>脚距 1.0（A5–B5）；引脚 信号脚贴片；外壳固定脚厚 0.30；孔 0.6×1.4 槽；焊盘 贴片 0.8×1.2、贴片 0.7×1.2、1.2×2；本体 宽 8.94 × 长 6.80 × 高 3.26；安装高 3.26</dd>
-    <dt>驱动</dt><dd>不适用</dd>
-    <dt>坑</dt><dd class="pit">CC1、CC2 必须各接 5.1kΩ 到 GND，否则 C-C 线插上不供电。只有 2 个脚的 Type-C 座没有 CC 脚，已从库里删除。 信号脚是 1.0 脚距贴片，烙铁可焊，先固定外壳脚再焊信号脚</dd>
-    <dt>备注</dt><dd>按厂家推荐 PCB 图新画，贴片脚向后加长 0.2 方便烙铁。外壳固定脚厂家推荐焊盘 1.0×1.8，库里加大到 1.2×2.0， 受 1.0 脚距和贴片脚间距限制，环宽按 0.3 放宽（外壳脚只做固定，不过电流）。3D 用立创 EDA 导出的模型。</dd>
-    <dt>依据</dt><dd>厂家规格书 首韩 TYPE-C 6P 推荐 PCB 图（dim_TypeC6P_layout.png，图片型，人工读图） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>无已核对脚位的替代</dd>
-    <dt>淘宝</dt><dd>Type-C 6P 母座 贴片 带固定脚</dd>
-  </dl>
-</article>
-<article class="card" data-cat="Type-C" data-text="usb-004type-c 16p 数据母座（贴片，常用）type-c-31-m-12c165948studenthw:usb_c_receptacle_hro_type-c-31-m-12">
-  <header><span class="id">USB-004</span><span class="lvl lvl-B">B 级</span><h2>Type-C 16P 数据母座（贴片，常用）</h2></header>
-  <p class="pn"><b>TYPE-C-31-M-12</b>（Korean Hroparts Elec）· 立创 <a href="https://item.szlcsc.com/search.html?k=C165948" target="_blank">C165948</a> · 扩展库 · ¥1.1424@5+（立创商城） · 库存 立创商城 87058，嘉立创 448538</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/USB_C_Receptacle_HRO_TYPE-C-31-M-12.svg" alt="封装" loading="lazy"><figcaption>封装 StudentHW:USB_C_Receptacle_HRO_TYPE-C-31-M-12</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Connector/USB_C_Receptacle_USB2.0_16P_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Connector:USB_C_Receptacle_USB2.0_16P</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/USB-004/dim_HRO_31M12_layout.png" target="_blank"><img class="dim" src="../evidence/USB-004/dim_HRO_31M12_layout.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>USB2.0 数据 + 供电，16 个信号脚，额定 5A/20V</dd>
-    <dt>引脚</dt><dd>A4/A9/B4/B9=VBUS，A1/A12/B1/B12=GND，A5=CC1，B5=CC2，A6/B6=D+，A7/B7=D-，A8/B8=SBU，SH=外壳</dd>
-    <dt>尺寸</dt><dd>脚距 0.5（信号脚）；引脚 贴片引脚宽 0.3（信号）/0.6（电源）；孔 0.6×1.7 槽、0.6×1.2 槽；焊盘 贴片 0.6×1.45、贴片 0.3×1.45、1×2.1、1×1.6；本体 宽 8.94 × 长 7.35 × 高 3.26；安装高 3.26</dd>
-    <dt>驱动</dt><dd>D+/D- 为 USB2.0 差分信号</dd>
-    <dt>坑</dt><dd class="pit">0.5 mm 脚距贴片，手焊易连锡，建议嘉立创贴片；只需要供电就用 USB-002</dd>
-    <dt>备注</dt><dd>外壳固定脚焊盘 1.0、孔 0.6（官方封装与厂家图一致），环宽按 0.2 放宽；固定脚只做机械固定。本机官方库缺 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。</dd>
-    <dt>依据</dt><dd>厂家规格书 HRO TYPE-C-31-M-12 推荐 PCB 图（图片型 PDF，人工读图，dim_HRO_31M12_layout.png） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>TYPE-C16PIN（SHOU HAN）/ C393939：首韩 TYPE-C16PIN，与 HRO TYPE-C-31-M-12 脚位兼容（换前看规格书）</dd>
-    <dt>淘宝</dt><dd>TYPE-C-31-M-12 16P 母座</dd>
   </dl>
 </article>
 <article class="card" data-cat="排针排母" data-text="hdr-0012.54mm 单排直排针 1×402.54-1*40pstraight pinc2337connector_pinheader_2.54mm:pinheader_1x40_p2.54mm_vertical">
@@ -1448,42 +1412,6 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>淘宝</dt><dd>S8550 TO-92 直插 三极管</dd>
   </dl>
 </article>
-<article class="card" data-cat="MOS管" data-text="q-003n 沟道 mos ao3400a（sot-23，贴片备选）ao3400ac20917package_to_sot_smd:sot-23">
-  <header><span class="id">Q-003</span><span class="lvl lvl-B">B 级</span><h2>N 沟道 MOS AO3400A（SOT-23，贴片备选）</h2></header>
-  <p class="pn"><b>AO3400A</b>（Alpha &amp; Omega Semicon）· 立创 <a href="https://item.szlcsc.com/search.html?k=C20917" target="_blank">C20917</a> · 基础库 · ¥0.5463@5+（立创商城） · 库存 立创商城 108091，嘉立创 964086</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/SOT-23.svg" alt="封装" loading="lazy"><figcaption>封装 Package_TO_SOT_SMD:SOT-23</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Transistor_FET/AO3400A_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Transistor_FET:AO3400A</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/Q-003/dim_pins_AO3400A.png" target="_blank"><img class="dim" src="../evidence/Q-003/dim_pins_AO3400A.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>N 沟道，30V，5.7A，导通电阻 &lt;32mΩ@4.5V、&lt;48mΩ@2.5V</dd>
-    <dt>引脚</dt><dd>1=G，2=S，3=D（SOT-23 正面看，左下 1、右下 2、上方 3）</dd>
-    <dt>尺寸</dt><dd>脚距 1.9（1、2 脚之间）；引脚 贴片引脚；孔 无（贴片）；焊盘 贴片 1.475×0.6；本体 SOT-23 2.9 × 1.3 × 1.1（见规格书）；安装高 约 1.1</dd>
-    <dt>驱动</dt><dd>阈值 0.65–1.45V，3.3V GPIO 可直接驱动（栅极串 100Ω、对地 10kΩ）</dd>
-    <dt>坑</dt><dd class="pit">贴片件，烙铁可焊但要镊子；学生板优先用 Q-001 直插三极管能解决的就不用 MOS</dd>
-    <dt>备注</dt><dd>嘉立创基础库料，打样贴片不收换料费。</dd>
-    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3400A.png） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>AO3400A（UMW(Youtai Semiconductor Co., Ltd.)）/ C347475：UMW AO3400A</dd>
-    <dt>淘宝</dt><dd>AO3400A SOT-23</dd>
-  </dl>
-</article>
-<article class="card" data-cat="MOS管" data-text="q-004p 沟道 mos ao3401a（sot-23，贴片备选）ao3401ac15127package_to_sot_smd:sot-23">
-  <header><span class="id">Q-004</span><span class="lvl lvl-B">B 级</span><h2>P 沟道 MOS AO3401A（SOT-23，贴片备选）</h2></header>
-  <p class="pn"><b>AO3401A</b>（Alpha &amp; Omega Semicon）· 立创 <a href="https://item.szlcsc.com/search.html?k=C15127" target="_blank">C15127</a> · 基础库 · ¥0.6245@5+（立创商城） · 库存 立创商城 82320，嘉立创 780677</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/SOT-23.svg" alt="封装" loading="lazy"><figcaption>封装 Package_TO_SOT_SMD:SOT-23</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Transistor_FET/AO3401A_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Transistor_FET:AO3401A</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/Q-004/dim_pins_AO3401A.png" target="_blank"><img class="dim" src="../evidence/Q-004/dim_pins_AO3401A.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>P 沟道，-30V，-4A，导通电阻 &lt;60mΩ@-4.5V、&lt;85mΩ@-2.5V</dd>
-    <dt>引脚</dt><dd>1=G，2=S，3=D</dd>
-    <dt>尺寸</dt><dd>脚距 1.9（1、2 脚之间）；引脚 贴片引脚；孔 无（贴片）；焊盘 贴片 1.475×0.6；本体 SOT-23 2.9 × 1.3 × 1.1（见规格书）；安装高 约 1.1</dd>
-    <dt>驱动</dt><dd>高边开关：栅极拉低导通、拉到源极电压关断；源极接 5V 时 3.3V GPIO 关不断，需加 NPN 电平转换</dd>
-    <dt>坑</dt><dd class="pit">常用作电源防反接或负载开关，D、S 接反会通过体二极管常通</dd>
-    <dt>备注</dt><dd>嘉立创基础库料。</dd>
-    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3401A.png） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>AO3401A（UMW(Youtai Semiconductor Co., Ltd.)）/ C347476：UMW AO3401A</dd>
-    <dt>淘宝</dt><dd>AO3401A SOT-23</dd>
-  </dl>
-</article>
 <article class="card" data-cat="光耦" data-text="opt-001光耦 pc817（dip-4）pc817x3nsz9fc96006package_dip:dip-4_w7.62mm">
   <header><span class="id">OPT-001</span><span class="lvl lvl-B">B 级</span><h2>光耦 PC817（DIP-4）</h2></header>
   <p class="pn"><b>PC817X3NSZ9F</b>（Sharp Microelectronics）· 立创 <a href="https://item.szlcsc.com/search.html?k=C96006" target="_blank">C96006</a> · 扩展库 · ¥0.5789@5+（立创商城） · 库存 立创商城 5518，嘉立创 31496</p>
@@ -1500,24 +1428,6 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>依据</dt><dd>厂家规格书 Sharp PC817X 外形图（图片型 PDF，人工读图，dim_PC817_outline.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>EL817(C)-F（Everlight Elec）/ C181890：亿光 EL817(C)，脚位相同</dd>
     <dt>淘宝</dt><dd>PC817 DIP-4 光耦</dd>
-  </dl>
-</article>
-<article class="card" data-cat="稳压器" data-text="reg-0013.3v 1a ldo ams1117-3.3（sot-223，贴片）ams1117-3.3c6186package_to_sot_smd:sot-223-3_tabpin2">
-  <header><span class="id">REG-001</span><span class="lvl lvl-B">B 级</span><h2>3.3V 1A LDO AMS1117-3.3（SOT-223，贴片）</h2></header>
-  <p class="pn"><b>AMS1117-3.3</b>（Advanced Monolithic Systems）· 立创 <a href="https://item.szlcsc.com/search.html?k=C6186" target="_blank">C6186</a> · 基础库 · ¥1.2749@5+（立创商城） · 库存 立创商城 144479，嘉立创 1074202</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/SOT-223-3_TabPin2.svg" alt="封装" loading="lazy"><figcaption>封装 Package_TO_SOT_SMD:SOT-223-3_TabPin2</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Regulator_Linear/AMS1117-3.3_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Regulator_Linear:AMS1117-3.3</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/REG-001/dim_pins_AMS1117.png" target="_blank"><img class="dim" src="../evidence/REG-001/dim_pins_AMS1117.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>输出 3.3V，1A，压差最大 1.3V（1A 时），输入最高 15V</dd>
-    <dt>引脚</dt><dd>1=GND/ADJ，2=VOUT（与背面散热片相通），3=VIN</dd>
-    <dt>尺寸</dt><dd>脚距 2.3；引脚 贴片引脚；孔 无（贴片）；焊盘 贴片 2×1.5、贴片 2×3.8；本体 SOT-223 6.5 × 3.5 × 1.6（见规格书）；安装高 约 1.6</dd>
-    <dt>驱动</dt><dd>不适用</dd>
-    <dt>坑</dt><dd class="pit">输入、输出各接 10µF 以上电容；5V→3.3V 带 500mA 时发热约 0.85W，散热片要铺铜</dd>
-    <dt>备注</dt><dd>嘉立创基础库料。只够单个 ESP32 加小传感器，带雷达等大电流负载用 REG-003。</dd>
-    <dt>依据</dt><dd>厂家规格书 AMS1117 引脚图（dim_pins_AMS1117.png） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>AMS1117-3.3（UMW(Youtai Semiconductor Co., Ltd.)）/ C347222：UMW AMS1117-3.3</dd>
-    <dt>淘宝</dt><dd>AMS1117-3.3 SOT-223</dd>
   </dl>
 </article>
 <article class="card" data-cat="稳压器" data-text="reg-0023.3v 800ma ldo ld1117v33（to-220）ld1117v33c283467studenthw:to-220-3_vertical_gnd-out-in">
@@ -1572,24 +1482,6 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>依据</dt><dd>厂家规格书 ST L78 TO-220 尺寸表（dim_TO220_ST_L7805.png）与引脚图（dim_pins_L7805.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>L7805CV(UMW)（UMW(Youtai Semiconductor Co., Ltd.)）/ C347289：UMW L7805CV，脚位相同</dd>
     <dt>淘宝</dt><dd>L7805CV TO-220</dd>
-  </dl>
-</article>
-<article class="card" data-cat="稳压器" data-text="reg-0053.3v 500ma ldo me6211c33m5g（sot-23-5，贴片）me6211c33m5g-nc82942package_to_sot_smd:sot-23-5">
-  <header><span class="id">REG-005</span><span class="lvl lvl-B">B 级</span><h2>3.3V 500mA LDO ME6211C33M5G（SOT-23-5，贴片）</h2></header>
-  <p class="pn"><b>ME6211C33M5G-N</b>（MICRONE(Nanjing Micro One Elec)）· 立创 <a href="https://item.szlcsc.com/search.html?k=C82942" target="_blank">C82942</a> · 扩展库 · ¥0.3731@10+（立创商城） · 库存 立创商城 15890，嘉立创 165153</p>
-  <div class="imgs"><figure><img class="fp" src="preview/fp/SOT-23-5.svg" alt="封装" loading="lazy"><figcaption>封装 Package_TO_SOT_SMD:SOT-23-5</figcaption></figure>
-  <figure><img class="sym" src="preview/sym/Regulator_Linear/ME6211C33M5_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Regulator_Linear:ME6211C33M5</figcaption></figure></div>
-  <div class="dims"><a href="../evidence/REG-005/dim_pins_ME6211.png" target="_blank"><img class="dim" src="../evidence/REG-005/dim_pins_ME6211.png" alt="尺寸图" loading="lazy"></a></div>
-  <dl>
-    <dt>参数</dt><dd>输出 3.3V，500mA，低压差，输入最高 6.5V</dd>
-    <dt>引脚</dt><dd>1=VIN，2=VSS(GND)，3=CE（接 VIN），4=NC，5=VOUT</dd>
-    <dt>尺寸</dt><dd>脚距 0.95；引脚 贴片引脚；孔 无（贴片）；焊盘 贴片 1.325×0.6；本体 SOT-23-5 2.9 × 1.6 × 1.1（见规格书）；安装高 约 1.1</dd>
-    <dt>驱动</dt><dd>CE 高电平使能，不用时接 VIN</dd>
-    <dt>坑</dt><dd class="pit">输入最高只有 6.5V，不能接 9V/12V；CE 悬空不输出</dd>
-    <dt>备注</dt><dd>锂电池供电的小板常用，压差小。</dd>
-    <dt>依据</dt><dd>厂家规格书 微盟 ME6211 引脚图（dim_pins_ME6211.png） · 核实 2026-10-02</dd>
-    <dt>替代</dt><dd>无脚位相同的常用替代（同脚位的 XC6206 只有 3 脚，不能直接换）</dd>
-    <dt>淘宝</dt><dd>ME6211C33M5G SOT-23-5</dd>
   </dl>
 </article>
 <article class="card" data-cat="主控板" data-text="mcu-001立创 esp32-s3 核心板 lckfb-esp32s3r8n8（40p）lckfb-esp32s3r8n8c20626143studenthw:module_lckfb_esp32s3r8n8">

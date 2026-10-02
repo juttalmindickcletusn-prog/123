@@ -1,6 +1,6 @@
 {
  "csv": "/home/user/123/常用元器件库/parts.csv",
- "checked": 113,
+ "checked": 107,
  "errors": {},
  "info": {
   "PWR-001": {
@@ -18,40 +18,6 @@
     "3"
    ],
    "pitch_measured": 6.0
-  },
-  "USB-002": {
-   "pads": [
-    "A12",
-    "A5",
-    "A9",
-    "B12",
-    "B5",
-    "B9",
-    "SH"
-   ],
-   "pitch_measured": 1.0
-  },
-  "USB-004": {
-   "pads": [
-    "A1",
-    "A12",
-    "A4",
-    "A5",
-    "A6",
-    "A7",
-    "A8",
-    "A9",
-    "B1",
-    "B12",
-    "B4",
-    "B5",
-    "B6",
-    "B7",
-    "B8",
-    "B9",
-    "SH"
-   ],
-   "pitch_measured": 0.5
   },
   "HDR-001": {
    "pads": [
@@ -860,22 +826,6 @@
    ],
    "pitch_measured": 2.54
   },
-  "Q-003": {
-   "pads": [
-    "1",
-    "2",
-    "3"
-   ],
-   "pitch_measured": 1.9
-  },
-  "Q-004": {
-   "pads": [
-    "1",
-    "2",
-    "3"
-   ],
-   "pitch_measured": 1.9
-  },
   "OPT-001": {
    "pads": [
     "1",
@@ -884,14 +834,6 @@
     "4"
    ],
    "pitch_measured": 2.54
-  },
-  "REG-001": {
-   "pads": [
-    "1",
-    "2",
-    "3"
-   ],
-   "pitch_measured": 2.3
   },
   "REG-002": {
    "pads": [
@@ -916,16 +858,6 @@
     "3"
    ],
    "pitch_measured": 2.54
-  },
-  "REG-005": {
-   "pads": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5"
-   ],
-   "pitch_measured": 0.95
   },
   "MCU-001": {
    "pads": [

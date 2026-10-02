@@ -12,6 +12,8 @@
 | ✅ 抓到 | 有极性但 1 脚不是方焊盘 | check_footprints.py | 方焊盘 | ✗ CAP-001   Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm: 有极性但 1 脚不是方焊盘 |
 | ✅ 抓到 | 封装不存在 | check_footprints.py | 封装不存在 | ✗ RES-001   StudentHW:NoSuchFootprint: 封装不存在: StudentHW:NoSuchFootprint |
 | ✅ 抓到 | 没有 3D 也没说明 | check_footprints.py | 3D | ✗ FUS-001   StudentHW:Fuse_PTC_Radial_P5.08mm: 没有 3D 模型且 notes 未说明 |
+| ✅ 抓到 | 贴片封装（0805 电阻） | check_footprints.py | 禁止贴片 | ✗ RES-001   Resistor_SMD:R_0805_2012Metric: 禁止贴片：封装 Resistor_SMD:R_0805_2012Metric 是贴片封装；禁止贴片：封装里有贴片焊盘 ['1', ' |
+| ✅ 抓到 | mount 写贴片 | check_footprints.py | 禁止贴片 | ✗ RES-002   Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal: 禁止贴片：mount 写的是“贴片” |
 | ✅ 抓到 | 符号引脚与焊盘不符 | check_symbol_pins.py | ≠ 焊盘 | ✗ LED-001   符号引脚 ['1', '2', '3'] ≠ 焊盘 ['1', '2'] |
 | ✅ 抓到 | 符号不存在 | check_symbol_pins.py | 符号不存在 | ✗ Q-001     符号不存在: Transistor_BJT:NoSuchPart |
 | ✅ 抓到 | 两个条目用同一张尺寸图 | check_evidence.py | 内容完全相同 | ✗ CAP-002   dim_same.png 与 /home/user/123/常用元器件库/tools/selftest/fixtures/evidence/CAP-001/dim_same.png 内容完全相同 |
@@ -20,10 +22,10 @@
 | ✅ 抓到 | 图片型 PDF 未注明人工读图 | check_evidence.py | 人工读图 | ✗ SW-001    PDF 文本里找不到 K2-1102DP-C4SW-04，且 dim_source 未注明人工读图 |
 | ✅ 抓到 | 规格书链接为空 | check_evidence.py | datasheet_url 为空 | ✗ DSP-002   datasheet_url 为空 |
 | ✅ 抓到 | 缺尺寸图 | check_evidence.py | 缺尺寸图 | ✗ BZ-002    缺尺寸图 dim*.png |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 113 条，出错 0 条 |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 113 条，出错 0 条 |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 113 条，出错 0 条；精简包缺 PDF（未核 PDF 文本）90 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 107 条，出错 0 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 107 条，出错 0 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 107 条，出错 0 条；精简包缺 PDF（未核 PDF 文本）84 条 |
 
-合计 16 个故意错误 + 3 个正向对照，失败 0 项。
+合计 18 个故意错误 + 3 个正向对照，失败 0 项。
 
 注意：本次在精简包上运行（STUDENTHW_PDF_MISSING_OK=1），证据检查的正向对照把缺 PDF 记为警告而非错误。

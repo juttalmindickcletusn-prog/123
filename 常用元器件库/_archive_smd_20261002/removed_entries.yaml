@@ -1,0 +1,169 @@
+# 2026-10-02 直插化：用户只焊直插件，以下 6 条贴片件移出库（原样留档，不再参与生成和检查）
+
+# 原在 src/b1_conn.yaml
+- id: USB-002
+  category: Type-C
+  name: Type-C 6P 仅供电母座（贴片信号脚+直插固定脚）
+  lcsc: C456012
+  alternatives: []
+  alternatives_text: 无已核对脚位的替代
+  key_params: 只有 VBUS、GND、CC1、CC2 六个脚，额定 3A（电源脚）；CC 脚各接 5.1kΩ 下拉后，C-C 线和 PD 充电器都能出 5V
+  supply: 5V 输入
+  logic_level: 不适用
+  pin_count: 7
+  pinout: A9/B9=VBUS，A12/B12=GND，A5=CC1，B5=CC2，SH=外壳（4 个固定脚）
+  pitch_mm: 1.0（A5–B5）
+  row_spacing_mm: 前后固定脚相距 3.80
+  lead_size_mm: 信号脚贴片；外壳固定脚厚 0.30
+  body_mm: 宽 8.94 × 长 6.80 × 高 3.26
+  mount: 贴片 + 直插固定脚，插口伸到板边
+  seated_height_mm: 3.26
+  kicad_symbol: Connector:USB_C_Receptacle_PowerOnly_6P
+  kicad_footprint: StudentHW:USB_C_Receptacle_ShouHan_TYPE-C-6P_PowerOnly
+  dim_source: 厂家规格书 首韩 TYPE-C 6P 推荐 PCB 图（dim_TypeC6P_layout.png，图片型，人工读图）
+  level: B
+  pitfalls: >-
+    CC1、CC2 必须各接 5.1kΩ 到 GND，否则 C-C 线插上不供电。只有 2 个脚的 Type-C 座没有 CC 脚，已从库里删除。
+    信号脚是 1.0 脚距贴片，烙铁可焊，先固定外壳脚再焊信号脚
+  notes: >-
+    按厂家推荐 PCB 图新画，贴片脚向后加长 0.2 方便烙铁。外壳固定脚厂家推荐焊盘 1.0×1.8，库里加大到 1.2×2.0，
+    受 1.0 脚距和贴片脚间距限制，环宽按 0.3 放宽（外壳脚只做固定，不过电流）。3D 用立创 EDA 导出的模型。
+  taobao_keyword: Type-C 6P 母座 贴片 带固定脚
+  polarized: 否
+  lead_max_mm: 0.3
+  check_pads: A5,B5
+  ring_min_mm: 0.3
+
+# 原在 src/b1_conn.yaml
+- id: USB-004
+  category: Type-C
+  name: Type-C 16P 数据母座（贴片，常用）
+  lcsc: C165948
+  alternatives: [{lcsc: C393939, note: 首韩 TYPE-C16PIN，与 HRO TYPE-C-31-M-12 脚位兼容（换前看规格书）}]
+  key_params: USB2.0 数据 + 供电，16 个信号脚，额定 5A/20V
+  supply: 5V 输入
+  logic_level: D+/D- 为 USB2.0 差分信号
+  pin_count: 17
+  pinout: A4/A9/B4/B9=VBUS，A1/A12/B1/B12=GND，A5=CC1，B5=CC2，A6/B6=D+，A7/B7=D-，A8/B8=SBU，SH=外壳
+  pitch_mm: 0.5（信号脚）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚宽 0.3（信号）/0.6（电源）
+  body_mm: 宽 8.94 × 长 7.35 × 高 3.26
+  mount: 贴片 + 直插固定脚
+  seated_height_mm: 3.26
+  kicad_symbol: Connector:USB_C_Receptacle_USB2.0_16P
+  kicad_footprint: StudentHW:USB_C_Receptacle_HRO_TYPE-C-31-M-12
+  dim_source: 厂家规格书 HRO TYPE-C-31-M-12 推荐 PCB 图（图片型 PDF，人工读图，dim_HRO_31M12_layout.png）
+  level: B
+  pitfalls: 0.5 mm 脚距贴片，手焊易连锡，建议嘉立创贴片；只需要供电就用 USB-002
+  notes: 外壳固定脚焊盘 1.0、孔 0.6（官方封装与厂家图一致），环宽按 0.2 放宽；固定脚只做机械固定。本机官方库缺 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。
+  taobao_keyword: TYPE-C-31-M-12 16P 母座
+  polarized: 否
+  check_pads: A6,A7
+  ring_min_mm: 0.2
+
+# 原在 src/b1_semi.yaml
+- id: Q-003
+  category: MOS管
+  name: N 沟道 MOS AO3400A（SOT-23，贴片备选）
+  lcsc: C20917
+  alternatives: [{lcsc: C347475, note: UMW AO3400A}]
+  key_params: N 沟道，30V，5.7A，导通电阻 <32mΩ@4.5V、<48mΩ@2.5V
+  supply: 不适用
+  logic_level: 阈值 0.65–1.45V，3.3V GPIO 可直接驱动（栅极串 100Ω、对地 10kΩ）
+  pin_count: 3
+  pinout: 1=G，2=S，3=D（SOT-23 正面看，左下 1、右下 2、上方 3）
+  pitch_mm: 1.9（1、2 脚之间）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23 2.9 × 1.3 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Transistor_FET:AO3400A
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23
+  dim_source: 厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3400A.png）
+  level: B
+  pitfalls: 贴片件，烙铁可焊但要镊子；学生板优先用 Q-001 直插三极管能解决的就不用 MOS
+  notes: 嘉立创基础库料，打样贴片不收换料费。
+  taobao_keyword: AO3400A SOT-23
+  polarized: 否
+
+# 原在 src/b1_semi.yaml
+- id: Q-004
+  category: MOS管
+  name: P 沟道 MOS AO3401A（SOT-23，贴片备选）
+  lcsc: C15127
+  alternatives: [{lcsc: C347476, note: UMW AO3401A}]
+  key_params: P 沟道，-30V，-4A，导通电阻 <60mΩ@-4.5V、<85mΩ@-2.5V
+  supply: 不适用
+  logic_level: 高边开关：栅极拉低导通、拉到源极电压关断；源极接 5V 时 3.3V GPIO 关不断，需加 NPN 电平转换
+  pin_count: 3
+  pinout: 1=G，2=S，3=D
+  pitch_mm: 1.9（1、2 脚之间）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23 2.9 × 1.3 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Transistor_FET:AO3401A
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23
+  dim_source: 厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3401A.png）
+  level: B
+  pitfalls: 常用作电源防反接或负载开关，D、S 接反会通过体二极管常通
+  notes: 嘉立创基础库料。
+  taobao_keyword: AO3401A SOT-23
+  polarized: 否
+
+# 原在 src/b1_semi.yaml
+- id: REG-001
+  category: 稳压器
+  name: 3.3V 1A LDO AMS1117-3.3（SOT-223，贴片）
+  lcsc: C6186
+  alternatives: [{lcsc: C347222, note: UMW AMS1117-3.3}]
+  key_params: 输出 3.3V，1A，压差最大 1.3V（1A 时），输入最高 15V
+  supply: 输入 4.6–12V（压差和发热决定上限）
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=GND/ADJ，2=VOUT（与背面散热片相通），3=VIN
+  pitch_mm: 2.3
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-223 6.5 × 3.5 × 1.6（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.6
+  kicad_symbol: Regulator_Linear:AMS1117-3.3
+  kicad_footprint: Package_TO_SOT_SMD:SOT-223-3_TabPin2
+  dim_source: 厂家规格书 AMS1117 引脚图（dim_pins_AMS1117.png）
+  level: B
+  pitfalls: 输入、输出各接 10µF 以上电容；5V→3.3V 带 500mA 时发热约 0.85W，散热片要铺铜
+  notes: 嘉立创基础库料。只够单个 ESP32 加小传感器，带雷达等大电流负载用 REG-003。
+  taobao_keyword: AMS1117-3.3 SOT-223
+  polarized: 否
+
+# 原在 src/b1_semi.yaml
+- id: REG-005
+  category: 稳压器
+  name: 3.3V 500mA LDO ME6211C33M5G（SOT-23-5，贴片）
+  lcsc: C82942
+  alternatives: []
+  alternatives_text: 无脚位相同的常用替代（同脚位的 XC6206 只有 3 脚，不能直接换）
+  key_params: 输出 3.3V，500mA，低压差，输入最高 6.5V
+  supply: 输入 3.6–6V（锂电池或 5V）
+  logic_level: CE 高电平使能，不用时接 VIN
+  pin_count: 5
+  pinout: 1=VIN，2=VSS(GND)，3=CE（接 VIN），4=NC，5=VOUT
+  pitch_mm: 0.95
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23-5 2.9 × 1.6 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Regulator_Linear:ME6211C33M5
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23-5
+  dim_source: 厂家规格书 微盟 ME6211 引脚图（dim_pins_ME6211.png）
+  level: B
+  pitfalls: 输入最高只有 6.5V，不能接 9V/12V；CE 悬空不输出
+  notes: 锂电池供电的小板常用，压差小。
+  taobao_keyword: ME6211C33M5G SOT-23-5
+  polarized: 否
+  pdf_keyword: ME6211

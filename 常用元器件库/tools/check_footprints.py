@@ -9,7 +9,9 @@
      脚距放不下大焊盘的（排针、XH/PH 等），可在 ring_min_mm 写更小的下限，notes 必须含"环宽"说明理由；
   6. 有极性的条目（polarized=是）：1 脚为方形/圆角方形焊盘；
   7. 有 F.Courtyard 和 F.Fab 图形；
-  8. 3D 模型文件存在（kicad_3d 写"无"的条目除外，需在 notes 说明）。
+  8. 3D 模型文件存在（kicad_3d 写"无"的条目除外，需在 notes 说明）；
+  9. 只收直插：mount 含"贴片"、封装名含 SMD/SOT/SOIC 等贴片字样、或封装里有贴片焊盘，一律报错
+     （用户只焊直插件；模块自身带贴片没关系，因为整块插在排母上，这里查的是底板上的封装）。
   kicad_footprint 写"不适用"的配件（如跳线帽）跳过以上检查，但 notes 必须含"不上板"。
 
 用法：D:/kicad/bin/python.exe tools/check_footprints.py [parts.csv]
@@ -56,6 +58,23 @@ def num(s: str) -> float | None:
     return float(m.group(0)) if m else None
 
 
+SMD_NAME = re.compile(r"(_SMD|SMD_|Package_TO_SOT_SMD|SOT-\d|SOIC|SSOP|TSSOP|QFN|QFP|SOD-\d|_0402|_0603|_0805|_1206|"
+                      r"Resistor_SMD|Capacitor_SMD|LED_SMD|Diode_SMD|Inductor_SMD)", re.I)
+
+
+def smd_errors(row: dict, pads=None) -> list[str]:
+    errs = []
+    if "贴片" in row.get("mount", ""):
+        errs.append(f"禁止贴片：mount 写的是“{row['mount']}”")
+    if SMD_NAME.search(row["kicad_footprint"]):
+        errs.append(f"禁止贴片：封装 {row['kicad_footprint']} 是贴片封装")
+    if pads is not None:
+        smd = sorted({p.GetNumber() or "?" for p in pads if p.GetAttribute() == pcbnew.PAD_ATTRIB_SMD})
+        if smd:
+            errs.append(f"禁止贴片：封装里有贴片焊盘 {smd[:6]}")
+    return errs
+
+
 def check_row(row: dict) -> tuple[list[str], dict]:
     errs: list[str] = []
     info: dict = {}
@@ -69,6 +88,7 @@ def check_row(row: dict) -> tuple[list[str], dict]:
         return [f"封装不存在: {row['kicad_footprint']}"], info
     fp = pcbnew.FootprintLoad(str(lib), name)
     pads = list(fp.Pads())
+    errs += smd_errors(row, pads)
     numbers = {p.GetNumber() for p in pads if p.GetNumber()}
     info["pads"] = sorted(numbers)
     try:

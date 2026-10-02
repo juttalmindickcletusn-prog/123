@@ -286,9 +286,6 @@ def main():
     from_official("Connector_BarrelJack", "BarrelJack_CUI_PJ-102AH_Horizontal", "BarrelJack_CUI_PJ-102AH_Horizontal",
                   "CUI PJ-102AH，焊盘与 KiCad 官方封装相同（与 CUI 推荐 PCB 图一致），3D 用立创 EDA 模型", lambda p: p,
                   model_override=("DC-IN-TH_PJ-102AH.wrl", (0, 0, 180), (2.35, -3.0, 0)))
-    from_official("Connector_USB", "USB_C_Receptacle_HRO_TYPE-C-31-M-12", "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
-                  "HRO TYPE-C-31-M-12，焊盘与 KiCad 官方封装相同，3D 用立创 EDA 模型", lambda p: p,
-                  model_override=("USB-C_SMD-TYPE-C-31-M-12_1.wrl", (0, 0, 180), (0, 1.5, 0)))
 
     # 第二批：数码管（引脚 Φ0.51，孔 0.8 已够；官方焊盘环宽偏小，加大）、Arduino Nano（本机缺官方 3D，去掉模型引用）
     from_official("Display_7Segment", "7SegmentLED_LTS6760_LTS6780", "7Seg_0.56in_1Digit_10P",
@@ -322,22 +319,7 @@ def main():
              [model("${KICAD10_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_Horizontal.step", (2.95, -ax, 0))])
     # ↑ 官方通用 DC 座模型：官方封装 1 脚在原点、2 脚在 -6、3 脚在 (-3, 4.7)，与本封装只差平移（立创模型与厂家图对不上，未用）
 
-    # Type-C 6P 仅供电（首韩 TYPE-C 6P，C456012）。坐标系同 EasyEDA 原封装，插口朝 +Y。
-    ty = -1.78                      # 后排固定脚
-    tf = ty + 3.80                  # 前排固定脚
-    sig = [("B12", -2.7, 0.8), ("B9", -1.5, 0.7), ("A5", -0.5, 0.7), ("B5", 0.5, 0.7), ("A9", 1.5, 0.7), ("A12", 2.7, 0.8)]
-    pads = [Pad(n, "smd", "rect", x, ty - 0.15, w, 1.2) for n, x, w in sig]   # 厂家 1.0 长，向后加长 0.2 便于烙铁
-    pads += [Pad("SH", "thru_hole", "oval", sx, sy, 1.2, 2.0, (0.6, 1.4)) for sx in (-4.32, 4.32) for sy in (ty, tf)]
-    edge = tf + 2.60
-    bx1, bx2, by1, by2 = -4.47, 4.47, edge - 6.80, edge
-    items = rect_lines(bx1, by1, bx2, by2, "F.Fab")
-    items += silk_lines_clipped(rect_coords(bx1 - 0.11, by1 - 0.11, bx2 + 0.11, by2 + 0.11), pads)
-    items += [line(-6, edge, 6, edge, "F.Fab"), line(-6, edge, 6, edge, "F.SilkS"), text("EDGE", 0, edge + 1.0, "F.SilkS", 0.8),
-              text("VBUS", 1.5, ty - 1.6, "F.Fab", 0.5), text("CC", 0, ty - 2.4, "F.Fab", 0.5)]
-    items += courtyard([(bx1, by1, bx2, edge + 0.5)] + [p.bbox() for p in pads])
-    write_fp("USB_C_Receptacle_ShouHan_TYPE-C-6P_PowerOnly", "首韩 TYPE-C 6P 仅供电母座：6 个贴片信号脚 + 4 个直插固定脚，按厂家推荐 PCB 图；插口朝 +Y，前端与 EDGE 线对齐",
-             "USB-C 6P power only", "through_hole", items, pads, (0, by1 - 1.6), (0, edge + 2.4),
-             [easy_model("TYPE-C-SMD_6P-L8.9-W6.8-H3.2-P1.00.wrl", rot=(0, 0, 180))])
+    # Type-C 6P（首韩，贴片信号脚）和 HRO TYPE-C-31-M-12（贴片 16P）已于 2026-10-02 直插化时移到 _archive_smd_20261002/，不再生成
 
     # 无源蜂鸣器 Φ12x8.5 脚距 6.5（锋鸣 YS-MBZ12085C05R42）
     def buzzer(name, d, h, pitch, lead, mdl, descr):

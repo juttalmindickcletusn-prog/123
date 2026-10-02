@@ -1,18 +1,18 @@
 {
- "csv": "/home/user/123/常用元器件库/tools/selftest/fixtures/fp_FUS-001_10.csv",
+ "csv": "/home/user/123/常用元器件库/tools/selftest/fixtures/fp_RES-002_9.csv",
  "checked": 1,
  "errors": {
-  "FUS-001": [
-   "没有 3D 模型且 notes 未说明"
+  "RES-002": [
+   "禁止贴片：mount 写的是“贴片”"
   ]
  },
  "info": {
-  "FUS-001": {
+  "RES-002": {
    "pads": [
     "1",
     "2"
    ],
-   "pitch_measured": 5.08
+   "pitch_measured": 10.16
   }
  }
 }
