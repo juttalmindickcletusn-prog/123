@@ -2,3 +2,5 @@ build/
 __pycache__/
 *.pyc
 tools/selftest/projects/*/
+tools/selftest/cost/cost_*/
+tools/selftest/fixtures/tmp_*

@@ -195,7 +195,48 @@ def main():
         what = "样例项目 " + Path(args[0]).stem if args else "真实 parts.csv"
         lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：{what} | {script} | 0 错误 | {last} |")
         print(("OK  " if ok else "FAIL"), "正向对照", what, script, last)
-    lines += ["", f"合计 {len(cases)} 个故意错误 + {len(positives)} 个正向对照，失败 {fails} 项。"]
+    # 成本与价格刷新（固定假价格：tools/selftest/cost/price_history.csv）
+    import os
+    sys.path.insert(0, str(ROOT / "tools"))
+    import market_lib
+    lines += ["", "## 成本计算、阶梯价选档、价格刷新", "", "| 结果 | 测试 | 期望 | 实际（节选） |", "|---|---|---|---|"]
+    def chk(title, ok, expect, got):
+        nonlocal_fails[0] += not ok
+        lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | {title} | {expect} | {str(got).replace('|', '/')[:120]} |")
+        print(("OK  " if ok else "FAIL"), title, "|", str(got)[:100])
+    nonlocal_fails = [0]
+    T = [(1, 0.2), (10, 0.15), (100, 0.1)]
+    for q, want in ((1, 0.2), (9, 0.2), (10, 0.15), (99, 0.15), (100, 0.1), (5000, 0.1)):
+        got = market_lib.pick_tier(T, q)
+        chk(f"阶梯选档：1/10/100 三档，买 {q} 个", got is not None and got[1] == want, f"¥{want:g}", got)
+    got = market_lib.pick_tier([(50, 0.057)], 10)
+    chk("阶梯选档：买 10 个但起订 50", got == (50, 0.057), "按起订档 50+", got)
+    cost_dir = HERE / "cost"
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "STUDENTHW_PRICE_HISTORY": str(cost_dir / "price_history.csv")}
+    def runp(args):
+        r = subprocess.run([PY, *map(str, args)], capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
+        return r.returncode, r.stdout + r.stderr
+    code, out = runp([ROOT / "tools" / "project_cost.py", cost_dir / "cost_hand.yaml"])
+    chk("手算样例总价一致（123.27）", code == 0 and "总计 ¥123.27" in out, "退出 0，总计 ¥123.27", out.strip().splitlines()[-1])
+    chk("缺价提示（模块淘宝未核、系列值无价格）", "总价不完整" in out and "缺价 SEN-014" in out and "100R C57438 没有价格记录" in out, "总价不完整 + 两行缺价", "；".join(l for l in out.splitlines() if l.startswith("缺价")))
+    chk("价格超过 30 天提示", "REG-004 C111887 立创价核实于 2026-08-01" in out, "提示 REG-004 过期", next((l for l in out.splitlines() if "REG-004" in l), ""))
+    md = (cost_dir / "cost_hand" / "成本.md").read_text(encoding="utf-8")
+    chk("小件按立创起订量买（JMP-001 起订 50）", "立创起订 50" in md and "¥2.85" in md, "买 50，小计 ¥2.85", next((l for l in md.splitlines() if l.startswith("| JMP-001")), ""))
+    code, out = runp([ROOT / "tools" / "project_cost.py", cost_dir / "cost_wrong.yaml"])
+    chk("故意写错手算值必须报错", code != 0 and "不一致" in out, "退出非 0，报不一致", out.strip().splitlines()[-1])
+    tmp_hist = FIX / "tmp_price_history.csv"
+    shutil.copy(cost_dir / "price_history.csv", tmp_hist)
+    env["STUDENTHW_PRICE_HISTORY"] = str(tmp_hist)
+    code, out = runp([ROOT / "tools" / "refresh_prices.py", "LED-001", "REG-004", "--from-json", cost_dir / "lceda_api"])
+    added = len(tmp_hist.read_text(encoding="utf-8-sig").strip().splitlines()) - len((cost_dir / "price_history.csv").read_text(encoding="utf-8-sig").strip().splitlines())
+    chk("价格刷新：库存低报警", "库存 50 低于 200" in out, "LED-001 库存 50 报警", next((l for l in out.splitlines() if "库存" in l), ""))
+    chk("价格刷新：价格变化超 10% 报警", "50+ 档价格 ¥0.25 → ¥0.32" in out, "LED-001 50+ 档 +28% 报警", next((l for l in out.splitlines() if "变化" in l), ""))
+    chk("价格刷新：结果追加到价格历史", code == 0 and added == 2, "追加 2 行", f"追加 {added} 行，退出 {code}")
+    tmp_hist.unlink()
+    fails += nonlocal_fails[0]
+
+    n_cost = sum(1 for l in lines if l.startswith(("| ✅ 通过 |", "| ❌ 不通过 |"))) - len(positives)
+    lines += ["", f"合计 {len(cases)} 个故意错误 + {len(positives)} 个正向对照 + {n_cost} 个成本/价格测试，失败 {fails} 项。"]
     _env = __import__("os").environ
     if _env.get("STUDENTHW_OFFLINE") == "1" or _env.get("STUDENTHW_PDF_MISSING_OK") == "1":
         lines += ["", "注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。"]

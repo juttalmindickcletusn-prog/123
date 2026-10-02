@@ -12,12 +12,14 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import json
+import os
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-HISTORY = ROOT / "src" / "price_history.csv"
+# 自测可用环境变量 STUDENTHW_PRICE_HISTORY 指向固定价格的样例文件
+HISTORY = Path(os.environ.get("STUDENTHW_PRICE_HISTORY") or ROOT / "src" / "price_history.csv")
 HIST_FIELDS = ["date", "id", "lcsc", "tiers_cny", "stock", "source"]
 NOT_CHECKED_TB = "淘宝未核（需登录）"
 

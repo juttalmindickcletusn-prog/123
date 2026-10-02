@@ -1,0 +1,15 @@
+# 采购量规则（project_cost.py、refresh_prices.py 读取），可以改。
+small_price_cny: 0.5        # 单价低于这个算小件（按立创已核到的最低起订档单价判断；没价格的不算小件）
+small_min_buy: 10           # 小件至少买这么多
+small_spare_pct: 10         # 小件备损：多买 10%（向上取整）
+small_spare_min: 2          #           且至少多 2 个
+module_prefixes: [MCU, DSP, SEN, ACT, COM, PMD, TOOL]   # 这些编号前缀算模块
+module_spare: 0             # 模块默认不加备损；想多买 1 个备用就改成 1
+other_spare: 0              # 其他件（非小件、非模块，如稳压器、电池座）的备损
+price_max_age_days: 30      # 立创价核实日期超过这么多天就提示刷新
+# 立创起订量 = 已核到的最低一档起订数量；递增量（倍数）云端没核到接口字段，按 1 处理（见 refresh_prices.py 说明）
+refresh:
+  low_stock_qty: 200        # 立创商城库存低于这个数报警（“常用量”，按需改）
+  change_pct: 10            # 与上次记录相比，任一档价格变化超过 10% 报警
+  delay_s: 1.5              # 每个 C 编号请求之间的间隔（限速）
+  cache_hours: 12           # 缓存有效期，期间重复运行不重复请求
