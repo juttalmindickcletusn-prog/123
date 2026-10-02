@@ -38,6 +38,11 @@
 | ✅ 抓到 | 淘宝价只写一个数字 | build_market.py | 店铺明细 | ✗ SEN-014 price_taobao_ref 只写了一个数字，必须写店铺明细（shops） |
 | ✅ 抓到 | 替代料引用不存在的编号 | build_market.py | 不在 parts.csv | ✗ SEN-001 better_alt 引用的 SEN-999 不在 parts.csv |
 | ✅ 抓到 | 热度等级写错字 | build_market.py | 不是 大众 | ✗ RES-001 sales_level=热门 不是 大众/常用/冷门/未核 |
+| ✅ 抓到 | 选型候选写了不存在的编号 | build_selection.py | 不在 parts.csv | ✗ 环境感知/其他环境开关量：候选 SEN-999 不在 parts.csv |
+| ✅ 抓到 | 传感器条目没被任何功能引用 | build_selection.py | SEN-037 没出现在任何功能的候选里 | ✗ 环境感知/其他环境开关量：候选 SEN-028x 不在 parts.csv |
+| ✅ 抓到 | 不推荐没写出处 | build_selection.py | 缺原因或出处 | ✗ 环境感知/气体与烟雾：不推荐的 SEN-032 缺原因或出处 |
+| ✅ 抓到 | 驱动库名没核对过 | build_selection.py | 没核对过 | ✗ 环境感知/光照：SEN-025 的驱动库“BH1750_Fake”没核对过（先在 arduino/library-registry 查到再加进 LIB_REPO） |
+| ✅ 抓到 | 三档推荐不是本功能候选 | build_selection.py | 不是本功能的候选件 | ✗ 环境感知/温湿度：精度推荐 SEN-014 不是本功能的候选件 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 189 条，出错 0 条；离线警告：缺 PDF 86 条，C 编号未接口核实 2 条 |
@@ -66,6 +71,6 @@
 | ✅ 通过 | 价格刷新：价格变化超 10% 报警 | LED-001 50+ 档 +28% 报警 | ! LED-001 C2895492 50+ 档价格 ¥0.25 → ¥0.32（变化 28%，上次 2026-10-01） |
 | ✅ 通过 | 价格刷新：结果追加到价格历史 | 追加 2 行 | 追加 2 行，退出 0 |
 
-合计 34 个故意错误 + 7 个正向对照 + 15 个成本/价格测试，失败 0 项。
+合计 39 个故意错误 + 7 个正向对照 + 15 个成本/价格测试，失败 0 项。
 
 注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。

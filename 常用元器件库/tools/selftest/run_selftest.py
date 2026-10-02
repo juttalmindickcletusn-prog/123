@@ -172,6 +172,19 @@ def main():
     cases.append(("替代料引用不存在的编号", "build_market.py", bad_market("alt", "SEN-001", better_alt="SEN-999 更好"), (), "不在 parts.csv"))
     cases.append(("热度等级写错字", "build_market.py", bad_market("lvlname", "RES-001", sales_level="热门"), (), "不是 大众"))
 
+    # 选型数据：拿真实 selection.yaml 改坏一处
+    sel0 = (ROOT / "src" / "selection.yaml").read_text(encoding="utf-8")
+    def bad_sel(tag, old_, new_):
+        assert old_ in sel0, old_
+        p_ = FIX / f"selection_{tag}.yaml"
+        p_.write_text(sel0.replace(old_, new_, 1), encoding="utf-8")
+        return p_
+    cases.append(("选型候选写了不存在的编号", "build_selection.py", bad_sel("noid", "      SEN-028: {", "      SEN-999: {"), (), "不在 parts.csv"))
+    cases.append(("传感器条目没被任何功能引用", "build_selection.py", bad_sel("cover", "      SEN-037: {", "      SEN-028x: {"), (), "SEN-037 没出现在任何功能的候选里"))
+    cases.append(("不推荐没写出处", "build_selection.py", bad_sel("nosrc", ', src: "炜盛 MQ-2 手册', ', srcx: "炜盛 MQ-2 手册'), (), "缺原因或出处"))
+    cases.append(("驱动库名没核对过", "build_selection.py", bad_sel("lib", "libs: [BH1750]", "libs: [BH1750_Fake]"), (), "没核对过"))
+    cases.append(("三档推荐不是本功能候选", "build_selection.py", bad_sel("pick", '精度: [SEN-006, "规格书精度最高', '精度: [SEN-014, "规格书精度最高'), (), "不是本功能的候选件"))
+
     lines = ["# 检查脚本自测", "", "每一行把一个真实条目故意改错一处，脚本必须报错。", "",
              "| 结果 | 故意制造的错误 | 脚本 | 期望报出 | 实际输出（节选） |", "|---|---|---|---|---|"]
     fails = 0

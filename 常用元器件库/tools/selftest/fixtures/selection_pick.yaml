@@ -1,0 +1,471 @@
+# 按功能选型数据。tools/build_selection.py 生成 选型速查.md。
+# 只写库里的编号；库外件放 not_in_lib，写"未入库"和原因。
+# 每个候选件：
+#   spec / spec_src   量程或精度及出处（不写就用 parts.csv 的 key_params，出处标注在其括号里）
+#   difficulty 1–3 + diff_why   1 = 现成库几行代码、接线 ≤3 根；2 = I2C/SPI/串口或要注意电平；3 = 要调参、大电流或射频/协议多
+#   libs   常用 Arduino 驱动库（库名在 arduino/library-registry@df95082 里核对过存在，见 build_selection.py 的 LIB_CHECKED）
+#   fit    适合的场景
+# 接口、供电、电平、电流从 src/electrical.yaml 读；坑从 parts.csv 的 pitfalls 读；价格、热度从市场数据读。不在这里重复写。
+# avoid：很多人用但不推荐，写原因和出处（src）。
+
+环境感知:
+  温湿度:
+    candidates:
+      SEN-004: {spec: "温度 ±0.3℃、湿度 ±2%RH（典型）", spec_src: "https://www.aosong.com/userfiles/files/media/Data%20Sheet%20AHT20.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 1, diff_why: "I2C 4 根线，库直接读", libs: [Adafruit AHTX0], fit: "室内温湿度显示、记录的默认选择"}
+      SEN-006: {spec: "温度 ±0.2℃（0–65℃）、湿度 ±2%RH（典型，Ver.7 规格书）", spec_src: "https://sensirion.com/media/documents/213E6A3B/63A5A569/Datasheet_SHT3x_DIS.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 1, diff_why: "I2C 4 根线，地址可选 0x44/0x45", libs: [Adafruit SHT31 Library], fit: "要求精度高、需要两颗同型传感器（改地址）"}
+      SEN-003: {difficulty: 1, diff_why: "单总线 1 根数据线，库直接读；采样慢", libs: [DHT sensor library], fit: "沿用旧教程、不想接 I2C"}
+      SEN-001: {spec: "温度 ±2℃、湿度 ±5%RH（0–50℃；25℃ 时 ±4%RH）", spec_src: "https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 1, diff_why: "单总线 1 根数据线", libs: [DHT sensor library], fit: "只做演示、对数值无要求"}
+      SEN-005: {difficulty: 1, diff_why: "I2C 两颗芯片共一路总线", libs: [Adafruit AHTX0, Adafruit BMP280 Library], fit: "温湿度 + 气压/海拔一块板解决"}
+    picks:
+      省钱: [SEN-004, "I2C 直接读、3.3V/5V 都能用，精度比 DHT11 高一个档次"]
+      均衡: [SEN-004, "同上：资料多、地址固定 0x38，注意别和 PCF8574A 跳线全短接（0x38）冲突"]
+      精度: [SEN-014, "规格书精度最高，地址可改，同一路总线可接两颗"]
+    avoid:
+      - {id: SEN-001, why: "精度低：温度 ±2℃、湿度 ±5%RH，比 AHT20（±0.3℃/±2%RH）差得多", src: "DHT11 规格书 https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf；AHT20 规格书（同上）"}
+  温度:
+    candidates:
+      SEN-007: {spec: "±0.5℃（-10~+85℃），-55~+125℃", spec_src: "evidence/SEN-007/datasheet.pdf（Maxim DS18B20 规格书，本地 PDF 文本已核）",
+                difficulty: 1, diff_why: "单总线，DQ 加 4.7k 上拉即可，多颗可并一根线", libs: [DallasTemperature, OneWire], fit: "板上测温、多点测温"}
+      SEN-008: {spec: "同 DS18B20 芯片", spec_src: "同 SEN-007", difficulty: 1, diff_why: "同 DS18B20", libs: [DallasTemperature, OneWire], fit: "水温、液体、户外"}
+      SEN-009: {difficulty: 2, diff_why: "接法同 DS18B20，但数据换算不同，库要改", libs: [], fit: "已有 M1820 探头的项目"}
+      SEN-010: {difficulty: 2, diff_why: "SMBus/I2C，注意测温距离与视场角", libs: [Adafruit MLX90614 Library], fit: "非接触测温（体温枪、物体表面）"}
+    picks:
+      省钱: [SEN-007, "TO-92 直插，单总线一根线"]
+      均衡: [SEN-008, "防水探头，液体和户外都能用"]
+      精度: [SEN-007, "规格书 ±0.5℃（-10~+85℃）；要非接触用 MLX90614（SEN-010）"]
+  气压:
+    candidates:
+      SEN-005: {spec: "BMP280 绝对精度 ±1 hPa（典型，950–1050hPa，0–40℃），相对精度 ±0.12 hPa", spec_src: "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 1, diff_why: "I2C", libs: [Adafruit BMP280 Library], fit: "气压、相对海拔"}
+    picks:
+      省钱: [SEN-005, "库内唯一气压件"]
+      均衡: [SEN-005, "同时带温湿度"]
+      精度: [SEN-005, "库内唯一气压件"]
+  光照:
+    candidates:
+      SEN-025: {difficulty: 1, diff_why: "I2C，直接读 lux", libs: [BH1750], fit: "要光照数值（lux）"}
+      SEN-026: {difficulty: 1, diff_why: "DO 开关量或 AO 模拟量", libs: [], fit: "只判断亮/暗"}
+    picks:
+      省钱: [SEN-026, "只要亮暗判断时最简单"]
+      均衡: [SEN-025, "直接输出 lux"]
+      精度: [SEN-025, "数字输出、量程 1–65535 lx"]
+  测距:
+    candidates:
+      SEN-019: {difficulty: 1, diff_why: "Trig/Echo 两根线，3.3V 供电可直连 3.3V 主控", libs: [HCSR04], fit: "几厘米到几米的避障、液位"}
+      SEN-018: {difficulty: 2, diff_why: "只能 5V 供电，Echo 5V，接 3.3V 主控要分压", libs: [HCSR04], fit: "Arduino Nano 等 5V 主控"}
+      SEN-020: {spec: "默认模式最远 1.2m，长距离模式约 2m", spec_src: "https://www.st.com/resource/en/datasheet/vl53l0x.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 2, diff_why: "I2C，多颗要软件改地址（XSHUT 轮流上电）", libs: [VL53L0X], fit: "近距离、小体积、窄光束"}
+    picks:
+      省钱: [SEN-019, "3.3V/5V 主控都能直连"]
+      均衡: [SEN-019, "资料多，3.3V 直连"]
+      精度: [SEN-020, "激光 ToF，光束窄，近距离稳定"]
+    avoid:
+      - {id: SEN-018, why: "老版 HC-SR04 只能 5V 供电，Echo 输出 5V，直接接 ESP32/Pico 会超出 3.3V IO 耐压", src: "src/electrical.yaml SEN-018（出处见该条 src_ref）；ESP32 IO 不耐 5V 见 src/mcu_pins.yaml"}
+  气体与烟雾:
+    candidates:
+      SEN-032: {spec: "加热功耗 ≤950mW，预热 ≥48 小时（Ver1.6 手册）", spec_src: "https://www.winsen-sensor.com/d/files/newpdf/mq-2-(ver1_6)---manual.pdf（搜索摘要转述，未打开原件）",
+                difficulty: 2, diff_why: "要预热、标定，只能比较相对变化", libs: [MQUnifiedsensor], fit: "烟雾/可燃气体报警（定性）"}
+      SEN-033: {difficulty: 2, diff_why: "同 MQ 系列：加热、预热、只能定性", libs: [MQUnifiedsensor], fit: "空气质量趋势（定性）"}
+    picks:
+      省钱: [SEN-032, "库内现有，只做报警阈值"]
+      均衡: [SEN-032, "同上"]
+      精度: [SEN-033, "库内没有定量的数字气体传感器（SGP30 等未入库），只能定性"]
+    avoid:
+      - {id: SEN-032, why: "MQ 系列是加热式：加热功耗约 1W 级（≤950mW），首次要长时间预热，输出受温湿度影响，只能定性判断，不能给出准确浓度；电池供电不适合", src: "炜盛 MQ-2 手册 Ver1.6 https://www.winsen-sensor.com/d/files/newpdf/mq-2-(ver1_6)---manual.pdf"}
+    not_in_lib:
+      - {name: SGP30 / PMS5003 等数字气体、粉尘传感器, why: "任务书 P2，云端没做（无尺寸图），见 待确认.md"}
+  其他环境开关量:
+    candidates:
+      SEN-028: {difficulty: 1, diff_why: "DO 开关量", libs: [], fit: "火焰有无"}
+      SEN-029: {difficulty: 1, diff_why: "DO/AO", libs: [], fit: "下雨检测"}
+      SEN-030: {difficulty: 1, diff_why: "AO 模拟量，要自己标定干湿", libs: [], fit: "土壤湿度（电容式，不易腐蚀）"}
+      SEN-031: {difficulty: 1, diff_why: "AO 模拟量，电极长期通电会腐蚀", libs: [], fit: "水位粗测、短时间演示"}
+      SEN-027: {difficulty: 1, diff_why: "DO/AO，只能判断有无声音", libs: [], fit: "声控开关"}
+      SEN-034: {difficulty: 1, diff_why: "DO 开关量", libs: [], fit: "有无振动"}
+      SEN-035: {difficulty: 1, diff_why: "DO/AO", libs: [], fit: "循迹、近距离反射检测"}
+      SEN-036: {difficulty: 2, diff_why: "要解码红外协议", libs: [IRremote], fit: "红外遥控接收"}
+      SEN-037: {difficulty: 1, diff_why: "开漏输出，要上拉", libs: [], fit: "磁铁接近、转速计数"}
+    picks:
+      省钱: [SEN-030, "土壤湿度优先电容式"]
+      均衡: [SEN-030, "电容式不腐蚀"]
+      精度: [SEN-030, "这一类都是定性/粗测，库内无定量件"]
+    avoid:
+      - {id: SEN-031, why: "裸露梳状电极长期通电会电解腐蚀，读数漂移；长期监测用电容式（SEN-030）", src: "parts.csv SEN-031 key_params：裸露梳状电极（规格书链接见该条 datasheet_url）"}
+
+人体相关:
+  人体存在和移动:
+    candidates:
+      SEN-016: {difficulty: 1, diff_why: "OUT 一根线，高电平有人", libs: [], fit: "走廊灯、有人移动报警"}
+      SEN-017: {difficulty: 1, diff_why: "OUT 一根线", libs: [], fit: "体积小的移动检测"}
+      SEN-021: {difficulty: 1, diff_why: "OUT 一根线；能穿透塑料外壳", libs: [], fit: "外壳内的移动检测"}
+      SEN-022: {difficulty: 2, diff_why: "串口 256000 波特率协议，OUT 脚可直接用", libs: [ld2410], fit: "静止的人也要检测（坐着、躺着）"}
+      SEN-023: {difficulty: 3, diff_why: "串口协议、功能多（呼吸心率/跌倒等看固件）", libs: [HLK-LD6002], fit: "毫米波生命体征类课题"}
+      SEN-024: {difficulty: 3, diff_why: "同 LD6002", libs: [HLK-LD6002], fit: "同 LD6002"}
+    picks:
+      省钱: [SEN-016, "热释电，最简单，只检测移动"]
+      均衡: [SEN-022, "能检测静止的人，OUT 脚可当开关量用"]
+      精度: [SEN-023, "60GHz 毫米波，功能最多（按固件）"]
+    avoid:
+      - {id: SEN-016, why: "热释电只对移动的人敏感，人静止后会判无人；需要\"有人在\"时用毫米波（SEN-022）", src: "parts.csv SEN-016 key_params（热释电人体感应）；HLK-LD2410C 手册 https://naylampmechatronics.com/img/cms/001080/HLK-LD2410C_datasheet.pdf"}
+  心率血氧:
+    candidates:
+      SEN-011: {difficulty: 2, diff_why: "I2C；算法要调（手指按压、环境光）", libs: [SparkFun MAX3010x Pulse and Proximity Sensor Library], fit: "心率 + 血氧"}
+      SEN-012: {difficulty: 1, diff_why: "模拟波形，库做心率计算", libs: [PulseSensor Playground], fit: "只要心率波形"}
+    picks:
+      省钱: [SEN-012, "模拟输出，接 ADC 即可"]
+      均衡: [SEN-011, "数字输出，能测血氧"]
+      精度: [SEN-011, "库内唯一能测血氧的"]
+  心电:
+    candidates:
+      SEN-013: {difficulty: 3, diff_why: "模拟前端，要电极贴片、滤波、注意供电噪声", libs: [], fit: "单导联心电波形"}
+    picks:
+      省钱: [SEN-013, "库内唯一心电件"]
+      均衡: [SEN-013, "同上"]
+      精度: [SEN-013, "同上"]
+  姿态和跌倒:
+    candidates:
+      SEN-014: {spec: "陀螺仪 ±250/500/1000/2000°/s，加速度 ±2/4/8/16g（可编程）", spec_src: "TDK MPU-6050 规格书（parts.csv SEN-014 datasheet_url；搜索摘要转述）",
+                difficulty: 2, diff_why: "I2C；姿态解算要滤波或用 DMP", libs: [Adafruit MPU6050, MPU6050], fit: "姿态、跌倒检测、计步"}
+      SEN-015: {spec: "±2/4/8/16g，最高 13 位", spec_src: "https://www.analog.com/media/en/technical-documentation/data-sheets/adxl345.pdf（搜索摘要转述）",
+                difficulty: 2, diff_why: "I2C 或 SPI", libs: [Adafruit ADXL345], fit: "只要加速度（倾斜、振动、跌倒冲击）"}
+    picks:
+      省钱: [SEN-015, "只要加速度时够用"]
+      均衡: [SEN-014, "六轴，跌倒判断可结合角速度"]
+      精度: [SEN-014, "库内唯一带陀螺仪的"]
+
+定位与识别:
+  定位:
+    candidates:
+      SEN-043: {spec: "GPS+北斗，2.5m（CEP50，开阔地）", spec_src: "商家/评测资料（搜索摘要），原厂规格书 https://www.tinytronics.nl/product_files/002176_ATGM336H.pdf 未打开",
+                difficulty: 2, diff_why: "串口 NMEA，库解析", libs: [TinyGPSPlus], fit: "国内定位，北斗+GPS"}
+      SEN-044: {spec: "GPS，水平 2.5m（CEP）", spec_src: "u-blox NEO-6 规格书 https://content.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf（搜索摘要转述）",
+                difficulty: 2, diff_why: "串口 NMEA", libs: [TinyGPSPlus], fit: "沿用 NEO-6M 教程"}
+    picks:
+      省钱: [SEN-043, "双模，模块小"]
+      均衡: [SEN-043, "北斗+GPS"]
+      精度: [SEN-043, "两者标称精度相同，ATGM336H 多北斗星座"]
+  RFID:
+    candidates:
+      SEN-045: {difficulty: 2, diff_why: "SPI 接线 7 根，3.3V 供电", libs: [MFRC522], fit: "门禁卡、校园卡（13.56MHz）"}
+    picks:
+      省钱: [SEN-045, "库内唯一"]
+      均衡: [SEN-045, "库内唯一"]
+      精度: [SEN-045, "库内唯一"]
+  指纹:
+    candidates:
+      SEN-046: {difficulty: 2, diff_why: "串口协议，录入/比对流程要写", libs: [Adafruit Fingerprint Sensor Library], fit: "指纹门禁、打卡"}
+    picks:
+      省钱: [SEN-046, "库内唯一"]
+      均衡: [SEN-046, "库内唯一"]
+      精度: [SEN-046, "库内唯一；R307 未入库"]
+
+测量:
+  称重:
+    candidates:
+      SEN-038: {difficulty: 2, diff_why: "两线时序，要标定系数", libs: [HX711 Arduino Library], fit: "电子秤、重量检测"}
+    picks:
+      省钱: [SEN-038, "库内唯一"]
+      均衡: [SEN-038, "库内唯一"]
+      精度: [SEN-038, "24 位 ADC，精度主要看称重传感器"]
+  电流电压:
+    candidates:
+      SEN-041: {difficulty: 2, diff_why: "I2C，同时读电压、电流、功率", libs: [Adafruit INA219], fit: "小电流（约 3A 内）、26V 内的直流测量"}
+      SEN-039: {difficulty: 2, diff_why: "模拟输出，零点在 VCC/2，接 3.3V ADC 要分压", libs: [], fit: "±5A 交直流"}
+      SEN-040: {difficulty: 2, diff_why: "同 SEN-039", libs: [], fit: "±20A 大电流"}
+      SEN-042: {difficulty: 1, diff_why: "电阻分压，接 ADC", libs: [], fit: "0–25V 电压粗测"}
+    picks:
+      省钱: [SEN-042, "只测电压最简单"]
+      均衡: [SEN-041, "数字输出，电压电流一起测"]
+      精度: [SEN-041, "数字输出，免 ADC 误差；超过 3A 用 ACS712"]
+
+时钟与存储:
+  时钟:
+    candidates:
+      SEN-047: {spec: "±2ppm（0~+40℃），±3.5ppm（-40~+85℃），内置温补晶振", spec_src: "https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231.pdf（搜索摘要转述）",
+                difficulty: 1, diff_why: "I2C，库直接读写时间", libs: [RTClib], fit: "需要走时准的项目"}
+      SEN-048: {spec: "精度取决于外接 32.768kHz 晶振", spec_src: "DS3231 规格书对比说明（同上）；DS1302 规格书 https://www.mouser.com/datasheet/2/256/ds1302-1177771.pdf",
+                difficulty: 1, diff_why: "三线时序（非 I2C）", libs: [Ds1302], fit: "课程沿用"}
+    picks:
+      省钱: [SEN-048, "能用，但走时随晶振和温度漂"]
+      均衡: [SEN-047, "温补晶振，走时准"]
+      精度: [SEN-047, "±2ppm"]
+    avoid:
+      - {id: SEN-048, why: "DS1302 靠外接晶振，走时精度随温度和晶振个体漂移；DS3231 内置温补晶振", src: "DS3231 规格书 https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231.pdf"}
+  存储:
+    candidates:
+      SEN-049: {difficulty: 2, diff_why: "SPI，要 FAT 文件系统", libs: [SD, SdFat], fit: "数据记录、存音频图片"}
+    picks:
+      省钱: [SEN-049, "库内唯一"]
+      均衡: [SEN-049, "库内唯一"]
+      精度: [SEN-049, "库内唯一；小量参数可用 ZS-042 板上 AT24C32"]
+
+显示:
+  字符屏:
+    candidates:
+      DSP-012: {difficulty: 2, diff_why: "并口 6 根以上，要对比度电位器；配 DSP-013 变 I2C", libs: [LiquidCrystal I2C], fit: "显示几行字，5V 系统"}
+      DSP-013: {difficulty: 1, diff_why: "I2C 4 根线", libs: [LiquidCrystal I2C], fit: "1602/2004 减线"}
+      DSP-014: {difficulty: 1, diff_why: "带 I2C 转接板", libs: [LiquidCrystal I2C], fit: "要显示 4 行"}
+    picks:
+      省钱: [DSP-012, "配 PCF8574（DSP-013）用 I2C"]
+      均衡: [DSP-012, "同上"]
+      精度: [DSP-014, "4 行 20 字"]
+  图形屏:
+    candidates:
+      DSP-001: {difficulty: 1, diff_why: "I2C 4 根线", libs: [Adafruit SSD1306, U8g2], fit: "小字、图标、波形"}
+      DSP-003: {difficulty: 1, diff_why: "I2C，驱动 SH1106（库要选对）", libs: [U8g2], fit: "要比 0.96 寸大一点"}
+      DSP-005: {difficulty: 1, diff_why: "I2C", libs: [Adafruit SSD1306, U8g2], fit: "空间很小，显示 2–4 行"}
+      DSP-006: {difficulty: 2, diff_why: "SPI 7 根线", libs: [Adafruit SSD1306, U8g2], fit: "刷新快"}
+      DSP-008: {difficulty: 2, diff_why: "SPI，3.3V", libs: [TFT_eSPI, Adafruit ST7735 and ST7789 Library], fit: "彩色、小尺寸"}
+      DSP-009: {difficulty: 2, diff_why: "SPI，3.3V", libs: [TFT_eSPI, Adafruit ST7735 and ST7789 Library], fit: "彩色界面"}
+      DSP-007: {difficulty: 2, diff_why: "SPI", libs: [Adafruit ST7735 and ST7789 Library], fit: "沿用旧教程"}
+      DSP-010: {difficulty: 3, diff_why: "SPI + 触摸 + SD 共用总线", libs: [TFT_eSPI, Adafruit ILI9341], fit: "要触摸"}
+      DSP-011: {difficulty: 3, diff_why: "同 DSP-010", libs: [TFT_eSPI, Adafruit ILI9341], fit: "要触摸、更大"}
+    picks:
+      省钱: [DSP-001, "I2C 4 根线，资料最多"]
+      均衡: [DSP-009, "2.0 寸 IPS 彩屏，视角好"]
+      精度: [DSP-011, "2.8 寸带触摸"]
+  数码管:
+    candidates:
+      DSP-015: {difficulty: 1, diff_why: "两线（CLK/DIO）", libs: [TM1637], fit: "4 位数字、时钟"}
+      SEG-003: {difficulty: 2, diff_why: "直接驱动要 12 个 IO 和限流电阻、动态扫描", libs: [], fit: "课程要求直驱数码管"}
+      SEG-001: {difficulty: 1, diff_why: "8 个 IO 静态驱动", libs: [], fit: "1 位数字"}
+    picks:
+      省钱: [DSP-015, "两根线、库直接显示"]
+      均衡: [DSP-015, "同上"]
+      精度: [DSP-015, "同上"]
+  点阵:
+    candidates:
+      DSP-016: {difficulty: 1, diff_why: "三线，可级联", libs: [MD_MAX72XX, LedControl], fit: "滚动字、图案"}
+    picks:
+      省钱: [DSP-016, "库内唯一"]
+      均衡: [DSP-016, "库内唯一"]
+      精度: [DSP-016, "库内唯一"]
+
+通信:
+  WiFi:
+    candidates:
+      MCU-001: {difficulty: 2, diff_why: "主控自带 WiFi/BLE", libs: [], fit: "新项目直接用带 WiFi 的主控"}
+      MCU-004: {difficulty: 2, diff_why: "主控自带 WiFi/BLE", libs: [], fit: "同上，官方板"}
+      COM-003: {difficulty: 2, diff_why: "AT 指令或单独编程，只有 2 个 GPIO", libs: [], fit: "给 Nano/51 加 WiFi"}
+      MCU-008: {difficulty: 1, diff_why: "主控自带 WiFi，不用额外模块", libs: [], fit: "新项目直接用带 WiFi 的主控"}
+    picks:
+      省钱: [MCU-008, "主控自带，省模块"]
+      均衡: [MCU-001, "ESP32-S3 主控自带 WiFi/BLE"]
+      精度: [MCU-004, "乐鑫官方板"]
+  蓝牙:
+    candidates:
+      COM-001: {difficulty: 2, diff_why: "串口透传，AT 设置主从", libs: [], fit: "给 5V 主控加蓝牙串口"}
+      COM-002: {difficulty: 1, diff_why: "上电即从机透传", libs: [], fit: "手机连板子收发数据"}
+      MCU-001: {difficulty: 2, diff_why: "主控自带 BLE，要写 BLE 服务", libs: [], fit: "新项目省掉蓝牙模块"}
+    picks:
+      省钱: [COM-002, "只做从机最简单"]
+      均衡: [COM-001, "主从可设"]
+      精度: [MCU-001, "ESP32-S3 自带 BLE，省模块"]
+  4G:
+    not_in_lib:
+      - {name: Air780E 4G Cat.1 模块, why: "任务书 P1，云端没拿到可靠尺寸图，未入库（见 待确认.md）"}
+    avoid:
+      - {name: SIM800L（2G）, why: "国内运营商 2G 退网：中国移动 2020 年底起停止新增 2G 物联网用户，联通推进 2G 减频退网；新项目用 4G Cat.1", src: "阿里云帮助中心《关于中国移动2G网络退网的通知》https://help.aliyun.com/zh/iotmcp/product-overview/notice-on-china-mobile-s-2g-network-withdrawal；人民网 http://finance.people.com.cn/n1/2023/1221/c1004-40143451.html"}
+  LoRa:
+    not_in_lib:
+      - {name: Ra-02（SX1278）, why: "邮票孔模组，需转接板；云端没拿到转接板尺寸图，未入库"}
+  2.4G:
+    candidates:
+      COM-004: {difficulty: 3, diff_why: "SPI，3.3V 供电要稳（加电容），射频调试", libs: [RF24], fit: "两块板之间短距离无线"}
+    picks:
+      省钱: [COM-004, "库内唯一"]
+      均衡: [COM-004, "库内唯一"]
+      精度: [COM-004, "库内唯一"]
+  ZigBee:
+    not_in_lib:
+      - {name: CC2530 类 ZigBee 模块, why: "版型多、主流款未确定，未入库"}
+  RS485:
+    candidates:
+      COM-005: {difficulty: 2, diff_why: "半双工，要控制 DE/RE 方向", libs: [ArduinoRS485], fit: "长距离有线、Modbus 设备"}
+    picks:
+      省钱: [COM-005, "库内唯一"]
+      均衡: [COM-005, "库内唯一"]
+      精度: [COM-005, "库内唯一"]
+
+执行:
+  直流电机:
+    candidates:
+      ACT-007: {difficulty: 2, diff_why: "PWM + 方向脚，逻辑 3.3V 可用", libs: [], fit: "小车（1A 级电机）"}
+      ACT-009: {difficulty: 2, diff_why: "PWM 两脚控制", libs: [], fit: "低压小电机（10.8V 内）"}
+      ACT-008: {difficulty: 2, diff_why: "PWM + 方向脚，压降大、发热", libs: [], fit: "12V 以上、沿用旧教程"}
+    picks:
+      省钱: [ACT-009, "小体积、低压"]
+      均衡: [ACT-007, "MOSFET 输出，压降小"]
+      精度: [ACT-007, "同上"]
+    avoid:
+      - {id: ACT-008, why: "L298 是双极型输出，1A 时总压降 1.8–3.2V、2A 时最高 4.9V，电机实际电压低、芯片发热大；低压小车用 TB6612FNG", src: "ST L298 规格书 https://www.st.com/resource/en/datasheet/l298.pdf（搜索摘要转述）"}
+  步进电机:
+    candidates:
+      ACT-006: {difficulty: 2, diff_why: "4 个 IO 顺序驱动", libs: [Stepper], fit: "小角度定位、演示"}
+    picks:
+      省钱: [ACT-006, "库内唯一"]
+      均衡: [ACT-006, "库内唯一"]
+      精度: [ACT-006, "库内唯一"]
+  舵机:
+    candidates:
+      ACT-004: {difficulty: 1, diff_why: "一根 PWM", libs: [Servo, ESP32Servo], fit: "轻负载转角"}
+      ACT-005: {difficulty: 1, diff_why: "一根 PWM，电流大要单独供电", libs: [Servo, ESP32Servo], fit: "大扭矩"}
+    picks:
+      省钱: [ACT-004, "轻负载够用"]
+      均衡: [ACT-004, "同上"]
+      精度: [ACT-005, "金属齿，扭矩大"]
+  继电器和大电流开关:
+    candidates:
+      ACT-001: {difficulty: 1, diff_why: "一根 IO，模块自带驱动", libs: [], fit: "控制家电/大电流负载（高电平触发）"}
+      ACT-002: {difficulty: 1, diff_why: "一根 IO，低电平触发", libs: [], fit: "同上"}
+      ACT-003: {difficulty: 2, diff_why: "要自己搭三极管驱动和续流二极管", libs: [], fit: "继电器直接焊在板上"}
+      Q-001: {difficulty: 2, diff_why: "要算基极电阻", libs: [], fit: "驱动蜂鸣器、小继电器线圈（几十到几百 mA）"}
+    picks:
+      省钱: [ACT-003, "裸继电器 + S8050 + 1N4007 上板"]
+      均衡: [ACT-001, "模块现成"]
+      精度: [ACT-001, "模块现成，带指示灯"]
+    not_in_lib:
+      - {name: 双 MOS 管驱动模块, why: "任务书 P1，云端没拿到可靠尺寸图，未入库"}
+  声音:
+    candidates:
+      BZ-001: {difficulty: 1, diff_why: "高低电平响/不响", libs: [], fit: "提示音、报警"}
+      BZ-002: {difficulty: 1, diff_why: "要 PWM 出频率", libs: [], fit: "播放音调"}
+      BZ-003: {difficulty: 1, diff_why: "同 BZ-001", libs: [], fit: "空间小"}
+      ACT-010: {difficulty: 2, diff_why: "串口控制 + TF 卡放 MP3", libs: [DFRobotDFPlayerMini], fit: "语音播报"}
+    picks:
+      省钱: [BZ-001, "有源，一根 IO"]
+      均衡: [BZ-002, "无源，能放音调"]
+      精度: [ACT-010, "能放语音"]
+
+输入:
+  按键:
+    candidates:
+      SW-001: {difficulty: 1, diff_why: "一根 IO + 上拉", libs: [], fit: "板上按键"}
+      SW-002: {difficulty: 1, diff_why: "同上", libs: [], fit: "外壳开孔按键"}
+      SW-010: {difficulty: 1, diff_why: "拨动", libs: [], fit: "电源开关、模式切换"}
+    picks:
+      省钱: [SW-001, "最常用 6×6"]
+      均衡: [SW-002, "高 7mm，好按"]
+      精度: [SW-002, "同上"]
+    not_in_lib:
+      - {name: 12×12 轻触开关、MTS-102 钮子开关、8×8 自锁开关, why: "没拿到可靠尺寸图，未入库（见 待确认.md）"}
+  旋钮:
+    candidates:
+      POT-001: {difficulty: 1, diff_why: "接 ADC", libs: [], fit: "精调参考电压"}
+    picks:
+      省钱: [POT-001, "库内唯一"]
+      均衡: [POT-001, "库内唯一"]
+      精度: [POT-001, "多圈"]
+    not_in_lib:
+      - {name: EC11 旋转编码器, why: "任务书没列，未入库"}
+  摇杆:
+    not_in_lib:
+      - {name: 双轴摇杆模块, why: "任务书没列，未入库"}
+
+供电:
+  USB:
+    not_in_lib:
+      - {name: 直插 Type-C 母座（候选 TYPE-C-31-D-09 C7463258）, why: "原贴片款已归档，直插替代没核实尺寸图，见 待确认.md；主控板自带 USB 口可直接供电"}
+  DC:
+    candidates:
+      PWR-001: {difficulty: 1, diff_why: "直插", libs: [], fit: "5V/12V 适配器供电"}
+      PWR-002: {difficulty: 1, diff_why: "直插，5A", libs: [], fit: "大电流"}
+      FUS-003: {difficulty: 1, diff_why: "串在电源入口", libs: [], fit: "入口过流保护"}
+    picks:
+      省钱: [PWR-001, "最常见"]
+      均衡: [PWR-001, "同上"]
+      精度: [PWR-002, "额定 5A"]
+  电池和充电:
+    candidates:
+      PMD-001: {difficulty: 1, diff_why: "接电池即可，带保护", libs: [], fit: "单节锂电充电"}
+      PMD-002: {difficulty: 1, diff_why: "只充电不保护", libs: [], fit: "电池自带保护板时"}
+      PMD-006: {difficulty: 1, diff_why: "带保护板", libs: [], fit: "便携供电"}
+      BAT-001: {difficulty: 1, diff_why: "直插座", libs: [], fit: "18650 上板"}
+      BAT-002: {difficulty: 1, diff_why: "直插座", libs: [], fit: "RTC 备用电池"}
+    picks:
+      省钱: [PMD-002, "电池自带保护时"]
+      均衡: [PMD-001, "充电 + 保护"]
+      精度: [PMD-001, "同上"]
+  升压:
+    candidates:
+      PMD-005: {difficulty: 1, diff_why: "调电位器设输出", libs: [], fit: "锂电升 5V/12V"}
+    picks:
+      省钱: [PMD-005, "库内唯一"]
+      均衡: [PMD-005, "库内唯一"]
+      精度: [PMD-005, "库内唯一"]
+  降压:
+    candidates:
+      PMD-003: {difficulty: 1, diff_why: "调电位器设输出", libs: [], fit: "12V 降 5V，小体积"}
+      PMD-004: {difficulty: 1, diff_why: "调电位器设输出", libs: [], fit: "12V/24V 降压，资料多"}
+      REG-002: {difficulty: 1, diff_why: "线性稳压，加输入输出电容", libs: [], fit: "5V 转 3.3V，800mA 内"}
+      REG-003: {difficulty: 1, diff_why: "线性稳压，注意散热", libs: [], fit: "5V 转 3.3V，大电流"}
+      REG-004: {difficulty: 1, diff_why: "线性稳压，压差大时发热", libs: [], fit: "7–12V 转 5V，小电流"}
+    picks:
+      省钱: [REG-002, "5V→3.3V 最简单"]
+      均衡: [PMD-003, "开关降压，效率高、体积小"]
+      精度: [REG-003, "线性稳压纹波小，电流大"]
+
+主控选择:
+  ESP32-S3:
+    candidates:
+      MCU-001: {difficulty: 2, diff_why: "注意启动脚和 PSRAM 占用脚（见兼容性速查）", libs: [], fit: "立创可配单"}
+      MCU-004: {difficulty: 2, diff_why: "同上", libs: [], fit: "官方板，资料最全"}
+      MCU-005: {difficulty: 2, diff_why: "兼容板针序各家可能不同", libs: [], fit: "要 16MB Flash + 8MB PSRAM"}
+    picks:
+      省钱: [MCU-001, "立创自营"]
+      均衡: [MCU-004, "官方板"]
+      精度: [MCU-004, "官方板，针序有官方图"]
+  ESP32 与 ESP8266:
+    candidates:
+      MCU-006: {difficulty: 2, diff_why: "启动脚、只能输入的脚多", libs: [], fit: "经典 ESP32 教程"}
+      MCU-007: {difficulty: 2, diff_why: "同上，30P 版", libs: [], fit: "沿用 DOIT 教程"}
+      MCU-016: {difficulty: 3, diff_why: "可用 IO 很少，下载要外接串口", libs: [], fit: "拍照、视频"}
+      MCU-010: {difficulty: 2, diff_why: "IO 少、只有 1 路 ADC", libs: [], fit: "旧项目"}
+      MCU-011: {difficulty: 2, diff_why: "同上", libs: [], fit: "旧项目"}
+    picks:
+      省钱: [MCU-007, "资料多"]
+      均衡: [MCU-006, "官方板"]
+      精度: [MCU-016, "要摄像头时唯一选择"]
+  ESP32-C3:
+    candidates:
+      MCU-008: {difficulty: 2, diff_why: "IO 少，注意 GPIO2/8/9 启动脚", libs: [], fit: "小体积、低成本 WiFi/BLE"}
+    picks:
+      省钱: [MCU-008, "库内唯一"]
+      均衡: [MCU-008, "库内唯一"]
+      精度: [MCU-008, "库内唯一"]
+  STM32:
+    candidates:
+      MCU-002: {difficulty: 2, diff_why: "要 SWD 下载器（TOOL-003）", libs: [], fit: "课程要求 STM32、正品芯片"}
+      MCU-003: {difficulty: 2, diff_why: "芯片可能是兼容片；要下载器", libs: [], fit: "沿用 Blue Pill 教程"}
+      MCU-015: {difficulty: 2, diff_why: "USB DFU 可直接下载", libs: [], fit: "要性能、浮点"}
+    picks:
+      省钱: [MCU-003, "资料多"]
+      均衡: [MCU-002, "正品、立创可配单"]
+      精度: [MCU-015, "F411 100MHz 带 FPU"]
+    avoid:
+      - {id: MCU-003, why: "淘宝 Blue Pill 不少是国产兼容芯片，下载工具要选对；PA12 上拉阻值常不对导致 USB 枚举失败", src: "parts.csv MCU-003 pitfalls（规格书链接见该条 datasheet_url）"}
+  Arduino:
+    candidates:
+      MCU-009: {difficulty: 1, diff_why: "Arduino IDE 资料最多，5V 逻辑", libs: [], fit: "5V 传感器多、入门项目"}
+    picks:
+      省钱: [MCU-009, "库内唯一"]
+      均衡: [MCU-009, "库内唯一"]
+      精度: [MCU-009, "库内唯一"]
+  51 单片机:
+    candidates:
+      MCU-014: {difficulty: 3, diff_why: "要外接晶振复位电路和 USB-TTL 下载", libs: [], fit: "课程要求 51"}
+    picks:
+      省钱: [MCU-014, "库内唯一"]
+      均衡: [MCU-014, "库内唯一"]
+      精度: [MCU-014, "库内唯一"]
+  Pico:
+    candidates:
+      MCU-012: {difficulty: 2, diff_why: "只有 3 路 ADC", libs: [], fit: "PIO、MicroPython"}
+      MCU-013: {difficulty: 2, diff_why: "同上，带 WiFi", libs: [], fit: "Pico + WiFi"}
+    picks:
+      省钱: [MCU-012, "立创可配单"]
+      均衡: [MCU-012, "同上"]
+      精度: [MCU-013, "带 WiFi"]

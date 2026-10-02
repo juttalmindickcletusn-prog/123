@@ -44,6 +44,7 @@ def main() -> int:
         step("原子符号检查", [PY, "tools/check_atomic.py"]),
         step("兼容性速查", [PY, "tools/build_compat.py"]),
         step("价格与热度表", [PY, "tools/build_market.py"]),
+        step("选型速查", [PY, "tools/build_selection.py"]),
         step("价格新鲜度（不联网）", [PY, "tools/refresh_prices.py", "--check"]),
         *[step(f"项目检查 {p.stem}", [PY, "tools/check_project.py", str(p)]) for p in sorted((ROOT / "projects").glob("*.yaml"))],
         *[step(f"项目成本 {p.stem}", [PY, "tools/project_cost.py", str(p)]) for p in sorted((ROOT / "projects").glob("*.yaml"))],
