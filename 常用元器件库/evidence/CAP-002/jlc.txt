@@ -1,0 +1,22 @@
+# CAP-002 瓷片电容 103（10nF/50V），脚距 5.08 mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2761727
+  型号: CC1H103ZC1ED3F4D1100
+  厂家: Dersonic
+  封装: Plugin,P=5.08mm
+  描述: -20%~+80% 10nF 3.2mm 4.8mm 5.08mm 50V Y5V Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.106 起订50  库存 113
+  嘉立创库存: 6073  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271930_Dersonic-CC1H103ZC1ED3F4D1100_C2761727.pdf
+
+[替代] C263209
+  型号: CC3A103MC1IEF48C30MF
+  厂家: Dersonic
+  封装: Plugin,P=5.08mm
+  描述: 10nF 1kV 2.8mm 5.08mm 8mm Y5V ±20% Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.2388 起订20  库存 3753
+  嘉立创库存: 77212  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2008261835_Dersonic-CC3A103MC1IEF48C30MF_C263209.pdf
+

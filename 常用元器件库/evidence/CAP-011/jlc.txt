@@ -1,0 +1,22 @@
+# CAP-011 电解电容 100µF/16V Φ5×11
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C43348
+  型号: KM107M016D11RR0VH2FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D5xL11mm
+  描述: 1000hrs@105℃ 100uF 11mm 125mA@120Hz 16V 2mm 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.1185 起订50  库存 1838
+  嘉立创库存: 95053  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM107M016D11RR0VH2FP0_C43348.pdf
+
+[替代] C2960368
+  型号: 16V100uF CD288
+  厂家: HRK
+  封装: Plugin,D5xL11mm
+  描述: -40℃~+105℃ 100uF 11mm 16V 2mm 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.0993 起订50  库存 94
+  嘉立创库存: 5041  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2202241230_HRK-16V100uF-CD288_C2960368.pdf
+

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C57436": {
+   "role": "主选",
+   "code": "C57436",
+   "mpn": "MFR0W4F1002A50",
+   "brand": "UNI-ROYAL(Uniroyal Elec)",
+   "package": "Plugin,D2.2xL6.5mm",
+   "describe": "10kΩ 250V 250mW Metal Film Resistor ±1% ±50ppm/℃ 插件,D2.2xL6.5mm Through Hole Resistors ROHS",
+   "jlc_stock": 155174,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0141
+    ],
+    [
+     500,
+     0.0114
+    ],
+    [
+     1500,
+     0.0099
+    ]
+   ],
+   "cny_price": 0.0864,
+   "cny_step": 50,
+   "szlcsc_stock": "2961",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F1002A50_C57436.pdf"
+  },
+  "C119347": {
+   "role": "替代",
+   "code": "C119347",
+   "mpn": "MF1/4W-10KΩ±1% T",
+   "brand": "CCO(Chian Chia Elec)",
+   "package": "Plugin,D2.3xL6.5mm",
+   "describe": "-55℃~+155℃ 10kΩ 250V 250mW Metal Film Resistor ±1% ±100ppm/℃ 插件,D2.3xL6.5mm Through Hole Resistors ROHS",
+   "jlc_stock": 79922,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0113
+    ],
+    [
+     500,
+     0.009
+    ],
+    [
+     1500,
+     0.0077
+    ]
+   ],
+   "cny_price": 0.069,
+   "cny_step": 50,
+   "szlcsc_stock": "1495",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCO-Chian-Chia-Elec-MF1-4W-10KR-1--T_C119347.pdf"
+  }
+ }
+}

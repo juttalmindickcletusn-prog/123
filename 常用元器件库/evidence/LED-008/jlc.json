@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895474": {
+   "role": "主选",
+   "code": "C2895474",
+   "mpn": "XL-302UBD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 1.5cd 20mA 3.4V 30° 3mm Round Lens 460nm 460nm~465nm 70mW Blue Blue Lens 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 42279,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0288
+    ],
+    [
+     200,
+     0.0225
+    ],
+    [
+     1000,
+     0.0176
+    ]
+   ],
+   "cny_price": 0.1765,
+   "cny_step": 20,
+   "szlcsc_stock": "2113",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-302UBD_C2895474.pdf"
+  },
+  "C2895464": {
+   "role": "替代",
+   "code": "C2895464",
+   "mpn": "XL-302UBC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 20mA 3.4V 30° 3mm Round Lens 460nm~475nm 468nm 5cd 70mW Blue Water Clear 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 27070,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0282
+    ],
+    [
+     200,
+     0.0218
+    ],
+    [
+     1000,
+     0.0173
+    ]
+   ],
+   "cny_price": 0.1728,
+   "cny_step": 20,
+   "szlcsc_stock": "1338",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-302UBC_C2895464.pdf"
+  }
+ }
+}

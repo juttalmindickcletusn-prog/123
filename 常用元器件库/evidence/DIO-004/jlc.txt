@@ -1,0 +1,22 @@
+# DIO-004 稳压二极管 1N4733A 5.1V 1W（DO-41）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C5157516
+  型号: 1N4733A
+  厂家: LGE
+  封装: DO-41
+  描述: -65℃~+200℃ 1 Independent 10uA@1V 1W 4.85V~5.36V 5.1V 550Ω 7Ω ±5% DO-41 Zener Diodes ROHS
+  立创商城: ¥0.5516 起订5  库存 880
+  嘉立创库存: 4402  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2209021800_LGE-1N4733A_C5157516.pdf
+
+[替代] C241985
+  型号: 1N4733A-TAP
+  厂家: Vishay Intertech
+  封装: DO-204AL(DO-41)
+  描述: 1 Independent 1.3W 10uA 178Ω 5.1V 7Ω DO-204AL(DO-41) Zener Diodes ROHS
+  立创商城: ¥0.839 起订5  库存 888
+  嘉立创库存: 4443  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Vishay-Intertech-1N4733A-TAP_C241985.pdf
+

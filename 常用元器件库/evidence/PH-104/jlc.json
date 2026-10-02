@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157926": {
+   "role": "主选",
+   "code": "C157926",
+   "mpn": "S4B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 1x4P 2A 2mm 4 4.8mm 4P 7.6mm 9.9mm Brass K Pin PA66 PH Right Angle Tin UL94V-0 White 弯插,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 19146,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.074
+    ],
+    [
+     100,
+     0.0621
+    ],
+    [
+     500,
+     0.0547
+    ]
+   ],
+   "cny_price": 0.4548,
+   "cny_step": 10,
+   "szlcsc_stock": "1914",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S4B-PH-K-S-LF-SN_C157926.pdf"
+  }
+ }
+}

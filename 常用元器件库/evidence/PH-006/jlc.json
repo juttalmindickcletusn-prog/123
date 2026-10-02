@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C131342": {
+   "role": "主选",
+   "code": "C131342",
+   "mpn": "B6B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 13.9mm 1x6P 2A 2mm 4.5mm 6 6P 6mm Brass K Pin PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 77387,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0722
+    ],
+    [
+     100,
+     0.0589
+    ],
+    [
+     300,
+     0.0522
+    ]
+   ],
+   "cny_price": 0.4438,
+   "cny_step": 10,
+   "szlcsc_stock": "7738",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811151524_JST-B6B-PH-K-S-LF-SN_C131342.pdf"
+  }
+ }
+}

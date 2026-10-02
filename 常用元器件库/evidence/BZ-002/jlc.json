@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C409842": {
+   "role": "主选",
+   "code": "C409842",
+   "mpn": "YS-MBZ12085C05R42",
+   "brand": "Fengming",
+   "package": "Plugin,D=12mm",
+   "describe": "-20℃~+60℃ 12mm 2.048kHz 3V~7V 5V 8.7mm 80mA 85dB Electromagnetic Passive (Externally Driven) Through-hole 插件,D=12mm Buzzers ROHS",
+   "jlc_stock": 1480,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1538
+    ],
+    [
+     50,
+     0.1233
+    ],
+    [
+     200,
+     0.1056
+    ]
+   ],
+   "cny_price": 0.9463,
+   "cny_step": 5,
+   "szlcsc_stock": "34",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912171631_Fengming-YS-MBZ12085C05R42_C409842.pdf"
+  },
+  "C968749": {
+   "role": "替代",
+   "code": "C968749",
+   "mpn": "Cy-12085G-3016-P4",
+   "brand": "CY(Changzhou Chaoyin Elec)",
+   "package": "Plugin,D=12mm",
+   "describe": "-20℃~+70℃ 12mm 2.048kHz 2V~5V 35mA 8.5mm 85dB Electromagnetic Passive (Externally Driven) 插件,D=12mm Buzzers ROHS",
+   "jlc_stock": 2905,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2088
+    ],
+    [
+     50,
+     0.1638
+    ],
+    [
+     200,
+     0.1433
+    ]
+   ],
+   "cny_price": 1.2843,
+   "cny_step": 5,
+   "szlcsc_stock": "581",
+   "datasheet": "https://datasheet.lcsc.com/lcsc/2012111604_CY-Changzhou-Chaoyin-Elec-Cy-12085G-3016-P4_C968749.pdf"
+  }
+ }
+}

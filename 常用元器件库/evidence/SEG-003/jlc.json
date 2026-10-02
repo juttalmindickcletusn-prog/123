@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C54396": {
+   "role": "主选",
+   "code": "C54396",
+   "mpn": "FJ5461AH Red",
+   "brand": "Shenzhen Zhihao Elec",
+   "package": "Plugin",
+   "describe": "0.56 19mm 4 50.4mm 7 Segment 8mm Common Cathode Red 插件 LED Segment Displays ROHS",
+   "jlc_stock": 6818,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.7218
+    ],
+    [
+     10,
+     0.595
+    ],
+    [
+     30,
+     0.5316
+    ]
+   ],
+   "cny_price": 4.44,
+   "cny_step": 1,
+   "szlcsc_stock": "6526",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809192116_Shenzhen-Zhihao-Elec-FJ5461AH-_C54396.pdf"
+  }
+ }
+}

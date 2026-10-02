@@ -1,0 +1,22 @@
+# FUS-003 直插自恢复保险丝 2A
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C21019
+  型号: RL30-200
+  厂家: RUILON(Shenzhen Ruilongyuan Elec)
+  封装: Plugin,P=5.1mm
+  描述: -40℃~+85℃ 1.5W 10.2mm 12s 2A 30V 30mΩ 40A 4A 90mΩ 插件,P=5.1mm Resettable Fuses ROHS
+  立创商城: ¥1.3292 起订5  库存 3376
+  嘉立创库存: 16884  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL30-200_C21019.pdf
+
+[替代] C369092
+  型号: JK60-200
+  厂家: Jinrui Electronic Materials Co.
+  封装: Plugin,P=5.1mm
+  描述: -40℃~+85℃ 140mΩ 17.8mm 2.3W 2A 40A 4A 60V 70mΩ 8s 插件,P=5.1mm Resettable Fuses ROHS
+  立创商城: ¥0.6048 起订5  库存 5688
+  嘉立创库存: 28615  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Jinrui-Electronic-Materials-Co--JK60-200_C369092.pdf
+

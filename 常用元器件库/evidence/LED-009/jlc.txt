@@ -1,0 +1,22 @@
+# LED-009 3mm 黄色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895472
+  型号: XL-302UYD
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 1.5cd 2.2V 20mA 30° 3mm Round Lens 50mW 585nm~595nm 588nm Yellow Yellow Lens 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2034 起订20  库存 2478
+  嘉立创库存: 49566  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-302UYD_C2895472.pdf
+
+[替代] C2895473
+  型号: XL-304UYD
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 1.5cd 2.2V 20mA 30° 3mm Round Lens 50mW 585nm~595nm 588nm Yellow Yellow Lens 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2188 起订20  库存 1181
+  嘉立创库存: 23649  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-304UYD_C2895473.pdf
+

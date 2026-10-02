@@ -1,0 +1,22 @@
+# HDR-004 2.0mm 单排直排针 1×40
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C3411
+  型号: 2.0-1*40PStraight Pin Header
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2mm
+  描述: -55℃~+105℃ 1 1x40P 2.7mm 2mm 2mm 3A 40P 4mm Black Brass Gold Pin Header Through Hole 插件,P=2mm Pin Headers ROHS
+  立创商城: ¥0.8384 起订5  库存 1469
+  嘉立创库存: 7385  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1811151526_BOOMELE-Boom-Precision-Elec-2-0-1-40P_C3411.pdf
+
+[替代] C42431828
+  型号: PZ2.0-1X40P-H20
+  厂家: JXTCONN
+  封装: Plugin,P=2mm
+  描述: -40℃~+105℃ 1 1.5A 1kV 1x40P 2.8mm 2mm 2mm 3.9mm 40P Black Brass Gold Pin Header Through Hole 插件,P=2mm Pin Headers ROHS
+  立创商城: ¥1.1174 起订5  库存 117
+  嘉立创库存: 586  贴片库: expand
+  规格书: None
+

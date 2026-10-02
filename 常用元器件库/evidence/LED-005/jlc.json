@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895480": {
+   "role": "主选",
+   "code": "C2895480",
+   "mpn": "XL-502UWC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-25℃~+85℃ 20cd 20mA 3.3V 30° 5mm round lamp head 70mW 9000K~20000K Discrete Diode Water Clear White Plugin,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 67776,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0335
+    ],
+    [
+     200,
+     0.0262
+    ],
+    [
+     1000,
+     0.0207
+    ]
+   ],
+   "cny_price": 0.2057,
+   "cny_step": 20,
+   "szlcsc_stock": "3388",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UWC_C2895480.pdf"
+  },
+  "C2895481": {
+   "role": "替代",
+   "code": "C2895481",
+   "mpn": "XL-504UWC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 20mA 3.6V 30cd 30° 5mm round lamp head 6000K~6500K 6000nm~80000nm 70mW Discrete Diode Water Clear White 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 16741,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0348
+    ],
+    [
+     200,
+     0.0274
+    ],
+    [
+     1000,
+     0.0213
+    ]
+   ],
+   "cny_price": 0.2141,
+   "cny_step": 20,
+   "szlcsc_stock": "837",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-504UWC_C2895481.pdf"
+  }
+ }
+}

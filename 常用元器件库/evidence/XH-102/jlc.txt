@@ -1,0 +1,22 @@
+# XH-102 XH 2P 弯插（JST S2B-XH-A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C157931
+  型号: S2B-XH-A(LF)(SN)
+  厂家: JST
+  封装: Push-Pull,P=2.5mm
+  描述: -25℃~+85℃ 1 11.5mm 1x2P 2 2.5mm 250V 2P 3A 6.1mm 7.4mm Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.5027 起订10  库存 2230
+  嘉立创库存: 41521  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S2B-XH-A-LF-SN_C157931.pdf
+
+[替代] C163035
+  型号: S2B-XH-A-1(LF)(SN)
+  厂家: JST
+  封装: Push-Pull,P=2.5mm
+  描述: -25℃~+85℃ 1 11.5mm 1x2P 2 2.5mm 250V 2P 3A 6.1mm 7.4mm Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.6045 起订5  库存 23203
+  嘉立创库存: 116098  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S2B-XH-A-1-LF-SN_C163035.pdf
+

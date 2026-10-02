@@ -1,0 +1,22 @@
+# BAT-001 18650 单节电池座（直插）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C5290176
+  型号: BH-18650-A1AJ005
+  厂家: MYOUNG
+  封装: -
+  描述: -10~100℃ Battery holder Nickel plated - ROHS
+  立创商城: ¥4.25 起订1  库存 4055
+  嘉立创库存: 4702  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-18650-A1AJ005_C5290176.pdf
+
+[替代] C19184084
+  型号: BH-18650-A6AJ012
+  厂家: MYOUNG
+  封装: -
+  描述: -25~85℃ Battery holder Nickel plated Stainless steel - ROHS
+  立创商城: ¥8.2 起订1  库存 3380
+  嘉立创库存: 3748  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-BH-18650-A6AJ012_C19184084.pdf
+

@@ -1,0 +1,22 @@
+# LED-001 5mm 红色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895492
+  型号: XL-502SURD
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -25℃~+85℃ 2.4V 20mA 300mcd 35° 5mm round lamp head 615nm~625nm 654nm 70mW Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1926 起订20  库存 9440
+  嘉立创库存: 188815  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404291052_XINGLIGHT-XL-502SURD_C2895492.pdf
+
+[替代] C87271
+  型号: 333-2SURD/S530-A3
+  厂家: Everlight Elec
+  封装: Plugin,D=5mm
+  描述: -40℃~+85℃ 200mcd 20mA 2V 30° 5mm round lamp head 624nm 632nm Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2343 起订10  库存 4316
+  嘉立创库存: 44147  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1810271709_Everlight-Elec-333-2SURD-S530-A3_C87271.pdf
+

@@ -1,0 +1,22 @@
+# Q-003 N 沟道 MOS AO3400A（SOT-23，贴片备选）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C20917
+  型号: AO3400A
+  厂家: Alpha & Omega Semicon
+  封装: SOT-23
+  描述: -55℃~+150℃ 1 N-channel 1.45V 1.4W 30V 48mΩ@2.5V 5.7A 50pF 630pF 75pF 7nC@10V N-Channel SOT-23 MOSFETs ROHS
+  立创商城: ¥0.5463 起订5  库存 108091
+  嘉立创库存: 964086  贴片库: base
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1811081213_Alpha---Omega-Semicon-AO3400A_C20917.pdf
+
+[替代] C347475
+  型号: AO3400A
+  厂家: UMW(Youtai Semiconductor Co., Ltd.)
+  封装: SOT-23
+  描述: -55℃~+150℃ 1 N-channel 1.1V 1.4W 17mΩ@10V 30V 5.8A 77pF 823pF 9.7nC@4.5V 99pF SOT-23 MOSFETs ROHS
+  立创商城: ¥0.228 起订20  库存 38408
+  嘉立创库存: 781736  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3400A_C347475.pdf
+

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C84772": {
+   "role": "主选",
+   "code": "C84772",
+   "mpn": "CT4-0805B104K500F3",
+   "brand": "FH (Guangdong Fenghua Advanced Tech)",
+   "package": "Plugin,P=5.08mm",
+   "describe": "100nF 5.08mm 50V X7R ±10% Plugin,P=5.08mm Multilayer Ceramic Capacitors MLCC - Leaded ROHS",
+   "jlc_stock": 41405,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0402
+    ],
+    [
+     100,
+     0.0321
+    ],
+    [
+     300,
+     0.0275
+    ]
+   ],
+   "cny_price": 0.2472,
+   "cny_step": 10,
+   "szlcsc_stock": "4073",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-CT4-0805B104K500F3_C84772.pdf"
+  },
+  "C263181": {
+   "role": "替代",
+   "code": "C263181",
+   "mpn": "CD1H104KC94ER1D000",
+   "brand": "Dersonic",
+   "package": "Plugin,P=5.08mm",
+   "describe": "100nF 5.08mm 50V X7R ±10% Plugin,P=5.08mm Multilayer Ceramic Capacitors MLCC - Leaded ROHS",
+   "jlc_stock": 23967,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0422
+    ],
+    [
+     200,
+     0.0335
+    ],
+    [
+     1000,
+     0.0269
+    ]
+   ],
+   "cny_price": 0.2593,
+   "cny_step": 20,
+   "szlcsc_stock": "1198",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2008261633_Dersonic-CD1H104KC94ER1D000_C263181.pdf"
+  }
+ }
+}

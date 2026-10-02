@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2474": {
+   "role": "主选",
+   "code": "C2474",
+   "mpn": "1N5819",
+   "brand": "MDD(Microdiode Semiconductor)",
+   "package": "DO-41",
+   "describe": "-65℃~+150℃ 1 Independent 1A 25A 40V 500uA@40V 600mV@1A DO-41 Schottky Diodes ROHS",
+   "jlc_stock": 64383,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0374
+    ],
+    [
+     200,
+     0.0303
+    ],
+    [
+     600,
+     0.0264
+    ]
+   ],
+   "cny_price": 0.2303,
+   "cny_step": 20,
+   "szlcsc_stock": "3212",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2407291648_MDD-Microdiode-Semiconductor-1N5819_C2474.pdf"
+  },
+  "C402218": {
+   "role": "替代",
+   "code": "C402218",
+   "mpn": "1N5819",
+   "brand": "LGE",
+   "package": "DO-41",
+   "describe": "-65℃~+125℃ 1 Independent 1A 1mA@40V 30A 40V 900mV@3A DO-41 Schottky Diodes ROHS",
+   "jlc_stock": 25189,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0283
+    ],
+    [
+     200,
+     0.0226
+    ],
+    [
+     600,
+     0.0196
+    ]
+   ],
+   "cny_price": 0.1743,
+   "cny_step": 20,
+   "szlcsc_stock": "1256",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_LGE-1N5819_C402218.pdf"
+  }
+ }
+}

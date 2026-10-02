@@ -1,0 +1,22 @@
+# CAP-004 独石电容 104（100nF/50V X7R），脚距 5.08 mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C84772
+  型号: CT4-0805B104K500F3
+  厂家: FH (Guangdong Fenghua Advanced Tech)
+  封装: Plugin,P=5.08mm
+  描述: 100nF 5.08mm 50V X7R ±10% Plugin,P=5.08mm Multilayer Ceramic Capacitors MLCC - Leaded ROHS
+  立创商城: ¥0.2472 起订10  库存 4073
+  嘉立创库存: 41405  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-CT4-0805B104K500F3_C84772.pdf
+
+[替代] C263181
+  型号: CD1H104KC94ER1D000
+  厂家: Dersonic
+  封装: Plugin,P=5.08mm
+  描述: 100nF 5.08mm 50V X7R ±10% Plugin,P=5.08mm Multilayer Ceramic Capacitors MLCC - Leaded ROHS
+  立创商城: ¥0.2593 起订20  库存 1198
+  嘉立创库存: 23967  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2008261633_Dersonic-CD1H104KC94ER1D000_C263181.pdf
+

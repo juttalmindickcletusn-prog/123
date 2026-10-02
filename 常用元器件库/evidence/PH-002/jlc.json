@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C131337": {
+   "role": "主选",
+   "code": "C131337",
+   "mpn": "B2B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 1x2P 2 2A 2P 2mm 4.5mm 5.9mm 6mm Brass K Pin PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 64178,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0353
+    ],
+    [
+     200,
+     0.028
+    ],
+    [
+     1000,
+     0.0244
+    ]
+   ],
+   "cny_price": 0.2166,
+   "cny_step": 20,
+   "szlcsc_stock": "2563",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B2B-PH-K-S-LF-SN_C131337.pdf"
+  },
+  "C18077744": {
+   "role": "替代",
+   "code": "C18077744",
+   "mpn": "BX-PH2.0-2PZZ",
+   "brand": "Bossie",
+   "package": "Plugin,P=2mm",
+   "describe": "-25℃~+85℃ 1 1x2P 2 250V 2A 2P 2mm 4.7mm 6.05mm 6mm Brass PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 201374,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.009
+    ],
+    [
+     500,
+     0.0075
+    ],
+    [
+     2000,
+     0.0065
+    ]
+   ],
+   "cny_price": 0.0551,
+   "cny_step": 50,
+   "szlcsc_stock": "3973",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310171751_Bossie-BX-PH2-0-2PZZ_C18077744.pdf"
+  }
+ }
+}

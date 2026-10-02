@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C5157516": {
+   "role": "主选",
+   "code": "C5157516",
+   "mpn": "1N4733A",
+   "brand": "LGE",
+   "package": "DO-41",
+   "describe": "-65℃~+200℃ 1 Independent 10uA@1V 1W 4.85V~5.36V 5.1V 550Ω 7Ω ±5% DO-41 Zener Diodes ROHS",
+   "jlc_stock": 4402,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0898
+    ],
+    [
+     50,
+     0.0742
+    ],
+    [
+     150,
+     0.0664
+    ]
+   ],
+   "cny_price": 0.5516,
+   "cny_step": 5,
+   "szlcsc_stock": "880",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2209021800_LGE-1N4733A_C5157516.pdf"
+  },
+  "C241985": {
+   "role": "替代",
+   "code": "C241985",
+   "mpn": "1N4733A-TAP",
+   "brand": "Vishay Intertech",
+   "package": "DO-204AL(DO-41)",
+   "describe": "1 Independent 1.3W 10uA 178Ω 5.1V 7Ω DO-204AL(DO-41) Zener Diodes ROHS",
+   "jlc_stock": 4443,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1364
+    ],
+    [
+     50,
+     0.1091
+    ],
+    [
+     150,
+     0.0955
+    ]
+   ],
+   "cny_price": 0.839,
+   "cny_step": 5,
+   "szlcsc_stock": "888",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Vishay-Intertech-1N4733A-TAP_C241985.pdf"
+  }
+ }
+}

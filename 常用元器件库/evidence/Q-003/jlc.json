@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C20917": {
+   "role": "主选",
+   "code": "C20917",
+   "mpn": "AO3400A",
+   "brand": "Alpha & Omega Semicon",
+   "package": "SOT-23",
+   "describe": "-55℃~+150℃ 1 N-channel 1.45V 1.4W 30V 48mΩ@2.5V 5.7A 50pF 630pF 75pF 7nC@10V N-Channel SOT-23 MOSFETs ROHS",
+   "jlc_stock": 964086,
+   "library": "base",
+   "usd_prices": [
+    [
+     1,
+     0.0888
+    ],
+    [
+     50,
+     0.0716
+    ],
+    [
+     150,
+     0.0628
+    ]
+   ],
+   "cny_price": 0.5463,
+   "cny_step": 5,
+   "szlcsc_stock": "108091",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811081213_Alpha---Omega-Semicon-AO3400A_C20917.pdf"
+  },
+  "C347475": {
+   "role": "替代",
+   "code": "C347475",
+   "mpn": "AO3400A",
+   "brand": "UMW(Youtai Semiconductor Co., Ltd.)",
+   "package": "SOT-23",
+   "describe": "-55℃~+150℃ 1 N-channel 1.1V 1.4W 17mΩ@10V 30V 5.8A 77pF 823pF 9.7nC@4.5V 99pF SOT-23 MOSFETs ROHS",
+   "jlc_stock": 781736,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0371
+    ],
+    [
+     200,
+     0.0275
+    ],
+    [
+     600,
+     0.0233
+    ]
+   ],
+   "cny_price": 0.228,
+   "cny_step": 20,
+   "szlcsc_stock": "38408",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3400A_C347475.pdf"
+  }
+ }
+}

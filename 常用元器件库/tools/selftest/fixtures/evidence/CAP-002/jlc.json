@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2761727": {
+   "role": "主选",
+   "code": "C2761727",
+   "mpn": "CC1H103ZC1ED3F4D1100",
+   "brand": "Dersonic",
+   "package": "Plugin,P=5.08mm",
+   "describe": "-20%~+80% 10nF 3.2mm 4.8mm 5.08mm 50V Y5V Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS",
+   "jlc_stock": 6073,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0173
+    ],
+    [
+     500,
+     0.0139
+    ],
+    [
+     2000,
+     0.0109
+    ]
+   ],
+   "cny_price": 0.106,
+   "cny_step": 50,
+   "szlcsc_stock": "113",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271930_Dersonic-CC1H103ZC1ED3F4D1100_C2761727.pdf"
+  },
+  "C263209": {
+   "role": "替代",
+   "code": "C263209",
+   "mpn": "CC3A103MC1IEF48C30MF",
+   "brand": "Dersonic",
+   "package": "Plugin,P=5.08mm",
+   "describe": "10nF 1kV 2.8mm 5.08mm 8mm Y5V ±20% Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS",
+   "jlc_stock": 77212,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0389
+    ],
+    [
+     200,
+     0.0309
+    ],
+    [
+     1000,
+     0.0248
+    ]
+   ],
+   "cny_price": 0.2388,
+   "cny_step": 20,
+   "szlcsc_stock": "3753",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2008261835_Dersonic-CC3A103MC1IEF48C30MF_C263209.pdf"
+  }
+ }
+}

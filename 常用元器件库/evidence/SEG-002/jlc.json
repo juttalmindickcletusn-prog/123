@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C8092": {
+   "role": "主选",
+   "code": "C8092",
+   "mpn": "FJ5161BH",
+   "brand": "Shenzhen Zhihao Elec",
+   "package": "Plugin",
+   "describe": "-40℃~+85℃ 0.56 1 12.6mm 19mm 25mcd 2V 7 Segment 8mm Common Anode Red 插件 LED Segment Displays ROHS",
+   "jlc_stock": 1648,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2083
+    ],
+    [
+     50,
+     0.1632
+    ],
+    [
+     300,
+     0.1439
+    ]
+   ],
+   "cny_price": 1.2807,
+   "cny_step": 5,
+   "szlcsc_stock": "329",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304031000_Shenzhen-Zhihao-Elec-FJ5161BH_C8092.pdf"
+  }
+ }
+}

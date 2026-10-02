@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2979167": {
+   "role": "主选",
+   "code": "C2979167",
+   "mpn": "BS-07-A1BJ001",
+   "brand": "MYOUNG",
+   "package": "-",
+   "describe": "-25~85℃ Battery base CR2032 Manganese steel Nickel plated - ROHS",
+   "jlc_stock": 1076,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3949
+    ],
+    [
+     50,
+     0.3143
+    ],
+    [
+     250,
+     0.2598
+    ]
+   ],
+   "cny_price": 2.4291,
+   "cny_step": 5,
+   "szlcsc_stock": "206",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2203021630_MYOUNG-BS-07-A1BJ001_C2979167.pdf"
+  }
+ }
+}

@@ -1,0 +1,22 @@
+# HDR-002 2.54mm 单排弯排针 1×40
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2334
+  型号: 2.54-1*40PStraight Bent Pin
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Push-Pull,P=2.54mm
+  描述: -55℃~+105℃ 1 1x40P 2.54mm 2.54mm 3A 3mm 40P Black Brass Gold Pin Header Right Angle 弯插,P=2.54mm Pin Headers ROHS
+  立创商城: ¥1.1887 起订5  库存 700
+  嘉立创库存: 3502  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_BOOMELE-Boom-Precision-Elec-2-54-1-40P_C2334.pdf
+
+[替代] C2925569
+  型号: PZ254R-11-40P
+  厂家: XFCN
+  封装: Push-Pull,P=2.54mm
+  描述: -40℃~+105℃ 1 1x40P 2.54mm 2.5mm 250V 3A 40P 6mm Black Pin Header Right Angle 弯插,P=2.54mm Pin Headers ROHS
+  立创商城: ¥1.876 起订5  库存 139
+  嘉立创库存: 695  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2111291730_XFCN-PZ254R-11-40P_C2925569.pdf
+

@@ -1,0 +1,22 @@
+# CAP-003 瓷片电容 22pF（晶振负载），脚距 5 mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C260725
+  型号: N06S1B220KN0B0S0N0
+  厂家: STE(Songtian Elec)
+  封装: Plugin,P=5mm
+  描述: 1kV 2.5mm 22pF 5.5mm 5mm SL ±10% Plugin,P=5mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.1622 起订20  库存 227
+  嘉立创库存: 4547  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_STE-Songtian-Elec-N06S1B220KN0B0S0N0_C260725.pdf
+
+[替代] C694484
+  型号: CC45SL3AD220JYNNA
+  厂家: TDK
+  封装: Plugin,P=5mm
+  描述: 1kV 22pF 5.5mm 5mm 5mm SL ±5% Plugin,P=5mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.3574 起订10  库存 86
+  嘉立创库存: 867  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-CC45SL3AD220JYNNA_C694484.pdf
+

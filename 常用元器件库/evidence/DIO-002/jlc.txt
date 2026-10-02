@@ -1,0 +1,22 @@
+# DIO-002 整流二极管 1N4007（DO-41）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C402311
+  型号: 1N4007
+  厂家: LGE
+  封装: DO-41
+  描述: -65℃~+150℃ 1A 1V@1A 1kV 30A 5uA@1kV Independent DO-41 Diodes - General Purpose ROHS
+  立创商城: ¥0.1395 起订50  库存 3714
+  嘉立创库存: 185742  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2410010131_LGE-1N4007_C402311.pdf
+
+[替代] C2457
+  型号: 1N4007G
+  厂家: MDD(Microdiode Semiconductor)
+  封装: DO-41
+  描述: -65℃~+150℃ 1 Independent 1.1V@1A 1A 1kV 30A 5uA@1kV DO-41 Diodes - General Purpose ROHS
+  立创商城: ¥0.1377 起订20  库存 8413
+  嘉立创库存: 168261  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2407301037_MDD-Microdiode-Semiconductor-1N4007G_C2457.pdf
+

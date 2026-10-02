@@ -1,0 +1,22 @@
+# JMP-001 2.54mm 跳线帽
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C100114
+  型号: 2.54Short Circuit Cap Closed
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: P=2.54mm
+  描述: 1x2 2.54mm 3A Black Capped Unshrouded P=2.54mm Shunts, Jumpers ROHS
+  立创商城: ¥0.057 起订50  库存 11713
+  嘉立创库存: 585660  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2303231100_BOOMELE-Boom-Precision-Elec-2-54_C100114.pdf
+
+[替代] C5305
+  型号: 2.54Short Circuit Cap Opening
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: P=2.54mm
+  描述: 1x2 2.54mm 3A Black Open-Top Unshrouded P=2.54mm Shunts, Jumpers ROHS
+  立创商城: ¥0.0599 起订50  库存 20226
+  嘉立创库存: 1013567  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811132212_BOOMELE-Boom-Precision-Elec-2-54_C5305.pdf
+

@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157991": {
+   "role": "主选",
+   "code": "C157991",
+   "mpn": "B5B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 14.9mm 1x5P 2.5mm 250V 3A 5 5.75mm 5P 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 70880,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0852
+    ],
+    [
+     50,
+     0.0696
+    ],
+    [
+     150,
+     0.0618
+    ]
+   ],
+   "cny_price": 0.5238,
+   "cny_step": 5,
+   "szlcsc_stock": "11216",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B5B-XH-A-LF-SN_C157991.pdf"
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C43349": {
+   "role": "主选",
+   "code": "C43349",
+   "mpn": "KM227M016E11RR0VH2FP0",
+   "brand": "CX(Dongguan Chengxing Elec)",
+   "package": "Plugin,D6.3xL11mm",
+   "describe": "1000hrs@105℃ 11mm 16V 2.5mm 220uF 6.3mm ±20% 插件,D6.3xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 133300,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0274
+    ],
+    [
+     200,
+     0.022
+    ],
+    [
+     1000,
+     0.0187
+    ]
+   ],
+   "cny_price": 0.1681,
+   "cny_step": 20,
+   "szlcsc_stock": "6130",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM227M016E11RR0VH2FP0_C43349.pdf"
+  },
+  "C47344173": {
+   "role": "替代",
+   "code": "C47344173",
+   "mpn": "ERG16V220M6X11",
+   "brand": "jieerrui",
+   "package": "Plugin,D6.3xL11mm",
+   "describe": "-40℃~+105℃ 11mm 16V 2.5mm 2000hrs@105℃ 220mΩ@100kHz 220uF 340mA@100kHz 6mm ±20% Plugin,D6.3xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 138583,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0387
+    ],
+    [
+     100,
+     0.0309
+    ],
+    [
+     300,
+     0.0269
+    ]
+   ],
+   "cny_price": 0.2384,
+   "cny_step": 10,
+   "szlcsc_stock": "13854",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_jieerrui-ERG16V220M6X11_C47344173.pdf"
+  }
+ }
+}

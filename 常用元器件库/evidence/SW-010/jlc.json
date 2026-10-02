@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C319012": {
+   "role": "主选",
+   "code": "C319012",
+   "mpn": "SS-12D10L5",
+   "brand": "XKB Connection",
+   "package": "插件,13x6.8mm",
+   "describe": "-40℃~+85℃ 10000 times 125V 13mm 3A 6.4mm 6.8mm Black PC Pin Rectangular Columnar SPDT Through Hole 插件,13x6.8mm Slide Switches ROHS",
+   "jlc_stock": 20895,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3203
+    ],
+    [
+     50,
+     0.2535
+    ],
+    [
+     150,
+     0.2208
+    ]
+   ],
+   "cny_price": 1.9703,
+   "cny_step": 5,
+   "szlcsc_stock": "3890",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110151630_XKB-Connection-SS-12D10L5_C319012.pdf"
+  },
+  "C2998777": {
+   "role": "替代",
+   "code": "C2998777",
+   "mpn": "SS-12D10-G5",
+   "brand": "DEALON",
+   "package": "插件,12.7x6.7mm",
+   "describe": "11.3mm 12.7mm 6.7mm Black PC Pin Rectangular Columnar SPDT Through Hole 插件,12.7x6.7mm Slide Switches ROHS",
+   "jlc_stock": 757,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2054
+    ],
+    [
+     50,
+     0.1638
+    ],
+    [
+     150,
+     0.146
+    ]
+   ],
+   "cny_price": 1.2625,
+   "cny_step": 5,
+   "szlcsc_stock": "151",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2204281630_DEALON-SS-12D10-G5_C2998777.pdf"
+  }
+ }
+}

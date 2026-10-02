@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C144397": {
+   "role": "主选",
+   "code": "C144397",
+   "mpn": "B6B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 17.4mm 1x6P 2.5mm 250V 3A 5.75mm 6 6P 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 44111,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0911
+    ],
+    [
+     50,
+     0.0743
+    ],
+    [
+     150,
+     0.0659
+    ]
+   ],
+   "cny_price": 0.56,
+   "cny_step": 5,
+   "szlcsc_stock": "8822",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B6B-XH-A-LF-SN_C144397.pdf"
+  }
+ }
+}

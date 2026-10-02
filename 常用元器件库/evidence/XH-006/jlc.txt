@@ -1,0 +1,13 @@
+# XH-006 XH 6P 直插（JST B6B-XH-A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C144397
+  型号: B6B-XH-A(LF)(SN)
+  厂家: JST
+  封装: Plugin,P=2.5mm
+  描述: -25℃~+85℃ 1 17.4mm 1x6P 2.5mm 250V 3A 5.75mm 6 6P 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.56 起订5  库存 8822
+  嘉立创库存: 44111  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B6B-XH-A-LF-SN_C144397.pdf
+

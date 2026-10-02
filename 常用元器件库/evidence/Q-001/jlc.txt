@@ -1,0 +1,22 @@
+# Q-001 NPN 三极管 S8050（TO-92）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C717453
+  型号: S8050
+  厂家: LGE
+  封装: TO-92
+  描述: 1 NPN 100nA 150MHz 250 25V 500mA 5V 600mV 625mW NPN TO-92 Bipolar (BJT) ROHS
+  立创商城: ¥0.1586 起订20  库存 492
+  嘉立创库存: 10669  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2008031905_LGE-S8050_C717453.pdf
+
+[替代] C8327
+  型号: S8050(RANGE:160-300)
+  厂家: Jiangsu Changjing Electronics Technology Co., Ltd.
+  封装: TO-92
+  描述: -55℃~+150℃ 1 NPN 100nA 150MHz 160 25V 500mA 5V 600mV 625mW NPN TO-92 Bipolar (BJT) ROHS
+  立创商城: ¥0.2125 起订20  库存 248
+  嘉立创库存: 4970  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1809212133_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--S8050-RANGE-160-300_C8327.pdf
+

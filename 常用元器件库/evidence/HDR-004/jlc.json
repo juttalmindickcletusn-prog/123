@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C3411": {
+   "role": "主选",
+   "code": "C3411",
+   "mpn": "2.0-1*40PStraight Pin Header",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "Plugin,P=2mm",
+   "describe": "-55℃~+105℃ 1 1x40P 2.7mm 2mm 2mm 3A 40P 4mm Black Brass Gold Pin Header Through Hole 插件,P=2mm Pin Headers ROHS",
+   "jlc_stock": 7385,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1363
+    ],
+    [
+     50,
+     0.1106
+    ],
+    [
+     150,
+     0.0976
+    ]
+   ],
+   "cny_price": 0.8384,
+   "cny_step": 5,
+   "szlcsc_stock": "1469",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811151526_BOOMELE-Boom-Precision-Elec-2-0-1-40P_C3411.pdf"
+  },
+  "C42431828": {
+   "role": "替代",
+   "code": "C42431828",
+   "mpn": "PZ2.0-1X40P-H20",
+   "brand": "JXTCONN",
+   "package": "Plugin,P=2mm",
+   "describe": "-40℃~+105℃ 1 1.5A 1kV 1x40P 2.8mm 2mm 2mm 3.9mm 40P Black Brass Gold Pin Header Through Hole 插件,P=2mm Pin Headers ROHS",
+   "jlc_stock": 586,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1816
+    ],
+    [
+     50,
+     0.1447
+    ],
+    [
+     200,
+     0.1288
+    ]
+   ],
+   "cny_price": 1.1174,
+   "cny_step": 5,
+   "szlcsc_stock": "117",
+   "datasheet": null
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C456012": {
+   "role": "主选",
+   "code": "C456012",
+   "mpn": "TYPE-C 6P",
+   "brand": "SHOU HAN",
+   "package": "SMD",
+   "describe": "-40℃~+85℃ 1 3,000 Cycles 3A 5V 6P Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
+   "jlc_stock": 688649,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0387
+    ],
+    [
+     100,
+     0.0313
+    ],
+    [
+     300,
+     0.0275
+    ]
+   ],
+   "cny_price": 0.2384,
+   "cny_step": 10,
+   "szlcsc_stock": "68308",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2012031006_SHOU-HAN-TYPE-C-6P_C456012.pdf"
+  }
+ }
+}

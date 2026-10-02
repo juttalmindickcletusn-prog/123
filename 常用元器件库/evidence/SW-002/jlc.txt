@@ -1,0 +1,13 @@
+# SW-002 6×6 直插轻触开关 高 7mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C136682
+  型号: K2-1102DP-G3SW-04
+  厂家: Korean Hroparts Elec
+  封装: Plugin-4P,6x6mm
+  描述: -25℃~+85℃ 1.8N 100,000 cycles 12V 50mA 6mm 6mm 7mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS
+  立创商城: ¥0.4155 起订10  库存 641
+  嘉立创库存: 6410  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2108131730_Korean-Hroparts-Elec-K2-1102DP-G3SW-04_C136682.pdf
+

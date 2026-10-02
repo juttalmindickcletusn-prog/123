@@ -1,0 +1,18 @@
+{
+ "csv": "G:\\GPT-Workspace\\Projects\\Desktop\\硬件设计提示词规范\\常用元器件库\\tools\\selftest\\fixtures\\fp_FUS-001_10.csv",
+ "checked": 1,
+ "errors": {
+  "FUS-001": [
+   "没有 3D 模型且 notes 未说明"
+  ]
+ },
+ "info": {
+  "FUS-001": {
+   "pads": [
+    "1",
+    "2"
+   ],
+   "pitch_measured": 5.08
+  }
+ }
+}

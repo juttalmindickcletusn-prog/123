@@ -1,0 +1,13 @@
+# BAT-002 CR2032 纽扣电池座（直插，MYOUNG BS-07）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2979167
+  型号: BS-07-A1BJ001
+  厂家: MYOUNG
+  封装: -
+  描述: -25~85℃ Battery base CR2032 Manganese steel Nickel plated - ROHS
+  立创商城: ¥2.4291 起订5  库存 206
+  嘉立创库存: 1076  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2203021630_MYOUNG-BS-07-A1BJ001_C2979167.pdf
+

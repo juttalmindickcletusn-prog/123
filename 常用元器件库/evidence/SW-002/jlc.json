@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C136682": {
+   "role": "主选",
+   "code": "C136682",
+   "mpn": "K2-1102DP-G3SW-04",
+   "brand": "Korean Hroparts Elec",
+   "package": "Plugin-4P,6x6mm",
+   "describe": "-25℃~+85℃ 1.8N 100,000 cycles 12V 50mA 6mm 6mm 7mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS",
+   "jlc_stock": 6410,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0677
+    ],
+    [
+     100,
+     0.0552
+    ],
+    [
+     300,
+     0.049
+    ]
+   ],
+   "cny_price": 0.4155,
+   "cny_step": 10,
+   "szlcsc_stock": "641",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2108131730_Korean-Hroparts-Elec-K2-1102DP-G3SW-04_C136682.pdf"
+  }
+ }
+}

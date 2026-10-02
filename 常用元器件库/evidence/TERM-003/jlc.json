@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C8465": {
+   "role": "主选",
+   "code": "C8465",
+   "mpn": "WJ500V-5.08-2P",
+   "brand": "Ningbo Kangnex Elec",
+   "package": "Plugin,P=5.08mm",
+   "describe": "-40℃~+105℃ 1 14~30 18A 1x2P 2 2.5 250V 2P 5.08mm Green M2.5 Through Hole 插件,P=5.08mm Screw Terminal Blocks ROHS",
+   "jlc_stock": 266219,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1337
+    ],
+    [
+     50,
+     0.1077
+    ],
+    [
+     150,
+     0.0943
+    ]
+   ],
+   "cny_price": 0.8217,
+   "cny_step": 5,
+   "szlcsc_stock": "44137",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912251636_Ningbo-Kangnex-Elec-WJ500V-5-08-2P_C8465.pdf"
+  }
+ }
+}

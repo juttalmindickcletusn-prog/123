@@ -1,0 +1,22 @@
+# BZ-002 5V 无源蜂鸣器 12×8.5
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C409842
+  型号: YS-MBZ12085C05R42
+  厂家: Fengming
+  封装: Plugin,D=12mm
+  描述: -20℃~+60℃ 12mm 2.048kHz 3V~7V 5V 8.7mm 80mA 85dB Electromagnetic Passive (Externally Driven) Through-hole 插件,D=12mm Buzzers ROHS
+  立创商城: ¥0.9463 起订5  库存 34
+  嘉立创库存: 1480  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912171631_Fengming-YS-MBZ12085C05R42_C409842.pdf
+
+[替代] C968749
+  型号: Cy-12085G-3016-P4
+  厂家: CY(Changzhou Chaoyin Elec)
+  封装: Plugin,D=12mm
+  描述: -20℃~+70℃ 12mm 2.048kHz 2V~5V 35mA 8.5mm 85dB Electromagnetic Passive (Externally Driven) 插件,D=12mm Buzzers ROHS
+  立创商城: ¥1.2843 起订5  库存 581
+  嘉立创库存: 2905  贴片库: expand
+  规格书: https://datasheet.lcsc.com/lcsc/2012111604_CY-Changzhou-Chaoyin-Elec-Cy-12085G-3016-P4_C968749.pdf
+

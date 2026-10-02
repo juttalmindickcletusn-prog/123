@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895472": {
+   "role": "主选",
+   "code": "C2895472",
+   "mpn": "XL-302UYD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 1.5cd 2.2V 20mA 30° 3mm Round Lens 50mW 585nm~595nm 588nm Yellow Yellow Lens 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 49566,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0331
+    ],
+    [
+     200,
+     0.0259
+    ],
+    [
+     1000,
+     0.0212
+    ]
+   ],
+   "cny_price": 0.2034,
+   "cny_step": 20,
+   "szlcsc_stock": "2478",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-302UYD_C2895472.pdf"
+  },
+  "C2895473": {
+   "role": "替代",
+   "code": "C2895473",
+   "mpn": "XL-304UYD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 1.5cd 2.2V 20mA 30° 3mm Round Lens 50mW 585nm~595nm 588nm Yellow Yellow Lens 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 23649,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0357
+    ],
+    [
+     200,
+     0.0282
+    ],
+    [
+     1000,
+     0.0222
+    ]
+   ],
+   "cny_price": 0.2188,
+   "cny_step": 20,
+   "szlcsc_stock": "1181",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-304UYD_C2895473.pdf"
+  }
+ }
+}

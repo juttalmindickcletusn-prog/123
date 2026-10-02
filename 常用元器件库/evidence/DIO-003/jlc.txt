@@ -1,0 +1,22 @@
+# DIO-003 肖特基二极管 1N5819（DO-41）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2474
+  型号: 1N5819
+  厂家: MDD(Microdiode Semiconductor)
+  封装: DO-41
+  描述: -65℃~+150℃ 1 Independent 1A 25A 40V 500uA@40V 600mV@1A DO-41 Schottky Diodes ROHS
+  立创商城: ¥0.2303 起订20  库存 3212
+  嘉立创库存: 64383  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2407291648_MDD-Microdiode-Semiconductor-1N5819_C2474.pdf
+
+[替代] C402218
+  型号: 1N5819
+  厂家: LGE
+  封装: DO-41
+  描述: -65℃~+125℃ 1 Independent 1A 1mA@40V 30A 40V 900mV@3A DO-41 Schottky Diodes ROHS
+  立创商城: ¥0.1743 起订20  库存 1256
+  嘉立创库存: 25189  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_LGE-1N5819_C402218.pdf
+

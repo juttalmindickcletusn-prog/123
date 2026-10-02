@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C20626143": {
+   "role": "主选",
+   "code": "C20626143",
+   "mpn": "LCKFB-ESP32S3R8N8",
+   "brand": "LCSC-boards",
+   "package": "-",
+   "describe": "- Development Boards & Kits ROHS",
+   "jlc_stock": 397,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     5.8361
+    ],
+    [
+     10,
+     5.1241
+    ],
+    [
+     30,
+     4.76
+    ]
+   ],
+   "cny_price": 35.9,
+   "cny_step": 1,
+   "szlcsc_stock": "397",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2412061428_LCSC-boards-LCKFB-ESP32S3R8N8_C20626143.pdf"
+  }
+ }
+}

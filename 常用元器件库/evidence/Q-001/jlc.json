@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C717453": {
+   "role": "主选",
+   "code": "C717453",
+   "mpn": "S8050",
+   "brand": "LGE",
+   "package": "TO-92",
+   "describe": "1 NPN 100nA 150MHz 250 25V 500mA 5V 600mV 625mW NPN TO-92 Bipolar (BJT) ROHS",
+   "jlc_stock": 10669,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0259
+    ],
+    [
+     200,
+     0.0205
+    ],
+    [
+     1000,
+     0.0168
+    ]
+   ],
+   "cny_price": 0.1586,
+   "cny_step": 20,
+   "szlcsc_stock": "492",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2008031905_LGE-S8050_C717453.pdf"
+  },
+  "C8327": {
+   "role": "替代",
+   "code": "C8327",
+   "mpn": "S8050(RANGE:160-300)",
+   "brand": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+   "package": "TO-92",
+   "describe": "-55℃~+150℃ 1 NPN 100nA 150MHz 160 25V 500mA 5V 600mV 625mW NPN TO-92 Bipolar (BJT) ROHS",
+   "jlc_stock": 4970,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0347
+    ],
+    [
+     200,
+     0.027
+    ],
+    [
+     1000,
+     0.0222
+    ]
+   ],
+   "cny_price": 0.2125,
+   "cny_step": 20,
+   "szlcsc_stock": "248",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809212133_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--S8050-RANGE-160-300_C8327.pdf"
+  }
+ }
+}

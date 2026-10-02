@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895492": {
+   "role": "主选",
+   "code": "C2895492",
+   "mpn": "XL-502SURD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-25℃~+85℃ 2.4V 20mA 300mcd 35° 5mm round lamp head 615nm~625nm 654nm 70mW Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 188815,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0314
+    ],
+    [
+     200,
+     0.0246
+    ],
+    [
+     1000,
+     0.0197
+    ]
+   ],
+   "cny_price": 0.1926,
+   "cny_step": 20,
+   "szlcsc_stock": "9440",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404291052_XINGLIGHT-XL-502SURD_C2895492.pdf"
+  },
+  "C87271": {
+   "role": "替代",
+   "code": "C87271",
+   "mpn": "333-2SURD/S530-A3",
+   "brand": "Everlight Elec",
+   "package": "Plugin,D=5mm",
+   "describe": "-40℃~+85℃ 200mcd 20mA 2V 30° 5mm round lamp head 624nm 632nm Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 44147,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0381
+    ],
+    [
+     100,
+     0.03
+    ],
+    [
+     500,
+     0.0257
+    ]
+   ],
+   "cny_price": 0.2343,
+   "cny_step": 10,
+   "szlcsc_stock": "4316",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810271709_Everlight-Elec-333-2SURD-S530-A3_C87271.pdf"
+  }
+ }
+}

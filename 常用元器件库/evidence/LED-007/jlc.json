@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895478": {
+   "role": "主选",
+   "code": "C2895478",
+   "mpn": "XL-302SYGD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-25℃~+85℃ 2.2V 200mcd 20mA 30° 3mm Round Lens 560nm~570nm 570nm 70mW Discrete Diode Green Lens Yellow Green 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 14812,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0304
+    ],
+    [
+     200,
+     0.0239
+    ],
+    [
+     1000,
+     0.0192
+    ]
+   ],
+   "cny_price": 0.1872,
+   "cny_step": 20,
+   "szlcsc_stock": "726",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-302SYGD_C2895478.pdf"
+  },
+  "C2895476": {
+   "role": "替代",
+   "code": "C2895476",
+   "mpn": "XL-302UGD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 20mA 3.6V 30° 3cd 3mm Round Lens 520nm 520nm~530nm 70mW Discrete Diode Emerald Green Green Lens Plugin,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 307471,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0274
+    ],
+    [
+     200,
+     0.0209
+    ],
+    [
+     1000,
+     0.0181
+    ]
+   ],
+   "cny_price": 0.1683,
+   "cny_step": 20,
+   "szlcsc_stock": "15373",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-302UGD_C2895476.pdf"
+  }
+ }
+}

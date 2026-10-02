@@ -1,0 +1,22 @@
+# CAP-015 电解电容 1000µF/10V Φ8×12
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C10752
+  型号: KM108M010F12RR0VH2FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D8xL12mm
+  描述: 1000uF 10V 12mm 2000hrs@105℃ 3.5mm 8mm ±20% 插件,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.3007 起订20  库存 2945
+  嘉立创库存: 60656  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM108M010F12RR0VH2FP0_C10752.pdf
+
+[替代] C3299
+  型号: GR108M010F12RR0VL4FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D8xL12mm
+  描述: -40℃~+105℃ 1000uF 10V 12mm 3.5mm 3000hrs@105℃ 640mA@100kHz 8mm ±20% 插件,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.3146 起订10  库存 12258
+  嘉立创库存: 125856  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271230_CX-Dongguan-Chengxing-Elec-GR108M010F12RR0VL4FP0_C3299.pdf
+

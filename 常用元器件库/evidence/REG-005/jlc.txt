@@ -1,0 +1,13 @@
+# REG-005 3.3V 500mA LDO ME6211C33M5G（SOT-23-5，贴片）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C82942
+  型号: ME6211C33M5G-N
+  厂家: MICRONE(Nanjing Micro One Elec)
+  封装: SOT-23-5
+  描述: -40℃~+150℃ 1 120mV@(100mA) 3.3V 500mA 50uVrms 60uA 6V 70dB@(1kHz) Fixed Over Current Protection、Enable、Short Circuit Protection Positive SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥0.3731 起订10  库存 15890
+  嘉立创库存: 165153  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1811131510_MICRONE-Nanjing-Micro-One-Elec-ME6211C33M5G-N_C82942.pdf
+

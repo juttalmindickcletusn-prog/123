@@ -1,0 +1,22 @@
+# Q-004 P 沟道 MOS AO3401A（SOT-23，贴片备选）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C15127
+  型号: AO3401A
+  厂家: Alpha & Omega Semicon
+  封装: SOT-23
+  描述: 1 P-Channel 14nC@10V 30V 47mΩ@10V、60mΩ@4.5V、85mΩ@2.5V 4A 55pF 645pF 80pF 900mV SOT-23 MOSFETs ROHS
+  立创商城: ¥0.6245 起订5  库存 82320
+  嘉立创库存: 780677  贴片库: base
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf
+
+[替代] C347476
+  型号: AO3401A
+  厂家: UMW(Youtai Semiconductor Co., Ltd.)
+  封装: SOT-23
+  描述: -55℃~+150℃ 1 P-Channel 1.3V 1.4W 115pF 30V 4.2A 50mΩ@10V 77pF 9.4nC@4.5V 954pF P-Channel SOT-23 MOSFETs ROHS
+  立创商城: ¥0.2245 起订20  库存 27723
+  嘉立创库存: 567849  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2411121106_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf
+

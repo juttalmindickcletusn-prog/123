@@ -1,0 +1,14 @@
+# MCU-002 立创·地猛星 STM32F103C8T6 核心板
+查询日期: 2026-10-02
+来源: 嘉立创元件接口 + 立创商城（立创 EDA 商品接口）
+
+[主选] C22396880
+  型号: LCKFB-DKX-STM32F103C8T6
+  厂家: LCSC-boards
+  封装: -
+  描述: - Development Boards & Kits ROHS
+  立创商城: ¥11.46 起订1  库存 783
+  嘉立创库存: 783  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2408010918_LCSC-boards-LCKFB-DKX-STM32F103C8T6_C22396880.pdf
+
+  规格书下载: 已保存 11593 KB

@@ -1,0 +1,22 @@
+# CAP-013 电解电容 470µF/16V Φ8×12
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C28067
+  型号: KM477M016F12RR0VH2FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D8xL12mm
+  描述: 12mm 16V 2000hrs@105℃ 3.5mm 470uF 8mm ±20% 插件,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.2674 起订20  库存 4642
+  嘉立创库存: 99480  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM477M016F12RR0VH2FP0_C28067.pdf
+
+[替代] C47344174
+  型号: ERG16V470M8X12
+  厂家: jieerrui
+  封装: Plugin,D8xL12mm
+  描述: -40℃~+105℃ 100mΩ@100kHz 12mm 16V 2000hrs@105℃ 3.5mm 470uF 705mA@100kHz 8mm ±20% Plugin,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.3711 起订10  库存 6977
+  嘉立创库存: 69772  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_jieerrui-ERG16V470M8X12_C47344174.pdf
+

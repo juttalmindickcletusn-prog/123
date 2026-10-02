@@ -1,0 +1,13 @@
+# XH-104 XH 4P 弯插（JST S4B-XH-A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C157925
+  型号: S4B-XH-A(LF)(SN)
+  厂家: JST
+  封装: Push-Pull,P=2.5mm
+  描述: -25℃~+85℃ 1 11.5mm 12.4mm 1x4P 2.5mm 250V 3A 4 4P 6.1mm Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.5499 起订5  库存 16578
+  嘉立创库存: 83333  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S4B-XH-A-LF-SN_C157925.pdf
+

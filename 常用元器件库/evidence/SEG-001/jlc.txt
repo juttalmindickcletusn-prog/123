@@ -1,0 +1,14 @@
+# SEG-001 x
+查询日期: 2026-10-02
+来源: 嘉立创元件接口 + 立创商城（立创 EDA 商品接口）
+
+[主选] C8093
+  型号: FJ5161AH
+  厂家: Shenzhen Zhihao Elec
+  封装: Plugin
+  描述: -40℃~+85℃ 0.56 1 12.6mm 19mm 25mcd 2V 7 Segment 8mm Common Cathode Red 插件 LED Segment Displays ROHS
+  立创商城: ¥1.3349 起订5  库存 2621
+  嘉立创库存: 13109  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304031000_Shenzhen-Zhihao-Elec-FJ5161AH_C8093.pdf
+
+  规格书下载: 已保存 337 KB

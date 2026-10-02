@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C84410": {
+   "role": "主选",
+   "code": "C84410",
+   "mpn": "1N4148TR",
+   "brand": "onsemi",
+   "package": "DO-35",
+   "describe": "-55℃~+175℃@(Tj) 1 Independent 100V 1V@10mA 200mA 4A 4ns 500mW 5uA@75V DO-35 Switching Diodes ROHS",
+   "jlc_stock": 105609,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0191
+    ],
+    [
+     500,
+     0.0154
+    ],
+    [
+     1500,
+     0.0133
+    ]
+   ],
+   "cny_price": 0.1169,
+   "cny_step": 50,
+   "szlcsc_stock": "2112",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_onsemi-1N4148TR_C84410.pdf"
+  },
+  "C85057": {
+   "role": "替代",
+   "code": "C85057",
+   "mpn": "1N4148",
+   "brand": "Changzhou Starsea Elec",
+   "package": "DO-35",
+   "describe": "-65℃~+200℃@(Tj) 1 Independent 100V 150mA 1V@10mA 4ns 500mA 500mW 5uA@75V DO-35 Switching Diodes ROHS",
+   "jlc_stock": 29556,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0123
+    ],
+    [
+     500,
+     0.0097
+    ],
+    [
+     1500,
+     0.0083
+    ]
+   ],
+   "cny_price": 0.0753,
+   "cny_step": 50,
+   "szlcsc_stock": "591",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810301823_Changzhou-Starsea-Elec-1N4148_C85057.pdf"
+  }
+ }
+}

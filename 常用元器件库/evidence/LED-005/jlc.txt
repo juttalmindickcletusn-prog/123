@@ -1,0 +1,22 @@
+# LED-005 5mm 白色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895480
+  型号: XL-502UWC
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -25℃~+85℃ 20cd 20mA 3.3V 30° 5mm round lamp head 70mW 9000K~20000K Discrete Diode Water Clear White Plugin,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2057 起订20  库存 3388
+  嘉立创库存: 67776  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UWC_C2895480.pdf
+
+[替代] C2895481
+  型号: XL-504UWC
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -20℃~+85℃ 20mA 3.6V 30cd 30° 5mm round lamp head 6000K~6500K 6000nm~80000nm 70mW Discrete Diode Water Clear White 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2141 起订20  库存 837
+  嘉立创库存: 16741  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-504UWC_C2895481.pdf
+

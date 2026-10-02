@@ -1,0 +1,13 @@
+# BZ-003 5V 有源蜂鸣器 9×5.5 小型（0905 类）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C96493
+  型号: HNB09A05
+  厂家: Jiangsu Huaneng Elec
+  封装: Plugin,D=9mm
+  描述: -20℃~+70℃ 30mA 3V~7V 3kHz 5.7mm 5V 85dB 9mm Active Buzzer (Built-in Driving Circuit) Electromagnetic Plug-in Plugin,D=9mm Buzzers ROHS
+  立创商城: ¥1.4092 起订5  库存 8367
+  嘉立创库存: 46101  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1811141138_Jiangsu-Huaneng-Elec-HNB09A05_C96493.pdf
+

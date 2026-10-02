@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157925": {
+   "role": "主选",
+   "code": "C157925",
+   "mpn": "S4B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 11.5mm 12.4mm 1x4P 2.5mm 250V 3A 4 4P 6.1mm Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 83333,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0895
+    ],
+    [
+     50,
+     0.0698
+    ],
+    [
+     150,
+     0.06
+    ]
+   ],
+   "cny_price": 0.5499,
+   "cny_step": 5,
+   "szlcsc_stock": "16578",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S4B-XH-A-LF-SN_C157925.pdf"
+  }
+ }
+}

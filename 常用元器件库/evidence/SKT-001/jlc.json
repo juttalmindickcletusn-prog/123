@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C27438": {
+   "role": "主选",
+   "code": "C27438",
+   "mpn": "2.54-1*8PFemale Environmentally Friendly",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-55℃~+105℃ 1 1x8P 2.54mm 3.2mm 3A 8.5mm 8P Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS",
+   "jlc_stock": 123847,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1155
+    ],
+    [
+     50,
+     0.0971
+    ],
+    [
+     150,
+     0.0877
+    ]
+   ],
+   "cny_price": 0.7097,
+   "cny_step": 5,
+   "szlcsc_stock": "22594",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410122100_BOOMELE-Boom-Precision-Elec-2-54-1-8P_C27438.pdf"
+  },
+  "C42431840": {
+   "role": "替代",
+   "code": "C42431840",
+   "mpn": "PM2.54-1X8PM-H85",
+   "brand": "JXTCONN",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-40℃~+105℃ 1 1x8P 2.54mm 3.2mm 3A 8.5mm 8P Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS",
+   "jlc_stock": 21163,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1119
+    ],
+    [
+     50,
+     0.0872
+    ],
+    [
+     150,
+     0.0748
+    ]
+   ],
+   "cny_price": 0.6877,
+   "cny_step": 5,
+   "szlcsc_stock": "4232",
+   "datasheet": null
+  }
+ }
+}

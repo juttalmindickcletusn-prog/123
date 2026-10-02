@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157923": {
+   "role": "主选",
+   "code": "C157923",
+   "mpn": "S5B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 11.9mm 1x5P 2A 2mm 4.8mm 5 5P 7.6mm Brass K Pin PA66 PH Right Angle Tin UL94V-0 White 弯插,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 63858,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0771
+    ],
+    [
+     100,
+     0.0631
+    ],
+    [
+     500,
+     0.0506
+    ]
+   ],
+   "cny_price": 0.4737,
+   "cny_step": 10,
+   "szlcsc_stock": "6385",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S5B-PH-K-S-LF-SN_C157923.pdf"
+  }
+ }
+}

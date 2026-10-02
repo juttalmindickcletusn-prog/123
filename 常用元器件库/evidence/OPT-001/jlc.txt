@@ -1,0 +1,22 @@
+# OPT-001 光耦 PC817（DIP-4）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C96006
+  型号: PC817X3NSZ9F
+  厂家: Sharp Microelectronics
+  封装: DIP-4
+  描述: -30℃~+100℃ 1.2V 200mV@20mA,1mA 200mW 3us 4us 50% 50mA 50mA 5kV 600% 6V 80V DC Phototransistor DIP-4 Transistor, Photovoltaic Output Optoisolators ROHS
+  立创商城: ¥0.5789 起订5  库存 5518
+  嘉立创库存: 31496  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Sharp-Microelectronics-PC817X3NSZ9F_C96006.pdf
+
+[替代] C181890
+  型号: EL817(C)-F
+  厂家: Everlight Elec
+  封装: DIP-4
+  描述: -55℃~+110℃ 1 1.2V 100mV@20mA,1mA 18us 18us 200% 35V 400% 50mA 5kV 6V Phototransistor DIP-4 Transistor, Photovoltaic Output Optoisolators ROHS
+  立创商城: ¥0.2887 起订20  库存 33055
+  嘉立创库存: 661119  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Everlight-Elec-EL817-C-F_C181890.pdf
+

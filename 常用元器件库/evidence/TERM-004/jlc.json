@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C72334": {
+   "role": "主选",
+   "code": "C72334",
+   "mpn": "WJ500V-5.08-03P-14-00A",
+   "brand": "Ningbo Kangnex Elec",
+   "package": "Plugin,P=5.08mm",
+   "describe": "-40℃~+105℃ 1 14~30 18A 1x3P 2.5 250V 3 3P 5.08mm Green Through Hole 插件,P=5.08mm Screw Terminal Blocks ROHS",
+   "jlc_stock": 209523,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2145
+    ],
+    [
+     50,
+     0.168
+    ],
+    [
+     250,
+     0.1412
+    ]
+   ],
+   "cny_price": 1.3193,
+   "cny_step": 5,
+   "szlcsc_stock": "38178",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912251709_Ningbo-Kangnex-Elec-WJ500V-5-08-3P_C72334.pdf"
+  }
+ }
+}

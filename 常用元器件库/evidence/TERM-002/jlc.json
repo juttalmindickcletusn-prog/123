@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C474882": {
+   "role": "主选",
+   "code": "C474882",
+   "mpn": "KF301-5.0-3P",
+   "brand": "Cixi Kefa Elec",
+   "package": "Plugin,P=5mm",
+   "describe": "-30℃~+120℃ 1 1.5 14~22 17A 1x3P 250V 3 3P 5mm Blue Through Hole 插件,P=5mm Screw Terminal Blocks ROHS",
+   "jlc_stock": 19274,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1387
+    ],
+    [
+     50,
+     0.1082
+    ],
+    [
+     150,
+     0.093
+    ]
+   ],
+   "cny_price": 0.8526,
+   "cny_step": 5,
+   "szlcsc_stock": "3853",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2303171000_Cixi-Kefa-Elec-KF301-5-0-3P_C474882.pdf"
+  }
+ }
+}

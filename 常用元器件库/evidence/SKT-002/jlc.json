@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C5124634": {
+   "role": "主选",
+   "code": "C5124634",
+   "mpn": "2.54-2*20P",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-55℃~+105℃ 2 2.54mm 2.54mm 2.5A 2x20P 3.1mm 40P 8.5mm Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS",
+   "jlc_stock": 10681,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3279
+    ],
+    [
+     50,
+     0.2641
+    ],
+    [
+     160,
+     0.2086
+    ]
+   ],
+   "cny_price": 2.0166,
+   "cny_step": 5,
+   "szlcsc_stock": "2112",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401111126_BOOMELE-Boom-Precision-Elec-2-54-2-20P_C5124634.pdf"
+  },
+  "C42431846": {
+   "role": "替代",
+   "code": "C42431846",
+   "mpn": "PM2.54-2X20P-H85",
+   "brand": "JXTCONN",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-40℃~+105℃ 2 2.54mm 2.54mm 2x20P 3.2mm 3A 40P 8.5mm Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS",
+   "jlc_stock": 978,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3644
+    ],
+    [
+     50,
+     0.2862
+    ],
+    [
+     160,
+     0.2525
+    ]
+   ],
+   "cny_price": 2.241,
+   "cny_step": 5,
+   "szlcsc_stock": "194",
+   "datasheet": null
+  }
+ }
+}

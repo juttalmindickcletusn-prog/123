@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895496": {
+   "role": "主选",
+   "code": "C2895496",
+   "mpn": "XL-502UBD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 20mA 25° 3.4V 3cd 460nm~470nm 465nm 5mm round lamp head 70mW Blue Blue Lens 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 12377,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0316
+    ],
+    [
+     200,
+     0.0251
+    ],
+    [
+     1000,
+     0.0199
+    ]
+   ],
+   "cny_price": 0.1941,
+   "cny_step": 20,
+   "szlcsc_stock": "591",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UBD_C2895496.pdf"
+  },
+  "C2895488": {
+   "role": "替代",
+   "code": "C2895488",
+   "mpn": "XL-502UBC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 12cd 20mA 25° 3V 460nm~470nm 465nm 5mm round lamp head 70mW Blue Water Clear 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 17715,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0303
+    ],
+    [
+     200,
+     0.0238
+    ],
+    [
+     1000,
+     0.0192
+    ]
+   ],
+   "cny_price": 0.1862,
+   "cny_step": 20,
+   "szlcsc_stock": "885",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UBC_C2895488.pdf"
+  }
+ }
+}

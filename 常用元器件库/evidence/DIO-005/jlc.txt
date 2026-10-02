@@ -1,0 +1,22 @@
+# DIO-005 单向 TVS P6KE6.8A（DO-15）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C409413
+  型号: P6KE6.8A
+  厂家: Littelfuse
+  封装: DO-15
+  描述: -55℃~+175℃ 10.5V 1mA 5.8V 58.1A 6.45V 600W IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-15 ESD and Surge Protection (TVS/ESD) ROHS
+  立创商城: ¥0.7191 起订5  库存 719
+  嘉立创库存: 3599  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304231849_Littelfuse-P6KE6-8A_C409413.pdf
+
+[替代] C713671
+  型号: P6KE6.8A
+  厂家: LGE
+  封装: DO-15
+  描述: -55℃~+175℃ 10.5V 1mA 5.8V 6.45V 600W@10/1000us 60A TVS Unidirectional DO-15 ESD and Surge Protection (TVS/ESD) ROHS
+  立创商城: ¥0.4385 起订10  库存 350
+  嘉立创库存: 3610  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_LGE-P6KE6-8A_C713671.pdf
+

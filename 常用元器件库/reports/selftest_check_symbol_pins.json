@@ -1,0 +1,8 @@
+{
+ "checked": 1,
+ "errors": {
+  "Q-001": [
+   "符号不存在: Transistor_BJT:NoSuchPart"
+  ]
+ }
+}

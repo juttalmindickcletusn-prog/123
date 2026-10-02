@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C474881": {
+   "role": "主选",
+   "code": "C474881",
+   "mpn": "KF301-5.0-2P",
+   "brand": "Cixi Kefa Elec",
+   "package": "Plugin,P=5mm",
+   "describe": "-30℃~+120℃ 1 1.5 14~22 17A 1x2P 2 250V 2P 5mm Blue Through Hole 插件,P=5mm Screw Terminal Blocks ROHS",
+   "jlc_stock": 76865,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1008
+    ],
+    [
+     50,
+     0.0831
+    ],
+    [
+     150,
+     0.074
+    ]
+   ],
+   "cny_price": 0.6203,
+   "cny_step": 5,
+   "szlcsc_stock": "15354",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2303171000_Cixi-Kefa-Elec-KF301-5-0-2P_C474881.pdf"
+  }
+ }
+}

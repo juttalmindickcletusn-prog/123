@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C283467": {
+   "role": "主选",
+   "code": "C283467",
+   "mpn": "LD1117V33",
+   "brand": "STMicroelectronics",
+   "package": "TO-220",
+   "describe": "0℃~+125℃@(Tj) 1 1.2V@(800mA) 100uV 15V 3.3V 5mA 75dB@(120Hz) 800mA Fixed Over Current Protection、Thermal Shutdown Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 6092,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.4666
+    ],
+    [
+     10,
+     0.3626
+    ],
+    [
+     50,
+     0.3187
+    ]
+   ],
+   "cny_price": 2.87,
+   "cny_step": 1,
+   "szlcsc_stock": "6092",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810221222_STMicroelectronics-LD1117V33_C283467.pdf"
+  },
+  "C672117": {
+   "role": "替代",
+   "code": "C672117",
+   "mpn": "LD1117V33C",
+   "brand": "STMicroelectronics",
+   "package": "TO-220",
+   "describe": "-40℃~+125℃ 1 1.3V@(800mA) 100uV 15V 3.3V 75dB@(120Hz) 800mA Fixed Over Current Protection、Over Temperature Protection Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 2083,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.6389
+    ],
+    [
+     10,
+     0.5284
+    ],
+    [
+     50,
+     0.4812
+    ]
+   ],
+   "cny_price": 3.93,
+   "cny_step": 1,
+   "szlcsc_stock": "2051",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_STMicroelectronics-LD1117V33C_C672117.pdf"
+  }
+ }
+}

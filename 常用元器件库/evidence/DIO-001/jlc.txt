@@ -1,0 +1,22 @@
+# DIO-001 开关二极管 1N4148（DO-35）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C84410
+  型号: 1N4148TR
+  厂家: onsemi
+  封装: DO-35
+  描述: -55℃~+175℃@(Tj) 1 Independent 100V 1V@10mA 200mA 4A 4ns 500mW 5uA@75V DO-35 Switching Diodes ROHS
+  立创商城: ¥0.1169 起订50  库存 2112
+  嘉立创库存: 105609  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_onsemi-1N4148TR_C84410.pdf
+
+[替代] C85057
+  型号: 1N4148
+  厂家: Changzhou Starsea Elec
+  封装: DO-35
+  描述: -65℃~+200℃@(Tj) 1 Independent 100V 150mA 1V@10mA 4ns 500mA 500mW 5uA@75V DO-35 Switching Diodes ROHS
+  立创商城: ¥0.0753 起订50  库存 591
+  嘉立创库存: 29556  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1810301823_Changzhou-Starsea-Elec-1N4148_C85057.pdf
+

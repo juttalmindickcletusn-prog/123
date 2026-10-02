@@ -1,0 +1,22 @@
+# BZ-001 5V 有源蜂鸣器 12×9.5（TMB12A05）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C96093
+  型号: TMB12A05
+  厂家: Jiangsu Huaneng Elec
+  封装: Plugin,D=12mm
+  描述: -40℃~+85℃ 12mm 2.4kHz 30mA 4V~8V 5V 85dB 9.8mm Active Buzzer (Built-in Driving Circuit) Electromagnetic Plug-in Plugin,D=12mm Buzzers ROHS
+  立创商城: ¥1.1812 起订5  库存 17018
+  嘉立创库存: 104692  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2405280932_Jiangsu-Huaneng-Elec-TMB12A05_C96093.pdf
+
+[替代] C49246931
+  型号: TMB12A05
+  厂家: XHXDZ
+  封装: 插件,D12xL9.5mm
+  描述: -30℃~+70℃ 12mm 2.4kHz 30mA 3V~7V 5V 85dB 9.5mm Active Buzzer (Built-in Driving Circuit) Electromagnetic 插件,D12xL9.5mm Buzzers ROHS
+  立创商城: ¥0.9999 起订5  库存 5765
+  嘉立创库存: 29434  贴片库: expand
+  规格书: None
+

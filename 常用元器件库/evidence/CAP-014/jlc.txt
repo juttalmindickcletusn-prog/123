@@ -1,0 +1,22 @@
+# CAP-014 电解电容 1000µF/16V Φ8×16
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C43832
+  型号: KM108M016F16RR0VH2FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D8xL16mm
+  描述: 1000uF 16V 16mm 2000hrs@105℃ 3.5mm 8mm ±20% 插件,D8xL16mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.4448 起订10  库存 9648
+  嘉立创库存: 99297  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271230_CX-Dongguan-Chengxing-Elec-KM108M016F16RR0VH2FP0_C43832.pdf
+
+[替代] C49256792
+  型号: ERA16V1000M8X16
+  厂家: jieerrui
+  封装: Plugin,D8xL16mm
+  描述: -40℃~+105℃ 1000uF 16V 16mm 2000hrs@105℃ 3.5mm 600mA@120Hz 8mm ±20% Plugin,D8xL16mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.5449 起订5  库存 6927
+  嘉立创库存: 34637  贴片库: expand
+  规格书: None
+

@@ -1,0 +1,22 @@
+# PH-002 PH2.0 2P 直插（JST B2B-PH-K-S）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C131337
+  型号: B2B-PH-K-S(LF)(SN)
+  厂家: JST
+  封装: Plugin,P=2mm
+  描述: -25℃~+85℃ 1 100V 1x2P 2 2A 2P 2mm 4.5mm 5.9mm 6mm Brass K Pin PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS
+  立创商城: ¥0.2166 起订20  库存 2563
+  嘉立创库存: 64178  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B2B-PH-K-S-LF-SN_C131337.pdf
+
+[替代] C18077744
+  型号: BX-PH2.0-2PZZ
+  厂家: Bossie
+  封装: Plugin,P=2mm
+  描述: -25℃~+85℃ 1 1x2P 2 250V 2A 2P 2mm 4.7mm 6.05mm 6mm Brass PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS
+  立创商城: ¥0.0551 起订50  库存 3973
+  嘉立创库存: 201374  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310171751_Bossie-BX-PH2-0-2PZZ_C18077744.pdf
+

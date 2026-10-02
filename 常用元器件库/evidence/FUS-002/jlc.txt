@@ -1,0 +1,22 @@
+# FUS-002 直插自恢复保险丝 1.1A
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C21017
+  型号: RL30-110
+  厂家: RUILON(Shenzhen Ruilongyuan Elec)
+  封装: Plugin,P=5.1mm
+  描述: -40℃~+85℃ 1.1A 2.2A 260mΩ 30V 40A 50mΩ 6.6s 700mW 插件,P=5.1mm Resettable Fuses ROHS
+  立创商城: ¥0.8599 起订5  库存 845
+  嘉立创库存: 4225  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL30-110_C21017.pdf
+
+[替代] C208481
+  型号: MF-R110
+  厂家: BOURNS
+  封装: Plugin,P=5.08mm
+  描述: -40℃~+85℃ 1.1A 100mΩ 2.2A 270mΩ 30V 40A 6.6s 700mW 8.9mm 插件,P=5.08mm Resettable Fuses ROHS
+  立创商城: ¥0.8331 起订5  库存 448
+  嘉立创库存: 2244  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1806121917_BOURNS-MF-R110_C208481.pdf
+

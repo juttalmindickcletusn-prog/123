@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895494": {
+   "role": "主选",
+   "code": "C2895494",
+   "mpn": "XL-502UYD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 1cd 2.2V 20mA 25° 50mW 585nm~595nm 588nm 5mm round lamp head Yellow Yellow Lens 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 21954,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0373
+    ],
+    [
+     200,
+     0.0293
+    ],
+    [
+     1000,
+     0.0235
+    ]
+   ],
+   "cny_price": 0.2293,
+   "cny_step": 20,
+   "szlcsc_stock": "1097",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UYD_C2895494.pdf"
+  },
+  "C2895486": {
+   "role": "替代",
+   "code": "C2895486",
+   "mpn": "XL-502UYC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 1cd 2.2V 20mA 25° 50mW 585nm~595nm 588nm 5mm round lamp head Water Clear Yellow 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 5098,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0387
+    ],
+    [
+     200,
+     0.0308
+    ],
+    [
+     1000,
+     0.0249
+    ]
+   ],
+   "cny_price": 0.2381,
+   "cny_step": 20,
+   "szlcsc_stock": "253",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UYC_C2895486.pdf"
+  }
+ }
+}

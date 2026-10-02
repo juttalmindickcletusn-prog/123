@@ -1,0 +1,22 @@
+# SKT-003 2.0mm 单排排母（以 1×8 为代表）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C22438140
+  型号: HX PM2.0-1x8P ZC
+  厂家: hanxia
+  封装: Plugin,P=2mm
+  描述: -40℃~+105℃ 1 1.5A 1x8P 2.8mm 2mm 4.3mm 500V 8P Gold Phosphor bronze Square Hole Through Hole Top Plugin,P=2mm Female Headers ROHS
+  立创商城: ¥0.9147 起订5  库存 4177
+  嘉立创库存: 20897  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2405221104_hanxia-HX-PM2-0-1x8P-ZC_C22438140.pdf
+
+[替代] C7243
+  型号: 2.0-1*40PFemale
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2mm
+  描述: -55℃~+105℃ 1 1x40P 2.8mm 2mm 3A 4.3mm 40P Brass Gold Square Hole Through Hole Top 插件,P=2mm Female Headers ROHS
+  立创商城: ¥2.0297 起订5  库存 501
+  嘉立创库存: 2508  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1810221914_BOOMELE-Boom-Precision-Elec-2-0-1-40P_C7243.pdf
+

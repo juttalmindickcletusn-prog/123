@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C82942": {
+   "role": "主选",
+   "code": "C82942",
+   "mpn": "ME6211C33M5G-N",
+   "brand": "MICRONE(Nanjing Micro One Elec)",
+   "package": "SOT-23-5",
+   "describe": "-40℃~+150℃ 1 120mV@(100mA) 3.3V 500mA 50uVrms 60uA 6V 70dB@(1kHz) Fixed Over Current Protection、Enable、Short Circuit Protection Positive SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 165153,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0607
+    ],
+    [
+     100,
+     0.0493
+    ],
+    [
+     300,
+     0.0433
+    ]
+   ],
+   "cny_price": 0.3731,
+   "cny_step": 10,
+   "szlcsc_stock": "15890",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811131510_MICRONE-Nanjing-Micro-One-Elec-ME6211C33M5G-N_C82942.pdf"
+  }
+ }
+}

@@ -1,0 +1,1309 @@
+# 第一批：电源座、Type-C、排针排母、端子、开关、蜂鸣器、电池座
+# 型号/厂家/价格/库存由 tools/fetch_evidence.py 从嘉立创接口取；孔径和焊盘尺寸由 build_csv.py 从封装文件读出。
+
+- id: PWR-001
+  category: 电源座
+  name: DC-005 电源座（5.5×2.1 插头，2.0 针）
+  lcsc: C381116
+  alternatives: [{lcsc: C16214, note: BOOMELE DC-005，1–2 脚距 6.3（本封装 5.9），1.0 宽槽孔可容下，焊前试插}]
+  key_params: 额定 5A/57V，中心针 Φ2.0，配 5.5×2.1 插头，插拔寿命 5000 次
+  supply: 外部电源输入
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=中心针（一般接 +），2=外套（一般接 GND），3=开关脚（未插头时与 2 相通，不用可悬空）
+  pitch_mm: 5.9（1–2 脚）
+  row_spacing_mm: 3 脚偏离 1–2 连线 4.70
+  lead_size_mm: 片状引脚，厚 0.30–0.35
+  body_mm: 长 14.0 × 宽 9.0 × 高 11.0
+  mount: 卧装直插，插口伸到板边
+  seated_height_mm: 11.0
+  kicad_symbol: Connector:Barrel_Jack_Switch
+  kicad_footprint: StudentHW:PowerJack_DC-005_XKB_5A_Horizontal
+  dim_source: 厂家规格书 XKB DC-005-5A-2.0 外形图与推荐 PCB 图（dim_DC005_XKB.png、dim_DC005_PCB.png）
+  level: B
+  pitfalls: V1.1 的 DC-005 封装插口画反，朝了板内；本封装丝印画了 EDGE 线和插口箭头，EDGE 线压在板边上
+  notes: >-
+    按厂家推荐 PCB 图新画：1、2 脚槽孔垂直于插头方向，3 脚槽孔平行于插头方向（立创 EDA 自带封装的槽孔方向、本体位置与厂家图不符，未采用）。
+    3D 用 KiCad 官方通用 DC 座模型（BarrelJack_Horizontal，引脚布局相同，只做平移）。
+  taobao_keyword: DC-005 电源座 5.5*2.1 直插 三脚
+  polarized: 是
+  lead_max_mm: 0.35
+  check_pads: 1,2
+
+- id: PWR-002
+  category: 电源座
+  name: DC 电源座 PJ-102AH（5.5×2.1 插头，2.0 针，5A）
+  lcsc: C3096093
+  alternatives: []
+  alternatives_text: 无脚位相同的替代；手边只有 DC-005 就改用 PWR-001 的封装
+  key_params: CUI 原厂，额定 5A，中心针 Φ2.0，插入深度 9.0
+  supply: 外部电源输入
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=中心针（一般接 +），2=外套（一般接 GND），3=开关脚
+  pitch_mm: 6.0（1–2 脚）
+  row_spacing_mm: 3 脚偏离 1–2 连线 4.7
+  lead_size_mm: 片状引脚宽 1.00
+  body_mm: 长 14.4 × 宽 9.0 × 高 11.0
+  mount: 卧装直插，插口伸到板边
+  seated_height_mm: 11.0
+  kicad_symbol: Connector:Barrel_Jack_Switch
+  kicad_footprint: StudentHW:BarrelJack_CUI_PJ-102AH_Horizontal
+  dim_source: 厂家规格书 CUI PJ-102AH 机械图与推荐 PCB 图（dim_PJ102AH.png）
+  level: B
+  pitfalls: 价格是 DC-005 的十几倍，学生项目一般用 PWR-001；官方封装是圆孔 1.6，片状脚可插入
+  notes: KiCad 官方封装与 CUI 推荐 PCB 图一致（1、2 脚相距 6.0，3 脚偏 4.7）；本机官方库缺它的 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。
+  taobao_keyword: PJ-102AH DC 电源座
+  polarized: 是
+  lead_max_mm: 1.0
+
+- id: USB-002
+  category: Type-C
+  name: Type-C 6P 仅供电母座（贴片信号脚+直插固定脚）
+  lcsc: C456012
+  alternatives: []
+  alternatives_text: 无已核对脚位的替代
+  key_params: 只有 VBUS、GND、CC1、CC2 六个脚，额定 3A（电源脚）；CC 脚各接 5.1kΩ 下拉后，C-C 线和 PD 充电器都能出 5V
+  supply: 5V 输入
+  logic_level: 不适用
+  pin_count: 7
+  pinout: A9/B9=VBUS，A12/B12=GND，A5=CC1，B5=CC2，SH=外壳（4 个固定脚）
+  pitch_mm: 1.0（A5–B5）
+  row_spacing_mm: 前后固定脚相距 3.80
+  lead_size_mm: 信号脚贴片；外壳固定脚厚 0.30
+  body_mm: 宽 8.94 × 长 6.80 × 高 3.26
+  mount: 贴片 + 直插固定脚，插口伸到板边
+  seated_height_mm: 3.26
+  kicad_symbol: Connector:USB_C_Receptacle_PowerOnly_6P
+  kicad_footprint: StudentHW:USB_C_Receptacle_ShouHan_TYPE-C-6P_PowerOnly
+  dim_source: 厂家规格书 首韩 TYPE-C 6P 推荐 PCB 图（dim_TypeC6P_layout.png，图片型，人工读图）
+  level: B
+  pitfalls: >-
+    CC1、CC2 必须各接 5.1kΩ 到 GND，否则 C-C 线插上不供电。只有 2 个脚的 Type-C 座没有 CC 脚，已从库里删除。
+    信号脚是 1.0 脚距贴片，烙铁可焊，先固定外壳脚再焊信号脚
+  notes: >-
+    按厂家推荐 PCB 图新画，贴片脚向后加长 0.2 方便烙铁。外壳固定脚厂家推荐焊盘 1.0×1.8，库里加大到 1.2×2.0，
+    受 1.0 脚距和贴片脚间距限制，环宽按 0.3 放宽（外壳脚只做固定，不过电流）。3D 用立创 EDA 导出的模型。
+  taobao_keyword: Type-C 6P 母座 贴片 带固定脚
+  polarized: 否
+  lead_max_mm: 0.3
+  check_pads: A5,B5
+  ring_min_mm: 0.3
+
+- id: USB-004
+  category: Type-C
+  name: Type-C 16P 数据母座（贴片，常用）
+  lcsc: C165948
+  alternatives: [{lcsc: C393939, note: 首韩 TYPE-C16PIN，与 HRO TYPE-C-31-M-12 脚位兼容（换前看规格书）}]
+  key_params: USB2.0 数据 + 供电，16 个信号脚，额定 5A/20V
+  supply: 5V 输入
+  logic_level: D+/D- 为 USB2.0 差分信号
+  pin_count: 17
+  pinout: A4/A9/B4/B9=VBUS，A1/A12/B1/B12=GND，A5=CC1，B5=CC2，A6/B6=D+，A7/B7=D-，A8/B8=SBU，SH=外壳
+  pitch_mm: 0.5（信号脚）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚宽 0.3（信号）/0.6（电源）
+  body_mm: 宽 8.94 × 长 7.35 × 高 3.26
+  mount: 贴片 + 直插固定脚
+  seated_height_mm: 3.26
+  kicad_symbol: Connector:USB_C_Receptacle_USB2.0_16P
+  kicad_footprint: StudentHW:USB_C_Receptacle_HRO_TYPE-C-31-M-12
+  dim_source: 厂家规格书 HRO TYPE-C-31-M-12 推荐 PCB 图（图片型 PDF，人工读图，dim_HRO_31M12_layout.png）
+  level: B
+  pitfalls: 0.5 mm 脚距贴片，手焊易连锡，建议嘉立创贴片；只需要供电就用 USB-002
+  notes: 外壳固定脚焊盘 1.0、孔 0.6（官方封装与厂家图一致），环宽按 0.2 放宽；固定脚只做机械固定。本机官方库缺 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。
+  taobao_keyword: TYPE-C-31-M-12 16P 母座
+  polarized: 否
+  check_pads: A6,A7
+  ring_min_mm: 0.2
+
+- id: HDR-001
+  category: 排针排母
+  name: 2.54mm 单排直排针 1×40
+  lcsc: C2337
+  alternatives: [{lcsc: C2895846, note: XFCN PZ254V-11-40P}]
+  key_params: 额定 3A，镀金，可掰断成任意针数
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 40
+  pinout: 按丝印 1 脚（方焊盘）依次编号
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.64
+  body_mm: 塑座高 2.5；针上露 5.7、下露 3.0，总长 11.2
+  mount: 立式直插
+  seated_height_mm: 8.2（塑座 + 上露针）
+  kicad_symbol: Connector_Generic:Conn_01x40
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x40_P2.54mm_Vertical
+  dim_source: 厂家规格书 博穆 2.54-1xNA-H2.5 图纸（dim_PZ254_1xN.png，图片型，人工读图）
+  level: B
+  pitfalls: 用几针就选几针的封装（如 PinHeader_1x04），不要整排 40P 放板上
+  notes: 环宽：2.54 脚距下官方焊盘 1.7、孔 1.0，环宽 0.35，再大易连锡，按 0.35 放宽。
+  taobao_keyword: 2.54 单排针 1*40 直针 镀金
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: 2.54-1xNA
+
+- id: HDR-002
+  category: 排针排母
+  name: 2.54mm 单排弯排针 1×40
+  lcsc: C2334
+  alternatives: [{lcsc: C2925569, note: XFCN PZ254R-11-40P}]
+  key_params: 额定 3A，90° 弯针
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 40
+  pinout: 按丝印 1 脚（方焊盘）依次编号
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.64
+  body_mm: 塑座 2.54 × 2.54；水平伸出 6.0，板下 3.0
+  mount: 卧式直插（针平行于板面）
+  seated_height_mm: 约 2.54
+  kicad_symbol: Connector_Generic:Conn_01x40
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x40_P2.54mm_Horizontal
+  dim_source: 厂家规格书 博穆 PZ2.54-1xNAW-ZW 图纸（dim_PZ254_1xN_RA.png，图片型，人工读图）
+  level: B
+  pitfalls: 弯针伸出方向朝板边，封装外框画在伸出一侧
+  notes: 环宽同直排针，按 0.35 放宽。
+  taobao_keyword: 2.54 单排弯针 1*40
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: HDR-003
+  category: 排针排母
+  name: 2.54mm 双排直排针 2×40
+  lcsc: C2333
+  alternatives: [{lcsc: C2895847, note: XFCN PZ254V-12-80P}]
+  key_params: 额定 3A，双排
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 80
+  pinout: 1 脚方焊盘，单号一排、双号一排（Odd_Even）
+  pitch_mm: 2.54
+  row_spacing_mm: 2.54
+  lead_size_mm: 方针 0.64
+  body_mm: 塑座宽 5.0 × 高 2.54；上露 6.0，下露 3.0，总长 11.4
+  mount: 立式直插
+  seated_height_mm: 约 8.5
+  kicad_symbol: Connector_Generic:Conn_02x40_Odd_Even
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_2x40_P2.54mm_Vertical
+  dim_source: 厂家规格书 博穆 PZ2.54-2xNA-11.4MM 图纸（dim_PZ254_2xN.png，图片型，人工读图）
+  level: B
+  pitfalls: 双排针的符号脚号是 1、2 在同一列（左右排），画原理图前确认与模块丝印一致
+  notes: 环宽同单排针，按 0.35 放宽。
+  taobao_keyword: 2.54 双排针 2*40 直针
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: HDR-004
+  category: 排针排母
+  name: 2.0mm 单排直排针 1×40
+  lcsc: C3411
+  alternatives: [{lcsc: C42431828, note: JXTCONN PZ2.0-1X40P-H20}]
+  key_params: 额定 3A，2.0 mm 间距
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 40
+  pinout: 按丝印 1 脚（方焊盘）依次编号
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.50
+  body_mm: 塑座高 2.0；上露 4.0，下露 2.7，总长 8.7
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x40
+  kicad_footprint: Connector_PinHeader_2.00mm:PinHeader_1x40_P2.00mm_Vertical
+  dim_source: 厂家规格书 博穆 PZ2.0-1xNA-L8.7MM 图纸（dim_PZ200_1xN.png，图片型，人工读图）
+  level: B
+  pitfalls: 2.0 和 2.54 外观很像，买错插不上；LD6002 等雷达模块是 2.0 间距
+  notes: 环宽：2.0 脚距下官方焊盘 1.35、孔 0.8，环宽 0.27，按 0.27 放宽。
+  taobao_keyword: 2.0mm 单排针 1*40
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.27
+
+- id: SKT-001
+  category: 排针排母
+  name: 2.54mm 单排排母 8.5mm 高（以 1×8 为代表）
+  lcsc: C27438
+  alternatives: [{lcsc: C42431840, note: JXTCONN PM2.54-1X8PM-H85}]
+  key_params: 额定 3A，高 8.5
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 8
+  pinout: 按丝印 1 脚（方焊盘）依次编号
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.64 × 0.40
+  body_mm: 宽 2.4 × 高 8.5；板下 3.2
+  mount: 立式直插
+  seated_height_mm: 8.5
+  kicad_symbol: Connector_Generic:Conn_01x08
+  kicad_footprint: Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical
+  dim_source: 厂家规格书 博穆 2.54-1xNA-H8.5MM 图纸（dim_PM254_1xN.png，图片型，人工读图）
+  level: B
+  pitfalls: 插模块的排母要先把模块插上再焊，保证两排对齐；其他针数换 PinSocket_1xNN
+  notes: V1.1 用同系列 1×20、1×8 实焊。环宽：官方焊盘 1.7、孔 1.0，按 0.35 放宽。
+  taobao_keyword: 2.54 单排母 8P 高 8.5
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: SKT-002
+  category: 排针排母
+  name: 2.54mm 双排排母 2×20 8.5mm 高
+  lcsc: C5124634
+  alternatives: [{lcsc: C42431846, note: JXTCONN PM2.54-2X20P-H85}]
+  key_params: 额定 2.5A，高 8.5
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 40
+  pinout: 1 脚方焊盘，单号一排、双号一排（Odd_Even）
+  pitch_mm: 2.54
+  row_spacing_mm: 2.54
+  lead_size_mm: 引脚 0.64 × 0.40
+  body_mm: 宽 5.0 × 高 8.5；板下 3.1
+  mount: 立式直插
+  seated_height_mm: 8.5
+  kicad_symbol: Connector_Generic:Conn_02x20_Odd_Even
+  kicad_footprint: Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical
+  dim_source: 厂家规格书 博穆 PY2.54-2xNA-8.5MM 图纸（dim_PY254_2xN.png，图片型，人工读图）
+  level: B
+  pitfalls: 树莓派等 2×20 接口用；核心板两排针间距大于 2.54 时要用两个单排母，不能用这个
+  notes: 环宽按 0.35 放宽（同单排母）。
+  taobao_keyword: 2.54 双排母 2*20 高 8.5
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  check_pads: 1,3
+
+- id: SKT-003
+  category: 排针排母
+  name: 2.0mm 单排排母（以 1×8 为代表）
+  lcsc: C22438140
+  alternatives: [{lcsc: C7243, note: BOOMELE 2.0 单排母 1×40，可剪短}]
+  key_params: 额定 1.5A，高 4.3
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 8
+  pinout: 按丝印 1 脚（方焊盘）依次编号
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.5 × 0.2
+  body_mm: 宽 2.4 × 高 4.3；板下 2.8
+  mount: 立式直插
+  seated_height_mm: 4.3
+  kicad_symbol: Connector_Generic:Conn_01x08
+  kicad_footprint: StudentHW:PinSocket_1x08_P2.00mm_Vertical
+  dim_source: V1.1 实物验证；厂家规格书 韩下 HX PM2.0-1x8P 图纸（dim_HX_PM20.png）
+  level: A
+  pitfalls: 2.0 和 2.54 外观很像，买错插不上
+  notes: V1.1 底板 J2、J9 雷达插座已用此封装实焊（LD6002/LD6002C 8P 2.0）。
+  taobao_keyword: 2.0mm 单排母 8P
+  polarized: 否
+  lead_max_mm: 0.5
+
+- id: JMP-001
+  category: 排针排母
+  name: 2.54mm 跳线帽
+  lcsc: C100114
+  alternatives: [{lcsc: C5305, note: BOOMELE 开口跳线帽（可串在长针上）}]
+  key_params: 额定 3A，闭口
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 不适用
+  pinout: 短接相邻两根 2.54 排针
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 不适用
+  body_mm: 2.4 × 5.0 × 6.4（高）
+  mount: 插在排针上
+  seated_height_mm: 不适用
+  kicad_symbol: 不适用
+  kicad_footprint: 不适用（配件，插在 HDR-001 的 2 针上）
+  dim_source: 厂家规格书 博穆 2.54 短路帽闭口图纸（dim_jumper254.png，图片型，人工读图）
+  level: B
+  pitfalls: 跳线帽要和 HDR-001 一起买；原理图用 Jumper 符号 + 1×02 排针封装
+  notes: 配件，不上板，不需要封装和符号。
+  taobao_keyword: 2.54 跳线帽 短路帽
+  polarized: 否
+
+- id: TERM-001
+  category: 端子
+  name: KF301 螺钉端子 2P 5.0mm
+  lcsc: C474881
+  alternatives: []
+  alternatives_text: 其他品牌 KF301-5.0-2P 通用；注意 5.0 和 5.08 两种脚距
+  key_params: 300V/16A，线径 22–14 AWG，剥线 4–5 mm，M2.5 螺丝
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1、2 按丝印，接线口朝板外
+  pitch_mm: 5.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 Φ1.00
+  body_mm: 长 10.0（2P）× 深 7.6 × 高 10.0
+  mount: 立式直插，接线口朝板边
+  seated_height_mm: 10.0
+  kicad_symbol: Connector:Screw_Terminal_01x02
+  kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal
+  dim_source: 厂家规格书 科发 KF301-5.0 图纸（dim_KF301_50.png，图片型，人工读图）
+  level: B
+  pitfalls: KF301 有 5.0 和 5.08 两种脚距，3P 以上混用会插不进；V1.1 用的是 5.08 的（见 TERM-003）
+  notes: 厂家推荐孔 1.20，官方封装孔 1.3、焊盘 2.6。引脚离接线口一侧 4.0。
+  taobao_keyword: KF301-5.0-2P 接线端子
+  polarized: 否
+  lead_max_mm: 1.0
+
+- id: TERM-002
+  category: 端子
+  name: KF301 螺钉端子 3P 5.0mm
+  lcsc: C474882
+  alternatives: []
+  alternatives_text: 其他品牌 KF301-5.0-3P 通用；注意 5.0 和 5.08 两种脚距
+  key_params: 300V/16A，线径 22–14 AWG，剥线 4–5 mm，M2.5 螺丝
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1、2、3 按丝印，接线口朝板外
+  pitch_mm: 5.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 Φ1.00
+  body_mm: 长 15.0（3P）× 深 7.6 × 高 10.0
+  mount: 立式直插，接线口朝板边
+  seated_height_mm: 10.0
+  kicad_symbol: Connector:Screw_Terminal_01x03
+  kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal
+  dim_source: 厂家规格书 科发 KF301-5.0 图纸（与 TERM-001 同一份，图片型，人工读图，见 evidence/TERM-001/dim_KF301_50.png）
+  level: B
+  pitfalls: KF301 有 5.0 和 5.08 两种脚距，3P 混用插不进；V1.1 用的是 5.08 的（见 TERM-004）
+  notes: 厂家推荐孔 1.20，官方封装孔 1.3、焊盘 2.6。
+  taobao_keyword: KF301-5.0-3P 接线端子
+  polarized: 否
+  lead_max_mm: 1.0
+  evidence_extra: [evidence/TERM-001/dim_KF301_50.png]
+
+- id: XH-002
+  category: 端子
+  name: XH 2P 直插（JST B2B-XH-A）
+  lcsc: C158012
+  alternatives: [{lcsc: C42391660, note: 韩下 XH 兼容座，商品名写 2.54，买前核对规格书脚距为 2.5}]
+  key_params: &xh_kp JST 原厂 XH，额定 3A（AWG22），脚距 2.5
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: &xh_pin 1 脚在本体标记端（方焊盘），依次编号
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: &xh_lead 方针 0.64
+  body_mm: 长 7.4（=脚数×2.5+2.4）× 深 5.75 × 高 7.0
+  mount: 立式直插（插头从上方插入）
+  seated_height_mm: 7.0
+  kicad_symbol: Connector_Generic:Conn_01x02
+  kicad_footprint: Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+  dim_source: JST XH 目录 Through-hole shrouded header 尺寸表（dim_JST_XH_top.png）
+  level: B
+  pitfalls: &xh_pit 淘宝常写"XH2.54"，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上
+  notes: &xh_note 环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。
+  taobao_keyword: JST XH2.5 2P 直针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: B2B-XH-A
+
+- id: XH-003
+  category: 端子
+  name: XH 3P 直插（JST B3B-XH-A）
+  lcsc: C144394
+  alternatives: []
+  alternatives_text: 国产 XH 兼容座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: 长 9.9 × 深 5.75 × 高 7.0
+  mount: 立式直插
+  seated_height_mm: 7.0
+  kicad_symbol: Connector_Generic:Conn_01x03
+  kicad_footprint: Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical
+  dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
+  level: B
+  pitfalls: *xh_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 3P 直针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: B3B-XH-A
+  evidence_extra: [evidence/XH-002/dim_JST_XH_top.png]
+
+- id: XH-004
+  category: 端子
+  name: XH 4P 直插（JST B4B-XH-A）
+  lcsc: C144395
+  alternatives: []
+  alternatives_text: 国产 XH 兼容座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 4
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: 长 12.4 × 深 5.75 × 高 7.0
+  mount: 立式直插
+  seated_height_mm: 7.0
+  kicad_symbol: Connector_Generic:Conn_01x04
+  kicad_footprint: Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
+  dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
+  level: B
+  pitfalls: *xh_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 4P 直针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: B4B-XH-A
+  evidence_extra: [evidence/XH-002/dim_JST_XH_top.png]
+
+- id: XH-005
+  category: 端子
+  name: XH 5P 直插（JST B5B-XH-A）
+  lcsc: C157991
+  alternatives: []
+  alternatives_text: 国产 XH 兼容座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 5
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: 长 14.9 × 深 5.75 × 高 7.0
+  mount: 立式直插
+  seated_height_mm: 7.0
+  kicad_symbol: Connector_Generic:Conn_01x05
+  kicad_footprint: Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical
+  dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
+  level: B
+  pitfalls: *xh_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 5P 直针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: B5B-XH-A
+  evidence_extra: [evidence/XH-002/dim_JST_XH_top.png]
+
+- id: XH-006
+  category: 端子
+  name: XH 6P 直插（JST B6B-XH-A）
+  lcsc: C144397
+  alternatives: []
+  alternatives_text: 国产 XH 兼容座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 6
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: 长 17.4 × 深 5.75 × 高 7.0
+  mount: 立式直插
+  seated_height_mm: 7.0
+  kicad_symbol: Connector_Generic:Conn_01x06
+  kicad_footprint: Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical
+  dim_source: JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png）
+  level: B
+  pitfalls: *xh_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 6P 直针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: B6B-XH-A
+  evidence_extra: [evidence/XH-002/dim_JST_XH_top.png]
+
+- id: XH-102
+  category: 端子
+  name: XH 2P 弯插（JST S2B-XH-A）
+  lcsc: C157931
+  alternatives: [{lcsc: C163035, note: JST S2B-XH-A-1（另一种侧插高度），脚位相同}]
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: &xh_side_body 侧插型，长 = 脚数×2.5+2.4，插入方向尺寸 11.5（见图，S()B-XH-A 型 9.2）
+  mount: 卧式直插（插头平行于板面插入，插口朝板边）
+  seated_height_mm: 约 7（见图）
+  kicad_symbol: Connector_Generic:Conn_01x02
+  kicad_footprint: Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal
+  dim_source: JST XH 目录 Side entry type 尺寸（dim_JST_XH_side.png）
+  level: B
+  pitfalls: &xh_side_pit 弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝"XH2.54"实际脚距 2.5
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 2P 弯针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: S2B-XH-A
+
+- id: XH-103
+  category: 端子
+  name: XH 3P 弯插（JST S3B-XH-A）
+  lcsc: C157928
+  alternatives: []
+  alternatives_text: 国产 XH 弯针座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: *xh_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 约 7（见图）
+  kicad_symbol: Connector_Generic:Conn_01x03
+  kicad_footprint: Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal
+  dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
+  level: B
+  pitfalls: *xh_side_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 3P 弯针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: S3B-XH-A
+  evidence_extra: [evidence/XH-102/dim_JST_XH_side.png]
+
+- id: XH-104
+  category: 端子
+  name: XH 4P 弯插（JST S4B-XH-A）
+  lcsc: C157925
+  alternatives: []
+  alternatives_text: 国产 XH 弯针座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 4
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: *xh_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 约 7（见图）
+  kicad_symbol: Connector_Generic:Conn_01x04
+  kicad_footprint: Connector_JST:JST_XH_S4B-XH-A_1x04_P2.50mm_Horizontal
+  dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
+  level: B
+  pitfalls: *xh_side_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 4P 弯针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: S4B-XH-A
+  evidence_extra: [evidence/XH-102/dim_JST_XH_side.png]
+
+- id: XH-105
+  category: 端子
+  name: XH 5P 弯插（JST S5B-XH-A）
+  lcsc: C263757
+  alternatives: []
+  alternatives_text: 国产 XH 弯针座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 5
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: *xh_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 约 7（见图）
+  kicad_symbol: Connector_Generic:Conn_01x05
+  kicad_footprint: Connector_JST:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal
+  dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
+  level: B
+  pitfalls: *xh_side_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 5P 弯针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: S5B-XH-A
+  evidence_extra: [evidence/XH-102/dim_JST_XH_side.png]
+
+- id: XH-106
+  category: 端子
+  name: XH 6P 弯插（JST S6B-XH-A）
+  lcsc: C157919
+  alternatives: []
+  alternatives_text: 国产 XH 弯针座可用，买前核对脚距 2.5
+  key_params: *xh_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 6
+  pinout: *xh_pin
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: *xh_lead
+  body_mm: *xh_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 约 7（见图）
+  kicad_symbol: Connector_Generic:Conn_01x06
+  kicad_footprint: Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal
+  dim_source: JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png）
+  level: B
+  pitfalls: *xh_side_pit
+  notes: *xh_note
+  taobao_keyword: JST XH2.5 6P 弯针座
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: S6B-XH-A
+  evidence_extra: [evidence/XH-102/dim_JST_XH_side.png]
+
+- id: PH-002
+  category: 端子
+  name: PH2.0 2P 直插（JST B2B-PH-K-S）
+  lcsc: C131337
+  alternatives: [{lcsc: C18077744, note: 博赛 PH2.0 兼容座}]
+  key_params: &ph_kp JST 原厂 PH，额定 2A（AWG24），脚距 2.0
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: &ph_pin 1 脚在本体标记端（方焊盘），依次编号
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: &ph_lead 方针 0.5
+  body_mm: 长 5.9（=脚数×2+1.9）× 深 4.5 × 高 6.0
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x02
+  kicad_footprint: Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
+  dim_source: JST PH 目录 Through-hole shrouded header 尺寸表（dim_JST_PH_top.png）
+  level: B
+  pitfalls: &ph_pit 锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量
+  notes: &ph_note 环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。
+  taobao_keyword: JST PH2.0 2P 直针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: B2B-PH-K-S
+
+- id: PH-003
+  category: 端子
+  name: PH2.0 3P 直插（JST B3B-PH-K-S）
+  lcsc: C131339
+  alternatives: []
+  alternatives_text: 国产 PH2.0 兼容座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: 长 7.9 × 深 4.5 × 高 6.0
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x03
+  kicad_footprint: Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical
+  dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
+  level: B
+  pitfalls: *ph_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 3P 直针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: B3B-PH-K-S
+  evidence_extra: [evidence/PH-002/dim_JST_PH_top.png]
+
+- id: PH-004
+  category: 端子
+  name: PH2.0 4P 直插（JST B4B-PH-K-S）
+  lcsc: C131334
+  alternatives: []
+  alternatives_text: 国产 PH2.0 兼容座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 4
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: 长 9.9 × 深 4.5 × 高 6.0
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x04
+  kicad_footprint: Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical
+  dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
+  level: B
+  pitfalls: *ph_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 4P 直针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: B4B-PH-K-S
+  evidence_extra: [evidence/PH-002/dim_JST_PH_top.png]
+
+- id: PH-005
+  category: 端子
+  name: PH2.0 5P 直插（JST B5B-PH-K-S）
+  lcsc: C157993
+  alternatives: []
+  alternatives_text: 国产 PH2.0 兼容座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 5
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: 长 11.9 × 深 4.5 × 高 6.0
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x05
+  kicad_footprint: Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical
+  dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
+  level: B
+  pitfalls: *ph_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 5P 直针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: B5B-PH-K-S
+  evidence_extra: [evidence/PH-002/dim_JST_PH_top.png]
+
+- id: PH-006
+  category: 端子
+  name: PH2.0 6P 直插（JST B6B-PH-K-S）
+  lcsc: C131342
+  alternatives: []
+  alternatives_text: 国产 PH2.0 兼容座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 6
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: 长 13.9 × 深 4.5 × 高 6.0
+  mount: 立式直插
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x06
+  kicad_footprint: Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical
+  dim_source: JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png）
+  level: B
+  pitfalls: *ph_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 6P 直针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: B6B-PH-K-S
+  evidence_extra: [evidence/PH-002/dim_JST_PH_top.png]
+
+- id: PH-102
+  category: 端子
+  name: PH2.0 2P 弯插（JST S2B-PH-K-S）
+  lcsc: C173752
+  alternatives: []
+  alternatives_text: 国产 PH2.0 弯针座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: &ph_side_body 侧插型，长 = 脚数×2+1.9，插入方向 4.8，板上高 6.0（见图）
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x02
+  kicad_footprint: Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal
+  dim_source: JST PH 目录 Side entry type 尺寸（dim_JST_PH_side.png）
+  level: B
+  pitfalls: &ph_side_pit 弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 2P 弯针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: S2B-PH-K-S
+
+- id: PH-103
+  category: 端子
+  name: PH2.0 3P 弯插（JST S3B-PH-K-S）
+  lcsc: C157929
+  alternatives: []
+  alternatives_text: 国产 PH2.0 弯针座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: *ph_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x03
+  kicad_footprint: Connector_JST:JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal
+  dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
+  level: B
+  pitfalls: *ph_side_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 3P 弯针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: S3B-PH-K-S
+  evidence_extra: [evidence/PH-102/dim_JST_PH_side.png]
+
+- id: PH-104
+  category: 端子
+  name: PH2.0 4P 弯插（JST S4B-PH-K-S）
+  lcsc: C157926
+  alternatives: []
+  alternatives_text: 国产 PH2.0 弯针座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 4
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: *ph_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x04
+  kicad_footprint: Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal
+  dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
+  level: B
+  pitfalls: *ph_side_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 4P 弯针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: S4B-PH-K-S
+  evidence_extra: [evidence/PH-102/dim_JST_PH_side.png]
+
+- id: PH-105
+  category: 端子
+  name: PH2.0 5P 弯插（JST S5B-PH-K-S）
+  lcsc: C157923
+  alternatives: []
+  alternatives_text: 国产 PH2.0 弯针座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 5
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: *ph_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x05
+  kicad_footprint: Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal
+  dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
+  level: B
+  pitfalls: *ph_side_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 5P 弯针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: S5B-PH-K-S
+  evidence_extra: [evidence/PH-102/dim_JST_PH_side.png]
+
+- id: PH-106
+  category: 端子
+  name: PH2.0 6P 弯插（JST S6B-PH-K-S）
+  lcsc: C157920
+  alternatives: []
+  alternatives_text: 国产 PH2.0 弯针座可用
+  key_params: *ph_kp
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 6
+  pinout: *ph_pin
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: *ph_lead
+  body_mm: *ph_side_body
+  mount: 卧式直插（插口朝板边）
+  seated_height_mm: 6.0
+  kicad_symbol: Connector_Generic:Conn_01x06
+  kicad_footprint: Connector_JST:JST_PH_S6B-PH-K_1x06_P2.00mm_Horizontal
+  dim_source: JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png）
+  level: B
+  pitfalls: *ph_side_pit
+  notes: *ph_note
+  taobao_keyword: JST PH2.0 6P 弯针座
+  polarized: 否
+  lead_max_mm: 0.5
+  ring_min_mm: 0.22
+  pdf_keyword: S6B-PH-K-S
+  evidence_extra: [evidence/PH-102/dim_JST_PH_side.png]
+
+- id: SW-001
+  category: 开关
+  name: 6×6 直插轻触开关 高 5mm
+  lcsc: C110153
+  alternatives: [{lcsc: C393938, note: 首韩 TS665CJ 6×6，脚位相同}]
+  key_params: &sw_kp 6×6 直插 4 脚轻触开关，行程 0.25，按压力按型号后缀分档（见规格书）
+  supply: 不适用
+  logic_level: GPIO 内部上拉，按下接地为低电平
+  pin_count: 2
+  pinout: &sw_pin 四只脚两两相通：同一侧（相距 4.5）的两脚是一对开关触点，相距 6.5 的两脚常通
+  pitch_mm: 4.5（1–2 脚，另一方向 6.5）
+  row_spacing_mm: 6.5
+  lead_size_mm: &sw_lead 片状脚 0.70 宽 × 0.30 厚
+  body_mm: 6.0 × 6.0，按钮高 5.0（总高）
+  mount: 立式直插
+  seated_height_mm: 5.0
+  kicad_symbol: Switch:SW_Push
+  kicad_footprint: StudentHW:SW_PUSH_6mm
+  dim_source: 厂家规格书 韩荣 K2-1102DP 图纸与高度表（dim_K2_6x6.png、dim_K2_height_table.png，图片型，人工读图）
+  level: B
+  pitfalls: &sw_pit 方向放错会变成常通（6.5 方向两脚本来就通）；按封装丝印方向放
+  notes: &sw_note 封装与 V1.1 的 6×6×7.3 轻触开关同一个（V1.1 实焊）。环宽：封装孔 1.1、焊盘 2.0，环宽 0.45，沿用 V1.1 实焊尺寸。
+  taobao_keyword: 6*6*5 轻触开关 直插 4 脚
+  polarized: 否
+  lead_max_mm: 0.76
+  ring_min_mm: 0.45
+
+- id: SW-002
+  category: 开关
+  name: 6×6 直插轻触开关 高 7mm
+  lcsc: C136682
+  alternatives: []
+  alternatives_text: 任意品牌 6×6×7 直插 4 脚轻触开关（脚距 6.5×4.5）
+  key_params: *sw_kp
+  supply: 不适用
+  logic_level: GPIO 内部上拉，按下接地为低电平
+  pin_count: 2
+  pinout: *sw_pin
+  pitch_mm: 4.5（1–2 脚，另一方向 6.5）
+  row_spacing_mm: 6.5
+  lead_size_mm: *sw_lead
+  body_mm: 6.0 × 6.0，按钮高 7.0（总高）
+  mount: 立式直插
+  seated_height_mm: 7.0
+  kicad_symbol: Switch:SW_Push
+  kicad_footprint: StudentHW:SW_PUSH_6mm
+  dim_source: V1.1 实物验证；厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png）
+  level: A
+  pitfalls: *sw_pit
+  notes: V1.1 底板 SW2–SW4 已用此封装实焊（6×6×7.3）。
+  taobao_keyword: 6*6*7 轻触开关 直插 4 脚
+  polarized: 否
+  lead_max_mm: 0.76
+  evidence_extra: [evidence/SW-001/dim_K2_6x6.png, evidence/SW-001/dim_K2_height_table.png]
+
+- id: SW-003
+  category: 开关
+  name: 6×6 直插轻触开关 高 9mm
+  lcsc: C111992
+  alternatives: []
+  alternatives_text: 任意品牌 6×6×9 直插 4 脚轻触开关（脚距 6.5×4.5）
+  key_params: *sw_kp
+  supply: 不适用
+  logic_level: GPIO 内部上拉，按下接地为低电平
+  pin_count: 2
+  pinout: *sw_pin
+  pitch_mm: 4.5（1–2 脚，另一方向 6.5）
+  row_spacing_mm: 6.5
+  lead_size_mm: *sw_lead
+  body_mm: 6.0 × 6.0，按钮高 9.0（总高）
+  mount: 立式直插
+  seated_height_mm: 9.0
+  kicad_symbol: Switch:SW_Push
+  kicad_footprint: StudentHW:SW_PUSH_6mm
+  dim_source: 厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png）
+  level: B
+  pitfalls: *sw_pit
+  notes: *sw_note
+  taobao_keyword: 6*6*9 轻触开关 直插 4 脚
+  polarized: 否
+  lead_max_mm: 0.76
+  ring_min_mm: 0.45
+  evidence_extra: [evidence/SW-001/dim_K2_6x6.png, evidence/SW-001/dim_K2_height_table.png]
+
+- id: SW-004
+  category: 开关
+  name: 6×6 直插轻触开关 高 13mm
+  lcsc: C223774
+  alternatives: []
+  alternatives_text: 任意品牌 6×6×13 直插 4 脚轻触开关（脚距 6.5×4.5）
+  key_params: *sw_kp
+  supply: 不适用
+  logic_level: GPIO 内部上拉，按下接地为低电平
+  pin_count: 2
+  pinout: *sw_pin
+  pitch_mm: 4.5（1–2 脚，另一方向 6.5）
+  row_spacing_mm: 6.5
+  lead_size_mm: *sw_lead
+  body_mm: 6.0 × 6.0，按钮高 13.0（总高）
+  mount: 立式直插
+  seated_height_mm: 13.0
+  kicad_symbol: Switch:SW_Push
+  kicad_footprint: StudentHW:SW_PUSH_6mm
+  dim_source: 厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png）
+  level: B
+  pitfalls: 13 mm 高的按钮适合从外壳面板伸出；其余同 SW-001
+  notes: *sw_note
+  taobao_keyword: 6*6*13 轻触开关 直插 4 脚
+  polarized: 否
+  lead_max_mm: 0.76
+  ring_min_mm: 0.45
+  evidence_extra: [evidence/SW-001/dim_K2_6x6.png, evidence/SW-001/dim_K2_height_table.png]
+
+- id: SW-010
+  category: 开关
+  name: SS-12D10 拨动开关（单刀双掷）
+  lcsc: C319012
+  alternatives: [{lcsc: C2998777, note: DEALON SS-12D10-G5，脚距 4.7}]
+  key_params: 单刀双掷，AC 125V/3A（作电源开关用于 5V 小电流），拨柄高 5
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 2=公共端（中间脚），1、3 为两侧触点；拨向哪边，中间脚就和那边接通
+  pitch_mm: 4.7
+  row_spacing_mm: 不适用
+  lead_size_mm: 片状脚 1.30 宽 × 0.80 厚
+  body_mm: 13.0 × 6.8 × 6.4（不含拨柄）
+  mount: 立式直插
+  seated_height_mm: 6.4 + 拨柄 5
+  kicad_symbol: Switch:SW_SPDT
+  kicad_footprint: StudentHW:SW_Slide_SS-12D10_P4.7mm
+  dim_source: V1.1 实物验证；厂家规格书 XKB SS-12D10L5 图纸（dim_SS12D10L5.png，图片型，人工读图）
+  level: A
+  pitfalls: 做电源开关时，中间脚接负载、一侧接电源，另一侧悬空；丝印标出"开"的方向
+  notes: V1.1 底板 SW1 总电源开关已用此封装实焊。无 3D 模型（V1.1 原封装就没有），不影响焊接。
+  taobao_keyword: SS-12D10 拨动开关 3 脚
+  polarized: 否
+  lead_max_mm: 1.53
+
+- id: BZ-001
+  category: 蜂鸣器
+  name: 5V 有源蜂鸣器 12×9.5（TMB12A05）
+  lcsc: C96093
+  alternatives: [{lcsc: C49246931, note: 其他厂 TMB12A05，D12×9.5}]
+  key_params: 有源，额定 5V（3–7V），≤30mA，2400±300Hz，≥95dB@10cm
+  supply: 5V（3.3V 也能响但声音小）
+  logic_level: 电流 30mA 超出 GPIO 能力，用 Q-001 S8050 驱动，蜂鸣器两端并 1N4148
+  pin_count: 2
+  pinout: 1=+（长脚，外壳有 + 标记），2=-
+  pitch_mm: 7.6
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 Φ0.6±0.05
+  body_mm: Φ12.0 × 高 9.5
+  mount: 立式直插
+  seated_height_mm: 9.5
+  kicad_symbol: Device:Buzzer
+  kicad_footprint: Buzzer_Beeper:Buzzer_12x9.5RM7.6
+  dim_source: 厂家规格书 华能 TMB12A05 外形尺寸图（dim_TMB12A05.png）
+  level: B
+  pitfalls: V1.1 曾买成 0905 小型号插不上；必须买"有源"，无源的通直流不响；底部贴纸洗板后再撕
+  notes: 封装与 V1.1 的蜂鸣器封装同一个；V1.1 实物为 0905，所以本条按厂家图定为 B 级。
+  taobao_keyword: 有源蜂鸣器 5V 12*9.5 一体
+  polarized: 是
+  lead_max_mm: 0.65
+
+- id: BZ-002
+  category: 蜂鸣器
+  name: 5V 无源蜂鸣器 12×8.5
+  lcsc: C409842
+  alternatives: [{lcsc: C968749, note: 超音 Cy-12085G 无源 Φ12×8.5，脚距 6.5，换前核对}]
+  key_params: 无源电磁式，额定 5V（3–7V），线圈 42Ω，最大 80mA，谐振 2048Hz，≥85dB
+  supply: 5V
+  logic_level: 需要 PWM（约 2kHz）驱动，用 Q-001 S8050 驱动，两端并 1N4148
+  pin_count: 2
+  pinout: 1、2（无源，方焊盘一侧按壳体标记接 +）
+  pitch_mm: 6.5
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 Φ0.6
+  body_mm: Φ12 × 高 8.5
+  mount: 立式直插
+  seated_height_mm: 8.5
+  kicad_symbol: Device:Buzzer
+  kicad_footprint: StudentHW:Buzzer_D12.0mm_H8.5mm_P6.50mm
+  dim_source: 厂家规格书 锋鸣 YS-MBZ12085C05R42 外形尺寸（dim_YS_MBZ12085.png）
+  level: B
+  pitfalls: 无源蜂鸣器通直流不响；只适用于手工焊接，不能过波峰焊；脚距 6.5 与有源 12 mm 的 7.6 不同
+  notes: 按厂家图新画封装，3D 用立创 EDA 导出的模型。
+  taobao_keyword: 无源蜂鸣器 5V 12*8.5
+  polarized: 否
+  lead_max_mm: 0.6
+
+- id: BZ-003
+  category: 蜂鸣器
+  name: 5V 有源蜂鸣器 9×5.5 小型（0905 类）
+  lcsc: C96493
+  alternatives: []
+  alternatives_text: 其他品牌 0905 有源蜂鸣器，脚距 5.0
+  key_params: 有源，额定 5V（3–7V），≤30mA，2700±300Hz，≥85dB@10cm
+  supply: 5V
+  logic_level: 用 Q-001 S8050 驱动，两端并 1N4148
+  pin_count: 2
+  pinout: 1=+（长脚），2=-
+  pitch_mm: 5.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 Φ0.6±0.05
+  body_mm: Φ9.0 × 高 5.5
+  mount: 立式直插
+  seated_height_mm: 5.5
+  kicad_symbol: Device:Buzzer
+  kicad_footprint: StudentHW:Buzzer_D9.0mm_H5.5mm_P5.00mm
+  dim_source: 厂家规格书 华能 HNB09A05 外形尺寸图（dim_HNB09A05.png）
+  level: B
+  pitfalls: 和 12 mm 蜂鸣器脚距不同（5.0 对 7.6），封装不能混用
+  notes: 按厂家图新画封装，3D 用立创 EDA 导出的模型。
+  taobao_keyword: 有源蜂鸣器 5V 0905 9*5.5
+  polarized: 是
+  lead_max_mm: 0.65
+
+- id: BAT-001
+  category: 电池座
+  name: 18650 单节电池座（直插）
+  lcsc: C5290176
+  alternatives: [{lcsc: C19184084, note: 美阳 BH-18650-A6AJ012，换前核对脚距}]
+  key_params: 单节 18650，额定 3.7V；弹簧端为负极
+  supply: 电池输出 3.0–4.2V
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（无弹簧端），2=-（弹簧端）
+  pitch_mm: 70.0（厂家 70.00±3）
+  row_spacing_mm: 不适用
+  lead_size_mm: 图纸未标；弹簧为 0.8 钢丝，按 0.8 估算，槽孔留余量
+  body_mm: 75.5 × 21.0 × 18.2（高）
+  mount: 卧装直插
+  seated_height_mm: 18.2
+  kicad_symbol: Device:Battery_Cell
+  kicad_footprint: StudentHW:BatteryHolder_MYOUNG_BH-18650-A1AJ005
+  dim_source: 厂家规格书 美阳 BH-18650-A1AJ005 图纸（dim_BH18650_A1AJ005.png，图片型，人工读图）
+  level: C
+  pitfalls: 厂家脚距公差 ±3 mm，封装用 3.8 长槽孔吸收；电池座本身不带保护，18650 必须配保护板或带保护的充电模块
+  notes: 引脚尺寸厂家图未标，按 C 级处理，到货后量一次引脚再确认。3D 用立创 EDA 导出的模型。
+  taobao_keyword: 18650 电池座 单节 直插
+  polarized: 是
+  lead_max_mm: 0.8
+
+- id: BAT-002
+  category: 电池座
+  name: CR2032 纽扣电池座（直插，MYOUNG BS-07）
+  lcsc: C2979167
+  alternatives: []
+  alternatives_text: 无脚位相同的替代；立创库存少时可用贴片的 CR2032-BS-6-1（C70377），封装不同
+  key_params: CR2032 纽扣电池，3V
+  supply: 电池输出 3V
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（离电池中心 12.40 的那只脚，在卡扣一侧），2=-（离中心 8.40）
+  pitch_mm: 20.8
+  row_spacing_mm: 不适用
+  lead_size_mm: 片状脚 0.80 宽 × 0.5 厚
+  body_mm: Φ23.2（外缘 26.6）× 高 9.0
+  mount: 卧装直插
+  seated_height_mm: 9.0
+  kicad_symbol: Device:Battery_Cell
+  kicad_footprint: StudentHW:BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032_Pad2.6
+  dim_source: 厂家规格书 美阳 BS-07-A1BJ001 图纸与 PCB 图（dim_BS07_A1BJ001.png，图片型，人工读图）
+  level: B
+  pitfalls: 立创库存较少（约 200），批量用前确认；正负极看离中心的距离，不要只看脚的左右
+  notes: 改自 KiCad 官方 BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032（孔 1.5 与厂家图一致），焊盘 2.0→2.6 加大环宽。
+  taobao_keyword: CR2032 电池座 直插 BS-07
+  polarized: 是
+  lead_max_mm: 0.94
+
+- id: TERM-003
+  category: 端子
+  name: 5.08mm 螺钉端子 2P（KF301-5.08 同款）
+  lcsc: C8465
+  alternatives: []
+  alternatives_text: 淘宝 KF301-5.08-2P 通用（同脚距同外形）
+  pin_count: 2
+  pinout: 1、2 按丝印，接线口朝板外
+  body_mm: 长 10.16（2P）× 深 10.0 × 高 14.07
+  kicad_symbol: Connector:Screw_Terminal_01x02
+  kicad_footprint: TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal
+  notes: 厂家推荐孔 Φ1.5，官方封装孔 1.3、焊盘 2.6；引脚对角约 1.2，能插入。立创无科发 KF301-5.08，用康奈克斯同款。
+  key_params: 300V/10A（UL），线径 22–12 AWG，剥线 6–7 mm，M2.5 螺丝
+  supply: 不适用
+  logic_level: 不适用
+  pitch_mm: 5.08
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.90 × 0.80
+  mount: 立式直插，接线口朝板边
+  seated_height_mm: 14.07
+  dim_source: 厂家规格书 康奈克斯 WJ500V-5.08 图纸（dim_WJ500V_508.png）
+  level: B
+  pitfalls: 5.08 和 5.0 两种脚距外观几乎一样，3P 以上混用插不进；买淘宝货时认准"5.08"
+  taobao_keyword: KF301-5.08 接线端子 2P
+  polarized: 否
+  lead_max_mm: 0.9
+  pdf_keyword: WJ500V-5.08
+
+- id: TERM-004
+  category: 端子
+  name: 5.08mm 螺钉端子 3P（KF301-5.08 同款）
+  lcsc: C72334
+  alternatives: []
+  alternatives_text: 淘宝 KF301-5.08-3P 通用（同脚距同外形）
+  pin_count: 3
+  pinout: 1、2、3 按丝印，接线口朝板外
+  body_mm: 长 15.24（3P）× 深 10.0 × 高 14.07
+  kicad_symbol: Connector:Screw_Terminal_01x03
+  kicad_footprint: StudentHW:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal
+  notes: 封装与 V1.1 的 KF301-5.08-3P（体温探头接口）同一个，V1.1 已实焊；本条换了品牌，所以定 B 级。厂家推荐孔 Φ1.5，封装孔 1.3，引脚对角约 1.2，能插入。
+  evidence_extra: [evidence/TERM-003/dim_WJ500V_508.png]
+  key_params: 300V/10A（UL），线径 22–12 AWG，剥线 6–7 mm，M2.5 螺丝
+  supply: 不适用
+  logic_level: 不适用
+  pitch_mm: 5.08
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.90 × 0.80
+  mount: 立式直插，接线口朝板边
+  seated_height_mm: 14.07
+  dim_source: 厂家规格书 康奈克斯 WJ500V-5.08 图纸（与 TERM-003 同一份，见 evidence/TERM-003/dim_WJ500V_508.png）
+  level: B
+  pitfalls: 5.08 和 5.0 两种脚距外观几乎一样，3P 以上混用插不进；买淘宝货时认准"5.08"
+  taobao_keyword: KF301-5.08 接线端子 3P
+  polarized: 否
+  lead_max_mm: 0.9
+  pdf_keyword: WJ500V-5.08

@@ -1,0 +1,22 @@
+# POT-001 3296W 多圈精密可调电阻 10kΩ
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C34846
+  型号: 3296W-1-103LF
+  厂家: BOURNS
+  封装: SIP-3P,9.5x4.8mm
+  描述: 10kΩ 25 500mW ±10% ±100ppm/℃ SIP-3P,9.5x4.8mm Potentiometers, Variable Resistors ROHS
+  立创商城: ¥5.18 起订1  库存 37881
+  嘉立创库存: 38425  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_BOURNS-3296W-1-103LF_C34846.pdf
+
+[替代] C118954
+  型号: 3296W-1-103
+  厂家: BOCHEN(Chengdu Guosheng Tech)
+  封装: Plugin-3P,9.5x4.9mm
+  描述: 10kΩ 30 500mW ±10% ±250ppm/℃ 插件-3P,9.5x4.9mm Potentiometers, Variable Resistors ROHS
+  立创商城: ¥1.1603 起订5  库存 12865
+  嘉立创库存: 71740  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1811071811_BOCHEN-Chengdu-Guosheng-Tech-3296W-1-103_C118954.pdf
+

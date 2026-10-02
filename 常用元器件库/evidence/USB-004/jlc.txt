@@ -1,0 +1,22 @@
+# USB-004 Type-C 16P 数据母座（贴片，常用）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C165948
+  型号: TYPE-C-31-M-12
+  厂家: Korean Hroparts Elec
+  封装: SMD
+  描述: -30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS
+  立创商城: ¥1.1424 起订5  库存 87058
+  嘉立创库存: 448538  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2205251630_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.pdf
+
+[替代] C393939
+  型号: TYPE-C16PIN
+  厂家: SHOU HAN
+  封装: SMD
+  描述: -40℃~+85℃ 1 10 thousand cycles 16P 30V 3A Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS
+  立创商城: ¥0.4218 起订10  库存 38852
+  嘉立创库存: 398481  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_SHOU-HAN-TYPE-C16PIN_C393939.pdf
+

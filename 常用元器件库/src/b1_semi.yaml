@@ -1,0 +1,671 @@
+# 第一批：二极管、LED、三极管/MOS/光耦、稳压器
+# 型号/厂家/价格/库存由 tools/fetch_evidence.py 从嘉立创接口取；孔径和焊盘尺寸由 build_csv.py 从封装文件读出。
+
+- id: DIO-001
+  category: 二极管
+  name: 开关二极管 1N4148（DO-35）
+  lcsc: C84410
+  alternatives: [{lcsc: C85057, note: 星海 1N4148 DO-35}]
+  key_params: 反向耐压 100V，平均电流 200mA，反向恢复 4ns
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=K（黑色环一端），2=A
+  pitch_mm: 7.62
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.46–0.533
+  body_mm: Φ1.53–1.91 × 3.05–4.56（玻璃封装）
+  mount: 卧装直插
+  seated_height_mm: 约 2（贴板卧装）
+  kicad_symbol: Diode:1N4148
+  kicad_footprint: StudentHW:D_DO-35_SOD27_P7.62mm_Horizontal
+  dim_source: 厂家规格书 onsemi DO-35 外形尺寸（dim_DO35.png）
+  level: B
+  pitfalls: 色环端接方焊盘（K）；用作蜂鸣器/继电器续流时 K 接电源正
+  notes: 封装与 V1.1 底板 D3 同一个。
+  taobao_keyword: 1N4148 直插 DO-35
+  polarized: 是
+  lead_max_mm: 0.533
+
+- id: DIO-002
+  category: 二极管
+  name: 整流二极管 1N4007（DO-41）
+  lcsc: C402311
+  alternatives: [{lcsc: C2457, note: MDD 1N4007G}]
+  key_params: 反向耐压 1000V，平均电流 1A，正向压降约 1.1V@1A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=K（色环端），2=A
+  pitch_mm: 10.16
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.61–0.71
+  body_mm: Φ2.0–2.7 × 4.2–5.2
+  mount: 卧装直插
+  seated_height_mm: 约 2.7（贴板卧装）
+  kicad_symbol: Diode:1N4007
+  kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal
+  dim_source: 厂家规格书 LGE DO-41 外形尺寸（dim_DO41_LGE.png）
+  level: B
+  pitfalls: 1N4007 压降约 1V，做 5V 防反接会让后级只剩约 4V；低压防反接用 DIO-003 肖特基
+  notes: 封装与 V1.1 的 1N5819 同一个。
+  taobao_keyword: 1N4007 直插 DO-41
+  polarized: 是
+  lead_max_mm: 0.71
+
+- id: DIO-003
+  category: 二极管
+  name: 肖特基二极管 1N5819（DO-41）
+  lcsc: C2474
+  alternatives: [{lcsc: C402218, note: LGE 1N5819}]
+  key_params: 反向耐压 40V，平均电流 1A，正向压降 ≤0.6V@1A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=K（色环端），2=A
+  pitch_mm: 10.16
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.55–0.65
+  body_mm: DO-41 Φ2.0–2.7 × 4.1–5.2（见规格书）
+  mount: 卧装直插
+  seated_height_mm: 约 2.7（贴板卧装）
+  kicad_symbol: Diode:1N5819
+  kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal
+  dim_source: V1.1 实物验证；厂家规格书 MDD DO-41 外形尺寸（dim_DO41_MDD.png）
+  level: A
+  pitfalls: 色环端（K）接负载一侧，接反整机不上电
+  notes: V1.1 底板已用此封装实焊（输入防反接）。
+  taobao_keyword: 1N5819 直插 DO-41
+  polarized: 是
+  lead_max_mm: 0.65
+
+- id: DIO-004
+  category: 二极管
+  name: 稳压二极管 1N4733A 5.1V 1W（DO-41）
+  lcsc: C5157516
+  alternatives: [{lcsc: C241985, note: Vishay 1N4733A-TAP，引线较细，同样可插 1.2 孔}]
+  key_params: 稳压 5.1V（测试电流 49mA），1W，动态电阻 7Ω
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=K（色环端），2=A；稳压时 K 接正
+  pitch_mm: 10.16
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.8±0.15（最粗 0.95）
+  body_mm: Φ2.5 × 最长 4.6（玻璃封装）
+  mount: 卧装直插
+  seated_height_mm: 约 2.6（贴板卧装）
+  kicad_symbol: Device:D_Zener
+  kicad_footprint: StudentHW:D_DO-41_SOD81_P10.16mm_Horizontal_Hole1.2
+  dim_source: 厂家规格书 LGE 玻封 DO-41 外形尺寸（dim_DO41_glass.png）
+  level: B
+  pitfalls: LGE 这颗引线最粗 0.95，官方 DO-41 封装 1.1 孔插不进，用库里的 1.2 孔版本；稳压管必须串限流电阻
+  notes: 改自 KiCad 官方 D_DO-41_SOD81_P10.16mm_Horizontal，孔 1.1→1.2，焊盘 2.2→2.4。
+  taobao_keyword: 1N4733A 5.1V 1W 稳压二极管 直插
+  polarized: 是
+  lead_max_mm: 0.95
+
+- id: DIO-005
+  category: 二极管
+  name: 单向 TVS P6KE6.8A（DO-15）
+  lcsc: C409413
+  alternatives: [{lcsc: C713671, note: LGE P6KE6.8A}]
+  key_params: 600W，工作电压 5.8V，击穿 6.45–7.14V，钳位 10.5V@58A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=K（色环端），2=A；并在 5V 电源上，K 接 5V、A 接地
+  pitch_mm: 10.16
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.71–0.86
+  body_mm: Φ2.6–3.6 × 5.8–7.6
+  mount: 卧装直插
+  seated_height_mm: 约 3.6（贴板卧装）
+  kicad_symbol: Device:D_Zener
+  kicad_footprint: StudentHW:D_DO-15_P10.16mm_Horizontal
+  dim_source: V1.1 实物验证；厂家规格书 Littelfuse P6KE DO-15 尺寸表（dim_DO15_Littelfuse.png）
+  level: A
+  pitfalls: 必须买单向（A 后缀）；买成 CA 双向的在 5V 上也能用，但没有反接保护作用
+  notes: V1.1 底板已用此封装实焊。KiCad 没有单向 TVS 专用符号，用稳压管符号表示方向（1=K）。
+  taobao_keyword: P6KE6.8A 单向 TVS 直插
+  polarized: 是
+  lead_max_mm: 0.86
+
+- id: LED-001
+  category: LED
+  name: 5mm 红色 LED
+  lcsc: C2895492
+  alternatives: [{lcsc: C87271, note: 亿光 333-2SURD 5mm 红}]
+  key_params: &led5_kp 红，正向压降 1.8/2.2/2.4V（最小/典型/最大，20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮（约 1–3mA，指示用足够亮）
+  pin_count: 2
+  pinout: &led_pin 1=K（短脚、管壳平边），2=A（长脚）
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: &led_lead 引脚 0.5 方
+  body_mm: &led5_body Φ5.0，底边 Φ5.5，高 8.7
+  mount: 立式直插
+  seated_height_mm: 8.7（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: StudentHW:LED_D5.0mm
+  dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（dim_LED5mm.png）
+  level: A
+  pitfalls: &led_pit 方焊盘是 K（负极、短脚）；管壳平边对丝印平边
+  notes: V1.1 底板已用此封装实焊（5mm LED + 1kΩ）。
+  taobao_keyword: 5mm LED 红色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+
+- id: LED-002
+  category: LED
+  name: 5mm 绿色 LED（黄绿，低压降）
+  lcsc: C2895550
+  alternatives: [{lcsc: C2895548, note: 同厂 XL-502UGD 翠绿，压降约 3V，3.3V 驱动偏暗}]
+  key_params: 黄绿，正向压降 2.0/2.2/2.6V（20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led5_body
+  mount: 立式直插
+  seated_height_mm: 8.7（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: StudentHW:LED_D5.0mm
+  dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
+  level: A
+  pitfalls: 方焊盘是 K（负极、短脚）；要"翠绿"的选压降约 3V 的那种，3.3V 下串 1kΩ 会很暗
+  notes: V1.1 底板已用此封装实焊。
+  taobao_keyword: 5mm LED 绿色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-001/dim_LED5mm.png]
+
+- id: LED-003
+  category: LED
+  name: 5mm 蓝色 LED
+  lcsc: C2895496
+  alternatives: [{lcsc: C2895488, note: 同厂 XL-502UBC 透明蓝}]
+  key_params: 蓝，正向压降 2.8/3.0/3.4V（20mA），雾状
+  supply: 不适用
+  logic_level: 压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led5_body
+  mount: 立式直插
+  seated_height_mm: 8.7（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: StudentHW:LED_D5.0mm
+  dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
+  level: A
+  pitfalls: 蓝光、白光 LED 在 3.3V GPIO 上可能不亮或很暗
+  notes: V1.1 底板已用此封装实焊。
+  taobao_keyword: 5mm LED 蓝色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-001/dim_LED5mm.png]
+
+- id: LED-004
+  category: LED
+  name: 5mm 黄色 LED
+  lcsc: C2895494
+  alternatives: [{lcsc: C2895486, note: 同厂 XL-502UYC 透明黄}]
+  key_params: 黄，正向压降 1.8/2.0/2.4V（20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led5_body
+  mount: 立式直插
+  seated_height_mm: 8.7（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: StudentHW:LED_D5.0mm
+  dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
+  level: A
+  pitfalls: *led_pit
+  notes: V1.1 底板已用此封装实焊。
+  taobao_keyword: 5mm LED 黄色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-001/dim_LED5mm.png]
+
+- id: LED-005
+  category: LED
+  name: 5mm 白色 LED
+  lcsc: C2895480
+  alternatives: [{lcsc: C2895481, note: 同厂 XL-504UWC（4 号外形，换前核对高度）}]
+  key_params: 白，正向压降 2.8/3.0/3.4V（20mA），透明
+  supply: 不适用
+  logic_level: 压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led5_body
+  mount: 立式直插
+  seated_height_mm: 8.7（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: StudentHW:LED_D5.0mm
+  dim_source: V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png）
+  level: A
+  pitfalls: 白光透明头很刺眼，做指示灯电流取 1–2mA 即可
+  notes: V1.1 底板已用此封装实焊。
+  taobao_keyword: 5mm LED 白色 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-001/dim_LED5mm.png]
+
+- id: LED-006
+  category: LED
+  name: 3mm 红色 LED
+  lcsc: C2895470
+  alternatives: [{lcsc: C99772, note: 亿光 204-10SURD 3mm 红}]
+  key_params: 红，正向压降 1.8/2.2/2.4V（20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: &led3_body Φ3.0，底边 Φ3.8，高 5.2
+  mount: 立式直插
+  seated_height_mm: 5.2（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: LED_THT:LED_D3.0mm
+  dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（dim_LED3mm.png）
+  level: B
+  pitfalls: *led_pit
+  notes: 3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。
+  taobao_keyword: 3mm LED 红色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+
+- id: LED-007
+  category: LED
+  name: 3mm 绿色 LED（黄绿，低压降）
+  lcsc: C2895478
+  alternatives: [{lcsc: C2895476, note: 同厂 XL-302UGD 翠绿，压降约 3V}]
+  key_params: 黄绿，正向压降 1.8/2.2/2.6V（20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led3_body
+  mount: 立式直插
+  seated_height_mm: 5.2（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: LED_THT:LED_D3.0mm
+  dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
+  level: B
+  pitfalls: *led_pit
+  notes: 3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。
+  taobao_keyword: 3mm LED 绿色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-006/dim_LED3mm.png]
+
+- id: LED-008
+  category: LED
+  name: 3mm 蓝色 LED
+  lcsc: C2895474
+  alternatives: [{lcsc: C2895464, note: 同厂 XL-302UBC 透明蓝}]
+  key_params: 蓝，正向压降 2.8/3.0/3.4V（20mA），雾状
+  supply: 不适用
+  logic_level: 压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led3_body
+  mount: 立式直插
+  seated_height_mm: 5.2（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: LED_THT:LED_D3.0mm
+  dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
+  level: B
+  pitfalls: 蓝光、白光 LED 在 3.3V GPIO 上可能不亮或很暗
+  notes: 3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。
+  taobao_keyword: 3mm LED 蓝色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-006/dim_LED3mm.png]
+
+- id: LED-009
+  category: LED
+  name: 3mm 黄色 LED
+  lcsc: C2895472
+  alternatives: [{lcsc: C2895473, note: 同厂 XL-304UYD（4 号外形，换前核对高度）}]
+  key_params: 黄，正向压降 1.8/2.2/2.4V（20mA），雾状
+  supply: 不适用
+  logic_level: 3.3V 或 5V GPIO 串 1kΩ 直接点亮
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led3_body
+  mount: 立式直插
+  seated_height_mm: 5.2（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: LED_THT:LED_D3.0mm
+  dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
+  level: B
+  pitfalls: *led_pit
+  notes: 3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。
+  taobao_keyword: 3mm LED 黄色 雾状 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-006/dim_LED3mm.png]
+
+- id: LED-010
+  category: LED
+  name: 3mm 白色 LED
+  lcsc: C2895458
+  alternatives: [{lcsc: C2895459, note: 同厂 XL-304UWC（4 号外形，换前核对高度）}]
+  key_params: 白，正向压降 2.8/3.0/3.4V（20mA），透明
+  supply: 不适用
+  logic_level: 压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动
+  pin_count: 2
+  pinout: *led_pin
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: *led_lead
+  body_mm: *led3_body
+  mount: 立式直插
+  seated_height_mm: 5.2（贴板）
+  kicad_symbol: Device:LED
+  kicad_footprint: LED_THT:LED_D3.0mm
+  dim_source: 厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png）
+  level: B
+  pitfalls: 白光透明头很刺眼，做指示灯电流取 1–2mA 即可
+  notes: 3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。
+  taobao_keyword: 3mm LED 白色 直插
+  polarized: 是
+  lead_max_mm: 0.5
+  evidence_extra: [evidence/LED-006/dim_LED3mm.png]
+
+- id: Q-001
+  category: 三极管
+  name: NPN 三极管 S8050（TO-92）
+  lcsc: C717453
+  alternatives: [{lcsc: C8327, note: 长晶 S8050，hFE 160–300 档，引脚同为 E-B-C}]
+  key_params: NPN，Vceo 25V，Ic 0.5A，Pc 0.625W，hFE 85–400（1V/50mA）
+  supply: 不适用
+  logic_level: 3.3V GPIO 串 1kΩ 驱动基极，可开关约 100mA 负载（蜂鸣器、继电器）
+  pin_count: 3
+  pinout: 1=E，2=B，3=C（平面朝自己、引脚朝下，从左到右）
+  pitch_mm: 2.54（引脚根部 1.27，焊时两边脚向外掰开）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.41–0.53
+  body_mm: TO-92 宽 4.45–5.21 × 厚 3.18–4.19 × 高 4.32–5.33
+  mount: 立式直插
+  seated_height_mm: 最高 5.33 + 留脚高度
+  kicad_symbol: Transistor_BJT:S8050
+  kicad_footprint: StudentHW:TO-92_Inline_Wide
+  dim_source: V1.1 实物验证；厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8050.png）
+  level: A
+  pitfalls: 不同厂家 S8050 有 EBC 和 ECB 两种脚序，买前看规格书；本条 LGE 为 E-B-C
+  notes: V1.1 底板已用此封装实焊（蜂鸣器驱动，E-B-C）。
+  taobao_keyword: S8050 TO-92 直插 三极管
+  polarized: 是
+  lead_max_mm: 0.53
+  check_pads: 1,2
+
+- id: Q-002
+  category: 三极管
+  name: PNP 三极管 S8550（TO-92）
+  lcsc: C717454
+  alternatives: [{lcsc: C141644, note: 长晶 S8550，hFE 160–300 档，引脚 E-B-C}]
+  key_params: PNP，Vceo -25V，Ic -0.5A，Pc 0.625W
+  supply: 不适用
+  logic_level: 用作高边开关：基极拉低导通；GPIO 是 3.3V 而负载接 5V 时关不断，需再加一级 NPN
+  pin_count: 3
+  pinout: 1=E，2=B，3=C（平面朝自己、引脚朝下，从左到右）
+  pitch_mm: 2.54（引脚根部 1.27，焊时两边脚向外掰开）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚 0.41–0.53（见规格书）
+  body_mm: TO-92（见规格书）
+  mount: 立式直插
+  seated_height_mm: 约 4.5 + 留脚高度
+  kicad_symbol: Transistor_BJT:S8550
+  kicad_footprint: StudentHW:TO-92_Inline_Wide
+  dim_source: 厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8550.png）
+  level: B
+  pitfalls: 不同厂家脚序不同，买前看规格书；本条 LGE 为 E-B-C
+  notes: 封装与 V1.1 的 S8050 同一个（V1.1 实焊）。环宽：TO-92 宽脚距封装孔 0.8、焊盘 1.5，环宽 0.35，沿用 V1.1 实焊尺寸。
+  taobao_keyword: S8550 TO-92 直插 三极管
+  polarized: 是
+  lead_max_mm: 0.53
+  ring_min_mm: 0.35
+
+- id: Q-003
+  category: MOS管
+  name: N 沟道 MOS AO3400A（SOT-23，贴片备选）
+  lcsc: C20917
+  alternatives: [{lcsc: C347475, note: UMW AO3400A}]
+  key_params: N 沟道，30V，5.7A，导通电阻 <32mΩ@4.5V、<48mΩ@2.5V
+  supply: 不适用
+  logic_level: 阈值 0.65–1.45V，3.3V GPIO 可直接驱动（栅极串 100Ω、对地 10kΩ）
+  pin_count: 3
+  pinout: 1=G，2=S，3=D（SOT-23 正面看，左下 1、右下 2、上方 3）
+  pitch_mm: 1.9（1、2 脚之间）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23 2.9 × 1.3 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Transistor_FET:AO3400A
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23
+  dim_source: 厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3400A.png）
+  level: B
+  pitfalls: 贴片件，烙铁可焊但要镊子；学生板优先用 Q-001 直插三极管能解决的就不用 MOS
+  notes: 嘉立创基础库料，打样贴片不收换料费。
+  taobao_keyword: AO3400A SOT-23
+  polarized: 否
+
+- id: Q-004
+  category: MOS管
+  name: P 沟道 MOS AO3401A（SOT-23，贴片备选）
+  lcsc: C15127
+  alternatives: [{lcsc: C347476, note: UMW AO3401A}]
+  key_params: P 沟道，-30V，-4A，导通电阻 <60mΩ@-4.5V、<85mΩ@-2.5V
+  supply: 不适用
+  logic_level: 高边开关：栅极拉低导通、拉到源极电压关断；源极接 5V 时 3.3V GPIO 关不断，需加 NPN 电平转换
+  pin_count: 3
+  pinout: 1=G，2=S，3=D
+  pitch_mm: 1.9（1、2 脚之间）
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23 2.9 × 1.3 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Transistor_FET:AO3401A
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23
+  dim_source: 厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3401A.png）
+  level: B
+  pitfalls: 常用作电源防反接或负载开关，D、S 接反会通过体二极管常通
+  notes: 嘉立创基础库料。
+  taobao_keyword: AO3401A SOT-23
+  polarized: 否
+
+- id: OPT-001
+  category: 光耦
+  name: 光耦 PC817（DIP-4）
+  lcsc: C96006
+  alternatives: [{lcsc: C181890, note: 亿光 EL817(C)，脚位相同}]
+  key_params: 单路晶体管输出光耦；输入 LED 电流取 5–10mA；电流传输比按后缀分档
+  supply: 不适用
+  logic_level: 输入端 3.3V GPIO 串 330Ω 约 6mA；输出端集电极上拉到对方电源
+  pin_count: 4
+  pinout: 1=阳极 A，2=阴极 K，3=发射极 E，4=集电极 C（圆点为 1 脚）
+  pitch_mm: 2.54
+  row_spacing_mm: 7.62
+  lead_size_mm: 引脚 0.5±0.1 × 0.26
+  body_mm: 6.5 × 4.6 × 3.5
+  mount: 直插（DIP）
+  seated_height_mm: 约 3.5
+  kicad_symbol: Isolator:PC817
+  kicad_footprint: Package_DIP:DIP-4_W7.62mm
+  dim_source: 厂家规格书 Sharp PC817X 外形图（图片型 PDF，人工读图，dim_PC817_outline.png）
+  level: B
+  pitfalls: 1 脚圆点要对丝印 1 脚；输出侧要自己接上拉电阻
+  notes: 嘉立创商城 EL817 规格书下载不到，主选改为 Sharp 原厂 PC817X。
+  taobao_keyword: PC817 DIP-4 光耦
+  polarized: 是
+  lead_max_mm: 0.6
+
+- id: REG-001
+  category: 稳压器
+  name: 3.3V 1A LDO AMS1117-3.3（SOT-223，贴片）
+  lcsc: C6186
+  alternatives: [{lcsc: C347222, note: UMW AMS1117-3.3}]
+  key_params: 输出 3.3V，1A，压差最大 1.3V（1A 时），输入最高 15V
+  supply: 输入 4.6–12V（压差和发热决定上限）
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=GND/ADJ，2=VOUT（与背面散热片相通），3=VIN
+  pitch_mm: 2.3
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-223 6.5 × 3.5 × 1.6（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.6
+  kicad_symbol: Regulator_Linear:AMS1117-3.3
+  kicad_footprint: Package_TO_SOT_SMD:SOT-223-3_TabPin2
+  dim_source: 厂家规格书 AMS1117 引脚图（dim_pins_AMS1117.png）
+  level: B
+  pitfalls: 输入、输出各接 10µF 以上电容；5V→3.3V 带 500mA 时发热约 0.85W，散热片要铺铜
+  notes: 嘉立创基础库料。只够单个 ESP32 加小传感器，带雷达等大电流负载用 REG-003。
+  taobao_keyword: AMS1117-3.3 SOT-223
+  polarized: 否
+
+- id: REG-002
+  category: 稳压器
+  name: 3.3V 800mA LDO LD1117V33（TO-220）
+  lcsc: C283467
+  alternatives: [{lcsc: C672117, note: ST LD1117V33C（输出精度不同），脚位相同}]
+  key_params: 输出 3.3V，800mA，压差约 1V（典型），输入最高 15V
+  supply: 输入 4.5–12V
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=GND，2=VOUT（与散热片相通），3=VIN（正面看、引脚朝下，从左到右）
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚宽 0.61–0.88 × 厚 0.48–0.70
+  body_mm: 宽 10–10.4 × 厚 4.4–4.6 × 本体加散热片高 15.25–15.75
+  mount: 立装直插
+  seated_height_mm: 约 15.5 + 留脚高度
+  kicad_symbol: Regulator_Linear:LM1117T-3.3
+  kicad_footprint: StudentHW:TO-220-3_Vertical_GND-OUT-IN
+  dim_source: 厂家规格书 ST LD1117 TO-220 尺寸表（dim_TO220_ST_LD1117.png）与引脚图（dim_pins_LD1117.png）
+  level: B
+  pitfalls: 散热片接的是输出 3.3V，不能和别的散热片或地相碰
+  notes: >-
+    KiCad 没有 LD1117V33 符号，用引脚号相同的 LM1117T-3.3（1 GND、2 VO、3 VI）。
+    封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。
+  taobao_keyword: LD1117V33 TO-220
+  polarized: 否
+  lead_max_mm: 0.88
+  ring_min_mm: 0.35
+  check_pads: 1,2
+
+- id: REG-003
+  category: 稳压器
+  name: 3.3V 3A LDO LM1085-3.3（TO-220）
+  lcsc: C444383
+  alternatives: [{lcsc: C49384189, note: 华冠 LM1085IT-3.3/HG，TO-220-3，脚位相同}]
+  key_params: 输出 3.3V，3A，压差最大 1.5V（3A 时），限流 3.2–4.5A
+  supply: 输入 4.8–12V（大电流时按发热算）
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=ADJ/GND，2=VOUT（与散热片相通），3=VIN（正面看、引脚朝下，从左到右）
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚宽 0.71–0.97 × 厚 0.33–0.42
+  body_mm: 宽 10–10.4 × 厚 4.45–4.62 × 塑封高 8.5–9.1（含散热片约 15）
+  mount: 立装直插（要卧装就把引脚弯 90° 贴板，另加 M3 螺丝）
+  seated_height_mm: 约 15 + 留脚高度
+  kicad_symbol: Regulator_Linear:LM1085-3.3
+  kicad_footprint: StudentHW:TO-220-3_Vertical_GND-OUT-IN
+  dim_source: 厂家规格书 华冠 LM1085 TO-220-3 尺寸表（dim_TO220.png）与引脚图（dim_pins_LM1085.png）
+  level: B
+  pitfalls: V1.1 曾买成 TO-263 贴片的 AMS1085CM，插不进孔；下单认准 TO-220 型号（LM1085T / LM1085IT / AMS1085CT）
+  notes: >-
+    该厂规格书页眉误写成"降压开关"，正文为 LDO，以正文为准。
+    封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。
+  taobao_keyword: LM1085IT-3.3 TO-220
+  polarized: 否
+  lead_max_mm: 0.97
+  ring_min_mm: 0.35
+  pdf_keyword: LM1085T-3.3
+
+- id: REG-004
+  category: 稳压器
+  name: 5V 1.5A 稳压 L7805CV（TO-220）
+  lcsc: C111887
+  alternatives: [{lcsc: C347289, note: UMW L7805CV，脚位相同}]
+  key_params: 输出 5V，1.5A，压差约 2V（1A），输入最高 35V
+  supply: 输入 7–25V
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=IN，2=GND（与散热片相通），3=OUT（正面看、引脚朝下，从左到右）
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 引脚宽 0.61–0.88 × 厚 0.48–0.70
+  body_mm: 宽 10–10.4 × 厚 4.4–4.6 × 本体加散热片高 15.25–15.75
+  mount: 立装直插
+  seated_height_mm: 约 15.5 + 留脚高度
+  kicad_symbol: Regulator_Linear:L7805
+  kicad_footprint: StudentHW:TO-220-3_Vertical_IN-GND-OUT
+  dim_source: 厂家规格书 ST L78 TO-220 尺寸表（dim_TO220_ST_L7805.png）与引脚图（dim_pins_L7805.png）
+  level: B
+  pitfalls: 脚序是 IN-GND-OUT，和 1117/1085 的 GND-OUT-IN 不同，封装也分开了，不能互换
+  notes: >-
+    12V→5V 带 0.5A 发热 3.5W，必须加散热片。
+    封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。
+  taobao_keyword: L7805CV TO-220
+  polarized: 否
+  lead_max_mm: 0.88
+  ring_min_mm: 0.35
+
+- id: REG-005
+  category: 稳压器
+  name: 3.3V 500mA LDO ME6211C33M5G（SOT-23-5，贴片）
+  lcsc: C82942
+  alternatives: []
+  alternatives_text: 无脚位相同的常用替代（同脚位的 XC6206 只有 3 脚，不能直接换）
+  key_params: 输出 3.3V，500mA，低压差，输入最高 6.5V
+  supply: 输入 3.6–6V（锂电池或 5V）
+  logic_level: CE 高电平使能，不用时接 VIN
+  pin_count: 5
+  pinout: 1=VIN，2=VSS(GND)，3=CE（接 VIN），4=NC，5=VOUT
+  pitch_mm: 0.95
+  row_spacing_mm: 不适用
+  lead_size_mm: 贴片引脚
+  body_mm: SOT-23-5 2.9 × 1.6 × 1.1（见规格书）
+  mount: 贴片
+  seated_height_mm: 约 1.1
+  kicad_symbol: Regulator_Linear:ME6211C33M5
+  kicad_footprint: Package_TO_SOT_SMD:SOT-23-5
+  dim_source: 厂家规格书 微盟 ME6211 引脚图（dim_pins_ME6211.png）
+  level: B
+  pitfalls: 输入最高只有 6.5V，不能接 9V/12V；CE 悬空不输出
+  notes: 锂电池供电的小板常用，压差小。
+  taobao_keyword: ME6211C33M5G SOT-23-5
+  polarized: 否
+  pdf_keyword: ME6211

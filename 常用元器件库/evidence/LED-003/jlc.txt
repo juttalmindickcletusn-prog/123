@@ -1,0 +1,22 @@
+# LED-003 5mm 蓝色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895496
+  型号: XL-502UBD
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -20℃~+85℃ 20mA 25° 3.4V 3cd 460nm~470nm 465nm 5mm round lamp head 70mW Blue Blue Lens 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1941 起订20  库存 591
+  嘉立创库存: 12377  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UBD_C2895496.pdf
+
+[替代] C2895488
+  型号: XL-502UBC
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -20℃~+85℃ 12cd 20mA 25° 3V 460nm~470nm 465nm 5mm round lamp head 70mW Blue Water Clear 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1862 起订20  库存 885
+  嘉立创库存: 17715  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UBC_C2895488.pdf
+

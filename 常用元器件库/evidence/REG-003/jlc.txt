@@ -1,0 +1,22 @@
+# REG-003 3.3V 3A LDO LM1085-3.3（TO-220）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C444383
+  型号: LM1085T-3.3
+  厂家: HGSEMI
+  封装: TO-220
+  描述: 0.003%Vout 0℃~+125℃@(Tj) 1 1.2V@(3A) 10V 3.3V 3A Fixed Positive Short Circuit Protection、Thermal shutdown TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥2.3605 起订5  库存 186
+  嘉立创库存: 930  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2209211400_HGSEMI-LM1085T-3-3_C444383.pdf
+
+[替代] C49384189
+  型号: LM1085IT-3.3/HG
+  厂家: HGSEMI
+  封装: TO-220-3
+  描述: -40℃~+125℃ 1 1.3V@(3A) 3.3V 3A 65dB@(120Hz) Fixed Positive Short Circuit Protection、Thermal shutdown TO-220-3 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥2.35 起订5  库存 163
+  嘉立创库存: 818  贴片库: expand
+  规格书: None
+

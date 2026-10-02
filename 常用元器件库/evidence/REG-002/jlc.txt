@@ -1,0 +1,22 @@
+# REG-002 3.3V 800mA LDO LD1117V33（TO-220）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C283467
+  型号: LD1117V33
+  厂家: STMicroelectronics
+  封装: TO-220
+  描述: 0℃~+125℃@(Tj) 1 1.2V@(800mA) 100uV 15V 3.3V 5mA 75dB@(120Hz) 800mA Fixed Over Current Protection、Thermal Shutdown Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥2.87 起订1  库存 6092
+  嘉立创库存: 6092  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1810221222_STMicroelectronics-LD1117V33_C283467.pdf
+
+[替代] C672117
+  型号: LD1117V33C
+  厂家: STMicroelectronics
+  封装: TO-220
+  描述: -40℃~+125℃ 1 1.3V@(800mA) 100uV 15V 3.3V 75dB@(120Hz) 800mA Fixed Over Current Protection、Over Temperature Protection Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥3.93 起订1  库存 2051
+  嘉立创库存: 2083  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_STMicroelectronics-LD1117V33C_C672117.pdf
+

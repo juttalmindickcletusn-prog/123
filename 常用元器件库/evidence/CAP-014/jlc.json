@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C43832": {
+   "role": "主选",
+   "code": "C43832",
+   "mpn": "KM108M016F16RR0VH2FP0",
+   "brand": "CX(Dongguan Chengxing Elec)",
+   "package": "Plugin,D8xL16mm",
+   "describe": "1000uF 16V 16mm 2000hrs@105℃ 3.5mm 8mm ±20% 插件,D8xL16mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 99297,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0724
+    ],
+    [
+     100,
+     0.06
+    ],
+    [
+     500,
+     0.0483
+    ]
+   ],
+   "cny_price": 0.4448,
+   "cny_step": 10,
+   "szlcsc_stock": "9648",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271230_CX-Dongguan-Chengxing-Elec-KM108M016F16RR0VH2FP0_C43832.pdf"
+  },
+  "C49256792": {
+   "role": "替代",
+   "code": "C49256792",
+   "mpn": "ERA16V1000M8X16",
+   "brand": "jieerrui",
+   "package": "Plugin,D8xL16mm",
+   "describe": "-40℃~+105℃ 1000uF 16V 16mm 2000hrs@105℃ 3.5mm 600mA@120Hz 8mm ±20% Plugin,D8xL16mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 34637,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0886
+    ],
+    [
+     50,
+     0.0706
+    ],
+    [
+     150,
+     0.0617
+    ]
+   ],
+   "cny_price": 0.5449,
+   "cny_step": 5,
+   "szlcsc_stock": "6927",
+   "datasheet": null
+  }
+ }
+}

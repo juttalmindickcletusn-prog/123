@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C144394": {
+   "role": "主选",
+   "code": "C144394",
+   "mpn": "B3B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 1x3P 2.5mm 250V 3 3A 3P 5.75mm 7mm 9.9mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 186148,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0542
+    ],
+    [
+     100,
+     0.0446
+    ],
+    [
+     300,
+     0.0396
+    ]
+   ],
+   "cny_price": 0.3331,
+   "cny_step": 10,
+   "szlcsc_stock": "12803",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B3B-XH-A-LF-SN_C144394.pdf"
+  }
+ }
+}

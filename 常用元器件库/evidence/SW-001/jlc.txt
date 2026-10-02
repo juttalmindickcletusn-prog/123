@@ -1,0 +1,22 @@
+# SW-001 6×6 直插轻触开关 高 5mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C110153
+  型号: K2-1102DP-C4SW-04
+  厂家: Korean Hroparts Elec
+  封装: Plugin-4P,6x6mm
+  描述: -25℃~+85℃ 100,000 cycles 12V 2.5N 50mA 5mm 6mm 6mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS
+  立创商城: ¥0.3612 起订10  库存 8585
+  嘉立创库存: 86680  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2108131530_Korean-Hroparts-Elec-K2-1102DP-C4SW-04_C110153.pdf
+
+[替代] C393938
+  型号: TS665CJ
+  厂家: SHOU HAN
+  封装: Plugin-4P,6x6mm
+  描述: -25℃~+70℃ 12V 2.5N 50,000 cycles 50mA 5mm 6mm 6mm Black No PC Pin Round Button SPST Through Hole Without Bracket Plugin-4P,6x6mm Tactile Switches ROHS
+  立创商城: ¥0.1183 起订50  库存 2935
+  嘉立创库存: 150436  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_SHOU-HAN-TS665CJ_C393938.pdf
+

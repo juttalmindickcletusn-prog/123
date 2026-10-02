@@ -1,0 +1,22 @@
+# LED-010 3mm 白色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895458
+  型号: XL-302UWC
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 20mA 3.2V 30° 3mm Round Lens 6000K~8000K 70mW 8cd Discrete Diode Water Clear White 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1759 起订20  库存 1734
+  嘉立创库存: 35606  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-302UWC_C2895458.pdf
+
+[替代] C2895459
+  型号: XL-304UWC
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 20mA 25° 3.2V 3mm Round Lens 6000K~8000K 70mW 9cd Discrete Diode Water Clear White 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1915 起订20  库存 904
+  嘉立创库存: 18084  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-304UWC_C2895459.pdf
+

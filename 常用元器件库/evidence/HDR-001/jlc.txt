@@ -1,0 +1,22 @@
+# HDR-001 2.54mm 单排直排针 1×40
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2337
+  型号: 2.54-1*40PStraight pin
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2.54mm
+  描述: -25℃~+85℃ 1 1x40P 2.54mm 2.5mm 3A 3mm 40P 6mm Black Brass Gold Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS
+  立创商城: ¥0.9725 起订5  库存 17371
+  嘉立创库存: 86905  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2212101330_BOOMELE-Boom-Precision-Elec-2-54-1-40P_C2337.pdf
+
+[替代] C2895846
+  型号: PZ254V-11-40P
+  厂家: XFCN
+  封装: Plugin,P=2.54mm
+  描述: -40℃~+105℃ 1 1x40P 2.54mm 2.5mm 250V 3A 3mm 40P 6mm Black Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS
+  立创商城: ¥1.3328 起订5  库存 1417
+  嘉立创库存: 7089  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110251030_XFCN-PZ254V-11-40P_C2895846.pdf
+

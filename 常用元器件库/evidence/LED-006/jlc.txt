@@ -1,0 +1,22 @@
+# LED-006 3mm 红色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895470
+  型号: XL-302SURD
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 1cd 2.2V 20mA 35° 3mm Round Lens 50mW 620nm~630nm 625nm Red Red Lens 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1593 起订20  库存 16256
+  嘉立创库存: 326818  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2410121451_XINGLIGHT-XL-302SURD_C2895470.pdf
+
+[替代] C99772
+  型号: 204-10SURD/S530-A3
+  厂家: Everlight Elec
+  封装: Plugin,D=3mm
+  描述: -40℃~+85℃ 20mA 2V 3mm Round Lens 45° 60mW 624nm 632nm 80mcd Discrete Diode Frosted Red Lens Red 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.2243 起订20  库存 1790
+  嘉立创库存: 35800  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1810181210_Everlight-Elec-204-10SURD-S530-A3_C99772.pdf
+

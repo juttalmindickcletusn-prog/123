@@ -1,0 +1,22 @@
+# RES-001 1/4W 金属膜电阻 1%，卧装 7.62 mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C57435
+  型号: MFR0W4F1001A50
+  厂家: UNI-ROYAL(Uniroyal Elec)
+  封装: Plugin,D2.2xL6.5mm
+  描述: 1kΩ 250V 250mW Metal Film Resistor ±1% ±50ppm/℃ 插件,D2.2xL6.5mm Through Hole Resistors ROHS
+  立创商城: ¥0.086 起订50  库存 2911
+  嘉立创库存: 151160  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F1001A50_C57435.pdf
+
+[替代] C2903232
+  型号: MF1/4W-10K±1%-ST52
+  厂家: VO
+  封装: Plugin,D2.7xL6.2mm
+  描述: -55℃~+155℃ 10kΩ 250V 250mW Metal Film Resistors ±1% ±100ppm/℃ 插件,D2.7xL6.2mm Through Hole Resistors ROHS
+  立创商城: ¥0.0571 起订100  库存 2613
+  嘉立创库存: 268137  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109301430_VO-MF1-4W-10K-1--ST52_C2903232.pdf
+

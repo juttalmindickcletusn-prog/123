@@ -1,0 +1,22 @@
+# SW-010 SS-12D10 拨动开关（单刀双掷）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C319012
+  型号: SS-12D10L5
+  厂家: XKB Connection
+  封装: 插件,13x6.8mm
+  描述: -40℃~+85℃ 10000 times 125V 13mm 3A 6.4mm 6.8mm Black PC Pin Rectangular Columnar SPDT Through Hole 插件,13x6.8mm Slide Switches ROHS
+  立创商城: ¥1.9703 起订5  库存 3890
+  嘉立创库存: 20895  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110151630_XKB-Connection-SS-12D10L5_C319012.pdf
+
+[替代] C2998777
+  型号: SS-12D10-G5
+  厂家: DEALON
+  封装: 插件,12.7x6.7mm
+  描述: 11.3mm 12.7mm 6.7mm Black PC Pin Rectangular Columnar SPDT Through Hole 插件,12.7x6.7mm Slide Switches ROHS
+  立创商城: ¥1.2625 起订5  库存 151
+  嘉立创库存: 757  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2204281630_DEALON-SS-12D10-G5_C2998777.pdf
+

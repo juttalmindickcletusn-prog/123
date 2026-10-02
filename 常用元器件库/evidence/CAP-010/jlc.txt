@@ -1,0 +1,22 @@
+# CAP-010 电解电容 10µF/25V Φ5×11
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C43347
+  型号: KM106M025D11RR0VH2FP0
+  厂家: CX(Dongguan Chengxing Elec)
+  封装: Plugin,D5xL11mm
+  描述: 1000hrs@105℃ 10uF 11mm 25V 2mm 38mA@120Hz 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.1121 起订50  库存 1112
+  嘉立创库存: 57093  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM106M025D11RR0VH2FP0_C43347.pdf
+
+[替代] C216293
+  型号: RL1E100MC110A00CV0
+  厂家: Changzhou Huawei Elec
+  封装: Plugin,D5xL11mm
+  描述: 10uF 11mm 2000hrs@105℃ 25V 2mm 50mA@120Hz 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS
+  立创商城: ¥0.1315 起订20  库存 2415
+  嘉立创库存: 48304  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Changzhou-Huawei-Elec-RL1E100MC110A00CV0_C216293.pdf
+

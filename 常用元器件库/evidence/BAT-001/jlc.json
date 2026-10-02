@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C5290176": {
+   "role": "主选",
+   "code": "C5290176",
+   "mpn": "BH-18650-A1AJ005",
+   "brand": "MYOUNG",
+   "package": "-",
+   "describe": "-10~100℃ Battery holder Nickel plated - ROHS",
+   "jlc_stock": 4702,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.691
+    ],
+    [
+     10,
+     0.5609
+    ],
+    [
+     36,
+     0.478
+    ]
+   ],
+   "cny_price": 4.25,
+   "cny_step": 1,
+   "szlcsc_stock": "4055",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-18650-A1AJ005_C5290176.pdf"
+  },
+  "C19184084": {
+   "role": "替代",
+   "code": "C19184084",
+   "mpn": "BH-18650-A6AJ012",
+   "brand": "MYOUNG",
+   "package": "-",
+   "describe": "-25~85℃ Battery holder Nickel plated Stainless steel - ROHS",
+   "jlc_stock": 3748,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     1.3331
+    ],
+    [
+     10,
+     1.1087
+    ],
+    [
+     30,
+     0.9868
+    ]
+   ],
+   "cny_price": 8.2,
+   "cny_step": 1,
+   "szlcsc_stock": "3380",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-BH-18650-A6AJ012_C19184084.pdf"
+  }
+ }
+}

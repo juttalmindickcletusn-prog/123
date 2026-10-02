@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C43348": {
+   "role": "主选",
+   "code": "C43348",
+   "mpn": "KM107M016D11RR0VH2FP0",
+   "brand": "CX(Dongguan Chengxing Elec)",
+   "package": "Plugin,D5xL11mm",
+   "describe": "1000hrs@105℃ 100uF 11mm 125mA@120Hz 16V 2mm 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 95053,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0194
+    ],
+    [
+     500,
+     0.0157
+    ],
+    [
+     2000,
+     0.0125
+    ]
+   ],
+   "cny_price": 0.1185,
+   "cny_step": 50,
+   "szlcsc_stock": "1838",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM107M016D11RR0VH2FP0_C43348.pdf"
+  },
+  "C2960368": {
+   "role": "替代",
+   "code": "C2960368",
+   "mpn": "16V100uF CD288",
+   "brand": "HRK",
+   "package": "Plugin,D5xL11mm",
+   "describe": "-40℃~+105℃ 100uF 11mm 16V 2mm 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 5041,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0162
+    ],
+    [
+     500,
+     0.013
+    ],
+    [
+     2000,
+     0.0106
+    ]
+   ],
+   "cny_price": 0.0993,
+   "cny_step": 50,
+   "szlcsc_stock": "94",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2202241230_HRK-16V100uF-CD288_C2960368.pdf"
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157919": {
+   "role": "主选",
+   "code": "C157919",
+   "mpn": "S6B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 11.5mm 17.4mm 1x6P 2.5mm 250V 3A 6 6.1mm 6P Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 22452,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1718
+    ],
+    [
+     50,
+     0.1347
+    ],
+    [
+     150,
+     0.116
+    ]
+   ],
+   "cny_price": 1.0565,
+   "cny_step": 5,
+   "szlcsc_stock": "4490",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S6B-XH-A-LF-SN_C157919.pdf"
+  }
+ }
+}

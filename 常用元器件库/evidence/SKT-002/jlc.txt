@@ -1,0 +1,22 @@
+# SKT-002 2.54mm 双排排母 2×20 8.5mm 高
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C5124634
+  型号: 2.54-2*20P
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2.54mm
+  描述: -55℃~+105℃ 2 2.54mm 2.54mm 2.5A 2x20P 3.1mm 40P 8.5mm Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS
+  立创商城: ¥2.0166 起订5  库存 2112
+  嘉立创库存: 10681  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401111126_BOOMELE-Boom-Precision-Elec-2-54-2-20P_C5124634.pdf
+
+[替代] C42431846
+  型号: PM2.54-2X20P-H85
+  厂家: JXTCONN
+  封装: Plugin,P=2.54mm
+  描述: -40℃~+105℃ 2 2.54mm 2.54mm 2x20P 3.2mm 3A 40P 8.5mm Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS
+  立创商城: ¥2.241 起订5  库存 194
+  嘉立创库存: 978  贴片库: expand
+  规格书: None
+

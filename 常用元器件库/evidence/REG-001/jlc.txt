@@ -1,0 +1,22 @@
+# REG-001 3.3V 1A LDO AMS1117-3.3（SOT-223，贴片）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C6186
+  型号: AMS1117-3.3
+  厂家: Advanced Monolithic Systems
+  封装: SOT-223
+  描述: -40℃~+125℃ 0.003%Vout 1 1.1V@(800mA) 15V 1A 3.3V 5mA 72dB@(120Hz) Fixed Over Current Protection、Short Circuit Protection、Thermal shutdown Positive SOT-223 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥1.2749 起订5  库存 144479
+  嘉立创库存: 1074202  贴片库: base
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2410121508_Advanced-Monolithic-Systems-AMS1117-3-3_C6186.pdf
+
+[替代] C347222
+  型号: AMS1117-3.3
+  厂家: UMW(Youtai Semiconductor Co., Ltd.)
+  封装: SOT-223
+  描述: -40℃~+125℃ 0.003%Vout 1 1.3V@(1A) 12V 1A 3.3V 5mA 60dB@(120Hz) Fixed Over Current Protection Positive SOT-223 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥0.2981 起订10  库存 91295
+  嘉立创库存: 921608  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2409141623_UMW-Youtai-Semiconductor-Co---Ltd--AMS1117-3-3_C347222.pdf
+

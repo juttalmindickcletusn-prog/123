@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C96493": {
+   "role": "主选",
+   "code": "C96493",
+   "mpn": "HNB09A05",
+   "brand": "Jiangsu Huaneng Elec",
+   "package": "Plugin,D=9mm",
+   "describe": "-20℃~+70℃ 30mA 3V~7V 3kHz 5.7mm 5V 85dB 9mm Active Buzzer (Built-in Driving Circuit) Electromagnetic Plug-in Plugin,D=9mm Buzzers ROHS",
+   "jlc_stock": 46101,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2291
+    ],
+    [
+     50,
+     0.1786
+    ],
+    [
+     150,
+     0.1438
+    ]
+   ],
+   "cny_price": 1.4092,
+   "cny_step": 5,
+   "szlcsc_stock": "8367",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811141138_Jiangsu-Huaneng-Elec-HNB09A05_C96493.pdf"
+  }
+ }
+}

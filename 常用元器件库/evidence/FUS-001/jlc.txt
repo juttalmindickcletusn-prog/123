@@ -1,0 +1,22 @@
+# FUS-001 直插自恢复保险丝 0.5A
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C21025
+  型号: RL60-050
+  厂家: RUILON(Shenzhen Ruilongyuan Elec)
+  封装: Plugin,P=5.1mm
+  描述: -40℃~+85℃ 1.2Ω 1A 400mΩ 40A 4s 500mA 60V 7.9mm 800mW 插件,P=5.1mm Resettable Fuses ROHS
+  立创商城: ¥0.644 起订5  库存 1557
+  嘉立创库存: 7811  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL60-050_C21025.pdf
+
+[替代] C208476
+  型号: MF-R050
+  厂家: BOURNS
+  封装: Plugin,P=5.1mm
+  描述: -40℃~+85℃ 1.17Ω 1A 40A 410mΩ 4s 5.1mm 500mA 60V 7.9mm 750mW 插件,P=5.1mm Resettable Fuses ROHS
+  立创商城: ¥0.8805 起订5  库存 1406
+  嘉立创库存: 7030  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1806111031_BOURNS-MF-R050_C208476.pdf
+

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C21019": {
+   "role": "主选",
+   "code": "C21019",
+   "mpn": "RL30-200",
+   "brand": "RUILON(Shenzhen Ruilongyuan Elec)",
+   "package": "Plugin,P=5.1mm",
+   "describe": "-40℃~+85℃ 1.5W 10.2mm 12s 2A 30V 30mΩ 40A 4A 90mΩ 插件,P=5.1mm Resettable Fuses ROHS",
+   "jlc_stock": 16884,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2161
+    ],
+    [
+     50,
+     0.1709
+    ],
+    [
+     150,
+     0.1516
+    ]
+   ],
+   "cny_price": 1.3292,
+   "cny_step": 5,
+   "szlcsc_stock": "3376",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL30-200_C21019.pdf"
+  },
+  "C369092": {
+   "role": "替代",
+   "code": "C369092",
+   "mpn": "JK60-200",
+   "brand": "Jinrui Electronic Materials Co.",
+   "package": "Plugin,P=5.1mm",
+   "describe": "-40℃~+85℃ 140mΩ 17.8mm 2.3W 2A 40A 4A 60V 70mΩ 8s 插件,P=5.1mm Resettable Fuses ROHS",
+   "jlc_stock": 28615,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0984
+    ],
+    [
+     50,
+     0.0843
+    ],
+    [
+     150,
+     0.0771
+    ]
+   ],
+   "cny_price": 0.6048,
+   "cny_step": 5,
+   "szlcsc_stock": "5688",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Jinrui-Electronic-Materials-Co--JK60-200_C369092.pdf"
+  }
+ }
+}

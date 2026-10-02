@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C6186": {
+   "role": "主选",
+   "code": "C6186",
+   "mpn": "AMS1117-3.3",
+   "brand": "Advanced Monolithic Systems",
+   "package": "SOT-223",
+   "describe": "-40℃~+125℃ 0.003%Vout 1 1.1V@(800mA) 15V 1A 3.3V 5mA 72dB@(120Hz) Fixed Over Current Protection、Short Circuit Protection、Thermal shutdown Positive SOT-223 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 1074202,
+   "library": "base",
+   "usd_prices": [
+    [
+     1,
+     0.2073
+    ],
+    [
+     50,
+     0.1616
+    ],
+    [
+     150,
+     0.1392
+    ]
+   ],
+   "cny_price": 1.2749,
+   "cny_step": 5,
+   "szlcsc_stock": "144479",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121508_Advanced-Monolithic-Systems-AMS1117-3-3_C6186.pdf"
+  },
+  "C347222": {
+   "role": "替代",
+   "code": "C347222",
+   "mpn": "AMS1117-3.3",
+   "brand": "UMW(Youtai Semiconductor Co., Ltd.)",
+   "package": "SOT-223",
+   "describe": "-40℃~+125℃ 0.003%Vout 1 1.3V@(1A) 12V 1A 3.3V 5mA 60dB@(120Hz) Fixed Over Current Protection Positive SOT-223 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 921608,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0485
+    ],
+    [
+     100,
+     0.0384
+    ],
+    [
+     300,
+     0.0332
+    ]
+   ],
+   "cny_price": 0.2981,
+   "cny_step": 10,
+   "szlcsc_stock": "91295",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2409141623_UMW-Youtai-Semiconductor-Co---Ltd--AMS1117-3-3_C347222.pdf"
+  }
+ }
+}

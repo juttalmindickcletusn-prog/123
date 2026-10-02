@@ -1,0 +1,22 @@
+# XH-002 XH 2P 直插（JST B2B-XH-A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C158012
+  型号: B2B-XH-A(LF)(SN)
+  厂家: JST
+  封装: Plugin,P=2.5mm
+  描述: -25℃~+85℃ 1 1x2P 2 2.5mm 250V 2P 3A 5.75mm 7.4mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.2486 起订20  库存 16123
+  嘉立创库存: 337727  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B2B-XH-A-LF-SN_C158012.pdf
+
+[替代] C42391660
+  型号: HX-XH2.54-2PZZ
+  厂家: hanxia
+  封装: Plugin,P=2.54mm
+  描述: -25℃~+85℃ 1 1x2P 2 2.54mm 250V 2P 3A Brass PA66 Through Hole Tin UL94V-0 White XH Plugin,P=2.54mm Wire To Board Connector ROHS
+  立创商城: ¥0.0452 起订5  库存 123888
+  嘉立创库存: 636630  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2504241400_hanxia-HX-XH2-54-2PZZ_C42391660.pdf
+

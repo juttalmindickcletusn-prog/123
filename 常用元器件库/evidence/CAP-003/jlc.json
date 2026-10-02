@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C260725": {
+   "role": "主选",
+   "code": "C260725",
+   "mpn": "N06S1B220KN0B0S0N0",
+   "brand": "STE(Songtian Elec)",
+   "package": "Plugin,P=5mm",
+   "describe": "1kV 2.5mm 22pF 5.5mm 5mm SL ±10% Plugin,P=5mm Through Hole Ceramic Capacitors ROHS",
+   "jlc_stock": 4547,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0264
+    ],
+    [
+     200,
+     0.021
+    ],
+    [
+     1000,
+     0.0181
+    ]
+   ],
+   "cny_price": 0.1622,
+   "cny_step": 20,
+   "szlcsc_stock": "227",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_STE-Songtian-Elec-N06S1B220KN0B0S0N0_C260725.pdf"
+  },
+  "C694484": {
+   "role": "替代",
+   "code": "C694484",
+   "mpn": "CC45SL3AD220JYNNA",
+   "brand": "TDK",
+   "package": "Plugin,P=5mm",
+   "describe": "1kV 22pF 5.5mm 5mm 5mm SL ±5% Plugin,P=5mm Through Hole Ceramic Capacitors ROHS",
+   "jlc_stock": 867,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0581
+    ],
+    [
+     100,
+     0.0465
+    ],
+    [
+     300,
+     0.0407
+    ]
+   ],
+   "cny_price": 0.3574,
+   "cny_step": 10,
+   "szlcsc_stock": "86",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-CC45SL3AD220JYNNA_C694484.pdf"
+  }
+ }
+}

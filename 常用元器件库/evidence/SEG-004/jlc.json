@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C38183": {
+   "role": "主选",
+   "code": "C38183",
+   "mpn": "FJ5461BH Pure Red",
+   "brand": "Shenzhen Zhihao Elec",
+   "package": "Plugin",
+   "describe": "0.56 19mm 4 50.2mm 7 Segment 8mm Common Anode Red 插件 LED Segment Displays ROHS",
+   "jlc_stock": 2315,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.7365
+    ],
+    [
+     10,
+     0.6097
+    ],
+    [
+     30,
+     0.5463
+    ]
+   ],
+   "cny_price": 4.53,
+   "cny_step": 1,
+   "szlcsc_stock": "2144",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2210192330_Shenzhen-Zhihao-Elec-FJ5461BH-_C38183.pdf"
+  }
+ }
+}

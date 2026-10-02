@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C15127": {
+   "role": "主选",
+   "code": "C15127",
+   "mpn": "AO3401A",
+   "brand": "Alpha & Omega Semicon",
+   "package": "SOT-23",
+   "describe": "1 P-Channel 14nC@10V 30V 47mΩ@10V、60mΩ@4.5V、85mΩ@2.5V 4A 55pF 645pF 80pF 900mV SOT-23 MOSFETs ROHS",
+   "jlc_stock": 780677,
+   "library": "base",
+   "usd_prices": [
+    [
+     1,
+     0.1017
+    ],
+    [
+     50,
+     0.0821
+    ],
+    [
+     150,
+     0.0721
+    ]
+   ],
+   "cny_price": 0.6245,
+   "cny_step": 5,
+   "szlcsc_stock": "82320",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf"
+  },
+  "C347476": {
+   "role": "替代",
+   "code": "C347476",
+   "mpn": "AO3401A",
+   "brand": "UMW(Youtai Semiconductor Co., Ltd.)",
+   "package": "SOT-23",
+   "describe": "-55℃~+150℃ 1 P-Channel 1.3V 1.4W 115pF 30V 4.2A 50mΩ@10V 77pF 9.4nC@4.5V 954pF P-Channel SOT-23 MOSFETs ROHS",
+   "jlc_stock": 567849,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0366
+    ],
+    [
+     200,
+     0.027
+    ],
+    [
+     600,
+     0.0226
+    ]
+   ],
+   "cny_price": 0.2245,
+   "cny_step": 20,
+   "szlcsc_stock": "27723",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2411121106_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf"
+  }
+ }
+}

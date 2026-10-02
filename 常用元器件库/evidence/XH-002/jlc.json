@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C158012": {
+   "role": "主选",
+   "code": "C158012",
+   "mpn": "B2B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 1x2P 2 2.5mm 250V 2P 3A 5.75mm 7.4mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 337727,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0405
+    ],
+    [
+     200,
+     0.0319
+    ],
+    [
+     1000,
+     0.028
+    ]
+   ],
+   "cny_price": 0.2486,
+   "cny_step": 20,
+   "szlcsc_stock": "16123",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B2B-XH-A-LF-SN_C158012.pdf"
+  },
+  "C42391660": {
+   "role": "替代",
+   "code": "C42391660",
+   "mpn": "HX-XH2.54-2PZZ",
+   "brand": "hanxia",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-25℃~+85℃ 1 1x2P 2 2.54mm 250V 2P 3A Brass PA66 Through Hole Tin UL94V-0 White XH Plugin,P=2.54mm Wire To Board Connector ROHS",
+   "jlc_stock": 636630,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0074
+    ],
+    [
+     50,
+     0.0057
+    ],
+    [
+     150,
+     0.0048
+    ]
+   ],
+   "cny_price": 0.0452,
+   "cny_step": 5,
+   "szlcsc_stock": "123888",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2504241400_hanxia-HX-XH2-54-2PZZ_C42391660.pdf"
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C96093": {
+   "role": "主选",
+   "code": "C96093",
+   "mpn": "TMB12A05",
+   "brand": "Jiangsu Huaneng Elec",
+   "package": "Plugin,D=12mm",
+   "describe": "-40℃~+85℃ 12mm 2.4kHz 30mA 4V~8V 5V 85dB 9.8mm Active Buzzer (Built-in Driving Circuit) Electromagnetic Plug-in Plugin,D=12mm Buzzers ROHS",
+   "jlc_stock": 104692,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.192
+    ],
+    [
+     50,
+     0.1496
+    ],
+    [
+     150,
+     0.1223
+    ]
+   ],
+   "cny_price": 1.1812,
+   "cny_step": 5,
+   "szlcsc_stock": "17018",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2405280932_Jiangsu-Huaneng-Elec-TMB12A05_C96093.pdf"
+  },
+  "C49246931": {
+   "role": "替代",
+   "code": "C49246931",
+   "mpn": "TMB12A05",
+   "brand": "XHXDZ",
+   "package": "插件,D12xL9.5mm",
+   "describe": "-30℃~+70℃ 12mm 2.4kHz 30mA 3V~7V 5V 85dB 9.5mm Active Buzzer (Built-in Driving Circuit) Electromagnetic 插件,D12xL9.5mm Buzzers ROHS",
+   "jlc_stock": 29434,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1626
+    ],
+    [
+     50,
+     0.129
+    ],
+    [
+     200,
+     0.1125
+    ]
+   ],
+   "cny_price": 0.9999,
+   "cny_step": 5,
+   "szlcsc_stock": "5765",
+   "datasheet": null
+  }
+ }
+}

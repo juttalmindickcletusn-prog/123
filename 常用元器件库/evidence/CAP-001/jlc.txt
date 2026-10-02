@@ -1,0 +1,22 @@
+# CAP-001 瓷片电容 104（100nF/50V），脚距 5.08 mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C254085
+  型号: CC1H104MC1FD3F6C10MF
+  厂家: Dersonic
+  封装: Plugin,P=5.08mm
+  描述: 100nF 2.2mm 5.08mm 50V 6mm Y5V ±20% Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.1592 起订20  库存 16941
+  嘉立创库存: 340043  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2008261834_Dersonic-CC1H104MC1FD3F6C10MF_C254085.pdf
+
+[替代] C2832508
+  型号: CC1H104ZC1FD3F5O1100
+  厂家: Dersonic
+  封装: Plugin,P=5.08mm
+  描述: -20%~+80% 100nF 2.4mm 5.08mm 5.5mm 50V Y5V Plugin,P=5.08mm Through Hole Ceramic Capacitors ROHS
+  立创商城: ¥0.1264 起订50  库存 862
+  嘉立创库存: 43101  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110271930_Dersonic-CC1H104ZC1FD3F5O1100_C2832508.pdf
+

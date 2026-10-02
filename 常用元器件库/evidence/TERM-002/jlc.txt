@@ -1,0 +1,13 @@
+# TERM-002 KF301 螺钉端子 3P 5.0mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C474882
+  型号: KF301-5.0-3P
+  厂家: Cixi Kefa Elec
+  封装: Plugin,P=5mm
+  描述: -30℃~+120℃ 1 1.5 14~22 17A 1x3P 250V 3 3P 5mm Blue Through Hole 插件,P=5mm Screw Terminal Blocks ROHS
+  立创商城: ¥0.8526 起订5  库存 3853
+  嘉立创库存: 19274  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2303171000_Cixi-Kefa-Elec-KF301-5-0-3P_C474882.pdf
+

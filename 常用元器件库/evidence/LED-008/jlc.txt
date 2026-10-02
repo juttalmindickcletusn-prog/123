@@ -1,0 +1,22 @@
+# LED-008 3mm 蓝色 LED
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895474
+  型号: XL-302UBD
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 1.5cd 20mA 3.4V 30° 3mm Round Lens 460nm 460nm~465nm 70mW Blue Blue Lens 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1765 起订20  库存 2113
+  嘉立创库存: 42279  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120946_XINGLIGHT-XL-302UBD_C2895474.pdf
+
+[替代] C2895464
+  型号: XL-302UBC
+  厂家: XINGLIGHT
+  封装: Plugin,D=3mm
+  描述: -20℃~+85℃ 20mA 3.4V 30° 3mm Round Lens 460nm~475nm 468nm 5cd 70mW Blue Water Clear 插件,D=3mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1728 起订20  库存 1338
+  嘉立创库存: 27070  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-302UBC_C2895464.pdf
+

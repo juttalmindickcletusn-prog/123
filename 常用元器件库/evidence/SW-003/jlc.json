@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C111992": {
+   "role": "主选",
+   "code": "C111992",
+   "mpn": "K2-1102DP-K4SW-04",
+   "brand": "Korean Hroparts Elec",
+   "package": "Plugin-4P,6x6mm",
+   "describe": "-25℃~+85℃ 100,000 cycles 12V 2.5N 50mA 6mm 6mm 9mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS",
+   "jlc_stock": 2556,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0649
+    ],
+    [
+     100,
+     0.0517
+    ],
+    [
+     300,
+     0.0451
+    ]
+   ],
+   "cny_price": 0.3992,
+   "cny_step": 10,
+   "szlcsc_stock": "255",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108131530_Korean-Hroparts-Elec-K2-1102DP-K4SW-04_C111992.pdf"
+  }
+ }
+}

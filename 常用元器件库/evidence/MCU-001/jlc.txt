@@ -1,0 +1,14 @@
+# MCU-001 立创 ESP32-S3 核心板 LCKFB-ESP32S3R8N8（40P）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C20626143
+  型号: LCKFB-ESP32S3R8N8
+  厂家: LCSC-boards
+  封装: -
+  描述: - Development Boards & Kits ROHS
+  立创商城: ¥35.9 起订1  库存 397
+  嘉立创库存: 397  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2412061428_LCSC-boards-LCKFB-ESP32S3R8N8_C20626143.pdf
+
+  规格书下载: PDF 11412 KB >5MB，只记链接

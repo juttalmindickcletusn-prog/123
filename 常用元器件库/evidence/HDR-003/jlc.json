@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2333": {
+   "role": "主选",
+   "code": "C2333",
+   "mpn": "2.54-2*40PPin",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-25℃~+85℃ 2 2.54mm 2.54mm 250V 2x40P 3A 80P Black Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS",
+   "jlc_stock": 21480,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3211
+    ],
+    [
+     50,
+     0.258
+    ],
+    [
+     150,
+     0.2098
+    ]
+   ],
+   "cny_price": 1.9745,
+   "cny_step": 5,
+   "szlcsc_stock": "4262",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2407251516_BOOMELE-Boom-Precision-Elec-2-54-2-40P_C2333.pdf"
+  },
+  "C2895847": {
+   "role": "替代",
+   "code": "C2895847",
+   "mpn": "PZ254V-12-80P",
+   "brand": "XFCN",
+   "package": "Plugin,P=2.54mm",
+   "describe": "-40℃~+105℃ 2 2.54mm 2.54mm 2.54mm 250V 2x40P 3A 3mm 6mm 80P Black Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS",
+   "jlc_stock": 232,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.4
+    ],
+    [
+     50,
+     0.3187
+    ],
+    [
+     150,
+     0.265
+    ]
+   ],
+   "cny_price": 2.46,
+   "cny_step": 5,
+   "szlcsc_stock": "46",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109151930_XFCN-PZ254V-12-80P_C2895847.pdf"
+  }
+ }
+}

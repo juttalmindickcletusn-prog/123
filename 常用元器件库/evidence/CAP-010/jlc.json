@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C43347": {
+   "role": "主选",
+   "code": "C43347",
+   "mpn": "KM106M025D11RR0VH2FP0",
+   "brand": "CX(Dongguan Chengxing Elec)",
+   "package": "Plugin,D5xL11mm",
+   "describe": "1000hrs@105℃ 10uF 11mm 25V 2mm 38mA@120Hz 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 57093,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0183
+    ],
+    [
+     500,
+     0.0151
+    ],
+    [
+     2000,
+     0.012
+    ]
+   ],
+   "cny_price": 0.1121,
+   "cny_step": 50,
+   "szlcsc_stock": "1112",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM106M025D11RR0VH2FP0_C43347.pdf"
+  },
+  "C216293": {
+   "role": "替代",
+   "code": "C216293",
+   "mpn": "RL1E100MC110A00CV0",
+   "brand": "Changzhou Huawei Elec",
+   "package": "Plugin,D5xL11mm",
+   "describe": "10uF 11mm 2000hrs@105℃ 25V 2mm 50mA@120Hz 5mm ±20% 插件,D5xL11mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 48304,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0215
+    ],
+    [
+     200,
+     0.0168
+    ],
+    [
+     1000,
+     0.0143
+    ]
+   ],
+   "cny_price": 0.1315,
+   "cny_step": 20,
+   "szlcsc_stock": "2415",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Changzhou-Huawei-Elec-RL1E100MC110A00CV0_C216293.pdf"
+  }
+ }
+}

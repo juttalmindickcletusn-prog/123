@@ -1,0 +1,22 @@
+# REG-004 5V 1.5A 稳压 L7805CV（TO-220）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C111887
+  型号: L7805CV
+  厂家: STMicroelectronics
+  封装: TO-220
+  描述: 0℃~+125℃@(Tj) 1 1.5A 2V@(1A) 35V 5V 68dB@(120Hz) 8mA Fixed Over Current Protection、Over Temperature Protection、Short Circuit Protection Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥2.23 起订1  库存 26176
+  嘉立创库存: 26292  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_STMicroelectronics-L7805CV_C111887.pdf
+
+[替代] C347289
+  型号: L7805CV(UMW)
+  厂家: UMW(Youtai Semiconductor Co., Ltd.)
+  封装: TO-220
+  描述: -40℃~+105℃@(Ta) 1 1.2A 20V 5V 6mA Fixed Over Temperature Protection、Short Circuit Protection Positive TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS
+  立创商城: ¥1.1872 起订5  库存 26602
+  嘉立创库存: 133011  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2312130943_UMW-Youtai-Semiconductor-Co---Ltd--L7805CV_C347289.pdf
+

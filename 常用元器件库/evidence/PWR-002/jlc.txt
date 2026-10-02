@@ -1,0 +1,22 @@
+# PWR-002 DC 电源座 PJ-102AH（5.5×2.1 插头，2.0 针，5A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C3096093
+  型号: PJ-102AH
+  厂家: CUI
+  封装: Plugin
+  描述: -25℃~+85℃ 24V 2mm 5A 6.5mm DC Power Jack Right Angle Plugin DC Power Connectors ROHS
+  立创商城: ¥6.67 起订1  库存 1085
+  嘉立创库存: 1085  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2401301340_CUI-PJ-102AH_C3096093.pdf
+
+[替代] C20518877
+  型号: PJ-102A
+  厂家: CUI
+  封装: -
+  描述: -25℃~+85℃ 2.5A 24V 2mm 6.4mm DC Power Jack Right Angle - DC Power Connectors ROHS
+  立创商城: ¥5.27 起订1  库存 1799
+  嘉立创库存: 1897  贴片库: expand
+  规格书: 
+

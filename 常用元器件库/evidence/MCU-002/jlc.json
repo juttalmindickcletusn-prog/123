@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C22396880": {
+   "role": "主选",
+   "code": "C22396880",
+   "mpn": "LCKFB-DKX-STM32F103C8T6",
+   "brand": "LCSC-boards",
+   "package": "-",
+   "describe": "- Development Boards & Kits ROHS",
+   "jlc_stock": 783,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     1.863
+    ],
+    [
+     5,
+     1.811
+    ],
+    [
+     10,
+     1.811
+    ]
+   ],
+   "cny_price": 11.46,
+   "cny_step": 1,
+   "szlcsc_stock": "783",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2408010918_LCSC-boards-LCKFB-DKX-STM32F103C8T6_C22396880.pdf"
+  }
+ }
+}

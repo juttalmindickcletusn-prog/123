@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C444383": {
+   "role": "主选",
+   "code": "C444383",
+   "mpn": "LM1085T-3.3",
+   "brand": "HGSEMI",
+   "package": "TO-220",
+   "describe": "0.003%Vout 0℃~+125℃@(Tj) 1 1.2V@(3A) 10V 3.3V 3A Fixed Positive Short Circuit Protection、Thermal shutdown TO-220 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 930,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3839
+    ],
+    [
+     50,
+     0.2845
+    ],
+    [
+     150,
+     0.2512
+    ]
+   ],
+   "cny_price": 2.3605,
+   "cny_step": 5,
+   "szlcsc_stock": "186",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2209211400_HGSEMI-LM1085T-3-3_C444383.pdf"
+  },
+  "C49384189": {
+   "role": "替代",
+   "code": "C49384189",
+   "mpn": "LM1085IT-3.3/HG",
+   "brand": "HGSEMI",
+   "package": "TO-220-3",
+   "describe": "-40℃~+125℃ 1 1.3V@(3A) 3.3V 3A 65dB@(120Hz) Fixed Positive Short Circuit Protection、Thermal shutdown TO-220-3 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+   "jlc_stock": 818,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.3821
+    ],
+    [
+     50,
+     0.3008
+    ],
+    [
+     150,
+     0.265
+    ]
+   ],
+   "cny_price": 2.35,
+   "cny_step": 5,
+   "szlcsc_stock": "163",
+   "datasheet": null
+  }
+ }
+}

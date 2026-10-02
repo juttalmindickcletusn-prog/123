@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C100114": {
+   "role": "主选",
+   "code": "C100114",
+   "mpn": "2.54Short Circuit Cap Closed",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "P=2.54mm",
+   "describe": "1x2 2.54mm 3A Black Capped Unshrouded P=2.54mm Shunts, Jumpers ROHS",
+   "jlc_stock": 585660,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0093
+    ],
+    [
+     500,
+     0.0074
+    ],
+    [
+     2000,
+     0.0059
+    ]
+   ],
+   "cny_price": 0.057,
+   "cny_step": 50,
+   "szlcsc_stock": "11713",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2303231100_BOOMELE-Boom-Precision-Elec-2-54_C100114.pdf"
+  },
+  "C5305": {
+   "role": "替代",
+   "code": "C5305",
+   "mpn": "2.54Short Circuit Cap Opening",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "P=2.54mm",
+   "describe": "1x2 2.54mm 3A Black Open-Top Unshrouded P=2.54mm Shunts, Jumpers ROHS",
+   "jlc_stock": 1013567,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0098
+    ],
+    [
+     500,
+     0.0079
+    ],
+    [
+     2000,
+     0.0058
+    ]
+   ],
+   "cny_price": 0.0599,
+   "cny_step": 50,
+   "szlcsc_stock": "20226",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811132212_BOOMELE-Boom-Precision-Elec-2-54_C5305.pdf"
+  }
+ }
+}

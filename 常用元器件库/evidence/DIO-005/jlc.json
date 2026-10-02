@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C409413": {
+   "role": "主选",
+   "code": "C409413",
+   "mpn": "P6KE6.8A",
+   "brand": "Littelfuse",
+   "package": "DO-15",
+   "describe": "-55℃~+175℃ 10.5V 1mA 5.8V 58.1A 6.45V 600W IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-15 ESD and Surge Protection (TVS/ESD) ROHS",
+   "jlc_stock": 3599,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1169
+    ],
+    [
+     50,
+     0.1017
+    ],
+    [
+     150,
+     0.094
+    ]
+   ],
+   "cny_price": 0.7191,
+   "cny_step": 5,
+   "szlcsc_stock": "719",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304231849_Littelfuse-P6KE6-8A_C409413.pdf"
+  },
+  "C713671": {
+   "role": "替代",
+   "code": "C713671",
+   "mpn": "P6KE6.8A",
+   "brand": "LGE",
+   "package": "DO-15",
+   "describe": "-55℃~+175℃ 10.5V 1mA 5.8V 6.45V 600W@10/1000us 60A TVS Unidirectional DO-15 ESD and Surge Protection (TVS/ESD) ROHS",
+   "jlc_stock": 3610,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0714
+    ],
+    [
+     100,
+     0.0573
+    ],
+    [
+     300,
+     0.0503
+    ]
+   ],
+   "cny_price": 0.4385,
+   "cny_step": 10,
+   "szlcsc_stock": "350",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_LGE-P6KE6-8A_C713671.pdf"
+  }
+ }
+}

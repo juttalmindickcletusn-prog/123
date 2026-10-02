@@ -1,0 +1,22 @@
+# SKT-001 2.54mm 单排排母 8.5mm 高（以 1×8 为代表）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C27438
+  型号: 2.54-1*8PFemale Environmentally Friendly
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2.54mm
+  描述: -55℃~+105℃ 1 1x8P 2.54mm 3.2mm 3A 8.5mm 8P Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS
+  立创商城: ¥0.7097 起订5  库存 22594
+  嘉立创库存: 123847  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2410122100_BOOMELE-Boom-Precision-Elec-2-54-1-8P_C27438.pdf
+
+[替代] C42431840
+  型号: PM2.54-1X8PM-H85
+  厂家: JXTCONN
+  封装: Plugin,P=2.54mm
+  描述: -40℃~+105℃ 1 1x8P 2.54mm 3.2mm 3A 8.5mm 8P Brass Gold Square Hole Through Hole Top 插件,P=2.54mm Female Headers ROHS
+  立创商城: ¥0.6877 起订5  库存 4232
+  嘉立创库存: 21163  贴片库: expand
+  规格书: None
+

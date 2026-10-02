@@ -1,0 +1,842 @@
+# 第二批：主控板、显示屏、数码管
+# 模块封装和符号由 tools/gen_modules.py 按 tools/module_defs.py 生成（坐标来源写在 module_defs.py 每条注释里）。
+# 淘宝模块没有立创编号：lcsc 留空，价格写"未查"，规格书没有时 notes 写"规格书缺"。
+
+- id: MCU-001
+  category: 主控板
+  name: 立创 ESP32-S3 核心板 LCKFB-ESP32S3R8N8（40P）
+  lcsc: C20626143
+  alternatives: []
+  alternatives_text: 无同脚位替代（立创独家板型）
+  key_params: ESP32-S3R8，8MB PSRAM + 8MB Flash，Wi-Fi/BLE，USB 直接下载
+  supply: 5V（Type-C 或 5V 脚）；板载 LDO 输出 3V3
+  logic_level: GPIO 3.3V，不耐 5V
+  pin_count: 40
+  pinout: >-
+    正面朝上、天线朝上看：左列自上而下 1–20 = GPIO1–6、GND、GPIO7–14、RST、3V3×3、GND；
+    右列自下而上 21–40 = GND、5V×3、BOOT(GPIO0)、GPIO48、47、38、39、40、21、GND、18、17、16、15、41、42、45、46。
+    1 脚（GPIO1）在天线端左上，方焊盘
+  pitch_mm: 2.54
+  row_spacing_mm: 17.78
+  lead_size_mm: 排针方针 0.64
+  body_mm: 51.66 × 20.32（Type-C 略伸出）
+  mount: 底板焊两条 1×20 排母，核心板插上
+  seated_height_mm: 排母 8.5 + 板厚，约 10
+  kicad_symbol: StudentHW:LCKFB_ESP32S3R8N8
+  kicad_footprint: StudentHW:Module_LCKFB_ESP32S3R8N8
+  dim_source: V1.1 实物验证；立创开发板规格书 尺寸标注图与引脚定义图（dim_LCKFB_S3_size.png、dim_LCKFB_S3_pinout.png，图片型，人工读图）
+  level: A
+  pitfalls: GPIO45、GPIO46 不能接上拉，否则无法启动；天线端不要压金属件或铺铜
+  notes: >-
+    V1.1 底板用两条 PinSocket_1x20 实焊，排距 17.78 与本封装一致。封装把两排画在一起，丝印印出全部脚名和天线、USB 方向。
+    环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 立创 ESP32S3R8N8 开发板
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: ESP32
+
+- id: MCU-002
+  category: 主控板
+  name: 立创·地猛星 STM32F103C8T6 核心板（Type-C）
+  lcsc: C22396880
+  alternatives: []
+  alternatives_text: 淘宝"蓝色药丸"STM32F103C8T6 最小系统板脚位相同（见 MCU-003）
+  key_params: STM32F103C8T6，72MHz，64KB Flash，20KB RAM；Type-C 供电，SWD 下载
+  supply: 5V（Type-C 或 5V 脚）
+  logic_level: 3.3V，标 FT 的脚耐 5V
+  pin_count: 40
+  pinout: >-
+    正面朝上、USB 在左：下排自左向右 1–20 = PB12–15、PA8–12、PA15、PB3–9、5V、GND、3V3；
+    上排自右向左 21–40 = VBAT、PC13–15、PA0–7、PB0、PB1、PB10、PB11、RST、3V3、GND、GND
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24（图上未标，按 2.54 网格量得）
+  lead_size_mm: 排针方针 0.64
+  body_mm: 53.34 × 22.86
+  mount: 底板焊两条 1×20 排母
+  seated_height_mm: 排母 8.5 + 板厚，约 10
+  kicad_symbol: StudentHW:STM32F103C8T6_BluePill
+  kicad_footprint: StudentHW:Module_STM32F103C8T6_BluePill
+  dim_source: 立创开发板规格书 结构尺寸与引脚图（dim_DKX_STM32_size.png、dim_DKX_STM32_pinout.png，图片型，人工读图）
+  level: C
+  pitfalls: 排距厂家图未标，到货后用卡尺量两排针中心距是否 15.24；BOOT0 跳线帽平时接 0
+  notes: >-
+    外形和脚位与经典蓝色药丸相同，共用一个封装。环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 立创 地猛星 STM32F103C8T6
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: STM32
+
+- id: MCU-003
+  category: 主控板
+  name: STM32F103C8T6 最小系统板（蓝色药丸，淘宝）
+  lcsc: ""
+  part_number: STM32F103C8T6 Blue Pill
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 立创·地猛星（MCU-002）脚位相同
+  key_params: STM32F103C8T6（部分为国产兼容芯片），Micro-USB 或 Type-C
+  supply: 5V（USB 或 5V 脚）
+  logic_level: 3.3V，标 FT 的脚耐 5V
+  pin_count: 40
+  pinout: 同 MCU-002（下排 B12…3V3，上排 GND GND 3V3 R B11…VB）
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 排针方针 0.64
+  body_mm: 约 53 × 22.5
+  mount: 底板焊两条 1×20 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:STM32F103C8T6_BluePill
+  kicad_footprint: StudentHW:Module_STM32F103C8T6_BluePill
+  dim_source: 无厂家图，按立创地猛星图纸（同板型）
+  level: C
+  pitfalls: 淘宝货的 USB 口有 Micro 和 Type-C 两种；不少是国产兼容芯片，下载工具要选对；PA12 上拉电阻阻值常不对，USB 枚举失败时改 1.5kΩ
+  notes: 规格书缺（淘宝通用板）。环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。
+  taobao_keyword: STM32F103C8T6 最小系统板 蓝色
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/MCU-002/dim_DKX_STM32_size.png, evidence/MCU-002/dim_DKX_STM32_pinout.png]
+
+- id: MCU-004
+  category: 主控板
+  name: 乐鑫 ESP32-S3-DevKitC-1（44P）
+  lcsc: ""
+  part_number: ESP32-S3-DevKitC-1 v1.1
+  manufacturer: Espressif（乐鑫）
+  alternatives: []
+  alternatives_text: 淘宝 N16R8 兼容板（MCU-005）脚位相同
+  key_params: ESP32-S3-WROOM-1 模组，USB/UART 双口，板载 RGB LED（GPIO38）
+  supply: 5V（USB 或 5V 脚）
+  logic_level: GPIO 3.3V
+  pin_count: 44
+  pinout: >-
+    天线朝上看：左列 J1 自上而下 1–22 = 3V3、3V3、RST、GPIO4–7、15–18、8、3、46、9–14、5V、GND；
+    右列 J3 自下而上 23–44（J3 第 22 脚为 23 号，J3 第 1 脚为 44 号）：J3 自上而下 = GND、TX(43)、RX(44)、1、2、42、41、40、39、38、37、36、35、0、45、48、47、21、20、19、GND、GND
+  pitch_mm: 2.54
+  row_spacing_mm: 22.86
+  lead_size_mm: 排针方针 0.64
+  body_mm: 62.74 × 25.40（模组天线另伸出板外约 6）
+  mount: 底板焊两条 1×22 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:ESP32-S3-DevKitC-1
+  kicad_footprint: StudentHW:Module_ESP32-S3-DevKitC-1
+  dim_source: 乐鑫官方尺寸图 DXF_ESP32-S3-DevKitC-1_V1.1（dim_DevKitC-1_v1.1.png，矢量图无文字层，人工读图并用 DXF 坐标复核）
+  level: B
+  pitfalls: 天线伸出板外约 6 mm，底板这一端不要放元件；N8R8 版 GPIO35–37 被 PSRAM 占用
+  notes: 立创编号 C20541519（N8R8）无库存，通常淘宝/乐鑫官方店购买。环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。
+  taobao_keyword: ESP32-S3-DevKitC-1 乐鑫官方
+  price: 未查（乐鑫官方店约 70–100 元）
+  stock: 乐鑫官方店/淘宝
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: MCU-005
+  category: 主控板
+  name: ESP32-S3 N16R8 兼容开发板（淘宝，DevKitC-1 脚位）
+  lcsc: ""
+  part_number: ESP32-S3-N16R8 DevKitC-1 compatible
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 官方 DevKitC-1（MCU-004）
+  key_params: ESP32-S3 N16R8（16MB Flash + 8MB PSRAM），双 Type-C
+  supply: 5V
+  logic_level: GPIO 3.3V
+  pin_count: 44
+  pinout: 与 MCU-004 相同（按 DevKitC-1 脚位）
+  pitch_mm: 2.54
+  row_spacing_mm: 22.86
+  lead_size_mm: 排针方针 0.64
+  body_mm: 约 63 × 25.5
+  mount: 底板焊两条 1×22 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:ESP32-S3-DevKitC-1
+  kicad_footprint: StudentHW:Module_ESP32-S3-DevKitC-1
+  dim_source: 无厂家图，按乐鑫 DevKitC-1 尺寸图（脚位兼容板）
+  level: C
+  pitfalls: 兼容板排针有 2×22 和 2×20 两种，买前看清针数；N16R8 的 GPIO35–37 不能用
+  notes: 规格书缺（淘宝兼容板）。到货后量排距是否 22.86。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: ESP32-S3 N16R8 开发板 44 针
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/MCU-004/dim_DevKitC-1_v1.1.png]
+
+- id: MCU-006
+  category: 主控板
+  name: 乐鑫 ESP32-DevKitC V4（38P）
+  lcsc: ""
+  part_number: ESP32-DevKitC V4
+  manufacturer: Espressif（乐鑫）
+  alternatives: []
+  alternatives_text: 淘宝 38P ESP32 开发板多为同脚位，但有排距 22.86 的窄版，买后量
+  key_params: ESP32-WROOM-32E 模组，Micro-USB/CP2102
+  supply: 5V（USB 或 5V 脚）
+  logic_level: GPIO 3.3V；GPIO34–39 只能输入
+  pin_count: 38
+  pinout: >-
+    天线朝上看：左列 J2 自上而下 1–19 = 3V3、EN、VP(36)、VN(39)、34、35、32、33、25、26、27、14、12、GND、13、SD2、SD3、CMD、5V；
+    右列 J3 自下而上 20–38，J3 自上而下 = GND、23、22、TX、RX、21、GND、19、18、5、17、16、4、0、2、15、SD1、SD0、CLK
+  pitch_mm: 2.54
+  row_spacing_mm: 25.40
+  lead_size_mm: 排针方针 0.64
+  body_mm: 48.26 × 27.94（天线伸出 6.04）
+  mount: 底板焊两条 1×19 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:ESP32-DevKitC-V4_38P
+  kicad_footprint: StudentHW:Module_ESP32-DevKitC-V4_38P
+  dim_source: 乐鑫官方尺寸图 esp32_devkitc_v4_dimensions（dim_DevKitC_V4.png，矢量图无文字层，人工读图）
+  level: B
+  pitfalls: SD0–SD3、CMD、CLK 接的是 Flash，不能当 GPIO 用；GPIO34–39 只能输入
+  notes: 环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。
+  taobao_keyword: ESP32-DevKitC V4 38针
+  price: 未查（淘宝需登录）
+  stock: 乐鑫官方店/淘宝
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: MCU-007
+  category: 主控板
+  name: ESP32 30P 开发板（DOIT DevKit V1 类，淘宝）
+  lcsc: ""
+  part_number: ESP32 DEVKIT V1 30P
+  manufacturer: 淘宝通用（DOIT 版型）
+  alternatives: []
+  alternatives_text: 38P 板见 MCU-006（脚位不同）
+  key_params: ESP32-WROOM-32，CP2102 或 CH340，Micro-USB
+  supply: 5V（USB 或 VIN）
+  logic_level: GPIO 3.3V
+  pin_count: 30
+  pinout: >-
+    天线朝上看：左列自上而下 1–15 = EN、VP(36)、VN(39)、34、35、32、33、25、26、27、14、12、13、GND、VIN；
+    右列自下而上 16–30，右列自上而下 = 23、22、TX、RX、21、19、18、5、17、16、4、2、15、GND、3V3
+  pitch_mm: 2.54
+  row_spacing_mm: 25.40（常见版；有 22.86 窄版）
+  lead_size_mm: 排针方针 0.64
+  body_mm: 51.45 × 28.33
+  mount: 底板焊两条 1×15 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:ESP32_DevKit_30P_W25.4
+  kicad_footprint: StudentHW:Module_ESP32_DevKit_30P_W25.4
+  dim_source: 无厂家图；引脚和外形按 espboards.dev 公开引脚图（dim_DOIT_30P_pinout.png）量取
+  level: C
+  pitfalls: 同名板有两种排距（25.40 和 22.86），到货先量；VIN 是 5V 输入，不是 3.3V
+  notes: 规格书缺（淘宝通用板）。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: ESP32 开发板 30P DOIT
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: MCU-008
+  category: 主控板
+  name: ESP32-C3 SuperMini（淘宝）
+  lcsc: ""
+  part_number: ESP32-C3 SuperMini
+  manufacturer: 淘宝通用（nologo）
+  alternatives: []
+  alternatives_text: 无同脚位替代
+  key_params: ESP32-C3FH4，4MB Flash，USB-C 直连下载，板载陶瓷天线
+  supply: 5V（USB-C 或 5V 脚）
+  logic_level: GPIO 3.3V
+  pin_count: 16
+  pinout: >-
+    正面朝上、USB-C 朝上：左列自上而下 1–8 = GPIO5、6、7、8、9、10、20(RX)、21(TX)；
+    右列自下而上 9–16，右列自上而下 = 5V、GND、3V3、GPIO4、3、2、1、0
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 排针方针 0.64
+  body_mm: 22.52 × 18.0
+  mount: 底板焊两条 1×8 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:ESP32-C3_SuperMini
+  kicad_footprint: StudentHW:Module_ESP32-C3_SuperMini
+  dim_source: 无厂家图；外形 22.52×18 与引脚按 espboards.dev 公开引脚图（dim_C3_SuperMini_pinout.png）
+  level: C
+  pitfalls: 5V/GND/3V3 在右列（正面看），别镜像；GPIO8 接板载 LED、GPIO9 是 BOOT 键，外接时注意
+  notes: 规格书缺（淘宝通用板）。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: ESP32-C3 SuperMini
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: MCU-009
+  category: 主控板
+  name: Arduino Nano（含 CH340 兼容版）
+  lcsc: ""
+  part_number: Arduino Nano (A000005)
+  manufacturer: Arduino（兼容版淘宝通用）
+  alternatives: []
+  alternatives_text: CH340 兼容版尺寸、脚位相同
+  key_params: ATmega328P，16MHz，5V 逻辑，Mini-USB（兼容版多为 Type-C/Micro）
+  supply: 5V（USB）或 VIN 7–12V
+  logic_level: 5V 逻辑；接 3.3V 模块要电平转换
+  pin_count: 30
+  pinout: 按 KiCad 符号 Arduino_Nano_v3.x：1–15 为 D1/TX、D0/RX、RST、GND、D2–D13；16–30 为 D13 对侧的 3V3、AREF、A0–A7、5V、RST、GND、VIN（以符号为准）
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 排针方针 0.64
+  body_mm: 43.2 × 18
+  mount: 底板焊两条 1×15 排母
+  seated_height_mm: 约 10
+  kicad_symbol: MCU_Module:Arduino_Nano_v3.x
+  kicad_footprint: StudentHW:Arduino_Nano
+  dim_source: Arduino 官方规格书 A000005 Mechanical Information（dim_Arduino_Nano.png）
+  level: B
+  pitfalls: 5V 逻辑，直接接 3.3V 传感器的输出没问题，但 Nano 输出给 3.3V 器件要分压；兼容版要装 CH340 驱动
+  notes: 封装与 KiCad 官方 Module:Arduino_Nano 相同（本机缺官方 3D，去掉了模型引用，无 3D 模型）。环宽：孔 1.0 焊盘 1.6，按 0.3 放宽。
+  taobao_keyword: Arduino Nano CH340
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.3
+  pdf_keyword: Arduino Nano
+
+- id: MCU-010
+  category: 主控板
+  name: NodeMCU ESP8266 v3（CH340，宽版 27.94）
+  lcsc: ""
+  part_number: NodeMCU v3 (LoLin, CH340)
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: CP2102 窄版（MCU-011）脚位相同、排距不同
+  key_params: ESP-12E/F，4MB Flash，CH340
+  supply: 5V（USB 或 VIN）
+  logic_level: GPIO 3.3V；A0 量程 0–3.3V（板上分压）
+  pin_count: 30
+  pinout: >-
+    天线朝上：左列自上而下 1–15 = A0、RSV、RSV、SD3、SD2、SD1、CMD、SD0、CLK、GND、3V3、EN、RST、GND、VIN；
+    右列自下而上 16–30，右列自上而下 = D0、D1、D2、D3、D4、3V3、GND、D5、D6、D7、D8、RX、TX、GND、3V3
+  pitch_mm: 2.54
+  row_spacing_mm: 27.94
+  lead_size_mm: 排针方针 0.64
+  body_mm: 约 58 × 31
+  mount: 底板焊两条 1×15 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:NodeMCU_ESP8266_CH340_W27.94
+  kicad_footprint: StudentHW:Module_NodeMCU_ESP8266_CH340_W27.94
+  dim_source: 无厂家图；引脚按 frightanic.com NodeMCU 引脚图（dim_NodeMCU_pins.png），外形 58×31、排距 1.1 英寸按公开对比资料
+  level: C
+  pitfalls: 宽版（CH340）占满面包板，窄版（CP2102）排距 22.86，封装不能混用；引脚在长边上的位置按通用图估计，到货先量
+  notes: 规格书缺（淘宝通用板）。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: NodeMCU ESP8266 CH340 V3
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: MCU-011
+  category: 主控板
+  name: NodeMCU ESP8266 v2（CP2102，窄版 22.86）
+  lcsc: ""
+  part_number: NodeMCU v2 (Amica, CP2102)
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: CH340 宽版（MCU-010）
+  key_params: ESP-12E/F，4MB Flash，CP2102
+  supply: 5V（USB 或 VIN）
+  logic_level: GPIO 3.3V
+  pin_count: 30
+  pinout: 与 MCU-010 相同
+  pitch_mm: 2.54
+  row_spacing_mm: 22.86
+  lead_size_mm: 排针方针 0.64
+  body_mm: 约 48 × 26
+  mount: 底板焊两条 1×15 排母
+  seated_height_mm: 约 10
+  kicad_symbol: StudentHW:NodeMCU_ESP8266_CP2102_W22.86
+  kicad_footprint: StudentHW:Module_NodeMCU_ESP8266_CP2102_W22.86
+  dim_source: 无厂家图；引脚同 MCU-010，外形 48×26、排距 0.9 英寸按公开对比资料
+  level: C
+  pitfalls: 和 CH340 宽版排距不同；引脚在长边上的位置按通用图估计，到货先量
+  notes: 规格书缺（淘宝通用板）。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: NodeMCU ESP8266 CP2102
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/MCU-010/dim_NodeMCU_pins.png]
+
+- id: DSP-001
+  category: 显示屏
+  name: 0.96 寸 I2C OLED 4P（GND 在前）
+  lcsc: ""
+  part_number: 0.96 OLED I2C GND-VCC-SCL-SDA (MC096GX)
+  manufacturer: 全动电子 QD（lcdwiki），淘宝通用
+  alternatives: []
+  alternatives_text: VCC 在前版（DSP-002）不能直接替换
+  key_params: SSD1306，128×64，I2C 地址 0x3C（板上电阻改 0x3D）
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 4
+  pinout: 1=GND（方焊盘）、2=VCC、3=SCL、4=SDA
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 27.30 × 27.80，四角 Φ2 孔
+  mount: 底板焊 1×4 排母，屏插上（或杜邦线）
+  seated_height_mm: 排母 8.5 + 屏厚约 3
+  kicad_symbol: StudentHW:OLED_0.96_I2C_GND-VCC-SCL-SDA
+  kicad_footprint: StudentHW:Module_OLED_0.96_I2C_GND-VCC-SCL-SDA
+  dim_source: V1.1 实物验证（GND-VCC-SCL-SDA 针序）；外形按 lcdwiki MC096 尺寸图（见 evidence/DSP-002/dim_MC096VX_size.png）
+  level: A
+  pitfalls: 针序有 GND 在前、VCC 在前两种，VCC 在前的屏插 GND 在前的座会烧屏；买前看屏背面丝印
+  notes: 规格书缺（MC096 只有尺寸图）。V1.1 用 PinSocket_1x04 实焊此针序。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 0.96寸 OLED 4针 IIC GND VCC
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/DSP-002/dim_MC096VX_size.png]
+
+- id: DSP-002
+  category: 显示屏
+  name: 0.96 寸 I2C OLED 4P（VCC 在前）
+  lcsc: ""
+  part_number: 0.96 OLED I2C VCC-GND-SCL-SDA (MC096VX)
+  manufacturer: 全动电子 QD（lcdwiki），淘宝通用
+  alternatives: []
+  alternatives_text: GND 在前版（DSP-001）不能直接替换
+  key_params: SSD1306，128×64，I2C
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 4
+  pinout: 1=VCC（方焊盘）、2=GND、3=SCL、4=SDA
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 27.30 × 27.80，四角 Φ2 孔距边 2.0
+  mount: 底板焊 1×4 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 3
+  kicad_symbol: StudentHW:OLED_0.96_I2C_VCC-GND-SCL-SDA
+  kicad_footprint: StudentHW:Module_OLED_0.96_I2C_VCC-GND-SCL-SDA
+  dim_source: lcdwiki MC096VX 产品尺寸图（dim_MC096VX_size.png）
+  level: B
+  pitfalls: 同 DSP-001，针序反了会烧屏
+  notes: 规格书缺（只有尺寸图）。上排两孔位置按下排对称（图上只标了下排 2.00）。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 0.96寸 OLED 4针 IIC VCC GND
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+
+- id: DSP-003
+  category: 显示屏
+  name: 1.3 寸 I2C OLED 4P（SH1106，GND 在前）
+  lcsc: ""
+  part_number: 1.3 OLED I2C SH1106 (MC130GX)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: VCC 在前版（DSP-004）
+  key_params: SH1106，128×64，I2C
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 4
+  pinout: 1=GND（方焊盘）、2=VCC、3=SCL、4=SDA
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 35.40 × 33.50，四角 Φ3.0 孔距边 2.50
+  mount: 底板焊 1×4 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 3
+  kicad_symbol: StudentHW:OLED_1.3_I2C_GND-VCC-SCL-SDA
+  kicad_footprint: StudentHW:Module_OLED_1.3_I2C_GND-VCC-SCL-SDA
+  dim_source: lcdwiki MC130GX 尺寸图与用户手册（dim_OLED130_size.png）
+  level: B
+  pitfalls: 驱动是 SH1106 不是 SSD1306，程序里要选对，否则画面偏移 2 列
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 1.3寸 OLED IIC 4针 SH1106
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MC130
+
+- id: DSP-004
+  category: 显示屏
+  name: 1.3 寸 I2C OLED 4P（SH1106，VCC 在前）
+  lcsc: ""
+  part_number: 1.3 OLED I2C SH1106 (MC130VX)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: GND 在前版（DSP-003）
+  key_params: SH1106，128×64，I2C
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 4
+  pinout: 1=VCC（方焊盘）、2=GND、3=SCL、4=SDA
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 35.40 × 33.50
+  mount: 底板焊 1×4 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 3
+  kicad_symbol: StudentHW:OLED_1.3_I2C_VCC-GND-SCL-SDA
+  kicad_footprint: StudentHW:Module_OLED_1.3_I2C_VCC-GND-SCL-SDA
+  dim_source: lcdwiki MC130GX/VX 共用用户手册与尺寸图（见 evidence/DSP-003）
+  level: B
+  pitfalls: 针序反了会烧屏；SH1106 驱动
+  notes: 规格书与 DSP-003 共用（MC130GX&MC130VX 手册，复制一份到本条目录）。环宽按 0.35 放宽。模块无 3D 模型。
+  pdf_keyword: MC130VX
+  taobao_keyword: 1.3寸 OLED IIC 4针 VCC GND
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/DSP-003/dim_OLED130_size.png, evidence/DSP-003/datasheet.pdf]
+
+- id: DSP-005
+  category: 显示屏
+  name: 0.91 寸 I2C OLED 128×32
+  lcsc: ""
+  part_number: 0.91 OLED I2C SSD1306 (MC091GX)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: SSD1306，128×32，I2C
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 4
+  pinout: 引脚竖排在左端，自下而上 1=GND（方焊盘）、2=VCC、3=SCL、4=SDA
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 38.00 × 12.00，无安装孔
+  mount: 底板焊 1×4 排母（屏较薄，另加固定）
+  seated_height_mm: 排母 8.5 + 屏厚
+  kicad_symbol: StudentHW:OLED_0.91_I2C_128x32
+  kicad_footprint: StudentHW:Module_OLED_0.91_I2C_128x32
+  dim_source: lcdwiki MC091GX 尺寸图与用户手册（dim_OLED091_size.png）
+  level: B
+  pitfalls: 没有安装孔，只靠排针支撑，外壳要压住
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 0.91寸 OLED 128x32 IIC
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MC091
+
+- id: DSP-006
+  category: 显示屏
+  name: 0.96 寸 SPI OLED 7P
+  lcsc: ""
+  part_number: 0.96 OLED SPI 7P (MSP096X)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: SSD1306，128×64，4 线 SPI（改电阻可切 I2C）
+  supply: 3.3–5V
+  logic_level: 3.3V/5V 兼容
+  pin_count: 7
+  pinout: 1=GND（方焊盘）、2=VCC、3=D0(SCK)、4=D1(MOSI)、5=RES、6=DC、7=CS
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 27.30 × 27.80，四角 Φ2 孔距边 2.0
+  mount: 底板焊 1×7 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 3
+  kicad_symbol: StudentHW:OLED_0.96_SPI_7P
+  kicad_footprint: StudentHW:Module_OLED_0.96_SPI_7P
+  dim_source: lcdwiki MSP096X 尺寸图与用户手册（dim_OLEDSPI_size.png）
+  level: B
+  pitfalls: RES 脚必须接 GPIO 或上拉，悬空屏不亮
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 0.96寸 OLED SPI 7针
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP096
+
+- id: DSP-007
+  category: 显示屏
+  name: 1.8 寸 SPI TFT ST7735S（8P）
+  lcsc: ""
+  part_number: 1.8 TFT SPI ST7735S (MSP1803)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: ST7735S，128×160，4 线 SPI，带 SD 卡座
+  supply: 3.3–5V（背光 LED 脚接 3.3V）
+  logic_level: 3.3V
+  pin_count: 8
+  pinout: 屏下边 1=VCC（方焊盘）、2=GND、3=CS、4=RESET、5=A0(DC)、6=SDA、7=SCK、8=LED
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 34.50 × 58.00，四角 Φ3.2 孔距边 3.0
+  mount: 底板焊 1×8 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 4
+  kicad_symbol: StudentHW:TFT_1.8_ST7735_8P
+  kicad_footprint: StudentHW:Module_TFT_1.8_ST7735_8P
+  dim_source: lcdwiki MSP1803 尺寸图与用户手册（dim_TFT18_size.png）
+  level: B
+  pitfalls: 上边还有 4 个 SD 卡引脚孔，不要在底板对应位置放元件；排针横向位置图上未直接标，按居中（量图 8.4）
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 1.8寸 TFT ST7735 SPI 8针
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP1803
+
+- id: DSP-008
+  category: 显示屏
+  name: 1.54 寸 IPS ST7789 240×240（8P）
+  lcsc: ""
+  part_number: 1.54 IPS SPI ST7789 (MSP1541)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: ST7789，240×240，4 线 SPI
+  supply: 3.3V（只能接 3.3V）
+  logic_level: 3.3V
+  pin_count: 8
+  pinout: 屏上边 1=GND（方焊盘）、2=VCC、3=SCL、4=SDA、5=RES、6=DC、7=CS、8=BLK
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 32.00 × 43.72，四角 Φ2 孔距边 2.5
+  mount: 底板焊 1×8 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 4
+  kicad_symbol: StudentHW:IPS_1.54_ST7789_8P
+  kicad_footprint: StudentHW:Module_IPS_1.54_ST7789_8P
+  dim_source: lcdwiki MSP1541 尺寸图与用户手册（dim_IPS154_size.png）
+  level: B
+  pitfalls: VCC 只能接 3.3V，接 5V 会烧
+  notes: 上排两孔按下排对称。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 1.54寸 IPS ST7789 240x240 SPI
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP1541
+
+- id: DSP-009
+  category: 显示屏
+  name: 2.0 寸 IPS ST7789 240×320（8P）
+  lcsc: ""
+  part_number: 2.0 IPS SPI ST7789 (MSP2008)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: ST7789，240×320，4 线 SPI
+  supply: 3.3V（只能接 3.3V）
+  logic_level: 3.3V
+  pin_count: 8
+  pinout: 屏上边 1=GND（方焊盘）、2=VCC、3=SCL、4=SDA、5=RES、6=DC、7=CS、8=BLK
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 36.48 × 61.12，四角 Φ2 孔距边 2.5
+  mount: 底板焊 1×8 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 4
+  kicad_symbol: StudentHW:IPS_2.0_ST7789_8P
+  kicad_footprint: StudentHW:Module_IPS_2.0_ST7789_8P
+  dim_source: lcdwiki MSP2008 尺寸图与用户手册（dim_IPS20_size.png）
+  level: B
+  pitfalls: VCC 只能接 3.3V
+  notes: 下排两孔按上排对称。环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 2.0寸 IPS ST7789 240x320 SPI
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP2008
+
+- id: DSP-010
+  category: 显示屏
+  name: 2.4 寸 SPI TFT ILI9341 带触摸（14P）
+  lcsc: ""
+  part_number: 2.4 TFT SPI ILI9341 (MSP2402)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: ILI9341，240×320，SPI，电阻触摸（XPT2046），带 SD 卡座
+  supply: 3.3–5V
+  logic_level: 3.3V
+  pin_count: 14
+  pinout: 屏下边 1=VCC（方焊盘）、2=GND、3=CS、4=RESET、5=DC、6=SDI(MOSI)、7=SCK、8=LED、9=SDO(MISO)、10=T_CLK、11=T_CS、12=T_DIN、13=T_DO、14=T_IRQ
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 42.72 × 77.18，四角 Φ3.2 孔
+  mount: 底板焊 1×14 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 4.3
+  kicad_symbol: StudentHW:TFT_2.4_ILI9341_14P
+  kicad_footprint: StudentHW:Module_TFT_2.4_ILI9341_14P
+  dim_source: lcdwiki MSP2401/2402 LCM OUTLINE 尺寸图（dim_TFT24_size.png）与用户手册
+  level: B
+  pitfalls: 屏和触摸共用 SPI，各自的 CS 要分开；上边 4 个 SD 卡孔不要放元件
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 2.4寸 TFT ILI9341 SPI 触摸 14针
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP2402
+
+- id: DSP-011
+  category: 显示屏
+  name: 2.8 寸 SPI TFT ILI9341 带触摸（14P）
+  lcsc: ""
+  part_number: 2.8 TFT SPI ILI9341 (MSP2807)
+  manufacturer: 全动电子 QD（lcdwiki）
+  alternatives: []
+  alternatives_text: 无
+  key_params: ILI9341，240×320，SPI，电阻触摸，带 SD 卡座
+  supply: 3.3–5V
+  logic_level: 3.3V
+  pin_count: 14
+  pinout: 与 DSP-010 相同（1=VCC … 14=T_IRQ）
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 排针方针 0.64
+  body_mm: 50.00 × 86.00，四角 Φ3.2 孔
+  mount: 底板焊 1×14 排母
+  seated_height_mm: 排母 8.5 + 屏厚约 5.6
+  kicad_symbol: StudentHW:TFT_2.8_ILI9341_14P
+  kicad_footprint: StudentHW:Module_TFT_2.8_ILI9341_14P
+  dim_source: lcdwiki MSP2807 LCM OUTLINE 尺寸图（dim_TFT28_size.png）与用户手册
+  level: B
+  pitfalls: 同 DSP-010
+  notes: 环宽按 0.35 放宽。模块无 3D 模型。
+  taobao_keyword: 2.8寸 TFT ILI9341 SPI 触摸 14针
+  price: 未查（淘宝需登录）
+  stock: 淘宝现货（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: MSP2807
+
+- id: SEG-001
+  category: 数码管
+  name: 0.56 寸 1 位数码管 共阴（红）
+  lcsc: C8093
+  alternatives: []
+  alternatives_text: 同脚位 0.56 寸 1 位共阴（5161AS 类）通用
+  key_params: 1 位，0.56 英寸（字高 14.2），红光，共阴
+  supply: 每段正向压降约 2V，串 330Ω–1kΩ
+  logic_level: 段脚接 GPIO（经限流电阻），公共脚接 GND
+  pin_count: 10
+  pinout: A=7、B=6、C=4、D=2、E=1、F=9、G=10、DP=5，3 和 8 为公共阴极；正面看左下为 1 脚，逆时针
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 引脚 Φ0.51
+  body_mm: 19.00 × 12.60 × 8.00
+  mount: 直插
+  seated_height_mm: 8.0
+  kicad_symbol: Display_Character:SM420561N
+  kicad_footprint: StudentHW:7Seg_0.56in_1Digit_10P
+  dim_source: 厂家规格书 志浩 FJ5161AH（dim_FJ5161AH.png），型号在图内，人工读图
+  level: B
+  pitfalls: 共阴和共阳外观一样，型号 A=共阴、B=共阳；小数点在右下角，那边朝下
+  notes: 改自 KiCad 官方 7SegmentLED_LTS6760（0.56 寸标准脚位），焊盘加大。无 3D 模型（官方原封装无模型）。
+  taobao_keyword: 0.56寸 一位 数码管 共阴 5161AS
+  polarized: 是
+  lead_max_mm: 0.51
+  pdf_keyword: FJ5161
+
+- id: SEG-002
+  category: 数码管
+  name: 0.56 寸 1 位数码管 共阳（红）
+  lcsc: C8092
+  alternatives: []
+  alternatives_text: 同脚位 0.56 寸 1 位共阳（5161BS 类）通用
+  key_params: 1 位，0.56 英寸，红光，共阳
+  supply: 每段约 2V，串 330Ω–1kΩ
+  logic_level: 公共脚接 VCC，段脚经电阻接 GPIO（低电平点亮）
+  pin_count: 10
+  pinout: A=7、B=6、C=4、D=2、E=1、F=9、G=10、DP=5，3 和 8 为公共阳极
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 引脚 Φ0.51
+  body_mm: 19.00 × 12.60 × 8.00
+  mount: 直插
+  seated_height_mm: 8.0
+  kicad_symbol: StudentHW:7Seg_1Digit_CA
+  kicad_footprint: StudentHW:7Seg_0.56in_1Digit_10P
+  dim_source: 厂家规格书 志浩 FJ5161BH（dim_FJ5161BH.png，型号在图片里，人工读图）
+  level: B
+  pitfalls: 立创库存较少（约 300）；共阳的段脚是低电平点亮
+  notes: 无 3D 模型（官方原封装无模型）。
+  taobao_keyword: 0.56寸 一位 数码管 共阳 5161BS
+  polarized: 是
+  lead_max_mm: 0.51
+
+- id: SEG-003
+  category: 数码管
+  name: 0.56 寸 4 位数码管 共阴（红）
+  lcsc: C54396
+  alternatives: [{lcsc: C10709, note: 同型号橙红色}]
+  key_params: 4 位，0.56 英寸，红光，共阴，动态扫描
+  supply: 每段约 2V
+  logic_level: 段脚经电阻接 GPIO，位选脚经三极管接 GND（或用 TM1637 模块）
+  pin_count: 12
+  pinout: A=11、B=7、C=4、D=2、E=1、F=10、G=5、DP=3；DIG1=12、DIG2=9、DIG3=8、DIG4=6；正面看左下为 1 脚
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 引脚 Φ0.51
+  body_mm: 50.4 × 19.0 × 8.0
+  mount: 直插
+  seated_height_mm: 8.0
+  kicad_symbol: Display_Character:CC56-12SRWA
+  kicad_footprint: StudentHW:7Seg_0.56in_4Digit_12P
+  dim_source: 厂家规格书 志浩 FJ5461AH 尺寸图（dim_FJ5461AH.png，图片型，人工读图）
+  level: B
+  pitfalls: 4 位要动态扫描，单片机 IO 不够时直接用 TM1637 模块
+  notes: 脚位与 KiCad 官方 CC56-12 一致；封装改自官方 CA56-12SRWA，孔 1.0→0.8、焊盘 1.5→1.6。无 3D 模型（官方原封装无模型）。
+  taobao_keyword: 0.56寸 四位 数码管 共阴 5461AS
+  polarized: 是
+  lead_max_mm: 0.51
+
+- id: SEG-004
+  category: 数码管
+  name: 0.56 寸 4 位数码管 共阳（红）
+  lcsc: C38183
+  alternatives: [{lcsc: C10713, note: 同型号橙红色}]
+  key_params: 4 位，0.56 英寸，红光，共阳
+  supply: 每段约 2V
+  logic_level: 位选脚经 PNP 接 VCC，段脚低电平点亮
+  pin_count: 12
+  pinout: 与 SEG-003 相同，DIG1–4（12、9、8、6）为公共阳极
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 引脚 Φ0.51
+  body_mm: 50.2 × 19.0 × 8.0
+  mount: 直插
+  seated_height_mm: 8.0
+  kicad_symbol: Display_Character:CA56-12SRWA
+  kicad_footprint: StudentHW:7Seg_0.56in_4Digit_12P
+  dim_source: 厂家规格书 志浩 FJ5461BH（dim_FJ5461BH.png）
+  level: B
+  pitfalls: 共阳段脚低电平点亮，程序取反
+  notes: 封装与 SEG-003 相同。无 3D 模型（官方原封装无模型）。
+  taobao_keyword: 0.56寸 四位 数码管 共阳 5461BS
+  polarized: 是
+  lead_max_mm: 0.51
+  pdf_keyword: FJ5461BH

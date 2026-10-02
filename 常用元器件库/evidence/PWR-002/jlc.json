@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C3096093": {
+   "role": "主选",
+   "code": "C3096093",
+   "mpn": "PJ-102AH",
+   "brand": "CUI",
+   "package": "Plugin",
+   "describe": "-25℃~+85℃ 24V 2mm 5A 6.5mm DC Power Jack Right Angle Plugin DC Power Connectors ROHS",
+   "jlc_stock": 1085,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     1.0844
+    ],
+    [
+     10,
+     0.8779
+    ],
+    [
+     30,
+     0.7755
+    ]
+   ],
+   "cny_price": 6.67,
+   "cny_step": 1,
+   "szlcsc_stock": "1085",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2401301340_CUI-PJ-102AH_C3096093.pdf"
+  },
+  "C20518877": {
+   "role": "替代",
+   "code": "C20518877",
+   "mpn": "PJ-102A",
+   "brand": "CUI",
+   "package": "-",
+   "describe": "-25℃~+85℃ 2.5A 24V 2mm 6.4mm DC Power Jack Right Angle - DC Power Connectors ROHS",
+   "jlc_stock": 1897,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.8568
+    ],
+    [
+     10,
+     0.6861
+    ],
+    [
+     30,
+     0.6015
+    ]
+   ],
+   "cny_price": 5.27,
+   "cny_step": 1,
+   "szlcsc_stock": "1799",
+   "datasheet": ""
+  }
+ }
+}

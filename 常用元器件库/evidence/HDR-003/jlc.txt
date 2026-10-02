@@ -1,0 +1,22 @@
+# HDR-003 2.54mm 双排直排针 2×40
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2333
+  型号: 2.54-2*40PPin
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin,P=2.54mm
+  描述: -25℃~+85℃ 2 2.54mm 2.54mm 250V 2x40P 3A 80P Black Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS
+  立创商城: ¥1.9745 起订5  库存 4262
+  嘉立创库存: 21480  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2407251516_BOOMELE-Boom-Precision-Elec-2-54-2-40P_C2333.pdf
+
+[替代] C2895847
+  型号: PZ254V-12-80P
+  厂家: XFCN
+  封装: Plugin,P=2.54mm
+  描述: -40℃~+105℃ 2 2.54mm 2.54mm 2.54mm 250V 2x40P 3A 3mm 6mm 80P Black Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS
+  立创商城: ¥2.46 起订5  库存 46
+  嘉立创库存: 232  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109151930_XFCN-PZ254V-12-80P_C2895847.pdf
+

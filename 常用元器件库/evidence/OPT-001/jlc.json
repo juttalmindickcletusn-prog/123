@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C96006": {
+   "role": "主选",
+   "code": "C96006",
+   "mpn": "PC817X3NSZ9F",
+   "brand": "Sharp Microelectronics",
+   "package": "DIP-4",
+   "describe": "-30℃~+100℃ 1.2V 200mV@20mA,1mA 200mW 3us 4us 50% 50mA 50mA 5kV 600% 6V 80V DC Phototransistor DIP-4 Transistor, Photovoltaic Output Optoisolators ROHS",
+   "jlc_stock": 31496,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0942
+    ],
+    [
+     50,
+     0.0755
+    ],
+    [
+     200,
+     0.06
+    ]
+   ],
+   "cny_price": 0.5789,
+   "cny_step": 5,
+   "szlcsc_stock": "5518",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Sharp-Microelectronics-PC817X3NSZ9F_C96006.pdf"
+  },
+  "C181890": {
+   "role": "替代",
+   "code": "C181890",
+   "mpn": "EL817(C)-F",
+   "brand": "Everlight Elec",
+   "package": "DIP-4",
+   "describe": "-55℃~+110℃ 1 1.2V 100mV@20mA,1mA 18us 18us 200% 35V 400% 50mA 5kV 6V Phototransistor DIP-4 Transistor, Photovoltaic Output Optoisolators ROHS",
+   "jlc_stock": 661119,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.047
+    ],
+    [
+     200,
+     0.0337
+    ],
+    [
+     600,
+     0.0291
+    ]
+   ],
+   "cny_price": 0.2887,
+   "cny_step": 20,
+   "szlcsc_stock": "33055",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Everlight-Elec-EL817-C-F_C181890.pdf"
+  }
+ }
+}

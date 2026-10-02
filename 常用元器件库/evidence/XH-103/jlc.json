@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C157928": {
+   "role": "主选",
+   "code": "C157928",
+   "mpn": "S3B-XH-A(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2.5mm",
+   "describe": "-25℃~+85℃ 1 11.5mm 1x3P 2.5mm 250V 3 3A 3P 6.1mm 9.9mm Brass K Pin PA66 Right Angle Tin UL94V-0 White XH 弯插,P=2.5mm Wire To Board Connector ROHS",
+   "jlc_stock": 140629,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0735
+    ],
+    [
+     100,
+     0.0586
+    ],
+    [
+     300,
+     0.0513
+    ]
+   ],
+   "cny_price": 0.4518,
+   "cny_step": 10,
+   "szlcsc_stock": "13462",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S3B-XH-A-LF-SN_C157928.pdf"
+  }
+ }
+}

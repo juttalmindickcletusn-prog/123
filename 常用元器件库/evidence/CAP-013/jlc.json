@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C28067": {
+   "role": "主选",
+   "code": "C28067",
+   "mpn": "KM477M016F12RR0VH2FP0",
+   "brand": "CX(Dongguan Chengxing Elec)",
+   "package": "Plugin,D8xL12mm",
+   "describe": "12mm 16V 2000hrs@105℃ 3.5mm 470uF 8mm ±20% 插件,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 99480,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0435
+    ],
+    [
+     200,
+     0.0358
+    ],
+    [
+     500,
+     0.0288
+    ]
+   ],
+   "cny_price": 0.2674,
+   "cny_step": 20,
+   "szlcsc_stock": "4642",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110271230_CX-Dongguan-Chengxing-Elec-KM477M016F12RR0VH2FP0_C28067.pdf"
+  },
+  "C47344174": {
+   "role": "替代",
+   "code": "C47344174",
+   "mpn": "ERG16V470M8X12",
+   "brand": "jieerrui",
+   "package": "Plugin,D8xL12mm",
+   "describe": "-40℃~+105℃ 100mΩ@100kHz 12mm 16V 2000hrs@105℃ 3.5mm 470uF 705mA@100kHz 8mm ±20% Plugin,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS",
+   "jlc_stock": 69772,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0604
+    ],
+    [
+     100,
+     0.0477
+    ],
+    [
+     500,
+     0.0412
+    ]
+   ],
+   "cny_price": 0.3711,
+   "cny_step": 10,
+   "szlcsc_stock": "6977",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_jieerrui-ERG16V470M8X12_C47344174.pdf"
+  }
+ }
+}

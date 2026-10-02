@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C131334": {
+   "role": "主选",
+   "code": "C131334",
+   "mpn": "B4B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Plugin,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 1x4P 2A 2mm 4 4.5mm 4P 6mm 9.9mm Brass K Pin PA66 PH Through Hole Tin UL94V-0 White 插件,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 111565,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0454
+    ],
+    [
+     100,
+     0.0373
+    ],
+    [
+     300,
+     0.0332
+    ]
+   ],
+   "cny_price": 0.2789,
+   "cny_step": 10,
+   "szlcsc_stock": "6921",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B4B-PH-K-S-LF-SN_C131334.pdf"
+  }
+ }
+}

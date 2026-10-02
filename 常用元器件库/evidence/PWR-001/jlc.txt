@@ -1,0 +1,22 @@
+# PWR-001 DC-005 电源座（5.5×2.1 插头，2.0 针）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C381116
+  型号: DC-005-5A-2.0
+  厂家: XKB Connection
+  封装: Plugin
+  描述: -20℃~+70℃ 24V 2mm 5A 6.2mm DC Power Jack Right Angle 插件 DC Power Connectors ROHS
+  立创商城: ¥1.6062 起订5  库存 5415
+  嘉立创库存: 31751  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2110151630_XKB-Connection-DC-005-5A-2-0_C381116.pdf
+
+[替代] C16214
+  型号: DC-005 2.0
+  厂家: BOOMELE(Boom Precision Elec)
+  封装: Plugin
+  描述: -25℃~+85℃ 12V 1A 2mm 6.4mm DC Power Jack Right Angle 插件 DC Power Connectors ROHS
+  立创商城: ¥0.3446 起订10  库存 8344
+  嘉立创库存: 83447  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2308221657_BOOMELE-Boom-Precision-Elec-DC-005-2-0_C16214.pdf
+

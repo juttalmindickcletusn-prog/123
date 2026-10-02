@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C173752": {
+   "role": "主选",
+   "code": "C173752",
+   "mpn": "S2B-PH-K-S(LF)(SN)",
+   "brand": "JST",
+   "package": "Push-Pull,P=2mm",
+   "describe": "-25℃~+85℃ 1 100V 1x2P 2 2A 2P 2mm 4.8mm 5.9mm 7.6mm Brass K Pin PA66 PH Right Angle Tin UL94V-0 White 弯插,P=2mm Wire To Board Connector ROHS",
+   "jlc_stock": 187776,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0396
+    ],
+    [
+     200,
+     0.0316
+    ],
+    [
+     1000,
+     0.0272
+    ]
+   ],
+   "cny_price": 0.2428,
+   "cny_step": 20,
+   "szlcsc_stock": "9388",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S2B-PH-K-S-LF-SN_C173752.pdf"
+  }
+ }
+}

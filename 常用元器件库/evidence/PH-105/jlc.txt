@@ -1,0 +1,13 @@
+# PH-105 PH2.0 5P 弯插（JST S5B-PH-K-S）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C157923
+  型号: S5B-PH-K-S(LF)(SN)
+  厂家: JST
+  封装: Push-Pull,P=2mm
+  描述: -25℃~+85℃ 1 100V 11.9mm 1x5P 2A 2mm 4.8mm 5 5P 7.6mm Brass K Pin PA66 PH Right Angle Tin UL94V-0 White 弯插,P=2mm Wire To Board Connector ROHS
+  立创商城: ¥0.4737 起订10  库存 6385
+  嘉立创库存: 63858  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-S5B-PH-K-S-LF-SN_C157923.pdf
+

@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C165948": {
+   "role": "主选",
+   "code": "C165948",
+   "mpn": "TYPE-C-31-M-12",
+   "brand": "Korean Hroparts Elec",
+   "package": "SMD",
+   "describe": "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
+   "jlc_stock": 448538,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1857
+    ],
+    [
+     50,
+     0.1467
+    ],
+    [
+     150,
+     0.1275
+    ]
+   ],
+   "cny_price": 1.1424,
+   "cny_step": 5,
+   "szlcsc_stock": "87058",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2205251630_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.pdf"
+  },
+  "C393939": {
+   "role": "替代",
+   "code": "C393939",
+   "mpn": "TYPE-C16PIN",
+   "brand": "SHOU HAN",
+   "package": "SMD",
+   "describe": "-40℃~+85℃ 1 10 thousand cycles 16P 30V 3A Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
+   "jlc_stock": 398481,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0687
+    ],
+    [
+     100,
+     0.055
+    ],
+    [
+     300,
+     0.048
+    ]
+   ],
+   "cny_price": 0.4218,
+   "cny_step": 10,
+   "szlcsc_stock": "38852",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_SHOU-HAN-TYPE-C16PIN_C393939.pdf"
+  }
+ }
+}

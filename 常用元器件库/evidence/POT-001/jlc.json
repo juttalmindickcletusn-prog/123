@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C34846": {
+   "role": "主选",
+   "code": "C34846",
+   "mpn": "3296W-1-103LF",
+   "brand": "BOURNS",
+   "package": "SIP-3P,9.5x4.8mm",
+   "describe": "10kΩ 25 500mW ±10% ±100ppm/℃ SIP-3P,9.5x4.8mm Potentiometers, Variable Resistors ROHS",
+   "jlc_stock": 38425,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.8421
+    ],
+    [
+     10,
+     0.7137
+    ],
+    [
+     50,
+     0.5837
+    ]
+   ],
+   "cny_price": 5.18,
+   "cny_step": 1,
+   "szlcsc_stock": "37881",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_BOURNS-3296W-1-103LF_C34846.pdf"
+  },
+  "C118954": {
+   "role": "替代",
+   "code": "C118954",
+   "mpn": "3296W-1-103",
+   "brand": "BOCHEN(Chengdu Guosheng Tech)",
+   "package": "Plugin-3P,9.5x4.9mm",
+   "describe": "10kΩ 30 500mW ±10% ±250ppm/℃ 插件-3P,9.5x4.9mm Potentiometers, Variable Resistors ROHS",
+   "jlc_stock": 71740,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1886
+    ],
+    [
+     50,
+     0.1395
+    ],
+    [
+     150,
+     0.1186
+    ]
+   ],
+   "cny_price": 1.1603,
+   "cny_step": 5,
+   "szlcsc_stock": "12865",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811071811_BOCHEN-Chengdu-Guosheng-Tech-3296W-1-103_C118954.pdf"
+  }
+ }
+}

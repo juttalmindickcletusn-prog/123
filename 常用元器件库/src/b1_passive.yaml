@@ -1,0 +1,437 @@
+# 第一批：电阻、电容、保险
+# 型号/厂家/价格/库存由 tools/fetch_evidence.py 从嘉立创接口取；孔径和焊盘尺寸由 build_csv.py 从封装文件读出，都不在这里手填。
+
+- id: RES-001
+  category: 电阻
+  name: 1/4W 金属膜电阻 1%，卧装 7.62 mm
+  lcsc: C57435
+  alternatives: [{lcsc: C2903232, note: VO 1/4W 1% 色环（该编号为 10kΩ，按需换阻值），本体 Φ2.7×6.2}]
+  key_params: 1/4W（70℃），±1%，金属膜，最高工作电压 250V；图示型号 1kΩ
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 7.62
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.54±0.05
+  body_mm: Φ2.2±0.3 × 6.5±1.0（最长 7.5）
+  mount: 卧装直插，贴板
+  seated_height_mm: 约 2.5（贴板卧装）
+  kicad_symbol: Device:R
+  kicad_footprint: StudentHW:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+  dim_source: 厂家规格书 UNI-ROYAL MFR 系列尺寸表（dim_MFR_1-4W.png）
+  level: B
+  pitfalls: 本体最长可到 7.5 mm，7.62 脚距要贴着本体弯脚；嫌难弯就用 RES-002 的 10.16 脚距
+  notes: >-
+    同系列常用阻值（尺寸、封装相同，只换 C 编号）：100Ω C57438、220Ω C57439、330Ω C58608、1kΩ C57435、2.2kΩ C58595、
+    4.7kΩ C57204、5.1kΩ C58591、10kΩ C57436、100kΩ C58597。封装与 V1.1 底板同一个。
+  taobao_keyword: 1/4W 金属膜电阻 1% 色环 直插
+  polarized: 否
+  lead_max_mm: 0.59
+  pdf_keyword: MFR
+
+- id: RES-002
+  category: 电阻
+  name: 1/4W 金属膜电阻 1%，卧装 10.16 mm
+  lcsc: C57436
+  alternatives: [{lcsc: C119347, note: CCO 10kΩ 1/4W 金属膜，本体 Φ2.3×6.5}]
+  key_params: 1/4W（70℃），±1%，金属膜，最高工作电压 250V；图示型号 10kΩ
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 10.16
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.54±0.05
+  body_mm: Φ2.2±0.3 × 6.5±1.0（最长 7.5）
+  mount: 卧装直插，贴板
+  seated_height_mm: 约 2.5（贴板卧装）
+  kicad_symbol: Device:R
+  kicad_footprint: Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+  dim_source: 厂家规格书 UNI-ROYAL MFR 系列尺寸表（与 RES-001 同一份，见 evidence/RES-001/dim_MFR_1-4W.png）
+  level: B
+  pitfalls: 脚距 10.16 比 7.62 占地大，但弯脚不用贴本体，新手更好焊
+  notes: 阻值 C 编号同 RES-001 列表。
+  taobao_keyword: 1/4W 金属膜电阻 1% 色环 直插
+  polarized: 否
+  lead_max_mm: 0.59
+  pdf_keyword: MFR
+  evidence_extra: [evidence/RES-001/dim_MFR_1-4W.png]
+
+- id: POT-001
+  category: 电阻
+  name: 3296W 多圈精密可调电阻 10kΩ
+  lcsc: C34846
+  alternatives: [{lcsc: C118954, note: 国产 3296W 同尺寸}]
+  key_params: 10kΩ ±10%，25 圈，0.5W（70℃），旋钮在顶部
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 3
+  pinout: 1=CCW 端，2=滑动端（中间脚），3=CW 端；顺时针拧，滑动端向 3 脚移动
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用（三脚一排）
+  lead_size_mm: 引脚 Φ0.51±0.03
+  body_mm: 9.53 × 4.83 × 10.03（高）
+  mount: 立式直插
+  seated_height_mm: 10.03
+  kicad_symbol: Device:R_Potentiometer_Trim
+  kicad_footprint: StudentHW:Potentiometer_Bourns_3296W_Vertical_Pad1.6
+  dim_source: Bourns 3296 规格书 Product Dimensions 与 3296W 引脚图（dim_Bourns3296W.png）
+  level: B
+  pitfalls: 官方封装焊盘 1.44、环宽只有 0.32，库里改成 1.6；三只脚不在本体正中，按丝印外框方向放
+  notes: 改自 KiCad 官方 Potentiometer_Bourns_3296W_Vertical，只加大焊盘。其他阻值把 103 换成对应代码（如 102=1k、503=50k）。
+  taobao_keyword: 3296W 精密可调电阻 103
+  polarized: 否
+  lead_max_mm: 0.54
+
+- id: CAP-001
+  category: 电容
+  name: 瓷片电容 104（100nF/50V），脚距 5.08 mm
+  lcsc: C254085
+  alternatives: [{lcsc: C2832508, note: 同厂 100nF/50V 瓷片，Z 档 -20%/+80%}]
+  key_params: 100nF ±20%，50V，高介电常数瓷片（容量随温度和电压变化大，只做去耦）
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.0（厂家 F=5.08±0.8，与 5.00 封装通用）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ≤0.55
+  body_mm: 直径 6+0.7（最大 6.7）× 厚 2.2±0.5
+  mount: 立式直插
+  seated_height_mm: 约 7–9（本体直径加引脚弯折段，规格书未给总高）
+  kicad_symbol: Device:C
+  kicad_footprint: Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm
+  dim_source: 厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc104.png）
+  level: B
+  pitfalls: 直径 6.7 比 V1.1 用的 5 mm 瓷片大，要用 D7.0 封装，否则和相邻元件打架
+  notes: 精度要求高（滤波、定时）的地方改用 CAP-004 独石电容。
+  taobao_keyword: 瓷片电容 104 50V 直插 5.08
+  polarized: 否
+  lead_max_mm: 0.55
+
+- id: CAP-002
+  category: 电容
+  name: 瓷片电容 103（10nF/50V），脚距 5.08 mm
+  lcsc: C2761727
+  alternatives: [{lcsc: C263209, note: 10nF 1kV 高压瓷片，体积可能更大，换前核对直径}]
+  key_params: 10nF，-20%/+80%（Z 档），50V，高介电常数瓷片
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.0（厂家 F=5.08，与 5.00 封装通用）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ≤0.55
+  body_mm: 直径 4.8+0.7（最大 5.5）× 厚 ≤3.2
+  mount: 立式直插
+  seated_height_mm: 约 6–8（规格书未给总高）
+  kicad_symbol: Device:C
+  kicad_footprint: Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm
+  dim_source: 厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc103.png）
+  level: B
+  pitfalls: 本体最大 5.5，比封装外框 5.1 稍大，两边各留 0.3 mm
+  notes: Z 档容量偏差大（-20%~+80%），只用于去耦、按键消抖。
+  taobao_keyword: 瓷片电容 103 50V 直插
+  polarized: 否
+  lead_max_mm: 0.55
+
+- id: CAP-003
+  category: 电容
+  name: 瓷片电容 22pF（晶振负载），脚距 5 mm
+  lcsc: C260725
+  alternatives: [{lcsc: C694484, note: TDK 22pF SL 1kV}]
+  key_params: 22pF ±10%，SL 温度特性，1kV 高压瓷片
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.0（厂家 F=5.0±0.8）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5
+  body_mm: 直径 5.5±1（最大 6.5）× 厚 2.0±1
+  mount: 立式直插
+  seated_height_mm: 约 7–9（规格书未给总高）
+  kicad_symbol: Device:C
+  kicad_footprint: Capacitor_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm
+  dim_source: 厂家规格书 松田 HV 系列尺寸表（dim_STE_HV.png）
+  level: B
+  pitfalls: 这是 1kV 高压瓷片，体积比普通 50V 的大；用模块的项目一般用不到晶振负载电容
+  notes: pF 级小电容选 SL/NP0 类，容量稳定。
+  taobao_keyword: 瓷片电容 22pF 直插
+  polarized: 否
+  lead_max_mm: 0.5
+  pdf_keyword: HV Series
+
+- id: CAP-004
+  category: 电容
+  name: 独石电容 104（100nF/50V X7R），脚距 5.08 mm
+  lcsc: C84772
+  alternatives: [{lcsc: C263181, note: Dersonic 100nF/50V 独石}]
+  key_params: 100nF ±10%，50V，X7R（B 特性，温度稳定）
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.0（厂家 F=5.08，与 5.00 封装通用）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.1
+  body_mm: 长 ≤4.2 × 宽 ≤3.8 × 厚 ≤3.8（c1 型）
+  mount: 立式直插
+  seated_height_mm: 约 6（规格书未给总高）
+  kicad_symbol: Device:C
+  kicad_footprint: Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm
+  dim_source: 厂家规格书 风华 CT4 系列外形 c1（dim_CT4.png）
+  level: B
+  pitfalls: 独石电容方块状，比瓷片厚，用 W4.4 的封装
+  notes: 比瓷片容量准、温度稳定，推荐作为通用去耦电容。
+  taobao_keyword: 独石电容 104 50V 直插 5.08
+  polarized: 否
+  lead_max_mm: 0.6
+  pdf_keyword: CT4
+
+- id: CAP-010
+  category: 电解电容
+  name: 电解电容 10µF/25V Φ5×11
+  lcsc: C43347
+  alternatives: [{lcsc: C216293, note: 华威 10µF/25V Φ5×11}]
+  key_params: 10µF ±20%，25V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ5（最大 5.5）× 11（最大 12.5）
+  mount: 立式直插
+  seated_height_mm: 最大 12.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D5.0mm_P2.00mm
+  dim_source: V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（dim_KM_series.png）
+  level: A
+  pitfalls: 方焊盘是正极；外套上负号条那边是负极
+  notes: V1.1 底板已用此封装实焊（10µF/25V Φ5）。
+  taobao_keyword: 电解电容 10uF 25V 5*11
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+
+- id: CAP-011
+  category: 电解电容
+  name: 电解电容 100µF/16V Φ5×11
+  lcsc: C43348
+  alternatives: [{lcsc: C2960368, note: HRK 100µF/16V Φ5×11}]
+  key_params: 100µF ±20%，16V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 2.0
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ5（最大 5.5）× 11（最大 12.5）
+  mount: 立式直插
+  seated_height_mm: 最大 12.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D5.0mm_P2.00mm
+  dim_source: 厂家规格书 CX KM 系列尺寸表（与 CAP-010 同一份，见 evidence/CAP-010/dim_KM_series.png）
+  level: B
+  pitfalls: V1.1 用的 100µF/16V 是 Φ6.3 的，这颗是 Φ5，封装不同不要混买
+  notes: 买 Φ6.3 的就改用 CAP-012 的封装。
+  taobao_keyword: 电解电容 100uF 16V 5*11
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+  evidence_extra: [evidence/CAP-010/dim_KM_series.png]
+
+- id: CAP-012
+  category: 电解电容
+  name: 电解电容 220µF/16V Φ6.3×11
+  lcsc: C43349
+  alternatives: [{lcsc: C47344173, note: 杰尔瑞 220µF/16V Φ6.3×11}]
+  key_params: 220µF ±20%，16V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 2.5
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ6.3（最大 6.8）× 11（最大 12.5）
+  mount: 立式直插
+  seated_height_mm: 最大 12.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D6.3mm_P2.50mm
+  dim_source: 厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png）
+  level: B
+  pitfalls: 方焊盘是正极
+  notes: 封装与 V1.1 的 100µF/16V Φ6.3 同一个。
+  taobao_keyword: 电解电容 220uF 16V 6.3*11
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+  evidence_extra: [evidence/CAP-010/dim_KM_series.png]
+
+- id: CAP-013
+  category: 电解电容
+  name: 电解电容 470µF/16V Φ8×12
+  lcsc: C28067
+  alternatives: [{lcsc: C47344174, note: 杰尔瑞 470µF/16V Φ8×12}]
+  key_params: 470µF ±20%，16V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 3.5
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ8（最大 8.5）× 12（最大 13.5）
+  mount: 立式直插
+  seated_height_mm: 最大 13.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D8.0mm_P3.50mm
+  dim_source: 厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png）
+  level: B
+  pitfalls: 方焊盘是正极
+  notes: 封装与 V1.1 的 1000µF/10V Φ8 同一个。
+  taobao_keyword: 电解电容 470uF 16V 8*12
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+  evidence_extra: [evidence/CAP-010/dim_KM_series.png]
+
+- id: CAP-014
+  category: 电解电容
+  name: 电解电容 1000µF/16V Φ8×16
+  lcsc: C43832
+  alternatives: [{lcsc: C49256792, note: 杰尔瑞 1000µF/16V Φ8×16}]
+  key_params: 1000µF ±20%，16V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 3.5
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ8（最大 8.5）× 16（最大 17.5）
+  mount: 立式直插
+  seated_height_mm: 最大 17.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D8.0mm_P3.50mm
+  dim_source: 厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png）
+  level: B
+  pitfalls: 高 17.5 mm，注意外壳和上层模块的高度；封装自带的 3D 模型是通用高度，比这颗实物矮
+  notes: 和 CAP-015 封装相同，只是更高、耐压 16V。
+  taobao_keyword: 电解电容 1000uF 16V 8*16
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+  evidence_extra: [evidence/CAP-010/dim_KM_series.png]
+
+- id: CAP-015
+  category: 电解电容
+  name: 电解电容 1000µF/10V Φ8×12
+  lcsc: C10752
+  alternatives: [{lcsc: C3299, note: 同厂 GR 系列 1000µF/10V Φ8×12}]
+  key_params: 1000µF ±20%，10V，105℃
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 1=+（长脚），2=-（短脚，外套负号条一侧）
+  pitch_mm: 3.5
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5±0.05
+  body_mm: Φ8（最大 8.5）× 12（最大 13.5）
+  mount: 立式直插
+  seated_height_mm: 最大 13.5
+  kicad_symbol: Device:C_Polarized
+  kicad_footprint: StudentHW:CP_Radial_D8.0mm_P3.50mm
+  dim_source: V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png）
+  level: A
+  pitfalls: 10V 耐压只能用在 5V 及以下电源上
+  notes: V1.1 底板已用此封装实焊（1000µF/10V Φ8）。
+  taobao_keyword: 电解电容 1000uF 10V 8*12
+  polarized: 是
+  lead_max_mm: 0.55
+  pdf_keyword: KM Series
+  evidence_extra: [evidence/CAP-010/dim_KM_series.png]
+
+- id: FUS-001
+  category: 保险
+  name: 直插自恢复保险丝 0.5A
+  lcsc: C21025
+  alternatives: [{lcsc: C208476, note: Bourns MF-R050，同规格}]
+  key_params: 维持电流 0.50A，动作电流 1.0A，最高 60V，最大故障电流 40A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.08（厂家 5.1±0.5）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5
+  body_mm: 宽 7.9 × 高 16.2 × 厚 3.1（均为最大值）
+  mount: 立式直插
+  seated_height_mm: 最大 16.2
+  kicad_symbol: Device:Polyfuse
+  kicad_footprint: StudentHW:Fuse_PTC_Radial_P5.08mm
+  dim_source: 厂家规格书 瑞隆源 RL60 系列尺寸表（dim_RL60.png）
+  level: B
+  pitfalls: 两脚出厂是弯的（一前一后），插直排 5.08 孔前把脚掰正
+  notes: 封装与 V1.1 的 2A 自恢复保险同一个。无 3D 模型（V1.1 原封装就没有），不影响焊接。
+  taobao_keyword: 自恢复保险丝 0.5A 60V 直插
+  polarized: 否
+  lead_max_mm: 0.5
+
+- id: FUS-002
+  category: 保险
+  name: 直插自恢复保险丝 1.1A
+  lcsc: C21017
+  alternatives: [{lcsc: C208481, note: Bourns MF-R110，同规格}]
+  key_params: 维持电流 1.10A，动作电流 2.2A，最高 30V，最大故障电流 40A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.08（厂家 5.1±0.5）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.5
+  body_mm: 宽 7.4 × 高 18.5 × 厚 3.0（均为最大值）
+  mount: 立式直插
+  seated_height_mm: 最大 18.5
+  kicad_symbol: Device:Polyfuse
+  kicad_footprint: StudentHW:Fuse_PTC_Radial_P5.08mm
+  dim_source: 厂家规格书 瑞隆源 RL30 系列尺寸表（dim_RL30.png）
+  level: B
+  pitfalls: 30V 耐压，只能用在 30V 以下；两脚出厂是弯的，插孔前掰正
+  notes: 无 3D 模型（沿用 V1.1 封装），不影响焊接。
+  taobao_keyword: 自恢复保险丝 1.1A 30V 直插
+  polarized: 否
+  lead_max_mm: 0.5
+
+- id: FUS-003
+  category: 保险
+  name: 直插自恢复保险丝 2A
+  lcsc: C21019
+  alternatives: [{lcsc: C369092, note: 金瑞 JK60-200（2A），脚距 5.1}]
+  key_params: 维持电流 2.0A，动作电流 4.0A，最高 30V，最大故障电流 40A
+  supply: 不适用
+  logic_level: 不适用
+  pin_count: 2
+  pinout: 无极性
+  pitch_mm: 5.08（厂家 5.1±0.5）
+  row_spacing_mm: 不适用
+  lead_size_mm: 引线 Φ0.6
+  body_mm: 宽 10.2 × 高 20.2 × 厚 3.0（均为最大值）
+  mount: 立式直插
+  seated_height_mm: 最大 20.2
+  kicad_symbol: Device:Polyfuse
+  kicad_footprint: StudentHW:Fuse_PTC_Radial_P5.08mm
+  dim_source: V1.1 实物验证；厂家规格书 瑞隆源 RL30 系列尺寸表（见 evidence/FUS-002/dim_RL30.png）
+  level: A
+  pitfalls: 本体宽 10.2，比封装外框 9.2 宽，两侧各留 0.6 mm 以上空位；高 20 mm，注意外壳
+  notes: V1.1 底板已用此封装实焊 2A 自恢复保险。无 3D 模型（V1.1 原封装就没有），不影响焊接。
+  taobao_keyword: 自恢复保险丝 2A 30V 直插
+  polarized: 否
+  lead_max_mm: 0.6
+  evidence_extra: [evidence/FUS-002/dim_RL30.png]

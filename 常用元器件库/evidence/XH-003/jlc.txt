@@ -1,0 +1,13 @@
+# XH-003 XH 3P 直插（JST B3B-XH-A）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C144394
+  型号: B3B-XH-A(LF)(SN)
+  厂家: JST
+  封装: Plugin,P=2.5mm
+  描述: -25℃~+85℃ 1 1x3P 2.5mm 250V 3 3A 3P 5.75mm 7mm 9.9mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH 插件,P=2.5mm Wire To Board Connector ROHS
+  立创商城: ¥0.3331 起订10  库存 12803
+  嘉立创库存: 186148  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B3B-XH-A-LF-SN_C144394.pdf
+

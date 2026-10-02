@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895550": {
+   "role": "主选",
+   "code": "C2895550",
+   "mpn": "XL-502SYGD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-20℃~+85℃ 2.3V 20mA 25° 300mcd 50mW 560nm~580nm 570nm 5mm round lamp head Green Lens Yellow Green 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 17613,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0316
+    ],
+    [
+     200,
+     0.0251
+    ],
+    [
+     1000,
+     0.02
+    ]
+   ],
+   "cny_price": 0.1937,
+   "cny_step": 20,
+   "szlcsc_stock": "855",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502SYGD_C2895550.pdf"
+  },
+  "C2895548": {
+   "role": "替代",
+   "code": "C2895548",
+   "mpn": "XL-502UGD",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=5mm",
+   "describe": "-25℃~+85℃ 12cd 20mA 25° 3V 520nm 520nm~530nm 5mm round lamp head 70mW Emerald Green Green Lens 插件,D=5mm LED Indication - Discrete ROHS",
+   "jlc_stock": 131828,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0324
+    ],
+    [
+     200,
+     0.0252
+    ],
+    [
+     1000,
+     0.0202
+    ]
+   ],
+   "cny_price": 0.1985,
+   "cny_step": 20,
+   "szlcsc_stock": "6591",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UGD_C2895548.pdf"
+  }
+ }
+}

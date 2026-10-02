@@ -1,0 +1,13 @@
+# SW-004 6×6 直插轻触开关 高 13mm
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C223774
+  型号: K2-1102DP-S4SW-04
+  厂家: Korean Hroparts Elec
+  封装: Plugin-4P,6x6mm
+  描述: -25℃~+85℃ 100,000 cycles 12V 13mm 2.5N 50mA 6mm 6mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS
+  立创商城: ¥0.415 起订10  库存 177
+  嘉立创库存: 1775  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2108131730_Korean-Hroparts-Elec-K2-1102DP-S4SW-04_C223774.pdf
+

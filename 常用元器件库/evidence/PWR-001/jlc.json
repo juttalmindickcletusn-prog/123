@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C381116": {
+   "role": "主选",
+   "code": "C381116",
+   "mpn": "DC-005-5A-2.0",
+   "brand": "XKB Connection",
+   "package": "Plugin",
+   "describe": "-20℃~+70℃ 24V 2mm 5A 6.2mm DC Power Jack Right Angle 插件 DC Power Connectors ROHS",
+   "jlc_stock": 31751,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.2611
+    ],
+    [
+     50,
+     0.2073
+    ],
+    [
+     150,
+     0.1811
+    ]
+   ],
+   "cny_price": 1.6062,
+   "cny_step": 5,
+   "szlcsc_stock": "5415",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2110151630_XKB-Connection-DC-005-5A-2-0_C381116.pdf"
+  },
+  "C16214": {
+   "role": "替代",
+   "code": "C16214",
+   "mpn": "DC-005 2.0",
+   "brand": "BOOMELE(Boom Precision Elec)",
+   "package": "Plugin",
+   "describe": "-25℃~+85℃ 12V 1A 2mm 6.4mm DC Power Jack Right Angle 插件 DC Power Connectors ROHS",
+   "jlc_stock": 83447,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0561
+    ],
+    [
+     100,
+     0.0451
+    ],
+    [
+     500,
+     0.0392
+    ]
+   ],
+   "cny_price": 0.3446,
+   "cny_step": 10,
+   "szlcsc_stock": "8344",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2308221657_BOOMELE-Boom-Precision-Elec-DC-005-2-0_C16214.pdf"
+  }
+ }
+}

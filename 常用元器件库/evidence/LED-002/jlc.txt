@@ -1,0 +1,22 @@
+# LED-002 5mm 绿色 LED（黄绿，低压降）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C2895550
+  型号: XL-502SYGD
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -20℃~+85℃ 2.3V 20mA 25° 300mcd 50mW 560nm~580nm 570nm 5mm round lamp head Green Lens Yellow Green 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1937 起订20  库存 855
+  嘉立创库存: 17613  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502SYGD_C2895550.pdf
+
+[替代] C2895548
+  型号: XL-502UGD
+  厂家: XINGLIGHT
+  封装: Plugin,D=5mm
+  描述: -25℃~+85℃ 12cd 20mA 25° 3V 520nm 520nm~530nm 5mm round lamp head 70mW Emerald Green Green Lens 插件,D=5mm LED Indication - Discrete ROHS
+  立创商城: ¥0.1985 起订20  库存 6591
+  嘉立创库存: 131828  贴片库: expand
+  规格书: https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-502UGD_C2895548.pdf
+

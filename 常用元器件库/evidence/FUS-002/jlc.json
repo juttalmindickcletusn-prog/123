@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C21017": {
+   "role": "主选",
+   "code": "C21017",
+   "mpn": "RL30-110",
+   "brand": "RUILON(Shenzhen Ruilongyuan Elec)",
+   "package": "Plugin,P=5.1mm",
+   "describe": "-40℃~+85℃ 1.1A 2.2A 260mΩ 30V 40A 50mΩ 6.6s 700mW 插件,P=5.1mm Resettable Fuses ROHS",
+   "jlc_stock": 4225,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1399
+    ],
+    [
+     50,
+     0.1119
+    ],
+    [
+     150,
+     0.0979
+    ]
+   ],
+   "cny_price": 0.8599,
+   "cny_step": 5,
+   "szlcsc_stock": "845",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL30-110_C21017.pdf"
+  },
+  "C208481": {
+   "role": "替代",
+   "code": "C208481",
+   "mpn": "MF-R110",
+   "brand": "BOURNS",
+   "package": "Plugin,P=5.08mm",
+   "describe": "-40℃~+85℃ 1.1A 100mΩ 2.2A 270mΩ 30V 40A 6.6s 700mW 8.9mm 插件,P=5.08mm Resettable Fuses ROHS",
+   "jlc_stock": 2244,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1355
+    ],
+    [
+     50,
+     0.107
+    ],
+    [
+     150,
+     0.0927
+    ]
+   ],
+   "cny_price": 0.8331,
+   "cny_step": 5,
+   "szlcsc_stock": "448",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1806121917_BOURNS-MF-R110_C208481.pdf"
+  }
+ }
+}

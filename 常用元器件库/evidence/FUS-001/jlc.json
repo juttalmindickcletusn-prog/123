@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C21025": {
+   "role": "主选",
+   "code": "C21025",
+   "mpn": "RL60-050",
+   "brand": "RUILON(Shenzhen Ruilongyuan Elec)",
+   "package": "Plugin,P=5.1mm",
+   "describe": "-40℃~+85℃ 1.2Ω 1A 400mΩ 40A 4s 500mA 60V 7.9mm 800mW 插件,P=5.1mm Resettable Fuses ROHS",
+   "jlc_stock": 7811,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1047
+    ],
+    [
+     50,
+     0.086
+    ],
+    [
+     150,
+     0.0766
+    ]
+   ],
+   "cny_price": 0.644,
+   "cny_step": 5,
+   "szlcsc_stock": "1557",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403081021_RUILON-Shenzhen-Ruilongyuan-Elec-RL60-050_C21025.pdf"
+  },
+  "C208476": {
+   "role": "替代",
+   "code": "C208476",
+   "mpn": "MF-R050",
+   "brand": "BOURNS",
+   "package": "Plugin,P=5.1mm",
+   "describe": "-40℃~+85℃ 1.17Ω 1A 40A 410mΩ 4s 5.1mm 500mA 60V 7.9mm 750mW 插件,P=5.1mm Resettable Fuses ROHS",
+   "jlc_stock": 7030,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.1433
+    ],
+    [
+     50,
+     0.1121
+    ],
+    [
+     150,
+     0.0965
+    ]
+   ],
+   "cny_price": 0.8805,
+   "cny_step": 5,
+   "szlcsc_stock": "1406",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1806111031_BOURNS-MF-R050_C208476.pdf"
+  }
+ }
+}

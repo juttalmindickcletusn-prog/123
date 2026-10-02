@@ -1,0 +1,22 @@
+# Q-002 PNP 三极管 S8550（TO-92）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C717454
+  型号: S8550
+  厂家: LGE
+  封装: TO-92
+  描述: -55℃~+150℃ 1 PNP 100nA 150MHz 25V 400 500mA 5V 600mV 625mW PNP TO-92 Bipolar (BJT) ROHS
+  立创商城: ¥0.1452 起订20  库存 100
+  嘉立创库存: 2004  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2008031905_LGE-S8550_C717454.pdf
+
+[替代] C141644
+  型号: S8550(RANGE:160-300)
+  厂家: Jiangsu Changjing Electronics Technology Co., Ltd.
+  封装: TO-92
+  描述: 1 PNP 100nA 150MHz 160 25V 500mA 5V 600mV 625mW PNP TO-92 Bipolar (BJT) ROHS
+  立创商城: ¥0.1979 起订20  库存 143
+  嘉立创库存: 2866  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--S8550-RANGE-160-300_C141644.pdf
+

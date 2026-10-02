@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C2895458": {
+   "role": "主选",
+   "code": "C2895458",
+   "mpn": "XL-302UWC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 20mA 3.2V 30° 3mm Round Lens 6000K~8000K 70mW 8cd Discrete Diode Water Clear White 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 35606,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0287
+    ],
+    [
+     200,
+     0.0223
+    ],
+    [
+     1000,
+     0.0178
+    ]
+   ],
+   "cny_price": 0.1759,
+   "cny_step": 20,
+   "szlcsc_stock": "1734",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-302UWC_C2895458.pdf"
+  },
+  "C2895459": {
+   "role": "替代",
+   "code": "C2895459",
+   "mpn": "XL-304UWC",
+   "brand": "XINGLIGHT",
+   "package": "Plugin,D=3mm",
+   "describe": "-20℃~+85℃ 20mA 25° 3.2V 3mm Round Lens 6000K~8000K 70mW 9cd Discrete Diode Water Clear White 插件,D=3mm LED Indication - Discrete ROHS",
+   "jlc_stock": 18084,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0313
+    ],
+    [
+     200,
+     0.0248
+    ],
+    [
+     1000,
+     0.0196
+    ]
+   ],
+   "cny_price": 0.1915,
+   "cny_step": 20,
+   "szlcsc_stock": "904",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401120947_XINGLIGHT-XL-304UWC_C2895459.pdf"
+  }
+ }
+}

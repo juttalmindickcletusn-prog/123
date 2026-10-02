@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C402311": {
+   "role": "主选",
+   "code": "C402311",
+   "mpn": "1N4007",
+   "brand": "LGE",
+   "package": "DO-41",
+   "describe": "-65℃~+150℃ 1A 1V@1A 1kV 30A 5uA@1kV Independent DO-41 Diodes - General Purpose ROHS",
+   "jlc_stock": 185742,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0228
+    ],
+    [
+     500,
+     0.0186
+    ],
+    [
+     1500,
+     0.0162
+    ]
+   ],
+   "cny_price": 0.1395,
+   "cny_step": 50,
+   "szlcsc_stock": "3714",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410010131_LGE-1N4007_C402311.pdf"
+  },
+  "C2457": {
+   "role": "替代",
+   "code": "C2457",
+   "mpn": "1N4007G",
+   "brand": "MDD(Microdiode Semiconductor)",
+   "package": "DO-41",
+   "describe": "-65℃~+150℃ 1 Independent 1.1V@1A 1A 1kV 30A 5uA@1kV DO-41 Diodes - General Purpose ROHS",
+   "jlc_stock": 168261,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0225
+    ],
+    [
+     200,
+     0.0179
+    ],
+    [
+     600,
+     0.0155
+    ]
+   ],
+   "cny_price": 0.1377,
+   "cny_step": 20,
+   "szlcsc_stock": "8413",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2407301037_MDD-Microdiode-Semiconductor-1N4007G_C2457.pdf"
+  }
+ }
+}

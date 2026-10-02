@@ -1,0 +1,14 @@
+# TERM-003 5.08mm 螺钉端子 2P（KF301-5.08 同款）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C8465
+  型号: WJ500V-5.08-2P
+  厂家: Ningbo Kangnex Elec
+  封装: Plugin,P=5.08mm
+  描述: -40℃~+105℃ 1 14~30 18A 1x2P 2 2.5 250V 2P 5.08mm Green M2.5 Through Hole 插件,P=5.08mm Screw Terminal Blocks ROHS
+  立创商城: ¥0.8217 起订5  库存 44137
+  嘉立创库存: 266219  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_1912251636_Ningbo-Kangnex-Elec-WJ500V-5-08-2P_C8465.pdf
+
+  规格书下载: 已保存 117 KB

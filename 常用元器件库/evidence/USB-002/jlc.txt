@@ -1,0 +1,14 @@
+# USB-002 Type-C 6P 仅供电母座（贴片信号脚+直插固定脚）
+查询日期: 2026-10-02
+来源: jlcpcb.com/partdetail 接口 + 立创商城(EasyEDA元件接口)
+
+[主选] C456012
+  型号: TYPE-C 6P
+  厂家: SHOU HAN
+  封装: SMD
+  描述: -40℃~+85℃ 1 3,000 Cycles 3A 5V 6P Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS
+  立创商城: ¥0.2384 起订10  库存 68308
+  嘉立创库存: 688649  贴片库: expand
+  规格书: https://www.lcsc.com/datasheet/lcsc_datasheet_2012031006_SHOU-HAN-TYPE-C-6P_C456012.pdf
+
+  规格书下载: 已保存 1020 KB
