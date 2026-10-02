@@ -10,7 +10,10 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import fitz
+try:
+    import fitz
+except ImportError:  # Debian/Ubuntu 的 python3-pymupdf 只提供 pymupdf 名字
+    import pymupdf as fitz
 
 ROOT = Path(__file__).resolve().parents[1]
 

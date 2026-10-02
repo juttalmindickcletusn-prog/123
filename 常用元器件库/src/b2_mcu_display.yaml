@@ -72,6 +72,7 @@
   category: 主控板
   name: STM32F103C8T6 最小系统板（蓝色药丸，淘宝）
   lcsc: ""
+  datasheet_url: "https://www.lcsc.com/datasheet/lcsc_datasheet_2408010918_LCSC-boards-LCKFB-DKX-STM32F103C8T6_C22396880.pdf"
   part_number: STM32F103C8T6 Blue Pill
   manufacturer: 淘宝通用
   alternatives: []
@@ -105,6 +106,7 @@
   category: 主控板
   name: 乐鑫 ESP32-S3-DevKitC-1（44P）
   lcsc: ""
+  datasheet_url: "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html"
   part_number: ESP32-S3-DevKitC-1 v1.1
   manufacturer: Espressif（乐鑫）
   alternatives: []
@@ -139,6 +141,7 @@
   category: 主控板
   name: ESP32-S3 N16R8 兼容开发板（淘宝，DevKitC-1 脚位）
   lcsc: ""
+  datasheet_url: "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html"
   part_number: ESP32-S3-N16R8 DevKitC-1 compatible
   manufacturer: 淘宝通用
   alternatives: []
@@ -172,6 +175,7 @@
   category: 主控板
   name: 乐鑫 ESP32-DevKitC V4（38P）
   lcsc: ""
+  datasheet_url: "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"
   part_number: ESP32-DevKitC V4
   manufacturer: Espressif（乐鑫）
   alternatives: []
@@ -206,6 +210,7 @@
   category: 主控板
   name: ESP32 30P 开发板（DOIT DevKit V1 类，淘宝）
   lcsc: ""
+  datasheet_url: "https://www.espboards.dev/esp32/esp32doit-devkit-v1/"
   part_number: ESP32 DEVKIT V1 30P
   manufacturer: 淘宝通用（DOIT 版型）
   alternatives: []
@@ -240,6 +245,7 @@
   category: 主控板
   name: ESP32-C3 SuperMini（淘宝）
   lcsc: ""
+  datasheet_url: "https://www.espboards.dev/esp32/esp32-c3-super-mini/"
   part_number: ESP32-C3 SuperMini
   manufacturer: 淘宝通用（nologo）
   alternatives: []
@@ -274,6 +280,7 @@
   category: 主控板
   name: Arduino Nano（含 CH340 兼容版）
   lcsc: ""
+  datasheet_url: "https://docs.arduino.cc/resources/datasheets/A000005-datasheet.pdf"
   part_number: Arduino Nano (A000005)
   manufacturer: Arduino（兼容版淘宝通用）
   alternatives: []
@@ -307,6 +314,7 @@
   category: 主控板
   name: NodeMCU ESP8266 v3（CH340，宽版 27.94）
   lcsc: ""
+  datasheet_url: "https://frightanic.com/iot/comparison-of-esp8266-nodemcu-development-boards/"
   part_number: NodeMCU v3 (LoLin, CH340)
   manufacturer: 淘宝通用
   alternatives: []
@@ -341,6 +349,7 @@
   category: 主控板
   name: NodeMCU ESP8266 v2（CP2102，窄版 22.86）
   lcsc: ""
+  datasheet_url: "https://frightanic.com/iot/comparison-of-esp8266-nodemcu-development-boards/"
   part_number: NodeMCU v2 (Amica, CP2102)
   manufacturer: 淘宝通用
   alternatives: []
@@ -374,6 +383,7 @@
   category: 显示屏
   name: 0.96 寸 I2C OLED 4P（GND 在前）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/0.96inch_OLED_Module_MC096GX"
   part_number: 0.96 OLED I2C GND-VCC-SCL-SDA (MC096GX)
   manufacturer: 全动电子 QD（lcdwiki），淘宝通用
   alternatives: []
@@ -407,6 +417,7 @@
   category: 显示屏
   name: 0.96 寸 I2C OLED 4P（VCC 在前）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/0.96inch_OLED_Module_MC096VX"
   part_number: 0.96 OLED I2C VCC-GND-SCL-SDA (MC096VX)
   manufacturer: 全动电子 QD（lcdwiki），淘宝通用
   alternatives: []
@@ -439,6 +450,7 @@
   category: 显示屏
   name: 1.3 寸 I2C OLED 4P（SH1106，GND 在前）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MC130GX_VX/1.3inch_IIC_OLED_Module_MC130GX&MC130VX_User_Manual_CN.pdf"
   part_number: 1.3 OLED I2C SH1106 (MC130GX)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -472,6 +484,7 @@
   category: 显示屏
   name: 1.3 寸 I2C OLED 4P（SH1106，VCC 在前）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MC130GX_VX/1.3inch_IIC_OLED_Module_MC130GX&MC130VX_User_Manual_CN.pdf"
   part_number: 1.3 OLED I2C SH1106 (MC130VX)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -506,6 +519,7 @@
   category: 显示屏
   name: 0.91 寸 I2C OLED 128×32
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MC091GX/0.91inch_IIC_OLED_Module_MC091GX_User_Manual_EN.pdf"
   part_number: 0.91 OLED I2C SSD1306 (MC091GX)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -539,6 +553,7 @@
   category: 显示屏
   name: 0.96 寸 SPI OLED 7P
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/0.96inch_SPI_OLED_Module"
   part_number: 0.96 OLED SPI 7P (MSP096X)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -572,6 +587,7 @@
   category: 显示屏
   name: 1.8 寸 SPI TFT ST7735S（8P）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MSP1803/1.8inch_SPI_Module_MSP1803_User_Manual_EN.pdf"
   part_number: 1.8 TFT SPI ST7735S (MSP1803)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -605,6 +621,7 @@
   category: 显示屏
   name: 1.54 寸 IPS ST7789 240×240（8P）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MSP1541/1.54inch_4-line-SPI_IPS_Module_MSP1541_User_Manual_EN.pdf"
   part_number: 1.54 IPS SPI ST7789 (MSP1541)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -638,6 +655,7 @@
   category: 显示屏
   name: 2.0 寸 IPS ST7789 240×320（8P）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MSP2008/2.0inch_4-line-SPI_IPS_Module_MSP2008_User_Manual_CN.pdf"
   part_number: 2.0 IPS SPI ST7789 (MSP2008)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -671,6 +689,7 @@
   category: 显示屏
   name: 2.4 寸 SPI TFT ILI9341 带触摸（14P）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MSP2402/2.4inch_SPI_Module_MSP2402_User_Manual_EN.pdf"
   part_number: 2.4 TFT SPI ILI9341 (MSP2402)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []
@@ -704,6 +723,7 @@
   category: 显示屏
   name: 2.8 寸 SPI TFT ILI9341 带触摸（14P）
   lcsc: ""
+  datasheet_url: "https://www.lcdwiki.com/res/MSP2807/2.8inch_SPI_Module_MSP2807_User_Manual_EN.pdf"
   part_number: 2.8 TFT SPI ILI9341 (MSP2807)
   manufacturer: 全动电子 QD（lcdwiki）
   alternatives: []

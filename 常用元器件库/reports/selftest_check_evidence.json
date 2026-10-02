@@ -4,5 +4,9 @@
   "BZ-002": [
    "缺尺寸图 dim*.png"
   ]
- }
+ },
+ "pdf_missing_warn": [
+  "BZ-002",
+  "BZ-002"
+ ]
 }

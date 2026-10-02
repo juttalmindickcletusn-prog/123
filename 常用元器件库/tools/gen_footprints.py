@@ -147,7 +147,10 @@ def write_fp(name, descr, tags, attr, items, pads, ref_at, val_at, models):
 
 def easy_model(src_name, rot=(0, 0, 0), offset=(0, 0, 0)):
     OUT3D.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(EASY3D / src_name, OUT3D / src_name)
+    if (EASY3D / src_name).exists():          # build/ 缓存可能被删；库里已有的模型直接沿用
+        shutil.copy2(EASY3D / src_name, OUT3D / src_name)
+    elif not (OUT3D / src_name).exists():
+        raise FileNotFoundError(f"缺 3D 模型 {src_name}：先运行 fetch_evidence.py 导出 EasyEDA 模型")
     return model("${STUDENTHW_DIR}/kicad/StudentHW.3dshapes/" + src_name, offset, rot)
 
 

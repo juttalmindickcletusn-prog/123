@@ -39,7 +39,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">V1.1 的 DC-005 封装插口画反，朝了板内；本封装丝印画了 EDGE 线和插口箭头，EDGE 线压在板边上</dd>
     <dt>备注</dt><dd>按厂家推荐 PCB 图新画：1、2 脚槽孔垂直于插头方向，3 脚槽孔平行于插头方向（立创 EDA 自带封装的槽孔方向、本体位置与厂家图不符，未采用）。 3D 用 KiCad 官方通用 DC 座模型（BarrelJack_Horizontal，引脚布局相同，只做平移）。</dd>
-    <dt>依据</dt><dd>厂家规格书 XKB DC-005-5A-2.0 外形图与推荐 PCB 图（dim_DC005_XKB.png、dim_DC005_PCB.png） · <a href="../evidence/PWR-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XKB DC-005-5A-2.0 外形图与推荐 PCB 图（dim_DC005_XKB.png、dim_DC005_PCB.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>DC-005 2.0（BOOMELE(Boom Precision Elec)）/ C16214：BOOMELE DC-005，1–2 脚距 6.3（本封装 5.9），1.0 宽槽孔可容下，焊前试插</dd>
     <dt>淘宝</dt><dd>DC-005 电源座 5.5*2.1 直插 三脚</dd>
   </dl>
@@ -57,7 +57,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">价格是 DC-005 的十几倍，学生项目一般用 PWR-001；官方封装是圆孔 1.6，片状脚可插入</dd>
     <dt>备注</dt><dd>KiCad 官方封装与 CUI 推荐 PCB 图一致（1、2 脚相距 6.0，3 脚偏 4.7）；本机官方库缺它的 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。</dd>
-    <dt>依据</dt><dd>厂家规格书 CUI PJ-102AH 机械图与推荐 PCB 图（dim_PJ102AH.png） · <a href="../evidence/PWR-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 CUI PJ-102AH 机械图与推荐 PCB 图（dim_PJ102AH.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无脚位相同的替代；手边只有 DC-005 就改用 PWR-001 的封装</dd>
     <dt>淘宝</dt><dd>PJ-102AH DC 电源座</dd>
   </dl>
@@ -75,7 +75,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">CC1、CC2 必须各接 5.1kΩ 到 GND，否则 C-C 线插上不供电。只有 2 个脚的 Type-C 座没有 CC 脚，已从库里删除。 信号脚是 1.0 脚距贴片，烙铁可焊，先固定外壳脚再焊信号脚</dd>
     <dt>备注</dt><dd>按厂家推荐 PCB 图新画，贴片脚向后加长 0.2 方便烙铁。外壳固定脚厂家推荐焊盘 1.0×1.8，库里加大到 1.2×2.0， 受 1.0 脚距和贴片脚间距限制，环宽按 0.3 放宽（外壳脚只做固定，不过电流）。3D 用立创 EDA 导出的模型。</dd>
-    <dt>依据</dt><dd>厂家规格书 首韩 TYPE-C 6P 推荐 PCB 图（dim_TypeC6P_layout.png，图片型，人工读图） · <a href="../evidence/USB-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 首韩 TYPE-C 6P 推荐 PCB 图（dim_TypeC6P_layout.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无已核对脚位的替代</dd>
     <dt>淘宝</dt><dd>Type-C 6P 母座 贴片 带固定脚</dd>
   </dl>
@@ -93,7 +93,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>D+/D- 为 USB2.0 差分信号</dd>
     <dt>坑</dt><dd class="pit">0.5 mm 脚距贴片，手焊易连锡，建议嘉立创贴片；只需要供电就用 USB-002</dd>
     <dt>备注</dt><dd>外壳固定脚焊盘 1.0、孔 0.6（官方封装与厂家图一致），环宽按 0.2 放宽；固定脚只做机械固定。本机官方库缺 3D 模型，库里复制一份并换上立创 EDA 的 3D，铜皮不变。</dd>
-    <dt>依据</dt><dd>厂家规格书 HRO TYPE-C-31-M-12 推荐 PCB 图（图片型 PDF，人工读图，dim_HRO_31M12_layout.png） · <a href="../evidence/USB-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 HRO TYPE-C-31-M-12 推荐 PCB 图（图片型 PDF，人工读图，dim_HRO_31M12_layout.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>TYPE-C16PIN（SHOU HAN）/ C393939：首韩 TYPE-C16PIN，与 HRO TYPE-C-31-M-12 脚位兼容（换前看规格书）</dd>
     <dt>淘宝</dt><dd>TYPE-C-31-M-12 16P 母座</dd>
   </dl>
@@ -111,7 +111,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">用几针就选几针的封装（如 PinHeader_1x04），不要整排 40P 放板上</dd>
     <dt>备注</dt><dd>环宽：2.54 脚距下官方焊盘 1.7、孔 1.0，环宽 0.35，再大易连锡，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 2.54-1xNA-H2.5 图纸（dim_PZ254_1xN.png，图片型，人工读图） · <a href="../evidence/HDR-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 2.54-1xNA-H2.5 图纸（dim_PZ254_1xN.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PZ254V-11-40P（XFCN）/ C2895846：XFCN PZ254V-11-40P</dd>
     <dt>淘宝</dt><dd>2.54 单排针 1*40 直针 镀金</dd>
   </dl>
@@ -129,7 +129,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯针伸出方向朝板边，封装外框画在伸出一侧</dd>
     <dt>备注</dt><dd>环宽同直排针，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.54-1xNAW-ZW 图纸（dim_PZ254_1xN_RA.png，图片型，人工读图） · <a href="../evidence/HDR-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.54-1xNAW-ZW 图纸（dim_PZ254_1xN_RA.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PZ254R-11-40P（XFCN）/ C2925569：XFCN PZ254R-11-40P</dd>
     <dt>淘宝</dt><dd>2.54 单排弯针 1*40</dd>
   </dl>
@@ -147,7 +147,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">双排针的符号脚号是 1、2 在同一列（左右排），画原理图前确认与模块丝印一致</dd>
     <dt>备注</dt><dd>环宽同单排针，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.54-2xNA-11.4MM 图纸（dim_PZ254_2xN.png，图片型，人工读图） · <a href="../evidence/HDR-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.54-2xNA-11.4MM 图纸（dim_PZ254_2xN.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PZ254V-12-80P（XFCN）/ C2895847：XFCN PZ254V-12-80P</dd>
     <dt>淘宝</dt><dd>2.54 双排针 2*40 直针</dd>
   </dl>
@@ -165,7 +165,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">2.0 和 2.54 外观很像，买错插不上；LD6002 等雷达模块是 2.0 间距</dd>
     <dt>备注</dt><dd>环宽：2.0 脚距下官方焊盘 1.35、孔 0.8，环宽 0.27，按 0.27 放宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.0-1xNA-L8.7MM 图纸（dim_PZ200_1xN.png，图片型，人工读图） · <a href="../evidence/HDR-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 PZ2.0-1xNA-L8.7MM 图纸（dim_PZ200_1xN.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PZ2.0-1X40P-H20（JXTCONN）/ C42431828：JXTCONN PZ2.0-1X40P-H20</dd>
     <dt>淘宝</dt><dd>2.0mm 单排针 1*40</dd>
   </dl>
@@ -183,7 +183,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">插模块的排母要先把模块插上再焊，保证两排对齐；其他针数换 PinSocket_1xNN</dd>
     <dt>备注</dt><dd>V1.1 用同系列 1×20、1×8 实焊。环宽：官方焊盘 1.7、孔 1.0，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 2.54-1xNA-H8.5MM 图纸（dim_PM254_1xN.png，图片型，人工读图） · <a href="../evidence/SKT-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 2.54-1xNA-H8.5MM 图纸（dim_PM254_1xN.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PM2.54-1X8PM-H85（JXTCONN）/ C42431840：JXTCONN PM2.54-1X8PM-H85</dd>
     <dt>淘宝</dt><dd>2.54 单排母 8P 高 8.5</dd>
   </dl>
@@ -201,7 +201,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">树莓派等 2×20 接口用；核心板两排针间距大于 2.54 时要用两个单排母，不能用这个</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽（同单排母）。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 PY2.54-2xNA-8.5MM 图纸（dim_PY254_2xN.png，图片型，人工读图） · <a href="../evidence/SKT-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 PY2.54-2xNA-8.5MM 图纸（dim_PY254_2xN.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>PM2.54-2X20P-H85（JXTCONN）/ C42431846：JXTCONN PM2.54-2X20P-H85</dd>
     <dt>淘宝</dt><dd>2.54 双排母 2*20 高 8.5</dd>
   </dl>
@@ -219,7 +219,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">2.0 和 2.54 外观很像，买错插不上</dd>
     <dt>备注</dt><dd>V1.1 底板 J2、J9 雷达插座已用此封装实焊（LD6002/LD6002C 8P 2.0）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 韩下 HX PM2.0-1x8P 图纸（dim_HX_PM20.png） · <a href="../evidence/SKT-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 韩下 HX PM2.0-1x8P 图纸（dim_HX_PM20.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>2.0-1*40PFemale（BOOMELE(Boom Precision Elec)）/ C7243：BOOMELE 2.0 单排母 1×40，可剪短</dd>
     <dt>淘宝</dt><dd>2.0mm 单排母 8P</dd>
   </dl>
@@ -237,7 +237,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">跳线帽要和 HDR-001 一起买；原理图用 Jumper 符号 + 1×02 排针封装</dd>
     <dt>备注</dt><dd>配件，不上板，不需要封装和符号。</dd>
-    <dt>依据</dt><dd>厂家规格书 博穆 2.54 短路帽闭口图纸（dim_jumper254.png，图片型，人工读图） · <a href="../evidence/JMP-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 博穆 2.54 短路帽闭口图纸（dim_jumper254.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>2.54Short Circuit Cap Opening（BOOMELE(Boom Precision Elec)）/ C5305：BOOMELE 开口跳线帽（可串在长针上）</dd>
     <dt>淘宝</dt><dd>2.54 跳线帽 短路帽</dd>
   </dl>
@@ -255,7 +255,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">KF301 有 5.0 和 5.08 两种脚距，3P 以上混用会插不进；V1.1 用的是 5.08 的（见 TERM-003）</dd>
     <dt>备注</dt><dd>厂家推荐孔 1.20，官方封装孔 1.3、焊盘 2.6。引脚离接线口一侧 4.0。</dd>
-    <dt>依据</dt><dd>厂家规格书 科发 KF301-5.0 图纸（dim_KF301_50.png，图片型，人工读图） · <a href="../evidence/TERM-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 科发 KF301-5.0 图纸（dim_KF301_50.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>其他品牌 KF301-5.0-2P 通用；注意 5.0 和 5.08 两种脚距</dd>
     <dt>淘宝</dt><dd>KF301-5.0-2P 接线端子</dd>
   </dl>
@@ -273,7 +273,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">KF301 有 5.0 和 5.08 两种脚距，3P 混用插不进；V1.1 用的是 5.08 的（见 TERM-004）</dd>
     <dt>备注</dt><dd>厂家推荐孔 1.20，官方封装孔 1.3、焊盘 2.6。</dd>
-    <dt>依据</dt><dd>厂家规格书 科发 KF301-5.0 图纸（与 TERM-001 同一份，图片型，人工读图，见 evidence/TERM-001/dim_KF301_50.png） · <a href="../evidence/TERM-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 科发 KF301-5.0 图纸（与 TERM-001 同一份，图片型，人工读图，见 evidence/TERM-001/dim_KF301_50.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>其他品牌 KF301-5.0-3P 通用；注意 5.0 和 5.08 两种脚距</dd>
     <dt>淘宝</dt><dd>KF301-5.0-3P 接线端子</dd>
   </dl>
@@ -291,7 +291,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">淘宝常写&quot;XH2.54&quot;，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Through-hole shrouded header 尺寸表（dim_JST_XH_top.png） · <a href="../evidence/XH-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Through-hole shrouded header 尺寸表（dim_JST_XH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>HX-XH2.54-2PZZ（hanxia）/ C42391660：韩下 XH 兼容座，商品名写 2.54，买前核对规格书脚距为 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 2P 直针座</dd>
   </dl>
@@ -309,7 +309,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">淘宝常写&quot;XH2.54&quot;，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · <a href="../evidence/XH-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 兼容座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 3P 直针座</dd>
   </dl>
@@ -327,7 +327,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">淘宝常写&quot;XH2.54&quot;，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · <a href="../evidence/XH-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 兼容座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 4P 直针座</dd>
   </dl>
@@ -345,7 +345,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">淘宝常写&quot;XH2.54&quot;，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · <a href="../evidence/XH-005/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 兼容座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 5P 直针座</dd>
   </dl>
@@ -363,7 +363,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">淘宝常写&quot;XH2.54&quot;，实际脚距 2.5；用 2.54 封装 5P 以上会插不进。插座缺口方向要和线材插头卡扣对上</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · <a href="../evidence/XH-006/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录尺寸表（见 evidence/XH-002/dim_JST_XH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 兼容座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 6P 直针座</dd>
   </dl>
@@ -381,7 +381,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝&quot;XH2.54&quot;实际脚距 2.5</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（dim_JST_XH_side.png） · <a href="../evidence/XH-102/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（dim_JST_XH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>S2B-XH-A-1(LF)(SN)（JST）/ C163035：JST S2B-XH-A-1（另一种侧插高度），脚位相同</dd>
     <dt>淘宝</dt><dd>JST XH2.5 2P 弯针座</dd>
   </dl>
@@ -399,7 +399,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝&quot;XH2.54&quot;实际脚距 2.5</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · <a href="../evidence/XH-103/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 弯针座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 3P 弯针座</dd>
   </dl>
@@ -417,7 +417,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝&quot;XH2.54&quot;实际脚距 2.5</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · <a href="../evidence/XH-104/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 弯针座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 4P 弯针座</dd>
   </dl>
@@ -435,7 +435,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝&quot;XH2.54&quot;实际脚距 2.5</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · <a href="../evidence/XH-105/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 弯针座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 5P 弯针座</dd>
   </dl>
@@ -453,7 +453,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边，封装外框伸出的一侧就是插口；淘宝&quot;XH2.54&quot;实际脚距 2.5</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.7×2.0、孔 1.0，2.5 脚距放不下更大焊盘，按 0.35 放宽。</dd>
-    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · <a href="../evidence/XH-106/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST XH 目录 Side entry type 尺寸（见 evidence/XH-102/dim_JST_XH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 XH 弯针座可用，买前核对脚距 2.5</dd>
     <dt>淘宝</dt><dd>JST XH2.5 6P 弯针座</dd>
   </dl>
@@ -471,7 +471,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Through-hole shrouded header 尺寸表（dim_JST_PH_top.png） · <a href="../evidence/PH-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Through-hole shrouded header 尺寸表（dim_JST_PH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>BX-PH2.0-2PZZ（Bossie）/ C18077744：博赛 PH2.0 兼容座</dd>
     <dt>淘宝</dt><dd>JST PH2.0 2P 直针座</dd>
   </dl>
@@ -489,7 +489,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · <a href="../evidence/PH-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 兼容座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 3P 直针座</dd>
   </dl>
@@ -507,7 +507,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · <a href="../evidence/PH-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 兼容座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 4P 直针座</dd>
   </dl>
@@ -525,7 +525,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · <a href="../evidence/PH-005/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 兼容座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 5P 直针座</dd>
   </dl>
@@ -543,7 +543,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">锂电池、小喇叭常用 PH2.0，但不同卖家的电池线红黑顺序可能相反，接前用万用表量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · <a href="../evidence/PH-006/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录尺寸表（见 evidence/PH-002/dim_JST_PH_top.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 兼容座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 6P 直针座</dd>
   </dl>
@@ -561,7 +561,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（dim_JST_PH_side.png） · <a href="../evidence/PH-102/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（dim_JST_PH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 弯针座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 2P 弯针座</dd>
   </dl>
@@ -579,7 +579,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · <a href="../evidence/PH-103/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 弯针座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 3P 弯针座</dd>
   </dl>
@@ -597,7 +597,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · <a href="../evidence/PH-104/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 弯针座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 4P 弯针座</dd>
   </dl>
@@ -615,7 +615,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · <a href="../evidence/PH-105/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 弯针座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 5P 弯针座</dd>
   </dl>
@@ -633,7 +633,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">弯插座插口朝板边；电池线红黑顺序因卖家而异，接前量</dd>
     <dt>备注</dt><dd>环宽：官方焊盘 1.2×1.75、孔 0.75，2.0 脚距放不下更大焊盘，按 0.22 放宽（焊盘沿长边仍有 0.5）。</dd>
-    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · <a href="../evidence/PH-106/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>JST PH 目录 Side entry type 尺寸（见 evidence/PH-102/dim_JST_PH_side.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>国产 PH2.0 弯针座可用</dd>
     <dt>淘宝</dt><dd>JST PH2.0 6P 弯针座</dd>
   </dl>
@@ -651,7 +651,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 内部上拉，按下接地为低电平</dd>
     <dt>坑</dt><dd class="pit">方向放错会变成常通（6.5 方向两脚本来就通）；按封装丝印方向放</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 6×6×7.3 轻触开关同一个（V1.1 实焊）。环宽：封装孔 1.1、焊盘 2.0，环宽 0.45，沿用 V1.1 实焊尺寸。</dd>
-    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸与高度表（dim_K2_6x6.png、dim_K2_height_table.png，图片型，人工读图） · <a href="../evidence/SW-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸与高度表（dim_K2_6x6.png、dim_K2_height_table.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>TS665CJ（SHOU HAN）/ C393938：首韩 TS665CJ 6×6，脚位相同</dd>
     <dt>淘宝</dt><dd>6*6*5 轻触开关 直插 4 脚</dd>
   </dl>
@@ -669,7 +669,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 内部上拉，按下接地为低电平</dd>
     <dt>坑</dt><dd class="pit">方向放错会变成常通（6.5 方向两脚本来就通）；按封装丝印方向放</dd>
     <dt>备注</dt><dd>V1.1 底板 SW2–SW4 已用此封装实焊（6×6×7.3）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png） · <a href="../evidence/SW-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>任意品牌 6×6×7 直插 4 脚轻触开关（脚距 6.5×4.5）</dd>
     <dt>淘宝</dt><dd>6*6*7 轻触开关 直插 4 脚</dd>
   </dl>
@@ -687,7 +687,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 内部上拉，按下接地为低电平</dd>
     <dt>坑</dt><dd class="pit">方向放错会变成常通（6.5 方向两脚本来就通）；按封装丝印方向放</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 6×6×7.3 轻触开关同一个（V1.1 实焊）。环宽：封装孔 1.1、焊盘 2.0，环宽 0.45，沿用 V1.1 实焊尺寸。</dd>
-    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png） · <a href="../evidence/SW-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>任意品牌 6×6×9 直插 4 脚轻触开关（脚距 6.5×4.5）</dd>
     <dt>淘宝</dt><dd>6*6*9 轻触开关 直插 4 脚</dd>
   </dl>
@@ -705,7 +705,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 内部上拉，按下接地为低电平</dd>
     <dt>坑</dt><dd class="pit">13 mm 高的按钮适合从外壳面板伸出；其余同 SW-001</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 6×6×7.3 轻触开关同一个（V1.1 实焊）。环宽：封装孔 1.1、焊盘 2.0，环宽 0.45，沿用 V1.1 实焊尺寸。</dd>
-    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png） · <a href="../evidence/SW-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 韩荣 K2-1102DP 图纸（图片型，人工读图，见 evidence/SW-001/dim_K2_6x6.png、dim_K2_height_table.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>任意品牌 6×6×13 直插 4 脚轻触开关（脚距 6.5×4.5）</dd>
     <dt>淘宝</dt><dd>6*6*13 轻触开关 直插 4 脚</dd>
   </dl>
@@ -723,7 +723,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">做电源开关时，中间脚接负载、一侧接电源，另一侧悬空；丝印标出&quot;开&quot;的方向</dd>
     <dt>备注</dt><dd>V1.1 底板 SW1 总电源开关已用此封装实焊。无 3D 模型（V1.1 原封装就没有），不影响焊接。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XKB SS-12D10L5 图纸（dim_SS12D10L5.png，图片型，人工读图） · <a href="../evidence/SW-010/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XKB SS-12D10L5 图纸（dim_SS12D10L5.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>SS-12D10-G5（DEALON）/ C2998777：DEALON SS-12D10-G5，脚距 4.7</dd>
     <dt>淘宝</dt><dd>SS-12D10 拨动开关 3 脚</dd>
   </dl>
@@ -741,7 +741,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>电流 30mA 超出 GPIO 能力，用 Q-001 S8050 驱动，蜂鸣器两端并 1N4148</dd>
     <dt>坑</dt><dd class="pit">V1.1 曾买成 0905 小型号插不上；必须买&quot;有源&quot;，无源的通直流不响；底部贴纸洗板后再撕</dd>
     <dt>备注</dt><dd>封装与 V1.1 的蜂鸣器封装同一个；V1.1 实物为 0905，所以本条按厂家图定为 B 级。</dd>
-    <dt>依据</dt><dd>厂家规格书 华能 TMB12A05 外形尺寸图（dim_TMB12A05.png） · <a href="../evidence/BZ-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 华能 TMB12A05 外形尺寸图（dim_TMB12A05.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>TMB12A05（XHXDZ）/ C49246931：其他厂 TMB12A05，D12×9.5</dd>
     <dt>淘宝</dt><dd>有源蜂鸣器 5V 12*9.5 一体</dd>
   </dl>
@@ -759,7 +759,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>需要 PWM（约 2kHz）驱动，用 Q-001 S8050 驱动，两端并 1N4148</dd>
     <dt>坑</dt><dd class="pit">无源蜂鸣器通直流不响；只适用于手工焊接，不能过波峰焊；脚距 6.5 与有源 12 mm 的 7.6 不同</dd>
     <dt>备注</dt><dd>按厂家图新画封装，3D 用立创 EDA 导出的模型。</dd>
-    <dt>依据</dt><dd>厂家规格书 锋鸣 YS-MBZ12085C05R42 外形尺寸（dim_YS_MBZ12085.png） · <a href="../evidence/BZ-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 锋鸣 YS-MBZ12085C05R42 外形尺寸（dim_YS_MBZ12085.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>Cy-12085G-3016-P4（CY(Changzhou Chaoyin Elec)）/ C968749：超音 Cy-12085G 无源 Φ12×8.5，脚距 6.5，换前核对</dd>
     <dt>淘宝</dt><dd>无源蜂鸣器 5V 12*8.5</dd>
   </dl>
@@ -777,7 +777,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>用 Q-001 S8050 驱动，两端并 1N4148</dd>
     <dt>坑</dt><dd class="pit">和 12 mm 蜂鸣器脚距不同（5.0 对 7.6），封装不能混用</dd>
     <dt>备注</dt><dd>按厂家图新画封装，3D 用立创 EDA 导出的模型。</dd>
-    <dt>依据</dt><dd>厂家规格书 华能 HNB09A05 外形尺寸图（dim_HNB09A05.png） · <a href="../evidence/BZ-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 华能 HNB09A05 外形尺寸图（dim_HNB09A05.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>其他品牌 0905 有源蜂鸣器，脚距 5.0</dd>
     <dt>淘宝</dt><dd>有源蜂鸣器 5V 0905 9*5.5</dd>
   </dl>
@@ -795,7 +795,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">厂家脚距公差 ±3 mm，封装用 3.8 长槽孔吸收；电池座本身不带保护，18650 必须配保护板或带保护的充电模块</dd>
     <dt>备注</dt><dd>引脚尺寸厂家图未标，按 C 级处理，到货后量一次引脚再确认。3D 用立创 EDA 导出的模型。</dd>
-    <dt>依据</dt><dd>厂家规格书 美阳 BH-18650-A1AJ005 图纸（dim_BH18650_A1AJ005.png，图片型，人工读图） · <a href="../evidence/BAT-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 美阳 BH-18650-A1AJ005 图纸（dim_BH18650_A1AJ005.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>BH-18650-A6AJ012（MYOUNG）/ C19184084：美阳 BH-18650-A6AJ012，换前核对脚距</dd>
     <dt>淘宝</dt><dd>18650 电池座 单节 直插</dd>
   </dl>
@@ -813,7 +813,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">立创库存较少（约 200），批量用前确认；正负极看离中心的距离，不要只看脚的左右</dd>
     <dt>备注</dt><dd>改自 KiCad 官方 BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032（孔 1.5 与厂家图一致），焊盘 2.0→2.6 加大环宽。</dd>
-    <dt>依据</dt><dd>厂家规格书 美阳 BS-07-A1BJ001 图纸与 PCB 图（dim_BS07_A1BJ001.png，图片型，人工读图） · <a href="../evidence/BAT-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 美阳 BS-07-A1BJ001 图纸与 PCB 图（dim_BS07_A1BJ001.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无脚位相同的替代；立创库存少时可用贴片的 CR2032-BS-6-1（C70377），封装不同</dd>
     <dt>淘宝</dt><dd>CR2032 电池座 直插 BS-07</dd>
   </dl>
@@ -831,7 +831,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">5.08 和 5.0 两种脚距外观几乎一样，3P 以上混用插不进；买淘宝货时认准&quot;5.08&quot;</dd>
     <dt>备注</dt><dd>厂家推荐孔 Φ1.5，官方封装孔 1.3、焊盘 2.6；引脚对角约 1.2，能插入。立创无科发 KF301-5.08，用康奈克斯同款。</dd>
-    <dt>依据</dt><dd>厂家规格书 康奈克斯 WJ500V-5.08 图纸（dim_WJ500V_508.png） · <a href="../evidence/TERM-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 康奈克斯 WJ500V-5.08 图纸（dim_WJ500V_508.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>淘宝 KF301-5.08-2P 通用（同脚距同外形）</dd>
     <dt>淘宝</dt><dd>KF301-5.08 接线端子 2P</dd>
   </dl>
@@ -849,7 +849,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">5.08 和 5.0 两种脚距外观几乎一样，3P 以上混用插不进；买淘宝货时认准&quot;5.08&quot;</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 KF301-5.08-3P（体温探头接口）同一个，V1.1 已实焊；本条换了品牌，所以定 B 级。厂家推荐孔 Φ1.5，封装孔 1.3，引脚对角约 1.2，能插入。</dd>
-    <dt>依据</dt><dd>厂家规格书 康奈克斯 WJ500V-5.08 图纸（与 TERM-003 同一份，见 evidence/TERM-003/dim_WJ500V_508.png） · <a href="../evidence/TERM-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 康奈克斯 WJ500V-5.08 图纸（与 TERM-003 同一份，见 evidence/TERM-003/dim_WJ500V_508.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>淘宝 KF301-5.08-3P 通用（同脚距同外形）</dd>
     <dt>淘宝</dt><dd>KF301-5.08 接线端子 3P</dd>
   </dl>
@@ -867,7 +867,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">本体最长可到 7.5 mm，7.62 脚距要贴着本体弯脚；嫌难弯就用 RES-002 的 10.16 脚距</dd>
     <dt>备注</dt><dd>同系列常用阻值（尺寸、封装相同，只换 C 编号）：100Ω C57438、220Ω C57439、330Ω C58608、1kΩ C57435、2.2kΩ C58595、 4.7kΩ C57204、5.1kΩ C58591、10kΩ C57436、100kΩ C58597。封装与 V1.1 底板同一个。</dd>
-    <dt>依据</dt><dd>厂家规格书 UNI-ROYAL MFR 系列尺寸表（dim_MFR_1-4W.png） · <a href="../evidence/RES-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 UNI-ROYAL MFR 系列尺寸表（dim_MFR_1-4W.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>MF1/4W-10K±1%-ST52（VO）/ C2903232：VO 1/4W 1% 色环（该编号为 10kΩ，按需换阻值），本体 Φ2.7×6.2</dd>
     <dt>淘宝</dt><dd>1/4W 金属膜电阻 1% 色环 直插</dd>
   </dl>
@@ -885,7 +885,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">脚距 10.16 比 7.62 占地大，但弯脚不用贴本体，新手更好焊</dd>
     <dt>备注</dt><dd>阻值 C 编号同 RES-001 列表。</dd>
-    <dt>依据</dt><dd>厂家规格书 UNI-ROYAL MFR 系列尺寸表（与 RES-001 同一份，见 evidence/RES-001/dim_MFR_1-4W.png） · <a href="../evidence/RES-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 UNI-ROYAL MFR 系列尺寸表（与 RES-001 同一份，见 evidence/RES-001/dim_MFR_1-4W.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>MF1/4W-10KΩ±1% T（CCO(Chian Chia Elec)）/ C119347：CCO 10kΩ 1/4W 金属膜，本体 Φ2.3×6.5</dd>
     <dt>淘宝</dt><dd>1/4W 金属膜电阻 1% 色环 直插</dd>
   </dl>
@@ -903,7 +903,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">官方封装焊盘 1.44、环宽只有 0.32，库里改成 1.6；三只脚不在本体正中，按丝印外框方向放</dd>
     <dt>备注</dt><dd>改自 KiCad 官方 Potentiometer_Bourns_3296W_Vertical，只加大焊盘。其他阻值把 103 换成对应代码（如 102=1k、503=50k）。</dd>
-    <dt>依据</dt><dd>Bourns 3296 规格书 Product Dimensions 与 3296W 引脚图（dim_Bourns3296W.png） · <a href="../evidence/POT-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>Bourns 3296 规格书 Product Dimensions 与 3296W 引脚图（dim_Bourns3296W.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>3296W-1-103（BOCHEN(Chengdu Guosheng Tech)）/ C118954：国产 3296W 同尺寸</dd>
     <dt>淘宝</dt><dd>3296W 精密可调电阻 103</dd>
   </dl>
@@ -921,7 +921,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">直径 6.7 比 V1.1 用的 5 mm 瓷片大，要用 D7.0 封装，否则和相邻元件打架</dd>
     <dt>备注</dt><dd>精度要求高（滤波、定时）的地方改用 CAP-004 独石电容。</dd>
-    <dt>依据</dt><dd>厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc104.png） · <a href="../evidence/CAP-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc104.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>CC1H104ZC1FD3F5O1100（Dersonic）/ C2832508：同厂 100nF/50V 瓷片，Z 档 -20%/+80%</dd>
     <dt>淘宝</dt><dd>瓷片电容 104 50V 直插 5.08</dd>
   </dl>
@@ -939,7 +939,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">本体最大 5.5，比封装外框 5.1 稍大，两边各留 0.3 mm</dd>
     <dt>备注</dt><dd>Z 档容量偏差大（-20%~+80%），只用于去耦、按键消抖。</dd>
-    <dt>依据</dt><dd>厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc103.png） · <a href="../evidence/CAP-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 Dersonic 瓷片电容尺寸表（dim_disc103.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>CC3A103MC1IEF48C30MF（Dersonic）/ C263209：10nF 1kV 高压瓷片，体积可能更大，换前核对直径</dd>
     <dt>淘宝</dt><dd>瓷片电容 103 50V 直插</dd>
   </dl>
@@ -957,7 +957,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">这是 1kV 高压瓷片，体积比普通 50V 的大；用模块的项目一般用不到晶振负载电容</dd>
     <dt>备注</dt><dd>pF 级小电容选 SL/NP0 类，容量稳定。</dd>
-    <dt>依据</dt><dd>厂家规格书 松田 HV 系列尺寸表（dim_STE_HV.png） · <a href="../evidence/CAP-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 松田 HV 系列尺寸表（dim_STE_HV.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>CC45SL3AD220JYNNA（TDK）/ C694484：TDK 22pF SL 1kV</dd>
     <dt>淘宝</dt><dd>瓷片电容 22pF 直插</dd>
   </dl>
@@ -975,7 +975,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">独石电容方块状，比瓷片厚，用 W4.4 的封装</dd>
     <dt>备注</dt><dd>比瓷片容量准、温度稳定，推荐作为通用去耦电容。</dd>
-    <dt>依据</dt><dd>厂家规格书 风华 CT4 系列外形 c1（dim_CT4.png） · <a href="../evidence/CAP-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 风华 CT4 系列外形 c1（dim_CT4.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>CD1H104KC94ER1D000（Dersonic）/ C263181：Dersonic 100nF/50V 独石</dd>
     <dt>淘宝</dt><dd>独石电容 104 50V 直插 5.08</dd>
   </dl>
@@ -993,7 +993,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">方焊盘是正极；外套上负号条那边是负极</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊（10µF/25V Φ5）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（dim_KM_series.png） · <a href="../evidence/CAP-010/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>RL1E100MC110A00CV0（Changzhou Huawei Elec）/ C216293：华威 10µF/25V Φ5×11</dd>
     <dt>淘宝</dt><dd>电解电容 10uF 25V 5*11</dd>
   </dl>
@@ -1011,7 +1011,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">V1.1 用的 100µF/16V 是 Φ6.3 的，这颗是 Φ5，封装不同不要混买</dd>
     <dt>备注</dt><dd>买 Φ6.3 的就改用 CAP-012 的封装。</dd>
-    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（与 CAP-010 同一份，见 evidence/CAP-010/dim_KM_series.png） · <a href="../evidence/CAP-011/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（与 CAP-010 同一份，见 evidence/CAP-010/dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>16V100uF CD288（HRK）/ C2960368：HRK 100µF/16V Φ5×11</dd>
     <dt>淘宝</dt><dd>电解电容 100uF 16V 5*11</dd>
   </dl>
@@ -1029,7 +1029,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">方焊盘是正极</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 100µF/16V Φ6.3 同一个。</dd>
-    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · <a href="../evidence/CAP-012/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>ERG16V220M6X11（jieerrui）/ C47344173：杰尔瑞 220µF/16V Φ6.3×11</dd>
     <dt>淘宝</dt><dd>电解电容 220uF 16V 6.3*11</dd>
   </dl>
@@ -1047,7 +1047,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">方焊盘是正极</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 1000µF/10V Φ8 同一个。</dd>
-    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · <a href="../evidence/CAP-013/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>ERG16V470M8X12（jieerrui）/ C47344174：杰尔瑞 470µF/16V Φ8×12</dd>
     <dt>淘宝</dt><dd>电解电容 470uF 16V 8*12</dd>
   </dl>
@@ -1065,7 +1065,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">高 17.5 mm，注意外壳和上层模块的高度；封装自带的 3D 模型是通用高度，比这颗实物矮</dd>
     <dt>备注</dt><dd>和 CAP-015 封装相同，只是更高、耐压 16V。</dd>
-    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · <a href="../evidence/CAP-014/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>ERA16V1000M8X16（jieerrui）/ C49256792：杰尔瑞 1000µF/16V Φ8×16</dd>
     <dt>淘宝</dt><dd>电解电容 1000uF 16V 8*16</dd>
   </dl>
@@ -1083,7 +1083,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">10V 耐压只能用在 5V 及以下电源上</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊（1000µF/10V Φ8）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · <a href="../evidence/CAP-015/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 CX KM 系列尺寸表（见 evidence/CAP-010/dim_KM_series.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>GR108M010F12RR0VL4FP0（CX(Dongguan Chengxing Elec)）/ C3299：同厂 GR 系列 1000µF/10V Φ8×12</dd>
     <dt>淘宝</dt><dd>电解电容 1000uF 10V 8*12</dd>
   </dl>
@@ -1101,7 +1101,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">两脚出厂是弯的（一前一后），插直排 5.08 孔前把脚掰正</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 2A 自恢复保险同一个。无 3D 模型（V1.1 原封装就没有），不影响焊接。</dd>
-    <dt>依据</dt><dd>厂家规格书 瑞隆源 RL60 系列尺寸表（dim_RL60.png） · <a href="../evidence/FUS-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 瑞隆源 RL60 系列尺寸表（dim_RL60.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>MF-R050（BOURNS）/ C208476：Bourns MF-R050，同规格</dd>
     <dt>淘宝</dt><dd>自恢复保险丝 0.5A 60V 直插</dd>
   </dl>
@@ -1119,7 +1119,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">30V 耐压，只能用在 30V 以下；两脚出厂是弯的，插孔前掰正</dd>
     <dt>备注</dt><dd>无 3D 模型（沿用 V1.1 封装），不影响焊接。</dd>
-    <dt>依据</dt><dd>厂家规格书 瑞隆源 RL30 系列尺寸表（dim_RL30.png） · <a href="../evidence/FUS-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 瑞隆源 RL30 系列尺寸表（dim_RL30.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>MF-R110（BOURNS）/ C208481：Bourns MF-R110，同规格</dd>
     <dt>淘宝</dt><dd>自恢复保险丝 1.1A 30V 直插</dd>
   </dl>
@@ -1137,7 +1137,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">本体宽 10.2，比封装外框 9.2 宽，两侧各留 0.6 mm 以上空位；高 20 mm，注意外壳</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊 2A 自恢复保险。无 3D 模型（V1.1 原封装就没有），不影响焊接。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 瑞隆源 RL30 系列尺寸表（见 evidence/FUS-002/dim_RL30.png） · <a href="../evidence/FUS-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 瑞隆源 RL30 系列尺寸表（见 evidence/FUS-002/dim_RL30.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>JK60-200（Jinrui Electronic Materials Co.）/ C369092：金瑞 JK60-200（2A），脚距 5.1</dd>
     <dt>淘宝</dt><dd>自恢复保险丝 2A 30V 直插</dd>
   </dl>
@@ -1155,7 +1155,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">色环端接方焊盘（K）；用作蜂鸣器/继电器续流时 K 接电源正</dd>
     <dt>备注</dt><dd>封装与 V1.1 底板 D3 同一个。</dd>
-    <dt>依据</dt><dd>厂家规格书 onsemi DO-35 外形尺寸（dim_DO35.png） · <a href="../evidence/DIO-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 onsemi DO-35 外形尺寸（dim_DO35.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>1N4148（Changzhou Starsea Elec）/ C85057：星海 1N4148 DO-35</dd>
     <dt>淘宝</dt><dd>1N4148 直插 DO-35</dd>
   </dl>
@@ -1173,7 +1173,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">1N4007 压降约 1V，做 5V 防反接会让后级只剩约 4V；低压防反接用 DIO-003 肖特基</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 1N5819 同一个。</dd>
-    <dt>依据</dt><dd>厂家规格书 LGE DO-41 外形尺寸（dim_DO41_LGE.png） · <a href="../evidence/DIO-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 LGE DO-41 外形尺寸（dim_DO41_LGE.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>1N4007G（MDD(Microdiode Semiconductor)）/ C2457：MDD 1N4007G</dd>
     <dt>淘宝</dt><dd>1N4007 直插 DO-41</dd>
   </dl>
@@ -1191,7 +1191,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">色环端（K）接负载一侧，接反整机不上电</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊（输入防反接）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 MDD DO-41 外形尺寸（dim_DO41_MDD.png） · <a href="../evidence/DIO-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 MDD DO-41 外形尺寸（dim_DO41_MDD.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>1N5819（LGE）/ C402218：LGE 1N5819</dd>
     <dt>淘宝</dt><dd>1N5819 直插 DO-41</dd>
   </dl>
@@ -1209,7 +1209,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">LGE 这颗引线最粗 0.95，官方 DO-41 封装 1.1 孔插不进，用库里的 1.2 孔版本；稳压管必须串限流电阻</dd>
     <dt>备注</dt><dd>改自 KiCad 官方 D_DO-41_SOD81_P10.16mm_Horizontal，孔 1.1→1.2，焊盘 2.2→2.4。</dd>
-    <dt>依据</dt><dd>厂家规格书 LGE 玻封 DO-41 外形尺寸（dim_DO41_glass.png） · <a href="../evidence/DIO-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 LGE 玻封 DO-41 外形尺寸（dim_DO41_glass.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>1N4733A-TAP（Vishay Intertech）/ C241985：Vishay 1N4733A-TAP，引线较细，同样可插 1.2 孔</dd>
     <dt>淘宝</dt><dd>1N4733A 5.1V 1W 稳压二极管 直插</dd>
   </dl>
@@ -1227,7 +1227,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">必须买单向（A 后缀）；买成 CA 双向的在 5V 上也能用，但没有反接保护作用</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊。KiCad 没有单向 TVS 专用符号，用稳压管符号表示方向（1=K）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 Littelfuse P6KE DO-15 尺寸表（dim_DO15_Littelfuse.png） · <a href="../evidence/DIO-005/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 Littelfuse P6KE DO-15 尺寸表（dim_DO15_Littelfuse.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>P6KE6.8A（LGE）/ C713671：LGE P6KE6.8A</dd>
     <dt>淘宝</dt><dd>P6KE6.8A 单向 TVS 直插</dd>
   </dl>
@@ -1245,7 +1245,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮（约 1–3mA，指示用足够亮）</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；管壳平边对丝印平边</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊（5mm LED + 1kΩ）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（dim_LED5mm.png） · <a href="../evidence/LED-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（dim_LED5mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>333-2SURD/S530-A3（Everlight Elec）/ C87271：亿光 333-2SURD 5mm 红</dd>
     <dt>淘宝</dt><dd>5mm LED 红色 雾状 直插</dd>
   </dl>
@@ -1263,7 +1263,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；要&quot;翠绿&quot;的选压降约 3V 的那种，3.3V 下串 1kΩ 会很暗</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · <a href="../evidence/LED-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-502UGD（XINGLIGHT）/ C2895548：同厂 XL-502UGD 翠绿，压降约 3V，3.3V 驱动偏暗</dd>
     <dt>淘宝</dt><dd>5mm LED 绿色 雾状 直插</dd>
   </dl>
@@ -1281,7 +1281,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动</dd>
     <dt>坑</dt><dd class="pit">蓝光、白光 LED 在 3.3V GPIO 上可能不亮或很暗</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · <a href="../evidence/LED-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-502UBC（XINGLIGHT）/ C2895488：同厂 XL-502UBC 透明蓝</dd>
     <dt>淘宝</dt><dd>5mm LED 蓝色 雾状 直插</dd>
   </dl>
@@ -1299,7 +1299,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；管壳平边对丝印平边</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · <a href="../evidence/LED-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-502UYC（XINGLIGHT）/ C2895486：同厂 XL-502UYC 透明黄</dd>
     <dt>淘宝</dt><dd>5mm LED 黄色 雾状 直插</dd>
   </dl>
@@ -1317,7 +1317,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动</dd>
     <dt>坑</dt><dd class="pit">白光透明头很刺眼，做指示灯电流取 1–2mA 即可</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · <a href="../evidence/LED-005/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 XINGLIGHT 5mm 外形图（见 evidence/LED-001/dim_LED5mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-504UWC（XINGLIGHT）/ C2895481：同厂 XL-504UWC（4 号外形，换前核对高度）</dd>
     <dt>淘宝</dt><dd>5mm LED 白色 直插</dd>
   </dl>
@@ -1335,7 +1335,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；管壳平边对丝印平边</dd>
     <dt>备注</dt><dd>3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。</dd>
-    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（dim_LED3mm.png） · <a href="../evidence/LED-006/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（dim_LED3mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>204-10SURD/S530-A3（Everlight Elec）/ C99772：亿光 204-10SURD 3mm 红</dd>
     <dt>淘宝</dt><dd>3mm LED 红色 雾状 直插</dd>
   </dl>
@@ -1353,7 +1353,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；管壳平边对丝印平边</dd>
     <dt>备注</dt><dd>3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。</dd>
-    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · <a href="../evidence/LED-007/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-302UGD（XINGLIGHT）/ C2895476：同厂 XL-302UGD 翠绿，压降约 3V</dd>
     <dt>淘宝</dt><dd>3mm LED 绿色 雾状 直插</dd>
   </dl>
@@ -1371,7 +1371,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动</dd>
     <dt>坑</dt><dd class="pit">蓝光、白光 LED 在 3.3V GPIO 上可能不亮或很暗</dd>
     <dt>备注</dt><dd>3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。</dd>
-    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · <a href="../evidence/LED-008/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-302UBC（XINGLIGHT）/ C2895464：同厂 XL-302UBC 透明蓝</dd>
     <dt>淘宝</dt><dd>3mm LED 蓝色 雾状 直插</dd>
   </dl>
@@ -1389,7 +1389,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V 或 5V GPIO 串 1kΩ 直接点亮</dd>
     <dt>坑</dt><dd class="pit">方焊盘是 K（负极、短脚）；管壳平边对丝印平边</dd>
     <dt>备注</dt><dd>3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。</dd>
-    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · <a href="../evidence/LED-009/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-304UYD（XINGLIGHT）/ C2895473：同厂 XL-304UYD（4 号外形，换前核对高度）</dd>
     <dt>淘宝</dt><dd>3mm LED 黄色 雾状 直插</dd>
   </dl>
@@ -1407,7 +1407,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>压降最高 3.4V，3.3V GPIO 直接驱动不可靠；接 5V 串 1kΩ，或用三极管从 5V 驱动</dd>
     <dt>坑</dt><dd class="pit">白光透明头很刺眼，做指示灯电流取 1–2mA 即可</dd>
     <dt>备注</dt><dd>3mm 和 5mm 脚距都是 2.54，封装外框不同，不要混用。</dd>
-    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · <a href="../evidence/LED-010/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 XINGLIGHT 3mm 外形图（见 evidence/LED-006/dim_LED3mm.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>XL-304UWC（XINGLIGHT）/ C2895459：同厂 XL-304UWC（4 号外形，换前核对高度）</dd>
     <dt>淘宝</dt><dd>3mm LED 白色 直插</dd>
   </dl>
@@ -1425,7 +1425,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V GPIO 串 1kΩ 驱动基极，可开关约 100mA 负载（蜂鸣器、继电器）</dd>
     <dt>坑</dt><dd class="pit">不同厂家 S8050 有 EBC 和 ECB 两种脚序，买前看规格书；本条 LGE 为 E-B-C</dd>
     <dt>备注</dt><dd>V1.1 底板已用此封装实焊（蜂鸣器驱动，E-B-C）。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8050.png） · <a href="../evidence/Q-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8050.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>S8050(RANGE:160-300)（Jiangsu Changjing Electronics Technology Co., Ltd.）/ C8327：长晶 S8050，hFE 160–300 档，引脚同为 E-B-C</dd>
     <dt>淘宝</dt><dd>S8050 TO-92 直插 三极管</dd>
   </dl>
@@ -1443,7 +1443,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>用作高边开关：基极拉低导通；GPIO 是 3.3V 而负载接 5V 时关不断，需再加一级 NPN</dd>
     <dt>坑</dt><dd class="pit">不同厂家脚序不同，买前看规格书；本条 LGE 为 E-B-C</dd>
     <dt>备注</dt><dd>封装与 V1.1 的 S8050 同一个（V1.1 实焊）。环宽：TO-92 宽脚距封装孔 0.8、焊盘 1.5，环宽 0.35，沿用 V1.1 实焊尺寸。</dd>
-    <dt>依据</dt><dd>厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8550.png） · <a href="../evidence/Q-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 LGE TO-92 外形与引脚图（dim_TO92_S8550.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>S8550(RANGE:160-300)（Jiangsu Changjing Electronics Technology Co., Ltd.）/ C141644：长晶 S8550，hFE 160–300 档，引脚 E-B-C</dd>
     <dt>淘宝</dt><dd>S8550 TO-92 直插 三极管</dd>
   </dl>
@@ -1461,7 +1461,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>阈值 0.65–1.45V，3.3V GPIO 可直接驱动（栅极串 100Ω、对地 10kΩ）</dd>
     <dt>坑</dt><dd class="pit">贴片件，烙铁可焊但要镊子；学生板优先用 Q-001 直插三极管能解决的就不用 MOS</dd>
     <dt>备注</dt><dd>嘉立创基础库料，打样贴片不收换料费。</dd>
-    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3400A.png） · <a href="../evidence/Q-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3400A.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>AO3400A（UMW(Youtai Semiconductor Co., Ltd.)）/ C347475：UMW AO3400A</dd>
     <dt>淘宝</dt><dd>AO3400A SOT-23</dd>
   </dl>
@@ -1479,7 +1479,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>高边开关：栅极拉低导通、拉到源极电压关断；源极接 5V 时 3.3V GPIO 关不断，需加 NPN 电平转换</dd>
     <dt>坑</dt><dd class="pit">常用作电源防反接或负载开关，D、S 接反会通过体二极管常通</dd>
     <dt>备注</dt><dd>嘉立创基础库料。</dd>
-    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3401A.png） · <a href="../evidence/Q-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 AOS SOT-23 引脚图（dim_pins_AO3401A.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>AO3401A（UMW(Youtai Semiconductor Co., Ltd.)）/ C347476：UMW AO3401A</dd>
     <dt>淘宝</dt><dd>AO3401A SOT-23</dd>
   </dl>
@@ -1497,7 +1497,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>输入端 3.3V GPIO 串 330Ω 约 6mA；输出端集电极上拉到对方电源</dd>
     <dt>坑</dt><dd class="pit">1 脚圆点要对丝印 1 脚；输出侧要自己接上拉电阻</dd>
     <dt>备注</dt><dd>嘉立创商城 EL817 规格书下载不到，主选改为 Sharp 原厂 PC817X。</dd>
-    <dt>依据</dt><dd>厂家规格书 Sharp PC817X 外形图（图片型 PDF，人工读图，dim_PC817_outline.png） · <a href="../evidence/OPT-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 Sharp PC817X 外形图（图片型 PDF，人工读图，dim_PC817_outline.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>EL817(C)-F（Everlight Elec）/ C181890：亿光 EL817(C)，脚位相同</dd>
     <dt>淘宝</dt><dd>PC817 DIP-4 光耦</dd>
   </dl>
@@ -1515,7 +1515,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">输入、输出各接 10µF 以上电容；5V→3.3V 带 500mA 时发热约 0.85W，散热片要铺铜</dd>
     <dt>备注</dt><dd>嘉立创基础库料。只够单个 ESP32 加小传感器，带雷达等大电流负载用 REG-003。</dd>
-    <dt>依据</dt><dd>厂家规格书 AMS1117 引脚图（dim_pins_AMS1117.png） · <a href="../evidence/REG-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 AMS1117 引脚图（dim_pins_AMS1117.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>AMS1117-3.3（UMW(Youtai Semiconductor Co., Ltd.)）/ C347222：UMW AMS1117-3.3</dd>
     <dt>淘宝</dt><dd>AMS1117-3.3 SOT-223</dd>
   </dl>
@@ -1533,7 +1533,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">散热片接的是输出 3.3V，不能和别的散热片或地相碰</dd>
     <dt>备注</dt><dd>KiCad 没有 LD1117V33 符号，用引脚号相同的 LM1117T-3.3（1 GND、2 VO、3 VI）。 封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。</dd>
-    <dt>依据</dt><dd>厂家规格书 ST LD1117 TO-220 尺寸表（dim_TO220_ST_LD1117.png）与引脚图（dim_pins_LD1117.png） · <a href="../evidence/REG-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 ST LD1117 TO-220 尺寸表（dim_TO220_ST_LD1117.png）与引脚图（dim_pins_LD1117.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>LD1117V33C（STMicroelectronics）/ C672117：ST LD1117V33C（输出精度不同），脚位相同</dd>
     <dt>淘宝</dt><dd>LD1117V33 TO-220</dd>
   </dl>
@@ -1551,7 +1551,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">V1.1 曾买成 TO-263 贴片的 AMS1085CM，插不进孔；下单认准 TO-220 型号（LM1085T / LM1085IT / AMS1085CT）</dd>
     <dt>备注</dt><dd>该厂规格书页眉误写成&quot;降压开关&quot;，正文为 LDO，以正文为准。 封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。</dd>
-    <dt>依据</dt><dd>厂家规格书 华冠 LM1085 TO-220-3 尺寸表（dim_TO220.png）与引脚图（dim_pins_LM1085.png） · <a href="../evidence/REG-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 华冠 LM1085 TO-220-3 尺寸表（dim_TO220.png）与引脚图（dim_pins_LM1085.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>LM1085IT-3.3/HG（HGSEMI）/ C49384189：华冠 LM1085IT-3.3/HG，TO-220-3，脚位相同</dd>
     <dt>淘宝</dt><dd>LM1085IT-3.3 TO-220</dd>
   </dl>
@@ -1569,7 +1569,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>不适用</dd>
     <dt>坑</dt><dd class="pit">脚序是 IN-GND-OUT，和 1117/1085 的 GND-OUT-IN 不同，封装也分开了，不能互换</dd>
     <dt>备注</dt><dd>12V→5V 带 0.5A 发热 3.5W，必须加散热片。 封装孔 1.2、焊盘 1.9×3.0；2.54 脚距放不下更大焊盘，环宽按 0.35 放宽，焊盘向上下加长补焊锡面积。</dd>
-    <dt>依据</dt><dd>厂家规格书 ST L78 TO-220 尺寸表（dim_TO220_ST_L7805.png）与引脚图（dim_pins_L7805.png） · <a href="../evidence/REG-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 ST L78 TO-220 尺寸表（dim_TO220_ST_L7805.png）与引脚图（dim_pins_L7805.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>L7805CV(UMW)（UMW(Youtai Semiconductor Co., Ltd.)）/ C347289：UMW L7805CV，脚位相同</dd>
     <dt>淘宝</dt><dd>L7805CV TO-220</dd>
   </dl>
@@ -1587,7 +1587,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>CE 高电平使能，不用时接 VIN</dd>
     <dt>坑</dt><dd class="pit">输入最高只有 6.5V，不能接 9V/12V；CE 悬空不输出</dd>
     <dt>备注</dt><dd>锂电池供电的小板常用，压差小。</dd>
-    <dt>依据</dt><dd>厂家规格书 微盟 ME6211 引脚图（dim_pins_ME6211.png） · <a href="../evidence/REG-005/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 微盟 ME6211 引脚图（dim_pins_ME6211.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无脚位相同的常用替代（同脚位的 XC6206 只有 3 脚，不能直接换）</dd>
     <dt>淘宝</dt><dd>ME6211C33M5G SOT-23-5</dd>
   </dl>
@@ -1605,7 +1605,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 3.3V，不耐 5V</dd>
     <dt>坑</dt><dd class="pit">GPIO45、GPIO46 不能接上拉，否则无法启动；天线端不要压金属件或铺铜</dd>
     <dt>备注</dt><dd>V1.1 底板用两条 PinSocket_1x20 实焊，排距 17.78 与本封装一致。封装把两排画在一起，丝印印出全部脚名和天线、USB 方向。 环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>V1.1 实物验证；立创开发板规格书 尺寸标注图与引脚定义图（dim_LCKFB_S3_size.png、dim_LCKFB_S3_pinout.png，图片型，人工读图） · <a href="../evidence/MCU-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>V1.1 实物验证；立创开发板规格书 尺寸标注图与引脚定义图（dim_LCKFB_S3_size.png、dim_LCKFB_S3_pinout.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无同脚位替代（立创独家板型）</dd>
     <dt>淘宝</dt><dd>立创 ESP32S3R8N8 开发板</dd>
   </dl>
@@ -1623,7 +1623,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V，标 FT 的脚耐 5V</dd>
     <dt>坑</dt><dd class="pit">排距厂家图未标，到货后用卡尺量两排针中心距是否 15.24；BOOT0 跳线帽平时接 0</dd>
     <dt>备注</dt><dd>外形和脚位与经典蓝色药丸相同，共用一个封装。环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>立创开发板规格书 结构尺寸与引脚图（dim_DKX_STM32_size.png、dim_DKX_STM32_pinout.png，图片型，人工读图） · <a href="../evidence/MCU-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>立创开发板规格书 结构尺寸与引脚图（dim_DKX_STM32_size.png、dim_DKX_STM32_pinout.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>淘宝&quot;蓝色药丸&quot;STM32F103C8T6 最小系统板脚位相同（见 MCU-003）</dd>
     <dt>淘宝</dt><dd>立创 地猛星 STM32F103C8T6</dd>
   </dl>
@@ -1659,7 +1659,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 3.3V</dd>
     <dt>坑</dt><dd class="pit">天线伸出板外约 6 mm，底板这一端不要放元件；N8R8 版 GPIO35–37 被 PSRAM 占用</dd>
     <dt>备注</dt><dd>立创编号 C20541519（N8R8）无库存，通常淘宝/乐鑫官方店购买。环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>乐鑫官方尺寸图 DXF_ESP32-S3-DevKitC-1_V1.1（dim_DevKitC-1_v1.1.png，矢量图无文字层，人工读图并用 DXF 坐标复核） · <a href="../evidence/MCU-004/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>乐鑫官方尺寸图 DXF_ESP32-S3-DevKitC-1_V1.1（dim_DevKitC-1_v1.1.png，矢量图无文字层，人工读图并用 DXF 坐标复核） · 核实 </dd>
     <dt>替代</dt><dd>淘宝 N16R8 兼容板（MCU-005）脚位相同</dd>
     <dt>淘宝</dt><dd>ESP32-S3-DevKitC-1 乐鑫官方</dd>
   </dl>
@@ -1695,7 +1695,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>GPIO 3.3V；GPIO34–39 只能输入</dd>
     <dt>坑</dt><dd class="pit">SD0–SD3、CMD、CLK 接的是 Flash，不能当 GPIO 用；GPIO34–39 只能输入</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>乐鑫官方尺寸图 esp32_devkitc_v4_dimensions（dim_DevKitC_V4.png，矢量图无文字层，人工读图） · <a href="../evidence/MCU-006/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>乐鑫官方尺寸图 esp32_devkitc_v4_dimensions（dim_DevKitC_V4.png，矢量图无文字层，人工读图） · 核实 </dd>
     <dt>替代</dt><dd>淘宝 38P ESP32 开发板多为同脚位，但有排距 22.86 的窄版，买后量</dd>
     <dt>淘宝</dt><dd>ESP32-DevKitC V4 38针</dd>
   </dl>
@@ -1749,7 +1749,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>5V 逻辑；接 3.3V 模块要电平转换</dd>
     <dt>坑</dt><dd class="pit">5V 逻辑，直接接 3.3V 传感器的输出没问题，但 Nano 输出给 3.3V 器件要分压；兼容版要装 CH340 驱动</dd>
     <dt>备注</dt><dd>封装与 KiCad 官方 Module:Arduino_Nano 相同（本机缺官方 3D，去掉了模型引用，无 3D 模型）。环宽：孔 1.0 焊盘 1.6，按 0.3 放宽。</dd>
-    <dt>依据</dt><dd>Arduino 官方规格书 A000005 Mechanical Information（dim_Arduino_Nano.png） · <a href="../evidence/MCU-009/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>Arduino 官方规格书 A000005 Mechanical Information（dim_Arduino_Nano.png） · 核实 </dd>
     <dt>替代</dt><dd>CH340 兼容版尺寸、脚位相同</dd>
     <dt>淘宝</dt><dd>Arduino Nano CH340</dd>
   </dl>
@@ -1839,7 +1839,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V/5V 兼容</dd>
     <dt>坑</dt><dd class="pit">驱动是 SH1106 不是 SSD1306，程序里要选对，否则画面偏移 2 列</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MC130GX 尺寸图与用户手册（dim_OLED130_size.png） · <a href="../evidence/DSP-003/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MC130GX 尺寸图与用户手册（dim_OLED130_size.png） · 核实 </dd>
     <dt>替代</dt><dd>VCC 在前版（DSP-004）</dd>
     <dt>淘宝</dt><dd>1.3寸 OLED IIC 4针 SH1106</dd>
   </dl>
@@ -1857,7 +1857,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V/5V 兼容</dd>
     <dt>坑</dt><dd class="pit">针序反了会烧屏；SH1106 驱动</dd>
     <dt>备注</dt><dd>规格书与 DSP-003 共用（MC130GX&amp;MC130VX 手册，复制一份到本条目录）。环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MC130GX/VX 共用用户手册与尺寸图（见 evidence/DSP-003） · <a href="../evidence/DSP-004/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MC130GX/VX 共用用户手册与尺寸图（见 evidence/DSP-003） · <a href="../evidence/DSP-003/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
     <dt>替代</dt><dd>GND 在前版（DSP-003）</dd>
     <dt>淘宝</dt><dd>1.3寸 OLED IIC 4针 VCC GND</dd>
   </dl>
@@ -1875,7 +1875,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V/5V 兼容</dd>
     <dt>坑</dt><dd class="pit">没有安装孔，只靠排针支撑，外壳要压住</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MC091GX 尺寸图与用户手册（dim_OLED091_size.png） · <a href="../evidence/DSP-005/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MC091GX 尺寸图与用户手册（dim_OLED091_size.png） · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>0.91寸 OLED 128x32 IIC</dd>
   </dl>
@@ -1893,7 +1893,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V/5V 兼容</dd>
     <dt>坑</dt><dd class="pit">RES 脚必须接 GPIO 或上拉，悬空屏不亮</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP096X 尺寸图与用户手册（dim_OLEDSPI_size.png） · <a href="../evidence/DSP-006/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP096X 尺寸图与用户手册（dim_OLEDSPI_size.png） · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>0.96寸 OLED SPI 7针</dd>
   </dl>
@@ -1911,7 +1911,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V</dd>
     <dt>坑</dt><dd class="pit">上边还有 4 个 SD 卡引脚孔，不要在底板对应位置放元件；排针横向位置图上未直接标，按居中（量图 8.4）</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP1803 尺寸图与用户手册（dim_TFT18_size.png） · <a href="../evidence/DSP-007/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP1803 尺寸图与用户手册（dim_TFT18_size.png） · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>1.8寸 TFT ST7735 SPI 8针</dd>
   </dl>
@@ -1929,7 +1929,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V</dd>
     <dt>坑</dt><dd class="pit">VCC 只能接 3.3V，接 5V 会烧</dd>
     <dt>备注</dt><dd>上排两孔按下排对称。环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP1541 尺寸图与用户手册（dim_IPS154_size.png） · <a href="../evidence/DSP-008/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP1541 尺寸图与用户手册（dim_IPS154_size.png） · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>1.54寸 IPS ST7789 240x240 SPI</dd>
   </dl>
@@ -1947,7 +1947,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V</dd>
     <dt>坑</dt><dd class="pit">VCC 只能接 3.3V</dd>
     <dt>备注</dt><dd>下排两孔按上排对称。环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP2008 尺寸图与用户手册（dim_IPS20_size.png） · <a href="../evidence/DSP-009/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP2008 尺寸图与用户手册（dim_IPS20_size.png） · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>2.0寸 IPS ST7789 240x320 SPI</dd>
   </dl>
@@ -1965,7 +1965,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V</dd>
     <dt>坑</dt><dd class="pit">屏和触摸共用 SPI，各自的 CS 要分开；上边 4 个 SD 卡孔不要放元件</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP2401/2402 LCM OUTLINE 尺寸图（dim_TFT24_size.png）与用户手册 · <a href="../evidence/DSP-010/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP2401/2402 LCM OUTLINE 尺寸图（dim_TFT24_size.png）与用户手册 · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>2.4寸 TFT ILI9341 SPI 触摸 14针</dd>
   </dl>
@@ -1983,7 +1983,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>3.3V</dd>
     <dt>坑</dt><dd class="pit">同 DSP-010</dd>
     <dt>备注</dt><dd>环宽按 0.35 放宽。模块无 3D 模型。</dd>
-    <dt>依据</dt><dd>lcdwiki MSP2807 LCM OUTLINE 尺寸图（dim_TFT28_size.png）与用户手册 · <a href="../evidence/DSP-011/datasheet.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>依据</dt><dd>lcdwiki MSP2807 LCM OUTLINE 尺寸图（dim_TFT28_size.png）与用户手册 · 核实 </dd>
     <dt>替代</dt><dd>无</dd>
     <dt>淘宝</dt><dd>2.8寸 TFT ILI9341 SPI 触摸 14针</dd>
   </dl>
@@ -2001,7 +2001,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>段脚接 GPIO（经限流电阻），公共脚接 GND</dd>
     <dt>坑</dt><dd class="pit">共阴和共阳外观一样，型号 A=共阴、B=共阳；小数点在右下角，那边朝下</dd>
     <dt>备注</dt><dd>改自 KiCad 官方 7SegmentLED_LTS6760（0.56 寸标准脚位），焊盘加大。无 3D 模型（官方原封装无模型）。</dd>
-    <dt>依据</dt><dd>厂家规格书 志浩 FJ5161AH（dim_FJ5161AH.png），型号在图内，人工读图 · <a href="../evidence/SEG-001/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 志浩 FJ5161AH（dim_FJ5161AH.png），型号在图内，人工读图 · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>同脚位 0.56 寸 1 位共阴（5161AS 类）通用</dd>
     <dt>淘宝</dt><dd>0.56寸 一位 数码管 共阴 5161AS</dd>
   </dl>
@@ -2019,7 +2019,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>公共脚接 VCC，段脚经电阻接 GPIO（低电平点亮）</dd>
     <dt>坑</dt><dd class="pit">立创库存较少（约 300）；共阳的段脚是低电平点亮</dd>
     <dt>备注</dt><dd>无 3D 模型（官方原封装无模型）。</dd>
-    <dt>依据</dt><dd>厂家规格书 志浩 FJ5161BH（dim_FJ5161BH.png，型号在图片里，人工读图） · <a href="../evidence/SEG-002/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 志浩 FJ5161BH（dim_FJ5161BH.png，型号在图片里，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>同脚位 0.56 寸 1 位共阳（5161BS 类）通用</dd>
     <dt>淘宝</dt><dd>0.56寸 一位 数码管 共阳 5161BS</dd>
   </dl>
@@ -2037,7 +2037,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>段脚经电阻接 GPIO，位选脚经三极管接 GND（或用 TM1637 模块）</dd>
     <dt>坑</dt><dd class="pit">4 位要动态扫描，单片机 IO 不够时直接用 TM1637 模块</dd>
     <dt>备注</dt><dd>脚位与 KiCad 官方 CC56-12 一致；封装改自官方 CA56-12SRWA，孔 1.0→0.8、焊盘 1.5→1.6。无 3D 模型（官方原封装无模型）。</dd>
-    <dt>依据</dt><dd>厂家规格书 志浩 FJ5461AH 尺寸图（dim_FJ5461AH.png，图片型，人工读图） · <a href="../evidence/SEG-003/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 志浩 FJ5461AH 尺寸图（dim_FJ5461AH.png，图片型，人工读图） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无合适替代</dd>
     <dt>淘宝</dt><dd>0.56寸 四位 数码管 共阴 5461AS</dd>
   </dl>
@@ -2055,7 +2055,7 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>驱动</dt><dd>位选脚经 PNP 接 VCC，段脚低电平点亮</dd>
     <dt>坑</dt><dd class="pit">共阳段脚低电平点亮，程序取反</dd>
     <dt>备注</dt><dd>封装与 SEG-003 相同。无 3D 模型（官方原封装无模型）。</dd>
-    <dt>依据</dt><dd>厂家规格书 志浩 FJ5461BH（dim_FJ5461BH.png） · <a href="../evidence/SEG-004/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-10-02</dd>
+    <dt>依据</dt><dd>厂家规格书 志浩 FJ5461BH（dim_FJ5461BH.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无合适替代</dd>
     <dt>淘宝</dt><dd>0.56寸 四位 数码管 共阳 5461BS</dd>
   </dl>

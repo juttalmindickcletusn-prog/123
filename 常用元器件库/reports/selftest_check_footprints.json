@@ -1,5 +1,5 @@
 {
- "csv": "G:\\GPT-Workspace\\Projects\\Desktop\\硬件设计提示词规范\\常用元器件库\\tools\\selftest\\fixtures\\fp_FUS-001_10.csv",
+ "csv": "/home/user/123/常用元器件库/tools/selftest/fixtures/fp_FUS-001_10.csv",
  "checked": 1,
  "errors": {
   "FUS-001": [

@@ -56,6 +56,11 @@ def main() -> int:
     lines += [f"| {n} | {'通过' if ok else '**失败**'} | {msg.replace('|', '/')} |" for n, ok, msg in res]
     lines += ["", f"测试板 DRC：违规 {len(drc.get('violations', []))} 条，未连接 {len(drc.get('unconnected_items', []))} 条。",
               "测试板文件、渲染图在 reports/testboard/。"]
+    ev = json.loads((ROOT / "reports" / "check_evidence.json").read_text(encoding="utf-8"))
+    if ev.get("pdf_missing_warn"):
+        lines += ["", f"**精简包模式**（STUDENTHW_PDF_MISSING_OK=1）：{len(ev['pdf_missing_warn'])} 条缺 datasheet.pdf，"
+                  "PDF 存在性和 PDF 文本型号检查未做，记为警告。完整包上不带该变量重跑才算证据检查通过。",
+                  "缺 PDF 的条目：" + "、".join(ev["pdf_missing_warn"])]
     (ROOT / "reports" / "检查汇总.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     bad = [n for n, ok, _ in res if not ok]
     print("全部通过" if not bad else f"失败：{bad}")

@@ -38,6 +38,24 @@ def write_csv(name, rs):
     return path
 
 
+def make_pdf(path: Path, text: str = "", image_only: bool = False) -> None:
+    """自测用的合成 PDF（不依赖 evidence/ 里的真规格书，精简包也能跑）。"""
+    try:
+        import fitz
+    except ImportError:
+        import pymupdf as fitz
+    doc = fitz.open()
+    page = doc.new_page()
+    if image_only:  # 只有一张图、没有文字层，模拟扫描件
+        pix = fitz.Pixmap(fitz.csRGB, fitz.IRect(0, 0, 200, 100), 0)
+        pix.clear_with(200)
+        page.insert_image(fitz.Rect(50, 50, 450, 250), pixmap=pix)
+    else:
+        page.insert_text((72, 72), text)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(path))
+
+
 def run(script, csv_path, extra=()):
     exe = KICAD_PY if script == "check_footprints.py" else PY
     r = subprocess.run([exe, str(ROOT / "tools" / script), str(csv_path), *extra], capture_output=True,
@@ -74,7 +92,7 @@ def main():
     for rid in ("CAP-001", "CAP-002"):
         (ev / rid).mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / "evidence" / rid / "jlc.json", ev / rid / "jlc.json")
-        shutil.copy2(ROOT / "evidence" / rid / "datasheet.pdf", ev / rid / "datasheet.pdf")
+        make_pdf(ev / rid / "datasheet.pdf", row(rid)["part_number"])
         shutil.copy2(ROOT / "evidence" / "CAP-001" / "dim_disc104.png", ev / rid / "dim_same.png")
     rs = []
     for rid in ("CAP-001", "CAP-002"):
@@ -89,8 +107,13 @@ def main():
     (ev / "RES-002" / "datasheet.pdf").write_text("<html>viewer page</html>", encoding="utf-8")
     r = row("RES-002"); r["evidence"] = "evidence/RES-001/dim_MFR_1-4W.png"
     cases.append(("规格书是网页不是 PDF", "check_evidence.py", write_csv("ev_html", [r]), (str(ev),), "不是 PDF"))
+    (ev / "SW-001").mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ROOT / "evidence" / "SW-001" / "jlc.json", ev / "SW-001" / "jlc.json")
+    make_pdf(ev / "SW-001" / "datasheet.pdf", image_only=True)
     r = row("SW-001"); r["dim_source"] = "厂家规格书"
-    cases.append(("图片型 PDF 未注明人工读图", "check_evidence.py", write_csv("ev_img", [r]), (), "人工读图"))
+    cases.append(("图片型 PDF 未注明人工读图", "check_evidence.py", write_csv("ev_img", [r]), (str(ev),), "人工读图"))
+    r = row("DSP-002"); r["datasheet_url"] = ""
+    cases.append(("规格书链接为空", "check_evidence.py", write_csv("ev_nourl", [r]), (), "datasheet_url 为空"))
     r = row("BZ-002"); r["evidence"] = "evidence/BZ-002/datasheet.pdf"
     cases.append(("缺尺寸图", "check_evidence.py", write_csv("ev_nodim", [r]), (), "缺尺寸图"))
 
@@ -115,6 +138,8 @@ def main():
         lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：真实 parts.csv | {script} | 0 错误 | {last} |")
         print(("OK  " if ok else "FAIL"), "正向对照", script, last)
     lines += ["", f"合计 {len(cases)} 个故意错误 + 3 个正向对照，失败 {fails} 项。"]
+    if __import__("os").environ.get("STUDENTHW_PDF_MISSING_OK") == "1":
+        lines += ["", "注意：本次在精简包上运行（STUDENTHW_PDF_MISSING_OK=1），证据检查的正向对照把缺 PDF 记为警告而非错误。"]
     (ROOT / "reports" / "selftest.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 1 if fails else 0
 

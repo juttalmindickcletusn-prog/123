@@ -28,6 +28,10 @@ import paths  # noqa: E402
 
 import pcbnew
 
+# 部分 Linux 发行版的 pcbnew 用新版 SWIG 编译，SwigPyIterator 没有 next()，补一个别名
+if hasattr(pcbnew, "SwigPyIterator") and not hasattr(pcbnew.SwigPyIterator, "next"):
+    pcbnew.SwigPyIterator.next = pcbnew.SwigPyIterator.__next__
+
 ROOT = Path(__file__).resolve().parents[1]
 OFFICIAL = paths.FP_OFF
 OFFICIAL_3D = str(paths.MODELS_3D)

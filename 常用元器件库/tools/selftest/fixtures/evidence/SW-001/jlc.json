@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-02",
+ "parts": {
+  "C110153": {
+   "role": "主选",
+   "code": "C110153",
+   "mpn": "K2-1102DP-C4SW-04",
+   "brand": "Korean Hroparts Elec",
+   "package": "Plugin-4P,6x6mm",
+   "describe": "-25℃~+85℃ 100,000 cycles 12V 2.5N 50mA 5mm 6mm 6mm Round Button SPST Through Hole 插件-4P,6x6mm Tactile Switches ROHS",
+   "jlc_stock": 86680,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0587
+    ],
+    [
+     100,
+     0.048
+    ],
+    [
+     300,
+     0.0426
+    ]
+   ],
+   "cny_price": 0.3612,
+   "cny_step": 10,
+   "szlcsc_stock": "8585",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2108131530_Korean-Hroparts-Elec-K2-1102DP-C4SW-04_C110153.pdf"
+  },
+  "C393938": {
+   "role": "替代",
+   "code": "C393938",
+   "mpn": "TS665CJ",
+   "brand": "SHOU HAN",
+   "package": "Plugin-4P,6x6mm",
+   "describe": "-25℃~+70℃ 12V 2.5N 50,000 cycles 50mA 5mm 6mm 6mm Black No PC Pin Round Button SPST Through Hole Without Bracket Plugin-4P,6x6mm Tactile Switches ROHS",
+   "jlc_stock": 150436,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.0192
+    ],
+    [
+     500,
+     0.0152
+    ],
+    [
+     2000,
+     0.0128
+    ]
+   ],
+   "cny_price": 0.1183,
+   "cny_step": 50,
+   "szlcsc_stock": "2935",
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_SHOU-HAN-TS665CJ_C393938.pdf"
+  }
+ }
+}
