@@ -59,10 +59,13 @@ def main() -> int:
     lines += ["", f"测试板 DRC：违规 {len(drc.get('violations', []))} 条，未连接 {len(drc.get('unconnected_items', []))} 条。",
               "测试板文件、渲染图在 reports/testboard/。"]
     ev = json.loads((ROOT / "reports" / "check_evidence.json").read_text(encoding="utf-8"))
-    if ev.get("pdf_missing_warn"):
-        lines += ["", f"**精简包模式**（STUDENTHW_PDF_MISSING_OK=1）：{len(ev['pdf_missing_warn'])} 条缺 datasheet.pdf，"
-                  "PDF 存在性和 PDF 文本型号检查未做，记为警告。完整包上不带该变量重跑才算证据检查通过。",
-                  "缺 PDF 的条目：" + "、".join(ev["pdf_missing_warn"])]
+    if ev.get("pdf_missing_warn") or ev.get("jlc_missing_warn"):
+        lines += ["", "**离线模式**（STUDENTHW_OFFLINE=1）：以下检查没做，只记为警告，不算通过。"
+                  "联网后先跑 `python tools/fetch_evidence.py 编号…` 补齐，再不带该变量重跑。",
+                  f"- 缺 datasheet.pdf（PDF 存在性和 PDF 文本型号未查）{len(ev.get('pdf_missing_warn', []))} 条："
+                  + "、".join(ev.get("pdf_missing_warn", [])),
+                  f"- 有 C 编号但没有 jlc.json（C 编号未用接口核实）{len(ev.get('jlc_missing_warn', []))} 条："
+                  + ("、".join(ev.get("jlc_missing_warn", [])) or "无")]
     (ROOT / "reports" / "检查汇总.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     bad = [n for n, ok, _ in res if not ok]
     print("全部通过" if not bad else f"失败：{bad}")

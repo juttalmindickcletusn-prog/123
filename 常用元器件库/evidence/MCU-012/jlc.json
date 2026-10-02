@@ -1,0 +1,35 @@
+{
+ "date": "2026-09-19",
+ "source": "jlcparts 镜像（github.com/yaqwsx/jlcparts gh-pages data/cache.zip）",
+ "parts": {
+  "C7203002": {
+   "role": "主选",
+   "code": "C7203002",
+   "mpn": "Raspberry Pi Pico",
+   "brand": "",
+   "package": "-",
+   "describe": "- Raspberry Pi ROHS",
+   "jlc_stock": 1093,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     7.1645
+    ],
+    [
+     10,
+     6.1434
+    ],
+    [
+     30,
+     5.5205
+    ]
+   ],
+   "cny_price": null,
+   "cny_step": null,
+   "szlcsc_stock": null,
+   "datasheet": "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8590904656078061568",
+   "mirror_fetched": "2026-09-19"
+  }
+ }
+}

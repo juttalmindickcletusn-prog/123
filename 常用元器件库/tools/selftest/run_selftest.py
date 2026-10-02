@@ -164,8 +164,9 @@ def main():
         lines.append(f"| {'✅ 通过' if ok else '❌ 不通过'} | 正向对照：真实 parts.csv | {script} | 0 错误 | {last} |")
         print(("OK  " if ok else "FAIL"), "正向对照", script, last)
     lines += ["", f"合计 {len(cases)} 个故意错误 + 4 个正向对照，失败 {fails} 项。"]
-    if __import__("os").environ.get("STUDENTHW_PDF_MISSING_OK") == "1":
-        lines += ["", "注意：本次在精简包上运行（STUDENTHW_PDF_MISSING_OK=1），证据检查的正向对照把缺 PDF 记为警告而非错误。"]
+    _env = __import__("os").environ
+    if _env.get("STUDENTHW_OFFLINE") == "1" or _env.get("STUDENTHW_PDF_MISSING_OK") == "1":
+        lines += ["", "注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。"]
     (ROOT / "reports" / "selftest.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 1 if fails else 0
 

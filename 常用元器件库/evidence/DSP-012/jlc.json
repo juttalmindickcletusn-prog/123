@@ -1,0 +1,35 @@
+{
+ "date": "2026-09-29",
+ "source": "jlcparts 镜像（github.com/yaqwsx/jlcparts gh-pages data/cache.zip）",
+ "parts": {
+  "C18198249": {
+   "role": "主选",
+   "code": "C18198249",
+   "mpn": "HS1602A-B",
+   "brand": "HS",
+   "package": "-",
+   "describe": "-20℃~+70℃ 2 55.7x11mm 5V Blue background white text SPLC780 - LCD Screen ROHS",
+   "jlc_stock": 682,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     2.4079
+    ],
+    [
+     10,
+     2.0391
+    ],
+    [
+     30,
+     1.808
+    ]
+   ],
+   "cny_price": null,
+   "cny_step": null,
+   "szlcsc_stock": null,
+   "datasheet": "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8604443430307315712",
+   "mirror_fetched": "2026-09-29"
+  }
+ }
+}

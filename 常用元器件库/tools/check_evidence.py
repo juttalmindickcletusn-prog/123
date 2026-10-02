@@ -6,8 +6,12 @@
   5. PDF 文本中能搜到型号关键字（图片型 PDF 需在 dim_source 写"人工读图"）；
   6. datasheet_url 不能为空（模块也必须给出厂家或商品资料链接）。
 
-精简交接包不带 PDF：设环境变量 STUDENTHW_PDF_MISSING_OK=1 时，"缺 datasheet.pdf"降为警告（单独计数、写进报告），
-其余检查照常。正式验收必须在完整包上不带该变量运行。
+离线模式（云端网络拦了立创、厂家站点，或拿到的是不带 PDF 的精简包）：设环境变量 STUDENTHW_OFFLINE=1
+（旧名 STUDENTHW_PDF_MISSING_OK=1 同义）时，下面两项降为警告，单独计数、写进报告，其余检查照常：
+  - 缺 datasheet.pdf（PDF 文本型号检查因此也没做）；
+  - 有 C 编号但缺 jlc.json（C 编号还没用接口核实）。
+正式验收必须在联网、完整包上先跑 fetch_evidence.py 补齐，再不带该变量运行。
+"不上板"的配件（封装写"不适用"、notes 写"不上板"）不要求尺寸图。
 
 用法：python tools/check_evidence.py [parts.csv]
 """
@@ -38,8 +42,8 @@ def main() -> int:
     csv_path = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "parts.csv"
     ev_root = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "evidence"
     rows = list(csv.DictReader(csv_path.open(encoding="utf-8-sig")))
-    report = {"checked": 0, "errors": {}, "pdf_missing_warn": []}
-    pdf_ok = os.environ.get("STUDENTHW_PDF_MISSING_OK") == "1"
+    report = {"checked": 0, "errors": {}, "pdf_missing_warn": [], "jlc_missing_warn": []}
+    pdf_ok = os.environ.get("STUDENTHW_OFFLINE") == "1" or os.environ.get("STUDENTHW_PDF_MISSING_OK") == "1"
     hashes: dict[str, str] = {}
     for row in rows:
         errs = []
@@ -48,7 +52,10 @@ def main() -> int:
         if code.startswith("C"):
             j = d / "jlc.json"
             if not j.exists():
-                errs.append("缺 jlc.json")
+                if pdf_ok:
+                    report["jlc_missing_warn"].append(row["id"])
+                else:
+                    errs.append("缺 jlc.json")
             else:
                 rec = json.loads(j.read_text(encoding="utf-8")).get("parts", {}).get(code)
                 if not rec:
@@ -83,7 +90,8 @@ def main() -> int:
                     report["pdf_missing_warn"].append(row["id"])
                 else:
                     errs.append(f"证据文件不存在: {x}")
-        if not [q for q in pngs if q.name.startswith("dim")] and not (row["level"] == "A" and "V1.1" in row["notes"]):
+        off_board = row["kicad_footprint"].startswith("不适用") and "不上板" in row["notes"]
+        if not [q for q in pngs if q.name.startswith("dim")] and not (row["level"] == "A" and "V1.1" in row["notes"]) and not off_board:
             errs.append("缺尺寸图 dim*.png")
         for q in pngs:
             if not q.exists():
@@ -99,10 +107,13 @@ def main() -> int:
             report["errors"][row["id"]] = errs
             print(f"✗ {row['id']:9} " + "；".join(errs))
     report["pdf_missing_warn"] = sorted(set(report["pdf_missing_warn"]))
+    report["jlc_missing_warn"] = sorted(set(report["jlc_missing_warn"]))
     out = ROOT / "reports" / ("check_evidence.json" if len(sys.argv) == 1 else "selftest_check_evidence.json")
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
-    warn = f"；精简包缺 PDF（未核 PDF 文本）{len(report['pdf_missing_warn'])} 条" if report["pdf_missing_warn"] else ""
+    warn = f"；离线警告：缺 PDF {len(report['pdf_missing_warn'])} 条" if report["pdf_missing_warn"] else ""
+    if report["jlc_missing_warn"]:
+        warn += f"，C 编号未接口核实 {len(report['jlc_missing_warn'])} 条"
     print(f"检查 {report['checked']} 条，出错 {len(report['errors'])} 条{warn}")
     return 1 if report["errors"] else 0
 

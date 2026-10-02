@@ -1,0 +1,455 @@
+# 第二批补完（云端 2026-10-02）：Pico、Pico W、STC89C52RC、BlackPill、ESP32-CAM、LCD1602、I2C 转接板、LCD2004、
+# TM1637、MAX7219、USB-TTL、ST-Link。
+# 云端网络拦了立创/嘉立创接口和多数厂家站点：
+#   - 有 C 编号的条目：jlc.json 用 tools/import_jlcparts.py 从 jlcparts 公开镜像写（只核型号和嘉立创库存/美元价）；
+#     镜像里没有的（C14022）留给本地 fetch_evidence.py；立创商城人民币价来自交接文档 1.2 节的本地查询记录（写在 price_history.csv）。
+#   - 规格书 PDF：能从 GitHub 公开仓库取到的已存（BlackPill、ESP32-CAM）；其余留给本地补。
+# 等级按"实际核对过什么"定：没看到厂家引脚定义页或尺寸图的，一律 C。
+
+- id: MCU-012
+  category: 主控板
+  name: 树莓派 Raspberry Pi Pico（RP2040，焊排针直插）
+  lcsc: C7203002
+  datasheet_url: "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
+  part_number: Raspberry Pi Pico
+  manufacturer: Raspberry Pi
+  alternatives: []
+  alternatives_text: Pico W（MCU-013）脚位相同；Pico H 自带排针
+  key_params: RP2040 双核 Cortex-M0+ 133MHz，264KB SRAM，板载 2MB Flash，Micro-USB；26 个 GPIO（3 路 ADC）
+  supply: 5V 从 VBUS（USB）或 VSYS（1.8–5.5V）进，板载 DC-DC 出 3V3
+  logic_level: GPIO 3.3V，不耐 5V
+  pin_count: 40
+  pinout: >-
+    USB 朝上看：左列自上而下 1–20 = GP0、GP1、GND、GP2–GP5、GND、GP6–GP9、GND、GP10–GP13、GND、GP14、GP15；
+    右列自下而上 21–40 = GP16、GP17、GND、GP18–GP21、GND、GP22、RUN、GP26、GP27、AGND、GP28、ADC_VREF、3V3(OUT)、3V3_EN、GND、VSYS、VBUS
+    （按 KiCad 官方符号 MCU_Module:RaspberryPi_Pico，与 Pico 规格书 2.1 节引脚图一致）
+  pitch_mm: 2.54
+  row_spacing_mm: 17.78
+  lead_size_mm: 排针方针 0.64（Pico 板孔 Φ1.0）
+  body_mm: 51 × 21 × 1（PCB），Micro-USB 伸出顶边 1.3
+  mount: 底板焊两条 1×20 排母（或直接焊排针），Pico 焊排针后插上；USB 端朝板外
+  seated_height_mm: 排母 8.5 + 板厚，约 10
+  pin1: 1=GP0：USB 朝上时左列最上，PCB 圆角方焊盘
+  kicad_symbol: MCU_Module:RaspberryPi_Pico
+  kicad_footprint: Module:RaspberryPi_Pico_Common_THT
+  dim_source: 树莓派 Pico 规格书 Figure 3（第 2 章机械规格，dim_Pico_mechanical.png）：21×51，排距 17.78，脚距 2.54，孔 Φ1.0，首末脚距 48.26
+  level: B
+  pitfalls: GPIO 不耐 5V，接 5V 模块要分压或电平转换；ADC 只有 GP26–28 三路；板载 LED 在 GP25（不在排针上）
+  notes: >-
+    KiCad 官方封装与规格书一致（排距 17.78、首末脚 48.26、孔 1.0）。环宽：焊盘 1.6、孔 1.0，环宽 0.3，2.54 脚距下按 0.3 放宽。
+    C 编号与型号由 jlcparts 镜像核实；规格书 PDF 云端未能下载（datasheets.raspberrypi.com 被拦），尺寸图来自本地交接线索。
+  taobao_keyword: 树莓派 Pico RP2040 官方
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.3
+  pdf_keyword: Pico
+
+- id: MCU-013
+  category: 主控板
+  name: 树莓派 Raspberry Pi Pico W（RP2040 + Wi-Fi）
+  lcsc: C7203003
+  datasheet_url: "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf"
+  part_number: Raspberry Pi Pico W
+  manufacturer: Raspberry Pi
+  alternatives: []
+  alternatives_text: 不要 Wi-Fi 用 Pico（MCU-012）
+  key_params: RP2040 + 英飞凌 CYW43439（2.4GHz Wi-Fi），其余同 Pico
+  supply: 同 Pico：VBUS 或 VSYS（1.8–5.5V）
+  logic_level: GPIO 3.3V，不耐 5V
+  pin_count: 40
+  pinout: 与 MCU-012 Pico 相同（KiCad 符号 RaspberryPi_Pico_W 引脚与 Pico 完全一致）
+  pitch_mm: 2.54
+  row_spacing_mm: 17.78
+  lead_size_mm: 排针方针 0.64
+  body_mm: 51 × 21（官方称与 Pico 外形相同）
+  mount: 同 MCU-012；天线在 USB 对面一端，底板这一端不铺铜
+  seated_height_mm: 约 10
+  pin1: 1=GP0：USB 朝上时左列最上，PCB 圆角方焊盘
+  kicad_symbol: MCU_Module:RaspberryPi_Pico_W
+  kicad_footprint: Module:RaspberryPi_Pico_Common_THT
+  dim_source: 云端未取到 Pico W 规格书，暂用 Pico 机械图（evidence/MCU-012/dim_Pico_mechanical.png），未逐项核对 Pico W 自己的图
+  level: C
+  pitfalls: 板载 LED 接在 Wi-Fi 芯片上（不是 GP25），点灯代码与 Pico 不同；天线端不要压金属、铺铜
+  notes: >-
+    本地拿到 Pico W 规格书机械图核对后可升 B。环宽：焊盘 1.6、孔 1.0，按 0.3 放宽。C 编号与型号由 jlcparts 镜像核实。
+  taobao_keyword: 树莓派 Pico W 无线
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.3
+  pdf_keyword: Pico W
+  evidence_extra: [evidence/MCU-012/dim_Pico_mechanical.png]
+
+- id: MCU-014
+  category: 单片机
+  name: STC89C52RC 单片机（PDIP-40，插 IC 座）
+  lcsc: C14022
+  datasheet_url: "https://www.stcmicro.com/STC/STC89C52RC.html"
+  part_number: STC89C52RC
+  manufacturer: STC（宏晶）
+  alternatives: []
+  alternatives_text: AT89S52（Microchip）引脚兼容，下载方式不同（ISP 而不是串口）
+  key_params: 8051 内核，8KB Flash，512B RAM，32 个 I/O，串口 ISP 下载（P3.0/P3.1）
+  supply: 5V 版（工作电压范围以 STC89 手册为准，云端未取到手册正文）
+  logic_level: 5V TTL；P0 口开漏，需外接上拉
+  pin_count: 40
+  pinout: >-
+    标准 8051 脚位：1–8=P1.0–P1.7，9=RST，10–17=P3.0–P3.7（10=RXD，11=TXD），18=XTAL2，19=XTAL1，20=GND，
+    21–28=P2.0–P2.7，29=PSEN，30=ALE，31=EA，32–39=P0.7–P0.0，40=VCC。缺口朝左时左下为 1 脚
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 规格书只给引脚肩宽 b=1.14–1.70，没给插入段宽度（芯片插在 IC 座里，焊在板上的是座子）
+  body_mm: 52.0 × 13.84（E1），排距 15.24（规格书 4.1 节 PDIP40）
+  mount: 板上焊 40P IC 座（圆孔座或锁紧座），芯片插座子
+  seated_height_mm: 座子 + 芯片约 8（座子型号未定）
+  pin1: 1=P1.0：芯片缺口朝左、字面朝上时左下角，圆点标记；PCB 方焊盘
+  kicad_symbol: MCU_Microchip_8051:AT89x51xxP
+  kicad_footprint: Package_DIP:DIP-40_W15.24mm_Socket
+  dim_source: STC89/90 系列技术手册 4.1 节 PDIP40 封装尺寸图（dim_STC89_PDIP40.png）：D 52.0、E 15.24、e 2.54
+  level: C
+  pitfalls: P0 口没有内部上拉，做 I/O 要接 10k 排阻；下载要冷启动（先点下载再上电）；40P 座子要另买并核对排距 15.24（宽体）
+  notes: >-
+    符号借用 AT89x51xxP（标准 8051 脚位，引脚兼容）。定 C 级的原因：手册尺寸表没给引脚插入段宽度，IC 座型号（决定孔径）还没定，
+    且云端没能用接口核实 C14022 的型号、没拿到手册 PDF（只有交接线索里的尺寸图截图）。规格书缺（云端未下载，本地 fetch_evidence 补）。
+  taobao_keyword: STC89C52RC 直插 DIP40
+  polarized: 是
+  lead_max_mm: ""
+  pdf_keyword: STC89C52
+
+- id: MCU-015
+  category: 主控板
+  name: WeAct STM32F411CEU6 核心板（BlackPill V3.1）
+  lcsc: ""
+  datasheet_url: "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/tree/master/Hardware"
+  part_number: WeAct MiniF4 STM32F411CEU6 V3.1
+  manufacturer: WeAct Studio（微行工作室）
+  alternatives: []
+  alternatives_text: STM32F401CCU6 版已停售（WeAct README）；只要 F103 用 MCU-002/003
+  key_params: STM32F411CEU6，100MHz Cortex-M4F，512KB Flash，128KB RAM；USB-C；25MHz + 32.768kHz 晶振；NRST、BOOT0、用户键 KEY(PA0)、LED(PC13)
+  supply: 5V（USB-C 或 5V 脚），板载 LDO 出 3.3V
+  logic_level: 3.3V，标 FT 的脚耐 5V（见 STM32F411 规格书引脚表）
+  pin_count: 40
+  pinout: >-
+    USB 在左、正面朝上：下排自左向右 1–20 = PB12–PB15、PA8–PA12、PA15、PB3–PB9、5V、GND、3V3；
+    上排自右向左 21–40 = VBAT、PC13、PC14、PC15、NRST、PA0–PA7、PB0、PB1、PB2、PB10、3V3、GND、5V（WeAct 外形图丝印与原理图 P1/P2）
+  pitch_mm: 2.54
+  row_spacing_mm: 15.24
+  lead_size_mm: 排针方针 0.64
+  body_mm: 52.81 × 20.78
+  mount: 底板焊两条 1×20 排母，核心板插上
+  seated_height_mm: 排母 8.5 + 板厚，约 10
+  pin1: 1=PB12：USB 在左时下排最左，PCB 方焊盘
+  kicad_symbol: StudentHW:WeAct_BlackPill_STM32F411
+  kicad_footprint: StudentHW:Module_WeAct_BlackPill_STM32F411
+  dim_source: WeAct 官方 MiniF4x1Cx_V31 Board Shape 外形图第 1 页（dim_BlackPill_V31_shape.png）：52.81×20.78、排距标 15.22；引脚名按同页丝印和 V3.1 原理图
+  level: B
+  pitfalls: 外形图排距标 15.22，封装按 2.54 网格 15.24（差 0.02）；没有 WeAct Logo 和版本号的是仿品，脚位可能不同；PC13 驱动 LED 时不要再接外设
+  notes: >-
+    规格书 = WeAct V3.1 原理图（datasheet.pdf），另存外形图 PDF 和 STM32F411CEU6 规格书（均取自 WeAct 官方 GitHub 仓库）。
+    环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。淘宝 WeAct 官方店购买。
+  taobao_keyword: WeAct STM32F411CEU6 核心板
+  price: 未查（淘宝需登录）
+  stock: 淘宝（未核实）
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: STM32F4X1
+
+- id: MCU-016
+  category: 主控板
+  name: 安信可 ESP32-CAM 摄像头开发板（16P）
+  lcsc: C17333398
+  datasheet_url: "https://raw.githubusercontent.com/raphaelbs/esp32-cam-ai-thinker/master/assets/ESP32-CAM_Product_Specification.pdf"
+  part_number: Ai-Thinker ESP32-CAM WiFi BT BLE
+  manufacturer: Ai-Thinker（安信可）
+  alternatives: []
+  alternatives_text: 淘宝"ESP32-CAM-MB"底板只是下载座，不上板
+  key_params: ESP32（ESP32-S 模组）+ 4MB PSRAM，OV2640 摄像头，TF 卡座，板载闪光灯（GPIO4）
+  supply: 5V（规格书只给 5V），关闪光灯 180mA@5V，闪光灯最亮 310mA@5V
+  logic_level: GPIO 3.3V，不耐 5V
+  pin_count: 16
+  pinout: >-
+    正面（ESP32-S 模组面）朝上、天线朝上：左列自下而上 1–8 = 5V、GND、IO12、IO13、IO15、IO14、IO2、IO4；
+    右列自上而下 9–16 = GND、U0T、U0R、VCC、GND、IO0、IO16、3V3
+  pitch_mm: 2.54
+  row_spacing_mm: 22.86
+  lead_size_mm: 排针方针 0.64
+  body_mm: 27 × 40 × 4.5（规格书 27×40.5×4.5±0.2）
+  mount: 底板焊两条 1×8 排母，模块插上；天线朝板外
+  seated_height_mm: 排母 8.5 + 模块，约 13
+  pin1: 1=5V：正面朝上、天线朝上时左列最下，PCB 方焊盘
+  kicad_symbol: StudentHW:ESP32-CAM_AiThinker
+  kicad_footprint: StudentHW:Module_ESP32-CAM_AiThinker
+  dim_source: 安信可 ESP32-CAM Wi-Fi+BT SoC Module V1.0 规格书第 1 页尺寸图（dim_ESP32-CAM_outline.png）：27×40，排距 22.86，末脚距板底 4.58
+  level: B
+  pitfalls: >-
+    没有 USB 口，下载要外接 USB-TTL 并把 IO0 拉低；IO4 接闪光灯，TF 卡占 IO2/4/12/13/14/15，IO16 接 PSRAM，几乎没有空闲 GPIO；
+    右列 VCC 脚是电源输出（板上焊盘选 3.3V/5V），不要当输入；供电至少 5V 2A 级，否则拍照复位
+  notes: >-
+    规格书取自 GitHub 公开仓库 raphaelbs/esp32-cam-ai-thinker 里的安信可原版 PDF。立创 C17333398 镜像显示库存 0，一般淘宝安信可官方店购买。
+    环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。
+  taobao_keyword: 安信可 ESP32-CAM 开发板 OV2640
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  pdf_keyword: ESP32-CAM
+
+- id: DSP-012
+  category: 显示屏
+  name: LCD1602 字符屏（并口 16P，汉昇 HS1602A-B 蓝底白字）
+  lcsc: C18198249
+  datasheet_url: "https://www.lcsc.com/product-detail/C18198249.html"
+  part_number: HS1602A-B
+  manufacturer: HS（汉昇）
+  alternatives: []
+  alternatives_text: 黄绿屏 HS1602A-Y（C18198250）外形、脚位相同（镜像描述同为 SPLC780 55.7×11）
+  key_params: 16×2 字符，控制器 SPLC780（HD44780 兼容），5V
+  supply: 5V
+  logic_level: 5V（3.3V 主控驱动时数据线一般可用，但 VDD 必须 5V，详见兼容性速查）
+  pin_count: 16
+  pinout: 按 HD44780 标准 1602 脚序：1=VSS、2=VDD、3=VO（对比度）、4=RS、5=RW、6=E、7–14=D0–D7、15=A（背光+）、16=K（背光-）；1 脚在左上角安装孔旁
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 屏上孔 Φ1.0，配 2.54 排针（方针 0.64）
+  body_mm: 80.0 × 36.0；安装孔 4×Φ3.0，孔距 75.0 × 31.0；通用款厚 11.0
+  mount: 屏背焊 1×16 排针，插在底板 1×16 排母上；四角用 M2.5/M3 铜柱固定
+  seated_height_mm: 排母 8.5 + 屏厚 11.0，约 20
+  pin1: 1=VSS：屏正面朝自己时左上角，靠安装孔一端，PCB 方焊盘
+  kicad_symbol: Display_Character:WC1602A
+  kicad_footprint: Display:WC1602A
+  dim_source: 汉昇 HS1602A 规格书"二、外形尺寸"图（dim_HS1602A_outline.png）：80×36，安装孔 75×31、Φ3，1 脚距左边 8.0、距上边 2.5，16-Φ1.0 脚距 2.54
+  level: C
+  pitfalls: 背光和 VO 对比度要接（VO 接 10k 电位器），不接对比度屏上看不到字；用 I2C 转接板时底板不放 16P，见 DSP-013
+  notes: >-
+    KiCad 官方 WC1602A 封装与汉昇外形图逐项一致（安装孔 75×31、1 脚相对安装孔 5.5、2.5）。定 C 级原因：只拿到外形图页，
+    汉昇的引脚定义表云端没取到，脚序按 HD44780 标准写，到货对照屏背丝印（尤其 15/16 背光极性）。
+    环宽：焊盘 1.8×2.6、孔 1.2，按 0.3 放宽。规格书缺（云端未下载；本地 fetch_evidence 补后核对脚位可升 B）。
+  taobao_keyword: LCD1602 蓝屏 5V 汉昇
+  polarized: 是
+  lead_max_mm: 0.64
+  ring_min_mm: 0.3
+  pdf_keyword: HS1602
+
+- id: DSP-013
+  category: 显示屏
+  name: LCD1602/2004 的 PCF8574 I2C 转接板（底板放 1×4 排针，杜邦线连接）
+  lcsc: ""
+  datasheet_url: "https://www.ti.com/lit/ds/symlink/pcf8574.pdf"
+  part_number: PCF8574T I2C LCD backpack
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 芯片是 PCF8574AT 的版本地址不同（0x3F），功能相同
+  key_params: PCF8574T 地址 0x27（A0–A2 跳线全断开），PCF8574AT 为 0x3F；板上电位器调对比度，跳线帽控制背光
+  supply: 5V（屏本身要 5V）
+  logic_level: 随供电（5V 供电时 I2C 上拉到 5V，见兼容性速查）
+  pin_count: 4
+  pinout: 转接板排针 GND、VCC、SDA、SCL；底板排针同序：1=GND、2=VCC、3=SDA、4=SCL
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.64
+  body_mm: 转接板焊在屏背面，不占底板面积
+  mount: 底板焊 1×4 直排针（HDR-001 截 4 针），4 根母对母杜邦线直通
+  seated_height_mm: 8.2（排针）
+  pin1: 1=GND：PCB 方焊盘；转接板排针顺序以丝印为准
+  kicad_symbol: StudentHW:LCD_I2C_PCF8574_4P
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+  dim_source: 底板上只有 1×4 排针，尺寸按 HDR-001 排针图纸（evidence/HDR-001/dim_PZ254_1xN.png）；转接板本身无厂家图
+  level: C
+  pitfalls: >-
+    汉昇 HS1602A-6B 这类"自带串口"的屏不是 PCF8574 方案，不能用 LiquidCrystal_I2C 库；地址 0x27/0x3F 两种，
+    先跑 I2C 扫描；5V 供电时 SDA/SCL 被转接板上拉到 5V，3.3V 主控要看兼容性速查
+  notes: 规格书缺（淘宝模块，datasheet_url 给的是 TI PCF8574 芯片规格书）。环宽：官方排针焊盘 1.7、孔 1.0，按 0.35 放宽。
+  taobao_keyword: LCD1602 IIC 转接板 PCF8574
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/HDR-001/dim_PZ254_1xN.png]
+
+- id: DSP-014
+  category: 显示屏
+  name: LCD2004 字符屏（20×4，配 I2C 转接板，不上板）
+  lcsc: ""
+  datasheet_url: "https://www.waveshare.com/datasheet/LCD_en_PDF/LCD2004.pdf"
+  part_number: LCD2004 + PCF8574 backpack
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 屏小一点就用 LCD1602（DSP-012）
+  key_params: 20×4 字符，HD44780 兼容，5V；经 DSP-013 转接板 I2C 连接
+  supply: 5V
+  logic_level: 经转接板为 I2C
+  pin_count: 0
+  pinout: 屏 16P 并口焊转接板；底板只放 DSP-013 的 4P 排针
+  pitch_mm: 不适用
+  row_spacing_mm: 不适用
+  lead_size_mm: 不适用
+  body_mm: 未核（Raystar RC2004A 规格书为 98×60、安装孔 93×55，但淘宝主流款没拿到图纸，不作数）
+  mount: 不上板：用铜柱固定在外壳上，杜邦线接底板 4P 排针
+  seated_height_mm: 不适用
+  pin1: 不上板（底板一侧见 DSP-013）
+  kicad_symbol: 不适用
+  kicad_footprint: 不适用
+  dim_source: 无厂家图纸（云端搜不到可下载的主流款尺寸图）
+  level: C
+  pitfalls: 外形和安装孔各家不一，开外壳孔前到货实测；屏要 5V
+  notes: 不上板。规格书缺（淘宝通用屏）。安装尺寸待到货实测，见 待确认.md。
+  taobao_keyword: LCD2004 IIC 蓝屏 5V
+  polarized: 否
+  lead_max_mm: ""
+
+- id: DSP-015
+  category: 数码管
+  name: TM1637 4 位数码管模块（0.36 寸，4P）
+  lcsc: ""
+  datasheet_url: "https://lcsc.com/datasheet/lcsc_datasheet_2409280032_TM-Shenzhen-Titan-Micro-Elec-TM1637_C20001.pdf"
+  part_number: TM1637 4-digit module
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 要更多位数用 MAX7219 8 位数码管模块（未入库）
+  key_params: TM1637 驱动，两线串行（CLK、DIO，非标准 I2C，无地址）
+  supply: 未核（看 TM1637 规格书和模块说明）
+  logic_level: 随供电
+  pin_count: 4
+  pinout: 模块排针常见 CLK、DIO、VCC、GND；底板排针同序：1=CLK、2=DIO、3=VCC、4=GND
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.64
+  body_mm: 未核（模块自身尺寸各家不同）
+  mount: 底板焊 1×4 直排针，杜邦线直通；模块用螺丝固定在外壳面板
+  seated_height_mm: 8.2（排针）
+  pin1: 1=CLK：PCB 方焊盘；买到后先对照模块丝印，顺序不同就换杜邦线顺序
+  kicad_symbol: StudentHW:TM1637_4Digit_Module_4P
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+  dim_source: 底板上只有 1×4 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图
+  level: C
+  pitfalls: DIO 不是 I2C 的 SDA，不能挂在 I2C 总线上；有的模块 VCC/GND 顺序反，对照丝印再接
+  notes: 规格书缺（淘宝模块，datasheet_url 为天微 TM1637 芯片规格书，立创链接）。环宽按 0.35 放宽。
+  taobao_keyword: TM1637 4位数码管模块 时钟
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/HDR-001/dim_PZ254_1xN.png]
+
+- id: DSP-016
+  category: 显示屏
+  name: MAX7219 8×8 点阵模块（输入 5P）
+  lcsc: ""
+  datasheet_url: "https://www.analog.com/media/en/technical-documentation/data-sheets/max7219-max7221.pdf"
+  part_number: MAX7219 8x8 dot matrix module
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: 多块可级联（输出 DOUT 接下一块 DIN）
+  key_params: MAX7219 驱动 8×8 共阴点阵，SPI 类三线（DIN、CS、CLK），10MHz
+  supply: 5V（电压范围以 MAX7219 规格书为准，云端未下载）
+  logic_level: 5V 器件；3.3V 主控输入高电平裕量不足，见兼容性速查
+  pin_count: 5
+  pinout: 输入端排针 VCC、GND、DIN、CS、CLK；底板排针同序：1=VCC、2=GND、3=DIN、4=CS、5=CLK
+  pitch_mm: 2.54
+  row_spacing_mm: 不适用
+  lead_size_mm: 方针 0.64
+  body_mm: 未核（常见约 32×32，不作数）
+  mount: 底板焊 1×5 直排针，杜邦线接模块输入端（DIN 一侧）
+  seated_height_mm: 8.2（排针）
+  pin1: 1=VCC：PCB 方焊盘；接模块 DIN 一侧（不是 DOUT 一侧）
+  kicad_symbol: StudentHW:MAX7219_Matrix_Module_5P
+  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical
+  dim_source: 底板上只有 1×5 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图
+  level: C
+  pitfalls: 输入输出两端都有 5P，接错到 DOUT 端不亮；全亮时电流大，按 MAX7219 规格书和段电流设置算电流预算
+  notes: 规格书缺（淘宝模块，datasheet_url 为 ADI MAX7219 芯片规格书）。环宽按 0.35 放宽。
+  taobao_keyword: MAX7219 点阵模块 8x8 单片机
+  polarized: 否
+  lead_max_mm: 0.64
+  ring_min_mm: 0.35
+  evidence_extra: [evidence/HDR-001/dim_PZ254_1xN.png]
+
+- id: TOOL-001
+  category: 工具
+  name: CH340 USB 转 TTL 模块（不上板）
+  lcsc: ""
+  datasheet_url: "https://www.wch-ic.com/downloads/CH340DS1_PDF.html"
+  part_number: CH340 USB-TTL module
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: CP2102 模块（TOOL-002）
+  key_params: CH340G/CH340C，USB 转 UART，3.3V/5V 跳线选择
+  supply: USB 5V
+  logic_level: 跳线选 3.3V 或 5V，接 3.3V 主控必须选 3.3V
+  pin_count: 0
+  pinout: 杜邦线接底板 UART 排针：模块 TXD→主控 RX，RXD→主控 TX，GND 共地
+  pitch_mm: 不适用
+  row_spacing_mm: 不适用
+  lead_size_mm: 不适用
+  body_mm: 不适用
+  mount: 不上板
+  seated_height_mm: 不适用
+  pin1: 不上板
+  kicad_symbol: 不适用
+  kicad_footprint: 不适用
+  dim_source: 不上板，不需要尺寸图
+  level: C
+  pitfalls: 电平跳线默认常在 5V，接 ESP32/STM32 前改 3.3V；TX/RX 要交叉接
+  notes: 不上板（下载/调试工具，底板只留 UART 排针）。规格书缺（淘宝模块，datasheet_url 为沁恒 CH340 规格书）。
+  taobao_keyword: CH340 USB转TTL 模块 3.3V 5V
+  polarized: 否
+  lead_max_mm: ""
+
+- id: TOOL-002
+  category: 工具
+  name: CP2102 USB 转 TTL 模块（不上板）
+  lcsc: ""
+  datasheet_url: "https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf"
+  part_number: CP2102 USB-TTL module
+  manufacturer: 淘宝通用
+  alternatives: []
+  alternatives_text: CH340 模块（TOOL-001）
+  key_params: Silicon Labs CP2102，USB 转 UART
+  supply: USB 5V
+  logic_level: 多数板 TXD/RXD 为 3.3V 电平，以模块说明为准
+  pin_count: 0
+  pinout: 杜邦线接底板 UART 排针，TX/RX 交叉，GND 共地
+  pitch_mm: 不适用
+  row_spacing_mm: 不适用
+  lead_size_mm: 不适用
+  body_mm: 不适用
+  mount: 不上板
+  seated_height_mm: 不适用
+  pin1: 不上板
+  kicad_symbol: 不适用
+  kicad_footprint: 不适用
+  dim_source: 不上板，不需要尺寸图
+  level: C
+  pitfalls: 模块上的 3V3 脚输出电流很小，不要给主控板供电
+  notes: 不上板（下载/调试工具）。规格书缺（淘宝模块，datasheet_url 为 Silicon Labs CP2102 规格书）。
+  taobao_keyword: CP2102 USB转TTL 模块
+  polarized: 否
+  lead_max_mm: ""
+
+- id: TOOL-003
+  category: 工具
+  name: ST-Link V2 下载器（不上板，接 SWD 4P 排针）
+  lcsc: ""
+  datasheet_url: "https://www.st.com/resource/en/user_manual/um1075-stlinkv2-incircuit-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf"
+  part_number: ST-LINK/V2 (compatible)
+  manufacturer: 淘宝通用（兼容版）
+  alternatives: []
+  alternatives_text: WeAct/正点原子 DAPLink 也可下载 STM32
+  key_params: SWD 下载调试 STM32，SWIM 下载 STM8
+  supply: USB 5V
+  logic_level: 3.3V
+  pin_count: 0
+  pinout: 杜邦线接底板 SWD 排针：3V3、SWDIO、SWCLK、GND（顺序以核心板丝印为准）
+  pitch_mm: 不适用
+  row_spacing_mm: 不适用
+  lead_size_mm: 不适用
+  body_mm: 不适用
+  mount: 不上板
+  seated_height_mm: 不适用
+  pin1: 不上板
+  kicad_symbol: 不适用
+  kicad_footprint: 不适用
+  dim_source: 不上板，不需要尺寸图
+  level: C
+  pitfalls: 兼容版外壳上的引脚顺序各家不同，看外壳丝印接；核心板已由 USB 供电时不要再接 ST-Link 的 3.3V
+  notes: 不上板（下载工具）。规格书缺（兼容版无规格书，datasheet_url 为 ST 原版 UM1075）。
+  taobao_keyword: ST-LINK V2 下载器 STM32
+  polarized: 否
+  lead_max_mm: ""

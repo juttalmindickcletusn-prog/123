@@ -7,5 +7,6 @@
  },
  "pdf_missing_warn": [
   "BZ-002"
- ]
+ ],
+ "jlc_missing_warn": []
 }

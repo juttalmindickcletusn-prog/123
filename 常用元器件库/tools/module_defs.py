@@ -132,6 +132,35 @@ add("Module_NodeMCU_ESP8266_CP2102_W22.86",
     height="插在 8.5 mm 排母上，模块底面离底板约 8.5 mm",
     sym_groups=[[0], [1]])
 
+# WeAct STM32F411CEU6 BlackPill V3.1：WeAct 官方外形图 MiniF4x1Cx_V31 Board Shape（GitHub WeActStudio.MiniSTM32F4x1/Hardware）
+# 板 52.81×20.78；两排 1×20，图上排距标 15.22（按 2.54 网格取 15.24，差 0.02 在排针公差内）；USB-C 在左端。
+# 板框相对引脚的位置按图量：B12 距左边约 1.35、3V3 距右边约 3.15，上下各约 2.77（只影响丝印外框，不影响焊盘）。
+_bk_bottom = ["PB12", "PB13", "PB14", "PB15", "PA8", "PA9", "PA10", "PA11", "PA12", "PA15", "PB3", "PB4", "PB5",
+              "PB6", "PB7", "PB8", "PB9", "5V", "GND", "3V3"]
+_bk_top_left_right = ["5V", "GND", "3V3", "PB10", "PB2", "PB1", "PB0", "PA7", "PA6", "PA5", "PA4", "PA3", "PA2",
+                      "PA1", "PA0", "NRST", "PC15", "PC14", "PC13", "VBAT"]
+add("Module_WeAct_BlackPill_STM32F411",
+    descr="WeAct STM32F411CEU6 BlackPill V3.1，两排 1×20 2.54，排距 15.24（图标 15.22）；USB-C 在左端，下排左起 1 脚 PB12",
+    board=(-1.35, -15.24 - 2.77, -1.35 + 52.81, 2.77),
+    rows=[col(20, _bk_bottom, 0, 0, "right", 1, "bottom"),
+          col(20, list(reversed(_bk_top_left_right)), 48.26, -15.24, "left", 21, "top")],
+    labels=[("USB", -3.4, -7.62, 90)],
+    height="插在 8.5 mm 排母上，模块底面离底板约 8.5 mm",
+    sym_groups=[[0], [1]])
+
+# 安信可 ESP32-CAM：安信可规格书 ESP32-CAM Wi-Fi+BT SoC Module V1.0 第 1 页尺寸图（与 DFRobot DFR0602 图一致）
+# 板 27×40，两排 1×8，排距 22.86，脚距 2.54；最下一脚中心距板底 4.58；天线区在顶端 6.218（板内）。
+# 正面（ESP32-S 模组面）朝上看：左列自下而上 5V(方焊盘)…IO4，右列自上而下 GND…3V3。
+add("Module_ESP32-CAM_AiThinker",
+    descr="安信可 ESP32-CAM，两排 1×8 2.54，排距 22.86；正面朝上、天线朝上，1 脚=左下 5V",
+    board=(-(27 - 22.86) / 2, 4.58 - 40, 22.86 + (27 - 22.86) / 2, 4.58),
+    overhang=(-(27 - 22.86) / 2, 4.58 - 40, 22.86 + (27 - 22.86) / 2, 4.58 - 40 + 6.218),
+    rows=[col(8, ["5V", "GND", "IO12", "IO13", "IO15", "IO14", "IO2", "IO4"], 0, 0, "up", 1, "left"),
+          col(8, ["GND", "U0T", "U0R", "VCC", "GND", "IO0", "IO16", "3V3"], 22.86, -17.78, "down", 9, "right")],
+    labels=[("ANT", 11.43, 4.58 - 40 - 1.4, 0)],
+    height="插在 8.5 mm 排母上，模块底面离底板约 8.5 mm（背面有 TF 卡座，排母不能低于 8.5）",
+    sym_groups=[[0], [1]])
+
 # ---------------- 显示屏 ----------------
 def _oled096(name, names, descr):
     # lcdwiki MC096：PCB 27.30×27.80；1 脚距左边 9.84，引脚行距上边 1.50；Φ2 安装孔距边 2.0
@@ -223,3 +252,13 @@ def sym(name, fp, descr, left, right=()):
 sym("7Seg_1Digit_CA", "StudentHW:7Seg_0.56in_1Digit_10P", "1 位 7 段数码管，共阳（3、8 脚为公共阳极）",
     [("7", "A"), ("6", "B"), ("4", "C"), ("2", "D"), ("1", "E"), ("9", "F"), ("10", "G"), ("5", "DP")],
     [("3", "CA"), ("8", "CA")])
+
+
+# 第二批补充：只在底板上放排针（杜邦线连模块），封装用 KiCad 官方排针，引脚顺序与模块排针一致，直通线即可
+sym("LCD_I2C_PCF8574_4P", "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "LCD1602/2004 的 PCF8574 I2C 转接板接口（模块排针 GND VCC SDA SCL）", [("1", "GND"), ("2", "VCC"), ("3", "SDA"), ("4", "SCL")])
+sym("TM1637_4Digit_Module_4P", "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "TM1637 4 位数码管模块接口（模块排针 CLK DIO VCC GND，不同厂家可能不同，对照丝印）",
+    [("1", "CLK"), ("2", "DIO"), ("3", "VCC"), ("4", "GND")])
+sym("MAX7219_Matrix_Module_5P", "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+    "MAX7219 8×8 点阵模块输入端接口（VCC GND DIN CS CLK）", [("1", "VCC"), ("2", "GND"), ("3", "DIN"), ("4", "CS"), ("5", "CLK")])

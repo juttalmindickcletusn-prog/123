@@ -22,9 +22,9 @@ figure img{width:100%;height:150px;object-fit:contain}figcaption{font-size:11px;
 dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{color:var(--mute)}dd{margin:0;word-break:break-word}.pit{color:var(--c)}
 </style></head><body>
 <div class="top"><h1>常用元器件库预览（第一批：通用元件）</h1>
-<p class="sum">107 条 · A 级 16 · B 级 83 · C 级 8 · 点尺寸图看原图 · 数据源 parts.csv</p>
+<p class="sum">120 条 · A 级 16 · B 级 86 · C 级 18 · 点尺寸图看原图 · 数据源 parts.csv</p>
 <input id="q" placeholder="搜索编号 / 名称 / 型号 / C 编号 / 封装名">
-<div class="cats"><button data-cat="" class="on">全部</button><button data-cat="电源座">电源座</button><button data-cat="排针排母">排针排母</button><button data-cat="端子">端子</button><button data-cat="开关">开关</button><button data-cat="蜂鸣器">蜂鸣器</button><button data-cat="电池座">电池座</button><button data-cat="电阻">电阻</button><button data-cat="电容">电容</button><button data-cat="电解电容">电解电容</button><button data-cat="保险">保险</button><button data-cat="二极管">二极管</button><button data-cat="LED">LED</button><button data-cat="三极管">三极管</button><button data-cat="光耦">光耦</button><button data-cat="稳压器">稳压器</button><button data-cat="主控板">主控板</button><button data-cat="显示屏">显示屏</button><button data-cat="数码管">数码管</button></div></div>
+<div class="cats"><button data-cat="" class="on">全部</button><button data-cat="电源座">电源座</button><button data-cat="排针排母">排针排母</button><button data-cat="端子">端子</button><button data-cat="开关">开关</button><button data-cat="蜂鸣器">蜂鸣器</button><button data-cat="电池座">电池座</button><button data-cat="电阻">电阻</button><button data-cat="电容">电容</button><button data-cat="电解电容">电解电容</button><button data-cat="保险">保险</button><button data-cat="二极管">二极管</button><button data-cat="LED">LED</button><button data-cat="三极管">三极管</button><button data-cat="光耦">光耦</button><button data-cat="稳压器">稳压器</button><button data-cat="主控板">主控板</button><button data-cat="显示屏">显示屏</button><button data-cat="数码管">数码管</button><button data-cat="单片机">单片机</button><button data-cat="工具">工具</button></div></div>
 <main id="list">
 <article class="card" data-cat="电源座" data-text="pwr-001dc-005 电源座（5.5×2.1 插头，2.0 针）dc-005-5a-2.0c381116studenthw:powerjack_dc-005_xkb_5a_horizontal">
   <header><span class="id">PWR-001</span><span class="lvl lvl-B">B 级</span><h2>DC-005 电源座（5.5×2.1 插头，2.0 针）</h2></header>
@@ -1950,6 +1950,240 @@ dl{display:grid;grid-template-columns:3em 1fr;gap:2px 8px;margin:10px 0 0}dt{col
     <dt>依据</dt><dd>厂家规格书 志浩 FJ5461BH（dim_FJ5461BH.png） · 核实 2026-10-02</dd>
     <dt>替代</dt><dd>无合适替代</dd>
     <dt>淘宝</dt><dd>0.56寸 四位 数码管 共阳 5461BS</dd>
+  </dl>
+</article>
+<article class="card" data-cat="主控板" data-text="mcu-012树莓派 raspberry pi pico（rp2040，焊排针直插）raspberry pi picoc7203002module:raspberrypi_pico_common_tht">
+  <header><span class="id">MCU-012</span><span class="lvl lvl-B">B 级</span><h2>树莓派 Raspberry Pi Pico（RP2040，焊排针直插）</h2></header>
+  <p class="pn"><b>Raspberry Pi Pico</b>（Raspberry Pi）· 立创 <a href="https://item.szlcsc.com/search.html?k=C7203002" target="_blank">C7203002</a> · 扩展库 · $7.1645@1+（嘉立创海外价，美元） · 库存 嘉立创 1093</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/RaspberryPi_Pico_Common_THT.svg" alt="封装" loading="lazy"><figcaption>封装 Module:RaspberryPi_Pico_Common_THT</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/MCU_Module/RaspberryPi_Pico_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 MCU_Module:RaspberryPi_Pico</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/MCU-012/dim_Pico_mechanical.png" target="_blank"><img class="dim" src="../evidence/MCU-012/dim_Pico_mechanical.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>RP2040 双核 Cortex-M0+ 133MHz，264KB SRAM，板载 2MB Flash，Micro-USB；26 个 GPIO（3 路 ADC）</dd>
+    <dt>引脚</dt><dd>USB 朝上看：左列自上而下 1–20 = GP0、GP1、GND、GP2–GP5、GND、GP6–GP9、GND、GP10–GP13、GND、GP14、GP15； 右列自下而上 21–40 = GP16、GP17、GND、GP18–GP21、GND、GP22、RUN、GP26、GP27、AGND、GP28、ADC_VREF、3V3(OUT)、3V3_EN、GND、VSYS、VBUS （按 KiCad 官方符号 MCU_Module:RaspberryPi_Pico，与 Pico 规格书 2.1 节引脚图一致）</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 排针方针 0.64（Pico 板孔 Φ1.0）；孔 1；焊盘 1.6×1.6；本体 51 × 21 × 1（PCB），Micro-USB 伸出顶边 1.3；安装高 排母 8.5 + 板厚，约 10</dd>
+    <dt>驱动</dt><dd>GPIO 3.3V，不耐 5V</dd>
+    <dt>坑</dt><dd class="pit">GPIO 不耐 5V，接 5V 模块要分压或电平转换；ADC 只有 GP26–28 三路；板载 LED 在 GP25（不在排针上）</dd>
+    <dt>备注</dt><dd>KiCad 官方封装与规格书一致（排距 17.78、首末脚 48.26、孔 1.0）。环宽：焊盘 1.6、孔 1.0，环宽 0.3，2.54 脚距下按 0.3 放宽。 C 编号与型号由 jlcparts 镜像核实；规格书 PDF 云端未能下载（datasheets.raspberrypi.com 被拦），尺寸图来自本地交接线索。</dd>
+    <dt>依据</dt><dd>树莓派 Pico 规格书 Figure 3（第 2 章机械规格，dim_Pico_mechanical.png）：21×51，排距 17.78，脚距 2.54，孔 Φ1.0，首末脚距 48.26 · 核实 2026-09-19</dd>
+    <dt>替代</dt><dd>Pico W（MCU-013）脚位相同；Pico H 自带排针</dd>
+    <dt>淘宝</dt><dd>树莓派 Pico RP2040 官方</dd>
+  </dl>
+</article>
+<article class="card" data-cat="主控板" data-text="mcu-013树莓派 raspberry pi pico w（rp2040 + wi-fi）raspberry pi pico wc7203003module:raspberrypi_pico_common_tht">
+  <header><span class="id">MCU-013</span><span class="lvl lvl-C">C 级</span><h2>树莓派 Raspberry Pi Pico W（RP2040 + Wi-Fi）</h2></header>
+  <p class="pn"><b>Raspberry Pi Pico W</b>（Raspberry Pi）· 立创 <a href="https://item.szlcsc.com/search.html?k=C7203003" target="_blank">C7203003</a> · 扩展库 · $12.8637@1+（嘉立创海外价，美元） · 库存 嘉立创 862</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/RaspberryPi_Pico_Common_THT.svg" alt="封装" loading="lazy"><figcaption>封装 Module:RaspberryPi_Pico_Common_THT</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/MCU_Module/RaspberryPi_Pico_W_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 MCU_Module:RaspberryPi_Pico_W</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/MCU-012/dim_Pico_mechanical.png" target="_blank"><img class="dim" src="../evidence/MCU-012/dim_Pico_mechanical.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>RP2040 + 英飞凌 CYW43439（2.4GHz Wi-Fi），其余同 Pico</dd>
+    <dt>引脚</dt><dd>与 MCU-012 Pico 相同（KiCad 符号 RaspberryPi_Pico_W 引脚与 Pico 完全一致）</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 排针方针 0.64；孔 1；焊盘 1.6×1.6；本体 51 × 21（官方称与 Pico 外形相同）；安装高 约 10</dd>
+    <dt>驱动</dt><dd>GPIO 3.3V，不耐 5V</dd>
+    <dt>坑</dt><dd class="pit">板载 LED 接在 Wi-Fi 芯片上（不是 GP25），点灯代码与 Pico 不同；天线端不要压金属、铺铜</dd>
+    <dt>备注</dt><dd>本地拿到 Pico W 规格书机械图核对后可升 B。环宽：焊盘 1.6、孔 1.0，按 0.3 放宽。C 编号与型号由 jlcparts 镜像核实。</dd>
+    <dt>依据</dt><dd>云端未取到 Pico W 规格书，暂用 Pico 机械图（evidence/MCU-012/dim_Pico_mechanical.png），未逐项核对 Pico W 自己的图 · 核实 2026-09-19</dd>
+    <dt>替代</dt><dd>不要 Wi-Fi 用 Pico（MCU-012）</dd>
+    <dt>淘宝</dt><dd>树莓派 Pico W 无线</dd>
+  </dl>
+</article>
+<article class="card" data-cat="单片机" data-text="mcu-014stc89c52rc 单片机（pdip-40，插 ic 座）stc89c52rcc14022package_dip:dip-40_w15.24mm_socket">
+  <header><span class="id">MCU-014</span><span class="lvl lvl-C">C 级</span><h2>STC89C52RC 单片机（PDIP-40，插 IC 座）</h2></header>
+  <p class="pn"><b>STC89C52RC</b>（STC（宏晶））· 立创 <a href="https://item.szlcsc.com/search.html?k=C14022" target="_blank">C14022</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/DIP-40_W15.24mm_Socket.svg" alt="封装" loading="lazy"><figcaption>封装 Package_DIP:DIP-40_W15.24mm_Socket</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/MCU_Microchip_8051/AT89x51xxP_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 MCU_Microchip_8051:AT89x51xxP</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/MCU-014/dim_STC89_PDIP40.png" target="_blank"><img class="dim" src="../evidence/MCU-014/dim_STC89_PDIP40.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>8051 内核，8KB Flash，512B RAM，32 个 I/O，串口 ISP 下载（P3.0/P3.1）</dd>
+    <dt>引脚</dt><dd>标准 8051 脚位：1–8=P1.0–P1.7，9=RST，10–17=P3.0–P3.7（10=RXD，11=TXD），18=XTAL2，19=XTAL1，20=GND， 21–28=P2.0–P2.7，29=PSEN，30=ALE，31=EA，32–39=P0.7–P0.0，40=VCC。缺口朝左时左下为 1 脚</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 规格书只给引脚肩宽 b=1.14–1.70，没给插入段宽度（芯片插在 IC 座里，焊在板上的是座子）；孔 0.8；焊盘 1.6×1.6；本体 52.0 × 13.84（E1），排距 15.24（规格书 4.1 节 PDIP40）；安装高 座子 + 芯片约 8（座子型号未定）</dd>
+    <dt>驱动</dt><dd>5V TTL；P0 口开漏，需外接上拉</dd>
+    <dt>坑</dt><dd class="pit">P0 口没有内部上拉，做 I/O 要接 10k 排阻；下载要冷启动（先点下载再上电）；40P 座子要另买并核对排距 15.24（宽体）</dd>
+    <dt>备注</dt><dd>符号借用 AT89x51xxP（标准 8051 脚位，引脚兼容）。定 C 级的原因：手册尺寸表没给引脚插入段宽度，IC 座型号（决定孔径）还没定， 且云端没能用接口核实 C14022 的型号、没拿到手册 PDF（只有交接线索里的尺寸图截图）。规格书缺（云端未下载，本地 fetch_evidence 补）。</dd>
+    <dt>依据</dt><dd>STC89/90 系列技术手册 4.1 节 PDIP40 封装尺寸图（dim_STC89_PDIP40.png）：D 52.0、E 15.24、e 2.54 · 核实 </dd>
+    <dt>替代</dt><dd>AT89S52（Microchip）引脚兼容，下载方式不同（ISP 而不是串口）</dd>
+    <dt>淘宝</dt><dd>STC89C52RC 直插 DIP40</dd>
+  </dl>
+</article>
+<article class="card" data-cat="主控板" data-text="mcu-015weact stm32f411ceu6 核心板（blackpill v3.1）weact minif4 stm32f411ceu6 v3.1无studenthw:module_weact_blackpill_stm32f411">
+  <header><span class="id">MCU-015</span><span class="lvl lvl-B">B 级</span><h2>WeAct STM32F411CEU6 核心板（BlackPill V3.1）</h2></header>
+  <p class="pn"><b>WeAct MiniF4 STM32F411CEU6 V3.1</b>（WeAct Studio（微行工作室））· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查（淘宝需登录） · 库存 淘宝（未核实）</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/Module_WeAct_BlackPill_STM32F411.svg" alt="封装" loading="lazy"><figcaption>封装 StudentHW:Module_WeAct_BlackPill_STM32F411</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/StudentHW/WeAct_BlackPill_STM32F411_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 StudentHW:WeAct_BlackPill_STM32F411</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/MCU-015/dim_BlackPill_V31_shape.png" target="_blank"><img class="dim" src="../evidence/MCU-015/dim_BlackPill_V31_shape.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>STM32F411CEU6，100MHz Cortex-M4F，512KB Flash，128KB RAM；USB-C；25MHz + 32.768kHz 晶振；NRST、BOOT0、用户键 KEY(PA0)、LED(PC13)</dd>
+    <dt>引脚</dt><dd>USB 在左、正面朝上：下排自左向右 1–20 = PB12–PB15、PA8–PA12、PA15、PB3–PB9、5V、GND、3V3； 上排自右向左 21–40 = VBAT、PC13、PC14、PC15、NRST、PA0–PA7、PB0、PB1、PB2、PB10、3V3、GND、5V（WeAct 外形图丝印与原理图 P1/P2）</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 排针方针 0.64；孔 1；焊盘 1.7×1.7；本体 52.81 × 20.78；安装高 排母 8.5 + 板厚，约 10</dd>
+    <dt>驱动</dt><dd>3.3V，标 FT 的脚耐 5V（见 STM32F411 规格书引脚表）</dd>
+    <dt>坑</dt><dd class="pit">外形图排距标 15.22，封装按 2.54 网格 15.24（差 0.02）；没有 WeAct Logo 和版本号的是仿品，脚位可能不同；PC13 驱动 LED 时不要再接外设</dd>
+    <dt>备注</dt><dd>规格书 = WeAct V3.1 原理图（datasheet.pdf），另存外形图 PDF 和 STM32F411CEU6 规格书（均取自 WeAct 官方 GitHub 仓库）。 环宽：孔 1.0 焊盘 1.7，2.54 脚距限制按 0.35 放宽。模块无 3D 模型。淘宝 WeAct 官方店购买。</dd>
+    <dt>依据</dt><dd>WeAct 官方 MiniF4x1Cx_V31 Board Shape 外形图第 1 页（dim_BlackPill_V31_shape.png）：52.81×20.78、排距标 15.22；引脚名按同页丝印和 V3.1 原理图 · <a href="../evidence/MCU-015/board_shape_V31.pdf" target="_blank">规格书</a> · 核实 </dd>
+    <dt>替代</dt><dd>STM32F401CCU6 版已停售（WeAct README）；只要 F103 用 MCU-002/003</dd>
+    <dt>淘宝</dt><dd>WeAct STM32F411CEU6 核心板</dd>
+  </dl>
+</article>
+<article class="card" data-cat="主控板" data-text="mcu-016安信可 esp32-cam 摄像头开发板（16p）ai-thinker esp32-cam wifi bt blec17333398studenthw:module_esp32-cam_aithinker">
+  <header><span class="id">MCU-016</span><span class="lvl lvl-B">B 级</span><h2>安信可 ESP32-CAM 摄像头开发板（16P）</h2></header>
+  <p class="pn"><b>Ai-Thinker ESP32-CAM WiFi BT BLE</b>（Ai-Thinker（安信可））· 立创 <a href="https://item.szlcsc.com/search.html?k=C17333398" target="_blank">C17333398</a> · 扩展库 · $34.6817@1+（嘉立创海外价，美元） · 库存 嘉立创 0</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/Module_ESP32-CAM_AiThinker.svg" alt="封装" loading="lazy"><figcaption>封装 StudentHW:Module_ESP32-CAM_AiThinker</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/StudentHW/ESP32-CAM_AiThinker_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 StudentHW:ESP32-CAM_AiThinker</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/MCU-016/dim_ESP32-CAM_outline.png" target="_blank"><img class="dim" src="../evidence/MCU-016/dim_ESP32-CAM_outline.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>ESP32（ESP32-S 模组）+ 4MB PSRAM，OV2640 摄像头，TF 卡座，板载闪光灯（GPIO4）</dd>
+    <dt>引脚</dt><dd>正面（ESP32-S 模组面）朝上、天线朝上：左列自下而上 1–8 = 5V、GND、IO12、IO13、IO15、IO14、IO2、IO4； 右列自上而下 9–16 = GND、U0T、U0R、VCC、GND、IO0、IO16、3V3</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 排针方针 0.64；孔 1；焊盘 1.7×1.7；本体 27 × 40 × 4.5（规格书 27×40.5×4.5±0.2）；安装高 排母 8.5 + 模块，约 13</dd>
+    <dt>驱动</dt><dd>GPIO 3.3V，不耐 5V</dd>
+    <dt>坑</dt><dd class="pit">没有 USB 口，下载要外接 USB-TTL 并把 IO0 拉低；IO4 接闪光灯，TF 卡占 IO2/4/12/13/14/15，IO16 接 PSRAM，几乎没有空闲 GPIO； 右列 VCC 脚是电源输出（板上焊盘选 3.3V/5V），不要当输入；供电至少 5V 2A 级，否则拍照复位</dd>
+    <dt>备注</dt><dd>规格书取自 GitHub 公开仓库 raphaelbs/esp32-cam-ai-thinker 里的安信可原版 PDF。立创 C17333398 镜像显示库存 0，一般淘宝安信可官方店购买。 环宽按 0.35 放宽（2.54 脚距）。模块无 3D 模型。</dd>
+    <dt>依据</dt><dd>安信可 ESP32-CAM Wi-Fi+BT SoC Module V1.0 规格书第 1 页尺寸图（dim_ESP32-CAM_outline.png）：27×40，排距 22.86，末脚距板底 4.58 · <a href="../evidence/MCU-016/datasheet.pdf" target="_blank">规格书</a> · 核实 2026-09-23</dd>
+    <dt>替代</dt><dd>淘宝&quot;ESP32-CAM-MB&quot;底板只是下载座，不上板</dd>
+    <dt>淘宝</dt><dd>安信可 ESP32-CAM 开发板 OV2640</dd>
+  </dl>
+</article>
+<article class="card" data-cat="显示屏" data-text="dsp-012lcd1602 字符屏（并口 16p，汉昇 hs1602a-b 蓝底白字）hs1602a-bc18198249display:wc1602a">
+  <header><span class="id">DSP-012</span><span class="lvl lvl-C">C 级</span><h2>LCD1602 字符屏（并口 16P，汉昇 HS1602A-B 蓝底白字）</h2></header>
+  <p class="pn"><b>HS1602A-B</b>（HS（汉昇））· 立创 <a href="https://item.szlcsc.com/search.html?k=C18198249" target="_blank">C18198249</a> · 扩展库 · $2.4079@1+（嘉立创海外价，美元） · 库存 嘉立创 682</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/WC1602A.svg" alt="封装" loading="lazy"><figcaption>封装 Display:WC1602A</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/Display_Character/WC1602A_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 Display_Character:WC1602A</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/DSP-012/dim_HS1602A_outline.png" target="_blank"><img class="dim" src="../evidence/DSP-012/dim_HS1602A_outline.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>16×2 字符，控制器 SPLC780（HD44780 兼容），5V</dd>
+    <dt>引脚</dt><dd>按 HD44780 标准 1602 脚序：1=VSS、2=VDD、3=VO（对比度）、4=RS、5=RW、6=E、7–14=D0–D7、15=A（背光+）、16=K（背光-）；1 脚在左上角安装孔旁</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 屏上孔 Φ1.0，配 2.54 排针（方针 0.64）；孔 1.2；焊盘 1.8×2.6；本体 80.0 × 36.0；安装孔 4×Φ3.0，孔距 75.0 × 31.0；通用款厚 11.0；安装高 排母 8.5 + 屏厚 11.0，约 20</dd>
+    <dt>驱动</dt><dd>5V（3.3V 主控驱动时数据线一般可用，但 VDD 必须 5V，详见兼容性速查）</dd>
+    <dt>坑</dt><dd class="pit">背光和 VO 对比度要接（VO 接 10k 电位器），不接对比度屏上看不到字；用 I2C 转接板时底板不放 16P，见 DSP-013</dd>
+    <dt>备注</dt><dd>KiCad 官方 WC1602A 封装与汉昇外形图逐项一致（安装孔 75×31、1 脚相对安装孔 5.5、2.5）。定 C 级原因：只拿到外形图页， 汉昇的引脚定义表云端没取到，脚序按 HD44780 标准写，到货对照屏背丝印（尤其 15/16 背光极性）。 环宽：焊盘 1.8×2.6、孔 1.2，按 0.3 放宽。规格书缺（云端未下载；本地 fetch_evidence 补后核对脚位可升 B）。</dd>
+    <dt>依据</dt><dd>汉昇 HS1602A 规格书&quot;二、外形尺寸&quot;图（dim_HS1602A_outline.png）：80×36，安装孔 75×31、Φ3，1 脚距左边 8.0、距上边 2.5，16-Φ1.0 脚距 2.54 · 核实 2026-09-29</dd>
+    <dt>替代</dt><dd>黄绿屏 HS1602A-Y（C18198250）外形、脚位相同（镜像描述同为 SPLC780 55.7×11）</dd>
+    <dt>淘宝</dt><dd>LCD1602 蓝屏 5V 汉昇</dd>
+  </dl>
+</article>
+<article class="card" data-cat="显示屏" data-text="dsp-013lcd1602/2004 的 pcf8574 i2c 转接板（底板放 1×4 排针，杜邦线连接）pcf8574t i2c lcd backpack无connector_pinheader_2.54mm:pinheader_1x04_p2.54mm_vertical">
+  <header><span class="id">DSP-013</span><span class="lvl lvl-C">C 级</span><h2>LCD1602/2004 的 PCF8574 I2C 转接板（底板放 1×4 排针，杜邦线连接）</h2></header>
+  <p class="pn"><b>PCF8574T I2C LCD backpack</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/PinHeader_1x04_P2.54mm_Vertical.svg" alt="封装" loading="lazy"><figcaption>封装 Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/StudentHW/LCD_I2C_PCF8574_4P_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 StudentHW:LCD_I2C_PCF8574_4P</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/HDR-001/dim_PZ254_1xN.png" target="_blank"><img class="dim" src="../evidence/HDR-001/dim_PZ254_1xN.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>PCF8574T 地址 0x27（A0–A2 跳线全断开），PCF8574AT 为 0x3F；板上电位器调对比度，跳线帽控制背光</dd>
+    <dt>引脚</dt><dd>转接板排针 GND、VCC、SDA、SCL；底板排针同序：1=GND、2=VCC、3=SDA、4=SCL</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 方针 0.64；孔 1；焊盘 1.7×1.7；本体 转接板焊在屏背面，不占底板面积；安装高 8.2（排针）</dd>
+    <dt>驱动</dt><dd>随供电（5V 供电时 I2C 上拉到 5V，见兼容性速查）</dd>
+    <dt>坑</dt><dd class="pit">汉昇 HS1602A-6B 这类&quot;自带串口&quot;的屏不是 PCF8574 方案，不能用 LiquidCrystal_I2C 库；地址 0x27/0x3F 两种， 先跑 I2C 扫描；5V 供电时 SDA/SCL 被转接板上拉到 5V，3.3V 主控要看兼容性速查</dd>
+    <dt>备注</dt><dd>规格书缺（淘宝模块，datasheet_url 给的是 TI PCF8574 芯片规格书）。环宽：官方排针焊盘 1.7、孔 1.0，按 0.35 放宽。</dd>
+    <dt>依据</dt><dd>底板上只有 1×4 排针，尺寸按 HDR-001 排针图纸（evidence/HDR-001/dim_PZ254_1xN.png）；转接板本身无厂家图 · 核实 </dd>
+    <dt>替代</dt><dd>芯片是 PCF8574AT 的版本地址不同（0x3F），功能相同</dd>
+    <dt>淘宝</dt><dd>LCD1602 IIC 转接板 PCF8574</dd>
+  </dl>
+</article>
+<article class="card" data-cat="显示屏" data-text="dsp-014lcd2004 字符屏（20×4，配 i2c 转接板，不上板）lcd2004 + pcf8574 backpack无不适用">
+  <header><span class="id">DSP-014</span><span class="lvl lvl-C">C 级</span><h2>LCD2004 字符屏（20×4，配 I2C 转接板，不上板）</h2></header>
+  <p class="pn"><b>LCD2004 + PCF8574 backpack</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><div class="na">无封装（配件）</div><figcaption>封装 不适用</figcaption></figure>
+  <figure><div class="na">无符号</div><figcaption>符号 不适用</figcaption></figure></div>
+  <div class="dims"></div>
+  <dl>
+    <dt>参数</dt><dd>20×4 字符，HD44780 兼容，5V；经 DSP-013 转接板 I2C 连接</dd>
+    <dt>引脚</dt><dd>屏 16P 并口焊转接板；底板只放 DSP-013 的 4P 排针</dd>
+    <dt>尺寸</dt><dd>脚距 不适用；引脚 不适用；孔 不适用；焊盘 不适用；本体 未核（Raystar RC2004A 规格书为 98×60、安装孔 93×55，但淘宝主流款没拿到图纸，不作数）；安装高 不适用</dd>
+    <dt>驱动</dt><dd>经转接板为 I2C</dd>
+    <dt>坑</dt><dd class="pit">外形和安装孔各家不一，开外壳孔前到货实测；屏要 5V</dd>
+    <dt>备注</dt><dd>不上板。规格书缺（淘宝通用屏）。安装尺寸待到货实测，见 待确认.md。</dd>
+    <dt>依据</dt><dd>无厂家图纸（云端搜不到可下载的主流款尺寸图） · 核实 </dd>
+    <dt>替代</dt><dd>屏小一点就用 LCD1602（DSP-012）</dd>
+    <dt>淘宝</dt><dd>LCD2004 IIC 蓝屏 5V</dd>
+  </dl>
+</article>
+<article class="card" data-cat="数码管" data-text="dsp-015tm1637 4 位数码管模块（0.36 寸，4p）tm1637 4-digit module无connector_pinheader_2.54mm:pinheader_1x04_p2.54mm_vertical">
+  <header><span class="id">DSP-015</span><span class="lvl lvl-C">C 级</span><h2>TM1637 4 位数码管模块（0.36 寸，4P）</h2></header>
+  <p class="pn"><b>TM1637 4-digit module</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/PinHeader_1x04_P2.54mm_Vertical.svg" alt="封装" loading="lazy"><figcaption>封装 Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/StudentHW/TM1637_4Digit_Module_4P_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 StudentHW:TM1637_4Digit_Module_4P</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/HDR-001/dim_PZ254_1xN.png" target="_blank"><img class="dim" src="../evidence/HDR-001/dim_PZ254_1xN.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>TM1637 驱动，两线串行（CLK、DIO，非标准 I2C，无地址）</dd>
+    <dt>引脚</dt><dd>模块排针常见 CLK、DIO、VCC、GND；底板排针同序：1=CLK、2=DIO、3=VCC、4=GND</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 方针 0.64；孔 1；焊盘 1.7×1.7；本体 未核（模块自身尺寸各家不同）；安装高 8.2（排针）</dd>
+    <dt>驱动</dt><dd>随供电</dd>
+    <dt>坑</dt><dd class="pit">DIO 不是 I2C 的 SDA，不能挂在 I2C 总线上；有的模块 VCC/GND 顺序反，对照丝印再接</dd>
+    <dt>备注</dt><dd>规格书缺（淘宝模块，datasheet_url 为天微 TM1637 芯片规格书，立创链接）。环宽按 0.35 放宽。</dd>
+    <dt>依据</dt><dd>底板上只有 1×4 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图 · 核实 </dd>
+    <dt>替代</dt><dd>要更多位数用 MAX7219 8 位数码管模块（未入库）</dd>
+    <dt>淘宝</dt><dd>TM1637 4位数码管模块 时钟</dd>
+  </dl>
+</article>
+<article class="card" data-cat="显示屏" data-text="dsp-016max7219 8×8 点阵模块（输入 5p）max7219 8x8 dot matrix module无connector_pinheader_2.54mm:pinheader_1x05_p2.54mm_vertical">
+  <header><span class="id">DSP-016</span><span class="lvl lvl-C">C 级</span><h2>MAX7219 8×8 点阵模块（输入 5P）</h2></header>
+  <p class="pn"><b>MAX7219 8x8 dot matrix module</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><img class="fp" src="preview/fp/PinHeader_1x05_P2.54mm_Vertical.svg" alt="封装" loading="lazy"><figcaption>封装 Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</figcaption></figure>
+  <figure><img class="sym" src="preview/sym/StudentHW/MAX7219_Matrix_Module_5P_unit1.svg" alt="符号" loading="lazy"><figcaption>符号 StudentHW:MAX7219_Matrix_Module_5P</figcaption></figure></div>
+  <div class="dims"><a href="../evidence/HDR-001/dim_PZ254_1xN.png" target="_blank"><img class="dim" src="../evidence/HDR-001/dim_PZ254_1xN.png" alt="尺寸图" loading="lazy"></a></div>
+  <dl>
+    <dt>参数</dt><dd>MAX7219 驱动 8×8 共阴点阵，SPI 类三线（DIN、CS、CLK），10MHz</dd>
+    <dt>引脚</dt><dd>输入端排针 VCC、GND、DIN、CS、CLK；底板排针同序：1=VCC、2=GND、3=DIN、4=CS、5=CLK</dd>
+    <dt>尺寸</dt><dd>脚距 2.54；引脚 方针 0.64；孔 1；焊盘 1.7×1.7；本体 未核（常见约 32×32，不作数）；安装高 8.2（排针）</dd>
+    <dt>驱动</dt><dd>5V 器件；3.3V 主控输入高电平裕量不足，见兼容性速查</dd>
+    <dt>坑</dt><dd class="pit">输入输出两端都有 5P，接错到 DOUT 端不亮；全亮时电流大，按 MAX7219 规格书和段电流设置算电流预算</dd>
+    <dt>备注</dt><dd>规格书缺（淘宝模块，datasheet_url 为 ADI MAX7219 芯片规格书）。环宽按 0.35 放宽。</dd>
+    <dt>依据</dt><dd>底板上只有 1×5 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图 · 核实 </dd>
+    <dt>替代</dt><dd>多块可级联（输出 DOUT 接下一块 DIN）</dd>
+    <dt>淘宝</dt><dd>MAX7219 点阵模块 8x8 单片机</dd>
+  </dl>
+</article>
+<article class="card" data-cat="工具" data-text="tool-001ch340 usb 转 ttl 模块（不上板）ch340 usb-ttl module无不适用">
+  <header><span class="id">TOOL-001</span><span class="lvl lvl-C">C 级</span><h2>CH340 USB 转 TTL 模块（不上板）</h2></header>
+  <p class="pn"><b>CH340 USB-TTL module</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><div class="na">无封装（配件）</div><figcaption>封装 不适用</figcaption></figure>
+  <figure><div class="na">无符号</div><figcaption>符号 不适用</figcaption></figure></div>
+  <div class="dims"></div>
+  <dl>
+    <dt>参数</dt><dd>CH340G/CH340C，USB 转 UART，3.3V/5V 跳线选择</dd>
+    <dt>引脚</dt><dd>杜邦线接底板 UART 排针：模块 TXD→主控 RX，RXD→主控 TX，GND 共地</dd>
+    <dt>尺寸</dt><dd>脚距 不适用；引脚 不适用；孔 不适用；焊盘 不适用；本体 不适用；安装高 不适用</dd>
+    <dt>驱动</dt><dd>跳线选 3.3V 或 5V，接 3.3V 主控必须选 3.3V</dd>
+    <dt>坑</dt><dd class="pit">电平跳线默认常在 5V，接 ESP32/STM32 前改 3.3V；TX/RX 要交叉接</dd>
+    <dt>备注</dt><dd>不上板（下载/调试工具，底板只留 UART 排针）。规格书缺（淘宝模块，datasheet_url 为沁恒 CH340 规格书）。</dd>
+    <dt>依据</dt><dd>不上板，不需要尺寸图 · 核实 </dd>
+    <dt>替代</dt><dd>CP2102 模块（TOOL-002）</dd>
+    <dt>淘宝</dt><dd>CH340 USB转TTL 模块 3.3V 5V</dd>
+  </dl>
+</article>
+<article class="card" data-cat="工具" data-text="tool-002cp2102 usb 转 ttl 模块（不上板）cp2102 usb-ttl module无不适用">
+  <header><span class="id">TOOL-002</span><span class="lvl lvl-C">C 级</span><h2>CP2102 USB 转 TTL 模块（不上板）</h2></header>
+  <p class="pn"><b>CP2102 USB-TTL module</b>（淘宝通用）· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><div class="na">无封装（配件）</div><figcaption>封装 不适用</figcaption></figure>
+  <figure><div class="na">无符号</div><figcaption>符号 不适用</figcaption></figure></div>
+  <div class="dims"></div>
+  <dl>
+    <dt>参数</dt><dd>Silicon Labs CP2102，USB 转 UART</dd>
+    <dt>引脚</dt><dd>杜邦线接底板 UART 排针，TX/RX 交叉，GND 共地</dd>
+    <dt>尺寸</dt><dd>脚距 不适用；引脚 不适用；孔 不适用；焊盘 不适用；本体 不适用；安装高 不适用</dd>
+    <dt>驱动</dt><dd>多数板 TXD/RXD 为 3.3V 电平，以模块说明为准</dd>
+    <dt>坑</dt><dd class="pit">模块上的 3V3 脚输出电流很小，不要给主控板供电</dd>
+    <dt>备注</dt><dd>不上板（下载/调试工具）。规格书缺（淘宝模块，datasheet_url 为 Silicon Labs CP2102 规格书）。</dd>
+    <dt>依据</dt><dd>不上板，不需要尺寸图 · 核实 </dd>
+    <dt>替代</dt><dd>CH340 模块（TOOL-001）</dd>
+    <dt>淘宝</dt><dd>CP2102 USB转TTL 模块</dd>
+  </dl>
+</article>
+<article class="card" data-cat="工具" data-text="tool-003st-link v2 下载器（不上板，接 swd 4p 排针）st-link/v2 (compatible)无不适用">
+  <header><span class="id">TOOL-003</span><span class="lvl lvl-C">C 级</span><h2>ST-Link V2 下载器（不上板，接 SWD 4P 排针）</h2></header>
+  <p class="pn"><b>ST-LINK/V2 (compatible)</b>（淘宝通用（兼容版））· 立创 <a href="https://item.szlcsc.com/search.html?k=无" target="_blank">无</a> · 不适用 · 未查到 · 库存 未查到</p>
+  <div class="imgs"><figure><div class="na">无封装（配件）</div><figcaption>封装 不适用</figcaption></figure>
+  <figure><div class="na">无符号</div><figcaption>符号 不适用</figcaption></figure></div>
+  <div class="dims"></div>
+  <dl>
+    <dt>参数</dt><dd>SWD 下载调试 STM32，SWIM 下载 STM8</dd>
+    <dt>引脚</dt><dd>杜邦线接底板 SWD 排针：3V3、SWDIO、SWCLK、GND（顺序以核心板丝印为准）</dd>
+    <dt>尺寸</dt><dd>脚距 不适用；引脚 不适用；孔 不适用；焊盘 不适用；本体 不适用；安装高 不适用</dd>
+    <dt>驱动</dt><dd>3.3V</dd>
+    <dt>坑</dt><dd class="pit">兼容版外壳上的引脚顺序各家不同，看外壳丝印接；核心板已由 USB 供电时不要再接 ST-Link 的 3.3V</dd>
+    <dt>备注</dt><dd>不上板（下载工具）。规格书缺（兼容版无规格书，datasheet_url 为 ST 原版 UM1075）。</dd>
+    <dt>依据</dt><dd>不上板，不需要尺寸图 · 核实 </dd>
+    <dt>替代</dt><dd>WeAct/正点原子 DAPLink 也可下载 STM32</dd>
+    <dt>淘宝</dt><dd>ST-LINK V2 下载器 STM32</dd>
   </dl>
 </article></main>
 <script>
