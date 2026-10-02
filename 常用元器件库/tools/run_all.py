@@ -43,6 +43,7 @@ def main() -> int:
         step("证据检查", [PY, "tools/check_evidence.py"]),
         step("原子符号检查", [PY, "tools/check_atomic.py"]),
         step("兼容性速查", [PY, "tools/build_compat.py"]),
+        step("价格与热度表", [PY, "tools/build_market.py"]),
         step("检查脚本自测", [PY, "tools/selftest/run_selftest.py"]),
         step("测试板", [KPY, "tools/build_testboard.py"]),
         step("测试板 DRC", [CLI, "pcb", "drc", "--format", "json", "--exit-code-violations", "-o", str(out / "drc.json"), str(tb)]),

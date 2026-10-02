@@ -153,6 +153,25 @@ def main():
                               ("bad_pullup.yaml", "I2C 上拉到 5V 接 ESP32", "上拉到 5V")):
         cases.append((title, "check_project.py", HERE / "projects" / fn, (), expect))
 
+    # 市场数据：拿真实 market.yaml 改坏一处
+    import yaml
+    mk0 = yaml.safe_load((ROOT / "src" / "market.yaml").read_text(encoding="utf-8"))
+    def bad_market(tag, pid, **kw):
+        mk = {k: dict(v) for k, v in mk0.items()}
+        mk[pid].update(kw)
+        p_ = FIX / f"market_{tag}.yaml"
+        p_.write_text(yaml.safe_dump(mk, allow_unicode=True), encoding="utf-8")
+        return p_
+    shops2 = [{"shop": "店A", "url": "https://example.invalid/a", "price": 1.0, "spec": "1 个"},
+              {"shop": "店B", "url": "https://example.invalid/b", "price": 2.0, "spec": "1 个"}]
+    shops3 = shops2 + [{"shop": "店C", "url": "https://example.invalid/c", "price": 3.0, "spec": "1 个"}]
+    cases.append(("热度定为大众但依据写未核", "build_market.py", bad_market("lvl", "SEN-030", sales_level="大众"), (), "依据写的是未核"))
+    cases.append(("淘宝参考价只取 2 家", "build_market.py", bad_market("tb2", "SEN-014", price_taobao_ref={"shops": shops2, "median": 1.5}), (), "至少 3 家"))
+    cases.append(("淘宝中位数算错", "build_market.py", bad_market("tbmed", "SEN-014", price_taobao_ref={"shops": shops3, "median": 2.5}), (), "中位数"))
+    cases.append(("淘宝价只写一个数字", "build_market.py", bad_market("tbnum", "SEN-014", price_taobao_ref=9.9), (), "店铺明细"))
+    cases.append(("替代料引用不存在的编号", "build_market.py", bad_market("alt", "SEN-001", better_alt="SEN-999 更好"), (), "不在 parts.csv"))
+    cases.append(("热度等级写错字", "build_market.py", bad_market("lvlname", "RES-001", sales_level="热门"), (), "不是 大众"))
+
     lines = ["# 检查脚本自测", "", "每一行把一个真实条目故意改错一处，脚本必须报错。", "",
              "| 结果 | 故意制造的错误 | 脚本 | 期望报出 | 实际输出（节选） |", "|---|---|---|---|---|"]
     fails = 0

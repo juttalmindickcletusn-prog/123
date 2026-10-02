@@ -1,0 +1,1196 @@
+ACT-001:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-002:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-003:
+  better_alt: 不想自己搭三极管驱动和续流二极管就用继电器模块（ACT-001/ACT-002）
+  recommend_shop: 立创商城（按 C35449 下单）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-004:
+  better_alt: 要更大扭矩用 MG996R（ACT-005，金属齿）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-005:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-006:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-007:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-008:
+  better_alt: TB6612FNG（ACT-007）：MOSFET 输出，压降和发热比 L298N 小，体积小
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-009:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+ACT-010:
+  better_alt: 无
+  recommend_shop: DFRobot 官方店（候选，店铺页未核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DFPlayer 的库 5 个（arduino/library-registry@df95082（2026-10-01）；例：DFRobotDFPlayerMini、DFPlayerMini、DFMiniMp3）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+BAT-001:
+  better_alt: 无（替代 C19184084（BH-18650-A6AJ012，MYOUNG） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2
+    倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C5290176 下单）
+  sales_evidence: 嘉立创库存 4702、立创商城库存 4055（C5290176，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+BAT-002:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C2979167 下单）
+  sales_evidence: 嘉立创库存 1076、立创商城库存 206（C2979167，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+BZ-001:
+  better_alt: C49246931（TMB12A05，XHXDZ）：起订价 ¥0.9999（5 起）比主选 ¥1.1812（5 起）便宜 15%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C96093 下单）
+  sales_evidence: 嘉立创库存 104692、立创商城库存 17018（C96093，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+BZ-002:
+  better_alt: 无（替代 C968749（Cy-12085G-3016-P4，CY(Changzhou Chaoyin Elec)） 没有明显优势：起订价低不到
+    5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C409842 下单）
+  sales_evidence: 嘉立创库存 1480、立创商城库存 34（C409842，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+BZ-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C96493 下单）
+  sales_evidence: 嘉立创库存 46101、立创商城库存 8367（C96493，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+CAP-001:
+  better_alt: C2832508（CC1H104ZC1FD3F5O1100，Dersonic）：起订价 ¥0.1264（50 起）比主选 ¥0.1592（20
+    起）便宜 21%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C254085 下单）
+  sales_evidence: 嘉立创库存 340043、立创商城库存 16941（C254085，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-002:
+  better_alt: C263209（CC3A103MC1IEF48C30MF，Dersonic）：嘉立创库存 77212 比主选 6073 多，更好买（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C2761727 下单）
+  sales_evidence: 嘉立创库存 6073、立创商城库存 113（C2761727，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+CAP-003:
+  better_alt: 无（替代 C694484（CC45SL3AD220JYNNA，TDK） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C260725 下单）
+  sales_evidence: 嘉立创库存 4547、立创商城库存 227（C260725，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+CAP-004:
+  better_alt: 无（替代 C263181（CD1H104KC94ER1D000，Dersonic） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C84772 下单）
+  sales_evidence: 嘉立创库存 41405、立创商城库存 4073（C84772，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+CAP-010:
+  better_alt: 无（替代 C216293（RL1E100MC110A00CV0，Changzhou Huawei Elec） 没有明显优势：起订价低不到
+    5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C43347 下单）
+  sales_evidence: 嘉立创库存 57093、立创商城库存 1112（C43347，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-011:
+  better_alt: C2960368（16V100uF CD288，HRK）：起订价 ¥0.0993（50 起）比主选 ¥0.1185（50 起）便宜 16%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C43348 下单）
+  sales_evidence: 嘉立创库存 95053、立创商城库存 1838（C43348，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-012:
+  better_alt: 无（替代 C47344173（ERG16V220M6X11，jieerrui） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2
+    倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C43349 下单）
+  sales_evidence: 嘉立创库存 133300、立创商城库存 6130（C43349，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-013:
+  better_alt: 无（替代 C47344174（ERG16V470M8X12，jieerrui） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2
+    倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C28067 下单）
+  sales_evidence: 嘉立创库存 99480、立创商城库存 4642（C28067，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-014:
+  better_alt: 无（替代 C49256792（ERA16V1000M8X16，jieerrui） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C43832 下单）
+  sales_evidence: 嘉立创库存 99297、立创商城库存 9648（C43832，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+CAP-015:
+  better_alt: C3299（GR108M010F12RR0VL4FP0，CX(Dongguan Chengxing Elec)）：嘉立创库存 125856
+    比主选 60656 多，更好买（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C10752 下单）
+  sales_evidence: 嘉立创库存 60656、立创商城库存 2945（C10752，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+COM-001:
+  better_alt: 主控用 ESP32（MCU-004/MCU-006）时自带蓝牙，可省掉模块
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+COM-002:
+  better_alt: HC-05（COM-001）：可做主机
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+COM-003:
+  better_alt: ESP32-C3 SuperMini（MCU-008）：可直接当主控，省掉 AT 指令
+  recommend_shop: 安信可官方店（候选，店铺页未核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+COM-004:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 RF24 的库 7 个（arduino/library-registry@df95082（2026-10-01）；例：RF24G、Soldered-nRF24-Radio-Module-Arduino-Library、RF24）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+COM-005:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+DIO-001:
+  better_alt: C85057（1N4148，Changzhou Starsea Elec）：起订价 ¥0.0753（50 起）比主选 ¥0.1169（50
+    起）便宜 36%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C84410 下单）
+  sales_evidence: 嘉立创库存 105609、立创商城库存 2112（C84410，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+DIO-002:
+  better_alt: 无（替代 C2457（1N4007G，MDD(Microdiode Semiconductor)） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C402311 下单）
+  sales_evidence: 嘉立创库存 185742、立创商城库存 3714（C402311，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+DIO-003:
+  better_alt: C402218（1N5819，LGE）：起订价 ¥0.1743（20 起）比主选 ¥0.2303（20 起）便宜 24%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C2474 下单）
+  sales_evidence: 嘉立创库存 64383、立创商城库存 3212（C2474，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+DIO-004:
+  better_alt: 无（替代 C241985（1N4733A-TAP，Vishay Intertech） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C5157516 下单）
+  sales_evidence: 嘉立创库存 4402、立创商城库存 880（C5157516，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+DIO-005:
+  better_alt: C713671（P6KE6.8A，LGE）：起订价 ¥0.4385（10 起）比主选 ¥0.7191（5 起）便宜 39%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C409413 下单）
+  sales_evidence: 嘉立创库存 3599、立创商城库存 719（C409413，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+DSP-001:
+  better_alt: 要更大显示用 1.3 寸 SH1106（DSP-003），注意驱动芯片不同、库要换
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SSD1306 的库 17 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_SSD1306_72x40、OLED_Display_SSD1306、Ai_Ardulib_SSD1306）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-002:
+  better_alt: 项目里统一用 GND 在前版（DSP-001），避免两种针序混用接反
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SSD1306 的库 17 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_SSD1306_72x40、OLED_Display_SSD1306、Ai_Ardulib_SSD1306）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-003:
+  better_alt: 无；注意 SH1106 与 SSD1306 驱动不同
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SH1106 的库 5 个（arduino/library-registry@df95082（2026-10-01）；例：SitronLabs_SinoWealth_SH1106_Arduino_Library、vega_sh1106、SH1106）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-004:
+  better_alt: 无；注意 SH1106 与 SSD1306 驱动不同
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SH1106 的库 5 个（arduino/library-registry@df95082（2026-10-01）；例：SitronLabs_SinoWealth_SH1106_Arduino_Library、vega_sh1106、SH1106）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-005:
+  better_alt: 要多显示几行用 0.96 寸（DSP-001）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SSD1306 的库 17 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_SSD1306_72x40、OLED_Display_SSD1306、Ai_Ardulib_SSD1306）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-006:
+  better_alt: 只要静态显示时 I2C 版（DSP-001）接线更少；SPI 版刷新更快
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SSD1306 的库 17 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_SSD1306_72x40、OLED_Display_SSD1306、Ai_Ardulib_SSD1306）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-007:
+  better_alt: ST7789 IPS（DSP-008/DSP-009）：IPS 视角更好
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ST7735 的库 3 个（arduino/library-registry@df95082（2026-10-01）；例：ST7735_LTSM、Adafruit-ST7735-Library、vega_st7735_and_st7789）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 库数
+DSP-008:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ST7789 的库 5 个（arduino/library-registry@df95082（2026-10-01）；例：ST7789_LTSM、QRcode_ST7789、vega_st7735_and_st7789）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-009:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ST7789 的库 5 个（arduino/library-registry@df95082（2026-10-01）；例：ST7789_LTSM、QRcode_ST7789、vega_st7735_and_st7789）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-010:
+  better_alt: 要更小体积用 2.0 寸 ST7789（DSP-009）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ILI9341 的库 9 个（arduino/library-registry@df95082（2026-10-01）；例：ILI9341_LTSM、Adafruit_ILI9341、ILI9341-Layout-Manager）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-011:
+  better_alt: 要更小体积用 2.0 寸 ST7789（DSP-009）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ILI9341 的库 9 个（arduino/library-registry@df95082（2026-10-01）；例：ILI9341_LTSM、Adafruit_ILI9341、ILI9341-Layout-Manager）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+DSP-012:
+  better_alt: 只显示几行字时用 I2C OLED（DSP-001）：3.3V 直连、4 根线；1602 并口要 5V 供电和对比度电位器，可加 PCF8574
+    转接板（DSP-013）减线
+  recommend_shop: 立创商城（按 C18198249 下单）
+  sales_evidence: Arduino 官方库注册表仓库名含 LiquidCrystal 的库 28 个（arduino/library-registry@df95082（2026-10-01）；例：LiquidCrystal_I2C_UTF8、Adafruit_LiquidCrystal、TinyLiquidCrystal）；嘉立创库存
+    682、立创商城库存 未记录（C18198249，2026-09-29 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-013:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 PCF8574 的库 14 个（arduino/library-registry@df95082（2026-10-01）；例：PCF8574-I2C、PCF8574_LH、Adafruit_PCF8574）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-014:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 LiquidCrystal 的库 28 个（arduino/library-registry@df95082（2026-10-01）；例：LiquidCrystal_I2C_UTF8、Adafruit_LiquidCrystal、TinyLiquidCrystal）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-015:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 TM1637 的库 10 个（arduino/library-registry@df95082（2026-10-01）；例：TM1637_6Easy、DIYables_4Digit7Segment_TM1637、SmartTM1637）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+DSP-016:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 MAX7219/MAX72xx 的库 10 个（arduino/library-registry@df95082（2026-10-01）；例：MAX7219_CH32、SBK_MAX72xx、MAX72XX）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+FUS-001:
+  better_alt: 无（替代 C208476（MF-R050，BOURNS） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C21025 下单）
+  sales_evidence: 嘉立创库存 7811、立创商城库存 1557（C21025，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+FUS-002:
+  better_alt: 无（替代 C208481（MF-R110，BOURNS） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C21017 下单）
+  sales_evidence: 嘉立创库存 4225、立创商城库存 845（C21017，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+FUS-003:
+  better_alt: C369092（JK60-200，Jinrui Electronic Materials Co.）：起订价 ¥0.6048（5 起）比主选
+    ¥1.3292（5 起）便宜 54%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C21019 下单）
+  sales_evidence: 嘉立创库存 16884、立创商城库存 3376（C21019，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+HDR-001:
+  better_alt: 无（替代 C2895846（PZ254V-11-40P，XFCN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2337 下单）
+  sales_evidence: 嘉立创库存 86905、立创商城库存 17371（C2337，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+HDR-002:
+  better_alt: 无（替代 C2925569（PZ254R-11-40P，XFCN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2334 下单）
+  sales_evidence: 嘉立创库存 3502、立创商城库存 700（C2334，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+HDR-003:
+  better_alt: 无（替代 C2895847（PZ254V-12-80P，XFCN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2333 下单）
+  sales_evidence: 嘉立创库存 21480、立创商城库存 4262（C2333，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+HDR-004:
+  better_alt: 无（替代 C42431828（PZ2.0-1X40P-H20，JXTCONN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2
+    倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C3411 下单）
+  sales_evidence: 嘉立创库存 7385、立创商城库存 1469（C3411，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+JMP-001:
+  better_alt: 无（替代 C5305（2.54Short Circuit Cap Opening，BOOMELE(Boom Precision Elec)）
+    没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C100114 下单）
+  sales_evidence: 嘉立创库存 585660、立创商城库存 11713（C100114，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+LED-001:
+  better_alt: 无（替代 C87271（333-2SURD/S530-A3，Everlight Elec） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895492 下单）
+  sales_evidence: 嘉立创库存 188815、立创商城库存 9440（C2895492，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+LED-002:
+  better_alt: C2895548（XL-502UGD，XINGLIGHT）：嘉立创库存 131828 比主选 17613 多，更好买（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C2895550 下单）
+  sales_evidence: 嘉立创库存 17613、立创商城库存 855（C2895550，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-003:
+  better_alt: 无（替代 C2895488（XL-502UBC，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895496 下单）
+  sales_evidence: 嘉立创库存 12377、立创商城库存 591（C2895496，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-004:
+  better_alt: 无（替代 C2895486（XL-502UYC，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895494 下单）
+  sales_evidence: 嘉立创库存 21954、立创商城库存 1097（C2895494，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-005:
+  better_alt: 无（替代 C2895481（XL-504UWC，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895480 下单）
+  sales_evidence: 嘉立创库存 67776、立创商城库存 3388（C2895480，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+LED-006:
+  better_alt: 无（替代 C99772（204-10SURD/S530-A3，Everlight Elec） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895470 下单）
+  sales_evidence: 嘉立创库存 326818、立创商城库存 16256（C2895470，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+LED-007:
+  better_alt: C2895476（XL-302UGD，XINGLIGHT）：起订价 ¥0.1683（20 起）比主选 ¥0.1872（20 起）便宜 10%；嘉立创库存
+    307471 比主选 14812 多，更好买（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C2895478 下单）
+  sales_evidence: 嘉立创库存 14812、立创商城库存 726（C2895478，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-008:
+  better_alt: 无（替代 C2895464（XL-302UBC，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895474 下单）
+  sales_evidence: 嘉立创库存 42279、立创商城库存 2113（C2895474，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-009:
+  better_alt: 无（替代 C2895473（XL-304UYD，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895472 下单）
+  sales_evidence: 嘉立创库存 49566、立创商城库存 2478（C2895472，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+LED-010:
+  better_alt: 无（替代 C2895459（XL-304UWC，XINGLIGHT） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C2895458 下单）
+  sales_evidence: 嘉立创库存 35606、立创商城库存 1734（C2895458，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+MCU-001:
+  better_alt: 乐鑫 ESP32-S3-DevKitC-1（MCU-004）：官方板，针序有官方图、教程最多；立创核心板的好处是立创商城可直接配单
+  recommend_shop: 立创商城（按 C20626143 下单）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录；嘉立创库存 397、立创商城库存 397（C20626143，2026-10-02
+    接口记录）
+  sales_level: 未核
+  sales_rule: 无
+MCU-002:
+  better_alt: Blue Pill（MCU-003）脚位相同、教程多但芯片常为兼容片；要正品芯片就用地猛星本身
+  recommend_shop: 立创商城（按 C22396880 下单）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录；嘉立创库存 783、立创商城库存 783（C22396880，2026-10-02
+    接口记录）
+  sales_level: 未核
+  sales_rule: 无
+MCU-003:
+  better_alt: 立创·地猛星（MCU-002）：脚位相同、立创自营可配单；要更强性能和 Type-C 选 BlackPill F411（MCU-015，WeAct
+    公开原理图）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: stm32duino/Arduino_Core_STM32 内核 boards.txt 内置专属板型“BluePill F103C8”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-004:
+  better_alt: 无（乐鑫官方板）；要更小可用立创 ESP32-S3 核心板（MCU-001）
+  recommend_shop: 乐鑫官方店（候选，店铺页未核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+MCU-005:
+  better_alt: 乐鑫官方 ESP32-S3-DevKitC-1（MCU-004）：针序有官方图，兼容板各家可能不同
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+MCU-006:
+  better_alt: 新项目优先 ESP32-S3（MCU-004）：原生 USB、可用 GPIO 更多
+  recommend_shop: 乐鑫官方店（候选，店铺页未核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+MCU-007:
+  better_alt: 乐鑫官方 ESP32-DevKitC V4（MCU-006）：针序有官方图；新项目优先 ESP32-S3（MCU-004）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: espressif/arduino-esp32 内核 boards.txt 内置专属板型“DOIT ESP32 DEVKIT V1”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-008:
+  better_alt: 要更多 IO 选 ESP32-S3（MCU-001/MCU-004）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: espressif/arduino-esp32 内核 boards.txt 内置专属板型“Nologo ESP32C3 Super
+    Mini”（2026-10-02 取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-009:
+  better_alt: 要 WiFi/蓝牙或外设 3.3V 直连：ESP32-C3 SuperMini（MCU-008）；纯 5V 外设时 Nano 本身合适
+  recommend_shop: Arduino 官方授权渠道（正品）或 CH340 兼容版综合店（候选，未核实）
+  sales_evidence: arduino/ArduinoCore-avr 内核 boards.txt 内置专属板型“Arduino Nano”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-010:
+  better_alt: ESP32-C3 SuperMini（MCU-008）：芯片更新、带 BLE、体积小；NodeMCU v3 板宽，插面包板两侧不留空位
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: esp8266/Arduino 内核 boards.txt 内置专属板型“NodeMCU 1.0 (ESP-12E Module)”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-011:
+  better_alt: ESP32-C3 SuperMini（MCU-008）：芯片更新、带 BLE、体积小
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: esp8266/Arduino 内核 boards.txt 内置专属板型“NodeMCU 1.0 (ESP-12E Module)”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-012:
+  better_alt: 要 WiFi 选 Pico W（MCU-013），脚位相同
+  recommend_shop: 立创商城（按 C7203002 下单）
+  sales_evidence: earlephilhower/arduino-pico 内核 boards.txt 内置专属板型“Raspberry Pi Pico”（2026-10-02
+    取自 raw.githubusercontent.com）；嘉立创库存 1093、立创商城库存 未记录（C7203002，2026-09-19 接口记录）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-013:
+  better_alt: 不需要无线用 Pico（MCU-012）：脚位相同，立创起订价 ¥43.71 比 Pico W ¥78.48 便宜（交接线索记录）
+  recommend_shop: 立创商城（按 C7203003 下单）
+  sales_evidence: earlephilhower/arduino-pico 内核 boards.txt 内置专属板型“Raspberry Pi Pico
+    W”（2026-10-02 取自 raw.githubusercontent.com）；嘉立创库存 862、立创商城库存 未记录（C7203003，2026-09-19
+    接口记录）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-014:
+  better_alt: 课程不要求 51 时优先 Arduino Nano（MCU-009）或 STM32（MCU-002/MCU-003）：USB 直接下载、资料多
+  recommend_shop: 立创商城（按 C14022 下单）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+MCU-015:
+  better_alt: 无（库内性能最强的 STM32 板）
+  recommend_shop: WeAct 官方店（候选，店铺页未核实）
+  sales_evidence: stm32duino/Arduino_Core_STM32 内核 boards.txt 内置专属板型“BlackPill F411CE”（2026-10-02
+    取自 raw.githubusercontent.com）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+MCU-016:
+  better_alt: 无（库内唯一带摄像头的主控）
+  recommend_shop: 安信可官方店（候选，店铺页未核实）
+  sales_evidence: espressif/arduino-esp32 内核 boards.txt 内置专属板型“AI Thinker ESP32-CAM”（2026-10-02
+    取自 raw.githubusercontent.com）；嘉立创库存 0、立创商城库存 未记录（C17333398，2026-09-23 接口记录）；淘宝销量未核（需登录），未据此定为大众
+  sales_level: 常用
+  sales_rule: 内核板型
+OPT-001:
+  better_alt: C181890（EL817(C)-F，Everlight Elec）：起订价 ¥0.2887（20 起）比主选 ¥0.5789（5 起）便宜
+    50%；嘉立创库存 661119 比主选 31496 多，更好买（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C96006 下单）
+  sales_evidence: 嘉立创库存 31496、立创商城库存 5518（C96006，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+PH-002:
+  better_alt: C18077744（BX-PH2.0-2PZZ，Bossie）：起订价 ¥0.0551（50 起）比主选 ¥0.2166（20 起）便宜
+    75%；嘉立创库存 201374 比主选 64178 多，更好买（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C131337 下单）
+  sales_evidence: 嘉立创库存 64178、立创商城库存 2563（C131337，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C131339 下单）
+  sales_evidence: 嘉立创库存 142355、立创商城库存 14239（C131339，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-004:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C131334 下单）
+  sales_evidence: 嘉立创库存 111565、立创商城库存 6921（C131334，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-005:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157993 下单）
+  sales_evidence: 嘉立创库存 160112、立创商城库存 16011（C157993，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-006:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C131342 下单）
+  sales_evidence: 嘉立创库存 77387、立创商城库存 7738（C131342，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-102:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C173752 下单）
+  sales_evidence: 嘉立创库存 187776、立创商城库存 9388（C173752，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-103:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157929 下单）
+  sales_evidence: 嘉立创库存 133353、立创商城库存 13335（C157929，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-104:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157926 下单）
+  sales_evidence: 嘉立创库存 19146、立创商城库存 1914（C157926，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+PH-105:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157923 下单）
+  sales_evidence: 嘉立创库存 63858、立创商城库存 6385（C157923，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PH-106:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157920 下单）
+  sales_evidence: 嘉立创库存 116916、立创商城库存 11691（C157920，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+PMD-001:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+PMD-002:
+  better_alt: 带保护版（PMD-001）：有过充/过放/过流保护
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+PMD-003:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+PMD-004:
+  better_alt: 要体积小用 MP1584（PMD-003）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+PMD-005:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+PMD-006:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+POT-001:
+  better_alt: C118954（3296W-1-103，BOCHEN(Chengdu Guosheng Tech)）：起订价 ¥1.1603（5 起）比主选
+    ¥5.18（1 起）便宜 78%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C34846 下单）
+  sales_evidence: 嘉立创库存 38425、立创商城库存 37881（C34846，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+PWR-001:
+  better_alt: C16214（DC-005 2.0，BOOMELE(Boom Precision Elec)）：起订价 ¥0.3446（10 起）比主选
+    ¥1.6062（5 起）便宜 79%；嘉立创库存 83447 比主选 31751 多，更好买（尺寸、参数差异见 parts.csv alternatives
+    列）
+  recommend_shop: 立创商城（按 C381116 下单）
+  sales_evidence: 嘉立创库存 31751、立创商城库存 5415（C381116，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+PWR-002:
+  better_alt: C20518877（PJ-102A，CUI）：起订价 ¥5.27（1 起）比主选 ¥6.67（1 起）便宜 21%（尺寸、参数差异见 parts.csv
+    alternatives 列）
+  recommend_shop: 立创商城（按 C3096093 下单）
+  sales_evidence: 嘉立创库存 1085、立创商城库存 1085（C3096093，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+Q-001:
+  better_alt: 无（替代 C8327（S8050(RANGE:160-300)，Jiangsu Changjing Electronics Technology
+    Co., Ltd.） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C717453 下单）
+  sales_evidence: 嘉立创库存 10669、立创商城库存 492（C717453，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+Q-002:
+  better_alt: 无（替代 C141644（S8550(RANGE:160-300)，Jiangsu Changjing Electronics Technology
+    Co., Ltd.） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C717454 下单）
+  sales_evidence: 嘉立创库存 2004、立创商城库存 100（C717454，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+REG-002:
+  better_alt: 无（替代 C672117（LD1117V33C，STMicroelectronics） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C283467 下单）
+  sales_evidence: 嘉立创库存 6092、立创商城库存 6092（C283467，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+REG-003:
+  better_alt: 无（替代 C49384189（LM1085IT-3.3/HG，HGSEMI） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选 2
+    倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C444383 下单）
+  sales_evidence: 嘉立创库存 930、立创商城库存 186（C444383，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+REG-004:
+  better_alt: C347289（L7805CV(UMW)，UMW(Youtai Semiconductor Co., Ltd.)）：起订价 ¥1.1872（5
+    起）比主选 ¥2.23（1 起）便宜 47%；嘉立创库存 133011 比主选 26292 多，更好买（尺寸、参数差异见 parts.csv alternatives
+    列）
+  recommend_shop: 立创商城（按 C111887 下单）
+  sales_evidence: 嘉立创库存 26292、立创商城库存 26176（C111887，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+RES-001:
+  better_alt: C2903232（MF1/4W-10K±1%-ST52，VO）：起订价 ¥0.0571（100 起）比主选 ¥0.086（50 起）便宜
+    34%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C57435 下单）
+  sales_evidence: 嘉立创库存 151160、立创商城库存 2911（C57435，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 热门
+  sales_rule: 嘉立创库存
+RES-002:
+  better_alt: C119347（MF1/4W-10KΩ±1% T，CCO(Chian Chia Elec)）：起订价 ¥0.069（50 起）比主选 ¥0.0864（50
+    起）便宜 20%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C57436 下单）
+  sales_evidence: 嘉立创库存 155174、立创商城库存 2961（C57436，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+SEG-001:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C8093 下单）
+  sales_evidence: 嘉立创库存 13109、立创商城库存 2621（C8093，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+SEG-002:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C8092 下单）
+  sales_evidence: 嘉立创库存 1648、立创商城库存 329（C8092，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+SEG-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C54396 下单）
+  sales_evidence: 嘉立创库存 6818、立创商城库存 6526（C54396，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+SEG-004:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C38183 下单）
+  sales_evidence: 嘉立创库存 2315、立创商城库存 2144（C38183，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+SEN-001:
+  better_alt: AHT20（SEN-004）：I2C、3.3V 直连、精度更高（参数对比见 选型速查.md）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DHT11/DHT22 的库 38 个（arduino/library-registry@df95082（2026-10-01）；例：Soldered-DHT11-DHT22-Temperature-RH-Sensor-Arduino-Library、myDHT、DHT_N128）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-003:
+  better_alt: SHT30（SEN-006）：I2C、精度更高（参数对比见 选型速查.md）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DHT11/DHT22 的库 38 个（arduino/library-registry@df95082（2026-10-01）；例：Soldered-DHT11-DHT22-Temperature-RH-Sensor-Arduino-Library、myDHT、DHT_N128）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-004:
+  better_alt: 要同时测气压用 AHT20+BMP280（SEN-005）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 AHT10/AHT20 的库 8 个（arduino/library-registry@df95082（2026-10-01）；例：PTSolns_AHTx、Adafruit_AHT10、Adafruit_AHTX0）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-005:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 BMP280 的库 8 个（arduino/library-registry@df95082（2026-10-01）；例：BMP280_LTSM、MentorBit-BMP280、Adafruit_BMP280_Library）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-006:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 SHT3x 的库 16 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_SHT31、ArtronShop_SHT3x、sht3x-dis-arduino-lib）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-007:
+  better_alt: 测液体用防水探头（SEN-008）
+  recommend_shop: 立创商城（按 C18723599 下单）
+  sales_evidence: Arduino 官方库注册表仓库名含 DS18B20 的库 11 个（arduino/library-registry@df95082（2026-10-01）；例：DIYables_DS18B20、MKL_DS18B20、MAX31850_DallasTemp）；嘉立创库存
+    1990、立创商城库存 未记录（C18723599，2026-09-29 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-008:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DS18B20 的库 11 个（arduino/library-registry@df95082（2026-10-01）；例：DIYables_DS18B20、MKL_DS18B20、MAX31850_DallasTemp）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-009:
+  better_alt: DS18B20 探头（SEN-008）：驱动库和教程更多（见本表热度依据）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DS18B20 的库 11 个（arduino/library-registry@df95082（2026-10-01）；例：DIYables_DS18B20、MKL_DS18B20、MAX31850_DallasTemp）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-010:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 MLX90614 的库 7 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_MiniMLX90614、Adafruit-MLX90614-Library、DFRobot_MLX90614）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-011:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 MAX3010x 的库 9 个（arduino/library-registry@df95082（2026-10-01）；例：MAX3010x-Sensor-Library、EmotiBit_MAX30101、Arduino-MAX30100）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-012:
+  better_alt: MAX30102（SEN-011）：I2C 数字输出，还能测血氧
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-013:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-014:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 MPU6050 的库 16 个（arduino/library-registry@df95082（2026-10-01）；例：MPU6050Auto、mpu6050、Adafruit_MPU6050）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-015:
+  better_alt: 要角速度（姿态/跌倒）用 MPU6050（SEN-014）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 ADXL345 的库 7 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_ADXL345、DFRobot_ADXL345、FaBo3Axis-ADXL345-Library）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-016:
+  better_alt: 要体积小用 AM312（SEN-017）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-017:
+  better_alt: 要更远感应距离用 HC-SR501（SEN-016，可调）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-018:
+  better_alt: HC-SR04P（SEN-019）：3.3V 供电时输出 3.3V，可直连 ESP32/Pico
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 HC-SR04 的库 14 个（arduino/library-registry@df95082（2026-10-01）；例：HCSR04_ESP_Hardware、Async-HC-SR04-Lib、Bonezegei_HCSR04）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-019:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 HC-SR04 的库 14 个（arduino/library-registry@df95082（2026-10-01）；例：HCSR04_ESP_Hardware、Async-HC-SR04-Lib、Bonezegei_HCSR04）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-020:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 VL53L0X 的库 8 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_VL53L0X、DFRobot_VL53L0X、vl53l0x-arduino）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-021:
+  better_alt: HLK-LD2410C（SEN-022）：能检测静止的人（呼吸微动），可串口读距离
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-022:
+  better_alt: 无
+  recommend_shop: 海凌科官方店（候选，店铺页未核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 LD2410 的库 4 个（arduino/library-registry@df95082（2026-10-01）；例：HLK-LD2410S、ld2410、MyLD2410）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-023:
+  better_alt: 无
+  recommend_shop: 海凌科官方店（候选，店铺页未核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 LD6002 的库 1 个（arduino/library-registry@df95082（2026-10-01）；例：HLK-LD6002）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 库数
+SEN-024:
+  better_alt: 无
+  recommend_shop: 海凌科官方店（候选，店铺页未核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 LD6002 的库 1 个（arduino/library-registry@df95082（2026-10-01）；例：HLK-LD6002）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 库数
+SEN-025:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 BH1750 的库 8 个（arduino/library-registry@df95082（2026-10-01）；例：MentorBit-BH1750、ArtronShop_BH1750、BH1750）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-026:
+  better_alt: 要光照数值（lux）用 BH1750（SEN-025）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-027:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-028:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-029:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-030:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-031:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-032:
+  better_alt: 无（MQ 系列只能定性，见 选型速查.md）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-033:
+  better_alt: 无（MQ 系列只能定性；数字型 SGP30 未入库）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-034:
+  better_alt: 要测振动大小用 MPU6050（SEN-014）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-035:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-036:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-037:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-038:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 HX711 的库 16 个（arduino/library-registry@df95082（2026-10-01）；例：Adafruit_HX711、arduino-HX711、HX711）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-039:
+  better_alt: INA219（SEN-041）：I2C 数字输出、同时测电压（量程较小，见 兼容性速查）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-040:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-041:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 INA219 的库 11 个（arduino/library-registry@df95082（2026-10-01）；例：INA219_Plus、Adafruit_INA219、DFRobot_INA219）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-042:
+  better_alt: INA219（SEN-041）：I2C 数字输出、同时测电流
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-043:
+  better_alt: 无（北斗+GPS 双模）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-044:
+  better_alt: ATGM336H（SEN-043）：北斗+GPS 双模
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-045:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 MFRC522/RC522 的库 7 个（arduino/library-registry@df95082（2026-10-01）；例：TinyRC522、MFRC522_I2C、MFRC522_PN512）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-046:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SEN-047:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DS3231/RTClib 的库 20 个（arduino/library-registry@df95082（2026-10-01）；例：MKL_RTClib、RTClib、TinyRTCLib）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 库数
+SEN-048:
+  better_alt: DS3231（SEN-047）：温补晶振，走时更准，I2C 接口
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: Arduino 官方库注册表仓库名含 DS1302 的库 4 个（arduino/library-registry@df95082（2026-10-01）；例：RTC_DS1302、ClearDS1302、Ds1302）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 库数
+SEN-049:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+SKT-001:
+  better_alt: 无（替代 C42431840（PM2.54-1X8PM-H85，JXTCONN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C27438 下单）
+  sales_evidence: 嘉立创库存 123847、立创商城库存 22594（C27438，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+SKT-002:
+  better_alt: 无（替代 C42431846（PM2.54-2X20P-H85，JXTCONN） 没有明显优势：起订价低不到 5%、嘉立创库存不到主选
+    2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C5124634 下单）
+  sales_evidence: 嘉立创库存 10681、立创商城库存 2112（C5124634，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+SKT-003:
+  better_alt: 无（替代 C7243（2.0-1*40PFemale，BOOMELE(Boom Precision Elec)） 没有明显优势：起订价低不到
+    5%、嘉立创库存不到主选 2 倍；只作缺货备选）
+  recommend_shop: 立创商城（按 C22438140 下单）
+  sales_evidence: 嘉立创库存 20897、立创商城库存 4177（C22438140，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+SW-001:
+  better_alt: C393938（TS665CJ，SHOU HAN）：起订价 ¥0.1183（50 起）比主选 ¥0.3612（10 起）便宜 67%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C110153 下单）
+  sales_evidence: 嘉立创库存 86680、立创商城库存 8585（C110153，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+SW-002:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C136682 下单）
+  sales_evidence: 嘉立创库存 6410、立创商城库存 641（C136682，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+SW-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C111992 下单）
+  sales_evidence: 嘉立创库存 2556、立创商城库存 255（C111992，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+SW-004:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C223774 下单）
+  sales_evidence: 嘉立创库存 1775、立创商城库存 177（C223774，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 冷门
+  sales_rule: 嘉立创库存
+SW-010:
+  better_alt: C2998777（SS-12D10-G5，DEALON）：起订价 ¥1.2625（5 起）比主选 ¥1.9703（5 起）便宜 36%（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C319012 下单）
+  sales_evidence: 嘉立创库存 20895、立创商城库存 3890（C319012，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+TERM-001:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C474881 下单）
+  sales_evidence: 嘉立创库存 76865、立创商城库存 15354（C474881，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+TERM-002:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C474882 下单）
+  sales_evidence: 嘉立创库存 19274、立创商城库存 3853（C474882，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+TERM-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C8465 下单）
+  sales_evidence: 嘉立创库存 266219、立创商城库存 44137（C8465，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+TERM-004:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C72334 下单）
+  sales_evidence: 嘉立创库存 209523、立创商城库存 38178（C72334，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+TOOL-001:
+  better_alt: 无（CP2102 版 TOOL-002 功能相同，二选一）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+TOOL-002:
+  better_alt: 无（CH340 版 TOOL-001 功能相同，二选一）
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+TOOL-003:
+  better_alt: 无
+  recommend_shop: 未核；可先在 优信电子、正点原子 等综合电子店搜关键词（候选，需登录核实）
+  sales_evidence: 未核：无专用驱动库（模拟/开关量或电源模块），库数不能代表热度；淘宝销量需登录
+  sales_level: 未核
+  sales_rule: 无
+XH-002:
+  better_alt: C42391660（HX-XH2.54-2PZZ，hanxia）：起订价 ¥0.0452（5 起）比主选 ¥0.2486（20 起）便宜
+    82%（尺寸、参数差异见 parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C158012 下单）
+  sales_evidence: 嘉立创库存 337727、立创商城库存 16123（C158012，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-003:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C144394 下单）
+  sales_evidence: 嘉立创库存 186148、立创商城库存 12803（C144394，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-004:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C144395 下单）
+  sales_evidence: 嘉立创库存 88648、立创商城库存 8211（C144395，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-005:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157991 下单）
+  sales_evidence: 嘉立创库存 70880、立创商城库存 11216（C157991，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-006:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C144397 下单）
+  sales_evidence: 嘉立创库存 44111、立创商城库存 8822（C144397，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+XH-102:
+  better_alt: C163035（S2B-XH-A-1(LF)(SN)，JST）：嘉立创库存 116098 比主选 41521 多，更好买（尺寸、参数差异见
+    parts.csv alternatives 列）
+  recommend_shop: 立创商城（按 C157931 下单）
+  sales_evidence: 嘉立创库存 41521、立创商城库存 2230（C157931，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+XH-103:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157928 下单）
+  sales_evidence: 嘉立创库存 140629、立创商城库存 13462（C157928，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-104:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157925 下单）
+  sales_evidence: 嘉立创库存 83333、立创商城库存 16578（C157925，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 大众
+  sales_rule: 嘉立创库存
+XH-105:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C263757 下单）
+  sales_evidence: 嘉立创库存 21464、立创商城库存 4292（C263757，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存
+XH-106:
+  better_alt: 无（库内无同功能更优件；立创未记录替代编号）
+  recommend_shop: 立创商城（按 C157919 下单）
+  sales_evidence: 嘉立创库存 22452、立创商城库存 4490（C157919，2026-10-02 接口记录）；淘宝销量未核（需登录）
+  sales_level: 常用
+  sales_rule: 嘉立创库存

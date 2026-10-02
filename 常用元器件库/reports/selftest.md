@@ -32,14 +32,20 @@
 | ✅ 抓到 | 同一个脚分两次 | check_project.py | 同时分给了 | ✗ SEN-019.TRIG → GPIO34：该脚只能输入，但 TRIG 需要主控输出 |
 | ✅ 抓到 | 电流超 70%（USB 带 MG996R） | check_project.py | 超过 70% | ✗ 电流：典型合计 2500mA，峰值合计 2500mA；USB 口 500mA 的 70% = 350mA → 超过 70%，换更大电源或分路供电 |
 | ✅ 抓到 | I2C 上拉到 5V 接 ESP32 | check_project.py | 上拉到 5V | ✗ I2C 总线 0：SEN-006 上拉到 5V，主控 GPIO4 不耐 5V（模块改 3.3V 供电或加电平转换） |
+| ✅ 抓到 | 热度定为大众但依据写未核 | build_market.py | 依据写的是未核 | ✗ SEN-030 定为大众，但依据写的是未核 |
+| ✅ 抓到 | 淘宝参考价只取 2 家 | build_market.py | 至少 3 家 | ✗ SEN-014 淘宝参考价只有 2 家，至少 3 家 |
+| ✅ 抓到 | 淘宝中位数算错 | build_market.py | 中位数 | ✗ SEN-014 淘宝参考价 median=2.5 与各家价格中位数 2 不符 |
+| ✅ 抓到 | 淘宝价只写一个数字 | build_market.py | 店铺明细 | ✗ SEN-014 price_taobao_ref 只写了一个数字，必须写店铺明细（shops） |
+| ✅ 抓到 | 替代料引用不存在的编号 | build_market.py | 不在 parts.csv | ✗ SEN-001 better_alt 引用的 SEN-999 不在 parts.csv |
+| ✅ 抓到 | 热度等级写错字 | build_market.py | 不是 大众 | ✗ RES-001 sales_level=热门 不是 大众/常用/冷门/未核 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 189 条，出错 0 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 189 条，出错 0 条；离线警告：缺 PDF 86 条，C 编号未接口核实 2 条 |
 | ✅ 通过 | 正向对照：真实 parts.csv | check_atomic.py | 0 错误 | 原子符号 192 个（应有 192），kicad-cli 导出 192 张 SVG，出错 0 处 |
-| ✅ 通过 | 正向对照：样例项目 示例1-ESP32S3-OLED-温湿度 | check_project.py | 0 错误 | 示例1-ESP32S3-OLED-温湿度：错误 0，提醒 2 → /home/user/123/常用元器件库/projects/示例1-ESP32S3-OLED-温湿度/检查结果.md |
-| ✅ 通过 | 正向对照：样例项目 示例2-STM32-继电器-按键 | check_project.py | 0 错误 | 示例2-STM32-继电器-按键：错误 0，提醒 1 → /home/user/123/常用元器件库/projects/示例2-STM32-继电器-按键/检查结果.md |
-| ✅ 通过 | 正向对照：样例项目 示例3-Nano-超声波-舵机 | check_project.py | 0 错误 | 示例3-Nano-超声波-舵机：错误 0，提醒 1 → /home/user/123/常用元器件库/projects/示例3-Nano-超声波-舵机/检查结果.md |
+| ✅ 通过 | 正向对照：样例项目 示例1-ESP32S3-OLED-温湿度 | check_project.py | 0 错误 | 示例1-ESP32S3-OLED-温湿度：错误 0，提醒 2 → projects/示例1-ESP32S3-OLED-温湿度/检查结果.md |
+| ✅ 通过 | 正向对照：样例项目 示例2-STM32-继电器-按键 | check_project.py | 0 错误 | 示例2-STM32-继电器-按键：错误 0，提醒 1 → projects/示例2-STM32-继电器-按键/检查结果.md |
+| ✅ 通过 | 正向对照：样例项目 示例3-Nano-超声波-舵机 | check_project.py | 0 错误 | 示例3-Nano-超声波-舵机：错误 0，提醒 1 → projects/示例3-Nano-超声波-舵机/检查结果.md |
 
-合计 28 个故意错误 + 7 个正向对照，失败 0 项。
+合计 34 个故意错误 + 7 个正向对照，失败 0 项。
 
 注意：本次在离线模式运行（STUDENTHW_OFFLINE=1），证据检查的正向对照把缺 PDF、缺 jlc.json 记为警告而非错误。
