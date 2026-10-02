@@ -250,14 +250,14 @@
   mount: 底板焊 1×4 直排针（HDR-001 截 4 针），4 根母对母杜邦线直通
   seated_height_mm: 8.2（排针）
   pin1: 1=GND：PCB 方焊盘；转接板排针顺序以丝印为准
-  kicad_symbol: StudentHW:LCD_I2C_PCF8574_4P
-  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+  kicad_symbol: StudentHW:Hdr_PCF8574_LCD_I2C_4P
+  kicad_footprint: StudentHW:Module_Hdr_PCF8574_LCD_I2C_4P
   dim_source: 底板上只有 1×4 排针，尺寸按 HDR-001 排针图纸（evidence/HDR-001/dim_PZ254_1xN.png）；转接板本身无厂家图
   level: C
   pitfalls: >-
     汉昇 HS1602A-6B 这类"自带串口"的屏不是 PCF8574 方案，不能用 LiquidCrystal_I2C 库；地址 0x27/0x3F 两种，
     先跑 I2C 扫描；5V 供电时 SDA/SCL 被转接板上拉到 5V，3.3V 主控要看兼容性速查
-  notes: 规格书缺（淘宝模块，datasheet_url 给的是 TI PCF8574 芯片规格书）。环宽：官方排针焊盘 1.7、孔 1.0，按 0.35 放宽。
+  notes: 规格书缺（淘宝模块，datasheet_url 给的是 TI PCF8574 芯片规格书）。环宽：排针焊盘 1.7、孔 1.0，按 0.35 放宽。模块无 3D 模型。
   taobao_keyword: LCD1602 IIC 转接板 PCF8574
   polarized: 否
   lead_max_mm: 0.64
@@ -316,12 +316,12 @@
   mount: 底板焊 1×4 直排针，杜邦线直通；模块用螺丝固定在外壳面板
   seated_height_mm: 8.2（排针）
   pin1: 1=CLK：PCB 方焊盘；买到后先对照模块丝印，顺序不同就换杜邦线顺序
-  kicad_symbol: StudentHW:TM1637_4Digit_Module_4P
-  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+  kicad_symbol: StudentHW:Hdr_TM1637_4P
+  kicad_footprint: StudentHW:Module_Hdr_TM1637_4P
   dim_source: 底板上只有 1×4 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图
   level: C
   pitfalls: DIO 不是 I2C 的 SDA，不能挂在 I2C 总线上；有的模块 VCC/GND 顺序反，对照丝印再接
-  notes: 规格书缺（淘宝模块，datasheet_url 为天微 TM1637 芯片规格书，立创链接）。环宽按 0.35 放宽。
+  notes: 规格书缺（淘宝模块，datasheet_url 为天微 TM1637 芯片规格书，立创链接）。环宽按 0.35 放宽。模块无 3D 模型。
   taobao_keyword: TM1637 4位数码管模块 时钟
   polarized: 否
   lead_max_mm: 0.64
@@ -349,12 +349,12 @@
   mount: 底板焊 1×5 直排针，杜邦线接模块输入端（DIN 一侧）
   seated_height_mm: 8.2（排针）
   pin1: 1=VCC：PCB 方焊盘；接模块 DIN 一侧（不是 DOUT 一侧）
-  kicad_symbol: StudentHW:MAX7219_Matrix_Module_5P
-  kicad_footprint: Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical
+  kicad_symbol: StudentHW:Hdr_MAX7219_5P
+  kicad_footprint: StudentHW:Module_Hdr_MAX7219_5P
   dim_source: 底板上只有 1×5 排针，按 HDR-001 图纸（evidence/HDR-001/dim_PZ254_1xN.png）；模块无厂家图
   level: C
   pitfalls: 输入输出两端都有 5P，接错到 DOUT 端不亮；全亮时电流大，按 MAX7219 规格书和段电流设置算电流预算
-  notes: 规格书缺（淘宝模块，datasheet_url 为 ADI MAX7219 芯片规格书）。环宽按 0.35 放宽。
+  notes: 规格书缺（淘宝模块，datasheet_url 为 ADI MAX7219 芯片规格书）。环宽按 0.35 放宽。模块无 3D 模型。
   taobao_keyword: MAX7219 点阵模块 8x8 单片机
   polarized: 否
   lead_max_mm: 0.64

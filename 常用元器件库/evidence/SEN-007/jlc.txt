@@ -1,0 +1,9 @@
+# SEN-007 DS18B20 数字温度传感器（TO-92）
+来源: jlcparts 公开镜像（嘉立创数据），不是立创商城接口；人民币价未核
+
+[主选] C18723599（镜像抓取 2026-09-29）
+  型号: DS18B20(XBLW)
+  厂家: XBLW
+  描述: -55℃~+125℃ 12bit 2.5V~5.5V 3uA 400ms Single bus Temperature threshold monitoring、Configurable temperature output、On-chip non-volatile parameter storage ±0.4℃ TO-92 Temperature Sensors ROHS
+  嘉立创库存: 1990  美元阶梯: [[1, 0.5655], [10, 0.4557], [30, 0.4]]
+

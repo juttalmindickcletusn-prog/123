@@ -1,0 +1,1 @@
+datasheet.pdf 来源: https://raw.githubusercontent.com/bc/mphand/master/SRD-05VDC-SL-C-Datasheet.pdf （松乐 SRD 规格书公开转存），下载日期 2026-10-02

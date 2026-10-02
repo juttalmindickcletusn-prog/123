@@ -1,0 +1,1 @@
+datasheet.pdf 来源: https://raw.githubusercontent.com/raphaelbs/esp32-cam-ai-thinker/master/assets/ESP32-CAM_Product_Specification.pdf （安信可原版），下载日期 2026-10-02

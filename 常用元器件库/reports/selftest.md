@@ -25,10 +25,10 @@
 | ✅ 抓到 | 原子符号封装属性写错 | check_atomic.py | Footprint 属性 | ✗ Q-001_S8050: Footprint 属性 'Package_TO_SOT_THT:TO-92_Inline' ≠ 应为 'StudentHW:TO-92_Inline_Wide' |
 | ✅ 抓到 | 原子符号少一个引脚 | check_atomic.py | 引脚与基础符号 | ✗ REG-002_LD1117V33: 引脚与基础符号 Regulator_Linear:LM1117T-3.3 不一致：缺 [('3', 'VI')] 多 []；引脚号 ['1', '2'] ≠ 封装焊盘号 ['1' |
 | ✅ 抓到 | 原子符号 C 编号写错 | check_atomic.py | LCSC 属性 | ✗ RES-001_10k: LCSC 属性 'C57435' ≠ 应为 'C57436' |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 120 条，出错 0 条 |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 120 条，出错 0 条 |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 120 条，出错 0 条；离线警告：缺 PDF 86 条，C 编号未接口核实 1 条 |
-| ✅ 通过 | 正向对照：真实 parts.csv | check_atomic.py | 0 错误 | 原子符号 131 个（应有 131），kicad-cli 导出 131 张 SVG，出错 0 处 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_footprints.py | 0 错误 | 检查 189 条，出错 0 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_symbol_pins.py | 0 错误 | 检查 189 条，出错 0 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_evidence.py | 0 错误 | 检查 189 条，出错 0 条；离线警告：缺 PDF 86 条，C 编号未接口核实 2 条 |
+| ✅ 通过 | 正向对照：真实 parts.csv | check_atomic.py | 0 错误 | 原子符号 192 个（应有 192），kicad-cli 导出 192 张 SVG，出错 0 处 |
 
 合计 21 个故意错误 + 4 个正向对照，失败 0 项。
 

@@ -28,8 +28,9 @@ def pins_of(m):
     for r in m["rows"]:
         dx, dy = STEP[r["dir"]]
         x0, y0 = r["start"]
+        pitch = r.get("pitch", P)
         for i, nm in enumerate(r["names"]):
-            out.append((str(r["first"] + i), x0 + dx * P * i, y0 + dy * P * i, nm, r["side"]))
+            out.append((str(r["first"] + i), x0 + dx * pitch * i, y0 + dy * pitch * i, nm, r["side"]))
     return out
 
 
@@ -43,7 +44,8 @@ def jtext(s, x, y, rot, just, size=0.8):
 def footprint(m):
     x0, y0, x1, y1 = m["board"]
     pins = pins_of(m)
-    pads = [Pad(n, "thru_hole", "rect" if n == "1" else "circle", x, y, PAD, PAD, HOLE) for n, x, y, _, _ in pins]
+    hole, pad = m.get("hole", HOLE), m.get("pad", PAD)
+    pads = [Pad(n, "thru_hole", "rect" if n == "1" else "circle", x, y, pad, pad, hole) for n, x, y, _, _ in pins]
     items = rect_lines(x0, y0, x1, y1, "F.Fab") + rect_lines(x0, y0, x1, y1, "F.SilkS")
     boxes = [(x0, y0, x1, y1)]
     if m.get("overhang"):

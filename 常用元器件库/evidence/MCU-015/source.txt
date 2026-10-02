@@ -1,0 +1,1 @@
+datasheet.pdf = MiniF4x1Cx_V31 SchDoc.pdf；board_shape_V31.pdf = MiniF4x1Cx_V31 Board Shape 外形.pdf；stm32f411ceu6_datasheet.pdf = Datasheet/STM32F411CEU6_Datasheet.pdf。均取自 https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1 （master 05380f5，2026-06-12），下载日期 2026-10-02

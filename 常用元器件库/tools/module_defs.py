@@ -254,11 +254,6 @@ sym("7Seg_1Digit_CA", "StudentHW:7Seg_0.56in_1Digit_10P", "1 位 7 段数码管�
     [("3", "CA"), ("8", "CA")])
 
 
-# 第二批补充：只在底板上放排针（杜邦线连模块），封装用 KiCad 官方排针，引脚顺序与模块排针一致，直通线即可
-sym("LCD_I2C_PCF8574_4P", "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
-    "LCD1602/2004 的 PCF8574 I2C 转接板接口（模块排针 GND VCC SDA SCL）", [("1", "GND"), ("2", "VCC"), ("3", "SDA"), ("4", "SCL")])
-sym("TM1637_4Digit_Module_4P", "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
-    "TM1637 4 位数码管模块接口（模块排针 CLK DIO VCC GND，不同厂家可能不同，对照丝印）",
-    [("1", "CLK"), ("2", "DIO"), ("3", "VCC"), ("4", "GND")])
-sym("MAX7219_Matrix_Module_5P", "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
-    "MAX7219 8×8 点阵模块输入端接口（VCC GND DIN CS CLK）", [("1", "VCC"), ("2", "GND"), ("3", "DIN"), ("4", "CS"), ("5", "CLK")])
+# 第三批：只在底板放带脚名丝印的排针（模块用杜邦线按名字对接），定义在 module_defs_b3.py
+from module_defs_b3 import register as _register_b3  # noqa: E402
+_register_b3(add, sym)

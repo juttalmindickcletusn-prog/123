@@ -1,0 +1,1 @@
+datasheet.pdf 来源: https://raw.githubusercontent.com/emilyhammes/emilyhammes.github.io/master/temperaturemonitor/DS18B20.pdf （Maxim DS18B20 Rev 5 原版 PDF 的公开转存），下载日期 2026-10-02

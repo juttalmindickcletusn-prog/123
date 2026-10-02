@@ -1,6 +1,6 @@
 {
- "symbols": 131,
- "expected": 131,
+ "symbols": 192,
+ "expected": 192,
  "cli": "未运行（--no-cli）",
  "errors": {
   "RES-001_10k": [

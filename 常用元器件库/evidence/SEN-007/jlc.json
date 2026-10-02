@@ -1,0 +1,35 @@
+{
+ "date": "2026-09-29",
+ "source": "jlcparts 镜像（github.com/yaqwsx/jlcparts gh-pages data/cache.zip）",
+ "parts": {
+  "C18723599": {
+   "role": "主选",
+   "code": "C18723599",
+   "mpn": "DS18B20(XBLW)",
+   "brand": "XBLW",
+   "package": "TO-92",
+   "describe": "-55℃~+125℃ 12bit 2.5V~5.5V 3uA 400ms Single bus Temperature threshold monitoring、Configurable temperature output、On-chip non-volatile parameter storage ±0.4℃ TO-92 Temperature Sensors ROHS",
+   "jlc_stock": 1990,
+   "library": "expand",
+   "usd_prices": [
+    [
+     1,
+     0.5655
+    ],
+    [
+     10,
+     0.4557
+    ],
+    [
+     30,
+     0.4
+    ]
+   ],
+   "cny_price": null,
+   "cny_step": null,
+   "szlcsc_stock": null,
+   "datasheet": "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8590906116111224832",
+   "mirror_fetched": "2026-09-29"
+  }
+ }
+}

@@ -1,5 +1,5 @@
 {
- "checked": 120,
+ "checked": 189,
  "errors": {},
  "pdf_missing_warn": [
   "BAT-001",
@@ -90,6 +90,7 @@
   "XH-106"
  ],
  "jlc_missing_warn": [
+  "ACT-003",
   "MCU-014"
  ]
 }
