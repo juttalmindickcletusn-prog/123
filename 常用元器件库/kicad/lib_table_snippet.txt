@@ -1,0 +1,9 @@
+# 把下面几行粘进 KiCad 的符号库表（sym-lib-table）和封装库表（fp-lib-table），全局或项目级都行。
+# 先在「偏好设置 → 配置路径」里设好 STUDENTHW_DIR = 本库文件夹的完整路径。
+
+# ---- sym-lib-table ----
+  (lib (name "StudentHW_Parts")(type "KiCad")(uri "${STUDENTHW_DIR}/kicad/StudentHW_Parts.kicad_sym")(options "")(descr "原子符号：一选全带封装、型号、C 编号、价格"))
+  (lib (name "StudentHW")(type "KiCad")(uri "${STUDENTHW_DIR}/kicad/StudentHW.kicad_sym")(options "")(descr "模块和自建器件的基础符号"))
+
+# ---- fp-lib-table ----
+  (lib (name "StudentHW")(type "KiCad")(uri "${STUDENTHW_DIR}/kicad/StudentHW.pretty")(options "")(descr "StudentHW 自建和复制的直插封装"))
